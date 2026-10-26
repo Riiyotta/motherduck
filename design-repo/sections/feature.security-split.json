@@ -1,0 +1,99 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.security-split",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Security split",
+  "purpose": "Split block with security rows and a media panel.",
+  "source": {
+    "file": "src/components/extra/persona2.jsx",
+    "tag": "SecuritySplit",
+    "lines": "171-196",
+    "id": "persona2-jsx#SecuritySplit"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.security-split",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "rows": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 24,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "media": {
+        "type": "asset",
+        "roles": [
+          "spot-illustration"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "480-563",
+        "heading": "X12. Persona landing `/product/for-founders`, `/product/for-operators` (one template, two "
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "persona-landing"
+  ],
+  "tags": []
+}

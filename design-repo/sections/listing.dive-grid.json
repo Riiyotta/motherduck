@@ -1,0 +1,128 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.dive-grid",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Dive card grid",
+  "purpose": "Sortable grid of dive cards with pick and hackathon toggles and load-more.",
+  "source": {
+    "file": "src/pages/content/DiveGallery.jsx",
+    "tag": "DiveCard",
+    "lines": "47-84",
+    "id": "DiveGallery-jsx#DiveCard"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/pages/content/DiveGallery.jsx",
+      "tag": "SortMenu",
+      "lines": "24-45",
+      "id": "DiveGallery-jsx#SortMenu"
+    }
+  ],
+  "semantic": {
+    "id": "listing.dive-grid",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 9,
+        "item": {
+          "thumb": {
+            "type": "asset",
+            "roles": [
+              "product-screenshot"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true
+          },
+          "author": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "votes": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "tags": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 3,
+            "item": {
+              "label": {
+                "type": "text",
+                "maxWords": 2,
+                "required": true
+              }
+            },
+            "required": false
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      },
+      "sortLabel": {
+        "type": "text",
+        "maxWords": 2,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-product-visual"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "594-636",
+        "heading": "D1. Dive gallery (L12): separate app chrome [NEW, self-contained]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "dive-gallery"
+  ],
+  "tags": []
+}

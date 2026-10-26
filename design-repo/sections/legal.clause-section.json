@@ -1,0 +1,148 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "legal.clause-section",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Legal clause section",
+  "purpose": "One heading-bounded part of a legal or policy document: heading, paragraphs, optional list or table.",
+  "source": {
+    "file": "src/components/company/legal.jsx",
+    "tag": "PrivacyPolicy",
+    "lines": "160-214",
+    "id": "legal-jsx#PrivacyPolicy"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/company/legal.jsx",
+      "tag": "TermsOfUse",
+      "lines": "232-267",
+      "id": "legal-jsx#TermsOfUse"
+    },
+    {
+      "file": "src/components/company/legal.jsx",
+      "tag": "SupportPolicy",
+      "lines": "290-333",
+      "id": "legal-jsx#SupportPolicy"
+    },
+    {
+      "file": "src/components/extra/generic.jsx",
+      "tag": "ShapeProse",
+      "lines": "181-298",
+      "id": "generic-jsx#ShapeProse"
+    }
+  ],
+  "semantic": {
+    "id": "legal.clause-section",
+    "category": "LEGAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "level": {
+        "type": "enum",
+        "values": [
+          "h2",
+          "h3"
+        ],
+        "required": true
+      },
+      "paragraphs": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 8,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 110,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "items": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 12,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 40,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "table": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 6,
+        "item": {
+          "cells": {
+            "type": "list",
+            "minItems": 2,
+            "maxItems": 5,
+            "item": {
+              "text": {
+                "type": "text",
+                "maxWords": 10,
+                "required": true
+              }
+            },
+            "required": true
+          }
+        },
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "259-277",
+        "heading": "F1. `LegalPage` [NEW] (Privacy, Terms; Support-policy variant)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "legal-plain",
+    "legal-toc",
+    "prose-sidebar-form"
+  ],
+  "tags": [],
+  "notes": "A document is a sequence of clause sections; no single contract holds the whole document."
+}

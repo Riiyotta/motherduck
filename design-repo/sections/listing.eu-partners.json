@@ -1,0 +1,94 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.eu-partners",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Regional partners",
+  "purpose": "Partner logo and text row for the regional launch.",
+  "source": {
+    "file": "src/components/extra/euRegion.jsx",
+    "tag": "EuPartners",
+    "lines": "74-90",
+    "id": "euRegion-jsx#EuPartners"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "listing.eu-partners",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "partners": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 6,
+        "item": {
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "partner-tool-logo"
+            ],
+            "required": true
+          },
+          "name": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generic-ui-glyph",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "564-594",
+        "heading": "X13. EU region `/product/eu-region`"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "eu-region"
+  ],
+  "tags": []
+}

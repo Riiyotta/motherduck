@@ -1,0 +1,49 @@
+{
+  "id": "panel.terminal",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Terminal panel",
+  "purpose": "Dark terminal panels for agent clients (typed transcript, caret, footer hint).",
+  "source": {
+    "file": "src/components/agent/TerminalPanels.jsx",
+    "tag": "ClaudePanel",
+    "lines": "39-140",
+    "id": "TerminalPanels-jsx#ClaudePanel"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/agent/TerminalPanels.jsx",
+      "tag": "CursorPanel",
+      "lines": "178-271",
+      "id": "TerminalPanels-jsx#CursorPanel"
+    },
+    {
+      "file": "src/components/agent/TerminalPanels.jsx",
+      "tag": "ChatPanel",
+      "lines": "305-392",
+      "id": "TerminalPanels-jsx#ChatPanel"
+    }
+  ],
+  "props": {
+    "client": [
+      "code-agent",
+      "editor-agent",
+      "chat-agent"
+    ],
+    "lines": "list"
+  },
+  "tokens": [
+    "panel.terminal.background"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "495-516",
+        "heading": "Left: agent client tabs + terminal sim (600×571 @1440; full width below)"
+      }
+    ]
+  }
+}

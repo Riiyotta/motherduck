@@ -1,0 +1,815 @@
+{
+  "registryVersion": "1.0.0",
+  "description": "Single registry of source-identity patterns used by the GENERATED_MODE_* rules. Every literal comes from the real clone or its specs (grep-verified at build time); nothing is invented.",
+  "sourceBrand": {
+    "patterns": {
+      "brandNames": {
+        "literals": [
+          {
+            "text": "MotherDuck",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "3"
+            }
+          },
+          {
+            "text": "Motherduck",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "218"
+            }
+          },
+          {
+            "text": "MOTHERDUCK",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "163"
+            }
+          },
+          {
+            "text": "motherduckdb",
+            "evidence": {
+              "file": "src/components/content/diveChrome.jsx",
+              "lines": "76"
+            }
+          }
+        ],
+        "regex": "(?i)mother[\\s_-]?duck(?:db|ing|s)?",
+        "note": "Variants and spellings: wordmark text in titles, the aria-label \"Motherduck home\", the upper-case label WHY MOTHERDUCK, the handle motherduckdb. The regex also covers spaced and hyphenated forms."
+      },
+      "domains": {
+        "literals": [
+          {
+            "text": "motherduck.com",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "1"
+            }
+          },
+          {
+            "text": "slack.motherduck.com",
+            "evidence": {
+              "file": "PAGES_SPEC_COMPANY.md",
+              "lines": "453"
+            }
+          },
+          {
+            "text": "auth.motherduck.com",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "567"
+            }
+          },
+          {
+            "text": "app.motherduck.com",
+            "evidence": {
+              "file": "src/lib/links.js",
+              "lines": "7"
+            }
+          },
+          {
+            "text": "status.motherduck.com",
+            "evidence": {
+              "file": "PAGES_SPEC_COMPANY.md",
+              "lines": "453"
+            }
+          },
+          {
+            "text": "merch.motherduck.com",
+            "evidence": {
+              "file": "src/components/footer/links.js",
+              "lines": "45"
+            }
+          },
+          {
+            "text": "embed-motherduck.com",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "576"
+            }
+          },
+          {
+            "text": "duckdb.org",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "480"
+            }
+          },
+          {
+            "text": "duckdbsnippets.com",
+            "evidence": {
+              "file": "PAGES_SPEC_COMPANY.md",
+              "lines": "453"
+            }
+          },
+          {
+            "text": "dataoutpost.ai",
+            "evidence": {
+              "file": "src/components/footer/links.js",
+              "lines": "44"
+            }
+          }
+        ]
+      },
+      "socialAndStoreLinks": {
+        "literals": [
+          {
+            "text": "twitter.com/motherduck",
+            "evidence": {
+              "file": "src/components/footer/links.js",
+              "lines": "83"
+            }
+          },
+          {
+            "text": "linkedin.com/company/motherduck",
+            "evidence": {
+              "file": "src/components/footer/links.js",
+              "lines": "84"
+            }
+          },
+          {
+            "text": "youtube.com/@motherduckdb",
+            "evidence": {
+              "file": "src/components/content/diveChrome.jsx",
+              "lines": "76"
+            }
+          },
+          {
+            "text": "info@motherduck.com",
+            "evidence": {
+              "file": "src/components/footer/links.js",
+              "lines": "86"
+            }
+          }
+        ]
+      },
+      "appStoreMarks": {
+        "literals": [],
+        "note": "No App Store, TestFlight or Play Store marks or links appear in the clone or specs (grep for app store / testflight / play store returned nothing); the rule still rejects store hosts generically.",
+        "hostRegex": "(?i)(apps\\.apple\\.com|testflight\\.apple\\.com|play\\.google\\.com|itunes\\.apple\\.com)"
+      },
+      "productNames": {
+        "literals": [
+          {
+            "text": "DuckDB",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "559"
+            }
+          },
+          {
+            "text": "DuckLake",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "72"
+            }
+          },
+          {
+            "text": "Hypertenancy",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "67"
+            }
+          },
+          {
+            "text": "Divemaxxing",
+            "evidence": {
+              "file": "src/components/extra/divemaxxing.jsx",
+              "lines": "181"
+            }
+          },
+          {
+            "text": "Explain Analyze",
+            "evidence": {
+              "file": "src/components/extra/podcast.jsx",
+              "lines": "119"
+            }
+          },
+          {
+            "text": "Dive Gallery",
+            "evidence": {
+              "file": "PAGES_SPEC_CONTENT.md",
+              "lines": "596"
+            }
+          },
+          {
+            "text": "Ducklings",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "383"
+            }
+          },
+          {
+            "text": "Public Preview",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "144"
+            }
+          },
+          {
+            "text": "MCP server",
+            "evidence": {
+              "file": "src/components/agent/AgentCards.jsx",
+              "lines": "17"
+            }
+          }
+        ]
+      },
+      "cloneStandInBrand": {
+        "literals": [
+          {
+            "text": "Northwind",
+            "evidence": {
+              "file": "src/components/Hero.jsx",
+              "lines": "38"
+            }
+          }
+        ],
+        "note": "The clone itself uses Northwind as a stand-in brand text in a few places (dive gallery nav, ecosystem call-to-action, a pick toggle). It is source-adjacent, so generated pages must not reuse it either."
+      },
+      "commonWordProductNames": {
+        "literals": [
+          {
+            "text": "Dives",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "391"
+            }
+          },
+          {
+            "text": "Flights",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "392"
+            }
+          },
+          {
+            "text": "Guides",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "395"
+            }
+          },
+          {
+            "text": "PULSE",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "334"
+            }
+          },
+          {
+            "text": "JUMBO",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "334"
+            }
+          },
+          {
+            "text": "MEGA",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "398"
+            }
+          },
+          {
+            "text": "GIGA",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "397"
+            }
+          }
+        ],
+        "note": "Product and instance names that are ordinary English words. Matched case-sensitively as whole words in their capitalised or upper-case forms only, so lower-case prose is not affected."
+      },
+      "callsToAction": {
+        "literals": [
+          {
+            "text": "TRY 7 DAYS FREE",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "270"
+            }
+          },
+          {
+            "text": "BOOK A DEMO",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "270"
+            }
+          },
+          {
+            "text": "GET STARTED FOR FREE",
+            "evidence": {
+              "file": "src/pages/marketing/ProductRouter.jsx",
+              "lines": "67"
+            }
+          },
+          {
+            "text": "START FREE",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "226"
+            }
+          },
+          {
+            "text": "COPY PROMPT",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "271"
+            }
+          }
+        ],
+        "brandBearingRegex": "(?i)\\b(?:get|try|download|start|use|join|subscribe to|choose|why)\\s+mother[\\s_-]?duck",
+        "note": "Source CTA strings from CLONE_SPEC and the product page blocks, plus Get/Try/Download <brand> forms."
+      },
+      "taglineAndLabelPhrases": {
+        "literals": [
+          {
+            "text": "TRUSTED BY BUILDERS",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "273"
+            }
+          },
+          {
+            "text": "CHOOSE YOUR STACK",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "455"
+            }
+          },
+          {
+            "text": "VIEW ALL INTEGRATIONS",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "429"
+            }
+          },
+          {
+            "text": "ANY MCP-CAPABLE AGENT",
+            "evidence": {
+              "file": "CLONE_SPEC.md",
+              "lines": "514"
+            }
+          },
+          {
+            "text": "JOIN THE FLOCK",
+            "evidence": {
+              "file": "PAGES_SPEC_COMPANY.md",
+              "lines": "137"
+            }
+          },
+          {
+            "text": "CUSTOMERS ARE QUACKING",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "507"
+            }
+          }
+        ],
+        "note": "The specs deliberately do not transcribe headlines or taglines (content policy); only these short verbatim UI labels are recorded."
+      },
+      "legalEntity": {
+        "literals": [],
+        "note": "No legal-entity string (Inc., Corp., LLC, Ltd, GmbH) appears in the clone, the specs or the manifests (grep returned nothing); entity-style variants are covered by the brand-name regex."
+      },
+      "customerNames": {
+        "literals": [
+          {
+            "text": "Dexibit",
+            "slug": "dexibit",
+            "evidence": {
+              "file": "PAGES_SPEC_EXTRA.md",
+              "lines": "25"
+            }
+          },
+          {
+            "text": "Dominik Moritz",
+            "slug": "dominik-moritz",
+            "evidence": {
+              "file": "PAGES_SPEC_EXTRA.md",
+              "lines": "26"
+            }
+          },
+          {
+            "text": "Gardyn",
+            "slug": "gardyn",
+            "evidence": {
+              "file": "src/components/content/caseProfiles.js",
+              "lines": "5"
+            }
+          },
+          {
+            "text": "Kultura Capital",
+            "slug": "kultura-capital",
+            "evidence": {
+              "file": "src/components/content/caseProfiles.js",
+              "lines": "5"
+            }
+          },
+          {
+            "text": "FinQore",
+            "slug": "finqore",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "574"
+            }
+          },
+          {
+            "text": "PriceMedic",
+            "slug": "pricemedic",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "580"
+            }
+          },
+          {
+            "text": "Emora Health",
+            "slug": "emora-health",
+            "evidence": {
+              "file": "src/components/content/caseProfiles.js",
+              "lines": "5"
+            }
+          },
+          {
+            "text": "Trunkrs",
+            "slug": "trunkrs",
+            "evidence": {
+              "file": "src/components/content/caseProfiles.js",
+              "lines": "5"
+            }
+          },
+          {
+            "text": "UDisc",
+            "slug": "udisc",
+            "evidence": {
+              "file": "src/components/content/caseProfiles.js",
+              "lines": "5"
+            }
+          },
+          {
+            "text": "Zero Health",
+            "slug": "zero-health",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "581"
+            }
+          },
+          {
+            "text": "Stern Risk Partners",
+            "slug": "stern-risk-partners",
+            "evidence": {
+              "file": "src/components/content/caseProfiles.js",
+              "lines": "5"
+            }
+          },
+          {
+            "text": "Ahead Computing",
+            "slug": "ahead-computing",
+            "evidence": {
+              "file": "ASSET_MANIFEST.md",
+              "lines": "38"
+            }
+          },
+          {
+            "text": "GoodShip",
+            "slug": "goodship",
+            "evidence": {
+              "file": "src/components/Blog.jsx",
+              "lines": "17"
+            }
+          },
+          {
+            "text": "Hazel AI",
+            "slug": "hazel-ai",
+            "evidence": {
+              "file": "src/components/Blog.jsx",
+              "lines": "16"
+            }
+          },
+          {
+            "text": "Together AI",
+            "slug": "together-ai",
+            "evidence": {
+              "file": "PAGES_SPEC_EXTRA.md",
+              "lines": "57"
+            }
+          },
+          {
+            "text": "ByzFunder",
+            "slug": "byzfunder",
+            "evidence": {
+              "file": "src/components/Blog.jsx",
+              "lines": "11"
+            }
+          },
+          {
+            "text": "DoSomething",
+            "slug": "dosomething",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "572"
+            }
+          },
+          {
+            "text": "SaaSWorks",
+            "slug": "saasworks",
+            "evidence": {
+              "file": "PAGES_SPEC_EXTRA.md",
+              "lines": "27"
+            }
+          }
+        ],
+        "note": "Real customers named by case-study slugs: the clone code links them (src/routes.js REDIRECTS, hero logo strip, customer grid) and the sitemap snapshot lists /case-studies/<slug>. Display spellings are derived from the slugs; matching ignores case and treats a space and a hyphen alike. Ambiguous one-word slugs (layers, reflex) are not included. The clone and specs contain no real investor name (logos are placeholders), so none is registered; the investor-logo role is the guard."
+      },
+      "investorNames": {
+        "literals": [],
+        "note": "No investor name appears anywhere in the clone, the specs or the sitemap snapshot; investor wordmarks are placeholders in the clone."
+      },
+      "competitorSlugs": {
+        "literals": [
+          {
+            "text": "snowflake-alternative",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "9"
+            }
+          },
+          {
+            "text": "bigquery-alternative",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "9"
+            }
+          },
+          {
+            "text": "clickhouse-alternative",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "9"
+            }
+          },
+          {
+            "text": "databricks-alternative",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "9"
+            }
+          },
+          {
+            "text": "postgresql-alternative",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "9"
+            }
+          },
+          {
+            "text": "redshift-alternative",
+            "evidence": {
+              "file": "PAGES_SPEC_MARKETING.md",
+              "lines": "9"
+            }
+          }
+        ],
+        "note": "Route slugs only (src/routes.js); copy uses generic Warehouse A-F stand-ins."
+      }
+    }
+  },
+  "sourceStaticRoutes": [
+    "/",
+    "/about-us",
+    "/acceptable-use-policy",
+    "/blog",
+    "/candidate-privacy",
+    "/careers",
+    "/case-studies",
+    "/case-study-dexibit",
+    "/case-study-dominik-moritz",
+    "/case-study-saasworks",
+    "/community-and-open-source",
+    "/community-code",
+    "/contact-us",
+    "/contact-us/product-expert",
+    "/contact-us/support",
+    "/customer-support",
+    "/dive-gallery",
+    "/divemaxxing-full",
+    "/divemaxxing/rules",
+    "/duckdb-book-brief",
+    "/duckdb-book-brief-orig",
+    "/duckdb-book-form",
+    "/duckdb-book-summary-chapter1",
+    "/duckdb-book-summary-chapter10",
+    "/duckdb-book-summary-chapter11",
+    "/duckdb-book-summary-chapter2",
+    "/duckdb-book-summary-chapter3",
+    "/duckdb-book-summary-chapter4",
+    "/duckdb-book-summary-chapter5",
+    "/duckdb-book-summary-chapter6",
+    "/duckdb-book-summary-chapter7",
+    "/duckdb-book-summary-chapter8",
+    "/duckdb-book-summary-chapter9",
+    "/duckdb-cheatsheet-full",
+    "/duckdb-news",
+    "/ducklake-open-table-format-full",
+    "/ducklake-open-table-format-guide",
+    "/ecosystem",
+    "/events",
+    "/events/past",
+    "/explain-analyze",
+    "/fees-addendum",
+    "/forms/finance-onboarding",
+    "/getting-started-with-motherduck",
+    "/glossary",
+    "/glossary/dlt",
+    "/glossary/time-series-database",
+    "/hack-night",
+    "/jev-full",
+    "/learn",
+    "/learn-more",
+    "/live-demo",
+    "/local-dev-cloud-prod-dagster-motherduck",
+    "/lp/ducklake-lakehouse-table-format-book",
+    "/motherduck-terms-of-service",
+    "/onboarding-sessions",
+    "/privacy-policy",
+    "/product",
+    "/product/app-developers",
+    "/product/azure",
+    "/product/data-teams",
+    "/product/dives",
+    "/product/duckdb-users",
+    "/product/ducklake",
+    "/product/eu-region",
+    "/product/flights",
+    "/product/for-founders",
+    "/product/for-operators",
+    "/product/guides",
+    "/product/hypertenancy",
+    "/product/mcp-server",
+    "/product/postgres-integration",
+    "/product/pricing",
+    "/product/pricing/duckdb-support",
+    "/quacking-around-the-web",
+    "/react-components-testing",
+    "/research",
+    "/sql-duckdb-book-form",
+    "/startups",
+    "/support-policy",
+    "/terms-of-service",
+    "/terms-of-use",
+    "/together-ai",
+    "/trust-and-security",
+    "/try",
+    "/videos",
+    "/vs",
+    "/vs/bigquery-alternative",
+    "/vs/clickhouse-alternative",
+    "/vs/databricks-alternative",
+    "/vs/postgresql-alternative",
+    "/vs/redshift-alternative",
+    "/vs/snowflake-alternative"
+  ],
+  "permittedPlaceholderHosts": {
+    "tlds": [
+      "example",
+      "invalid",
+      "test"
+    ],
+    "domains": [
+      "example.com",
+      "example.org",
+      "example.net"
+    ]
+  },
+  "ratingRegex": "(?i)(\\b\\d(?:\\.\\d)?\\s*(?:/|out of)\\s*5\\b|★|⭐|\\b\\d(?:\\.\\d)?\\s*stars?\\b|\\brated\\s+\\d)",
+  "ratingAllowMarker": "sample",
+  "copyShingleWords": 6,
+  "copyShingleNote": "Any run of 6 consecutive words that also appears in a reference-mode example shipped in this package is treated as reproduced source copy (GENERATED_MODE_COPY).",
+  "personEvidence": {
+    "note": "Author profile pages are served at /authors/<slug>; these slugs name real people in the sitemap snapshot. They are listed so generated pages cannot reuse them. No real customer or employee names are transcribed in the clone itself (placeholder names only).",
+    "authorSlugs": [
+      "aaron-elmore",
+      "adi-polak",
+      "adithya-krishnan",
+      "aditya-aomani",
+      "aditya-parameswaran",
+      "alex-monahan",
+      "amrutha-gujjar",
+      "andrea-soria",
+      "andrew-mcewen",
+      "andrew-witten",
+      "anna-geller",
+      "antony-courtney",
+      "archie-wood",
+      "armin-efendic",
+      "benn-stancil",
+      "boaz-leskes",
+      "brett-griffin",
+      "brian-bickell",
+      "brian-olsen",
+      "brittany-rosenau",
+      "carly-spoljaric",
+      "chanin-nantasenamat",
+      "christophe-blefari",
+      "christophe-oudar",
+      "cody-peterson",
+      "colton-padden",
+      "daniel-palma",
+      "daniel-pham",
+      "david-stocker",
+      "diptanu-gon-choudhury",
+      "dominik-moritz",
+      "doo-shim",
+      "doug-raymond",
+      "dumky-de-wilde",
+      "emily-lucek",
+      "evelyn-wou",
+      "faraz-hameed",
+      "gabor-szarnyas",
+      "garrett-obrien",
+      "gilad-lotan",
+      "graham-wetzler",
+      "hamilton-ulmer",
+      "hannes-muhleisen",
+      "holly-smith",
+      "hoyt-emerson",
+      "hugo-lu",
+      "jacob-matson",
+      "james-mcneill",
+      "jan-soubusta",
+      "jeffrey-heer",
+      "jeffrey-morgan",
+      "jelte-fennema-nio",
+      "jerel-navarrete",
+      "jessica-libman",
+      "joe-reis",
+      "john-kutay",
+      "jordan-tigani",
+      "joseph-hwang",
+      "josh-nakka",
+      "josh-wills",
+      "julia-schottenstein",
+      "julien-hurault",
+      "kaustav-mitra",
+      "khalil-muhammad",
+      "leonardo-vida",
+      "leslie-thomas",
+      "lindsay-murphy",
+      "logan-toskey",
+      "lorenzo-mangani",
+      "louisa-huang",
+      "louise-de-leyritz",
+      "luciano-galvao-filho",
+      "mael-deschamps",
+      "manveer-chawla",
+      "marc-d",
+      "marcos-ortiz",
+      "mark-raasveldt",
+      "matt-forrest",
+      "matt-housley",
+      "matt-martin",
+      "matt-turck",
+      "mehdi-ouazza",
+      "michael-driscoll",
+      "michael-hunger",
+      "miguel-miranda",
+      "mihai-bojin",
+      "mike-spaulding",
+      "mike-xu",
+      "nate-sooter",
+      "nicholas-greenspan",
+      "nick-ursa",
+      "niels-claeys",
+      "nouras-haddad",
+      "oli-dinov",
+      "paul-dudley",
+      "pedro-holanda",
+      "peter-boncz",
+      "peter-chapman",
+      "rik-bauwens",
+      "rob-teeuwen",
+      "ryan-boyd",
+      "ryan-dolley",
+      "sahil-gupta",
+      "samantha-lohier",
+      "saqib-rasul",
+      "sean-m-tracey",
+      "sheila-sitaram",
+      "simon-spati",
+      "spencer-taylor",
+      "stephanie-wang",
+      "sung-won-chung",
+      "ted-conbeer",
+      "thomas-tfmv-mcgeehan",
+      "till-dohmen",
+      "tino-tereshko",
+      "vasilije-markovic",
+      "yannick-welsch",
+      "yves-le-maout",
+      "zack-mazzoncini",
+      "zhenni-wu"
+    ],
+    "authorSlugCount": 120
+  }
+}

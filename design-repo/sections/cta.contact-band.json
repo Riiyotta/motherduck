@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "cta.contact-band",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Get-in-touch band",
+  "purpose": "Sun band with a tag, heading, contact action and an animated character.",
+  "source": {
+    "file": "src/components/company/about.jsx",
+    "tag": "ContactBand",
+    "lines": "110-139",
+    "id": "about-jsx#ContactBand"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "cta.contact-band",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "tag": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "character": {
+        "type": "asset",
+        "roles": [
+          "company-mascot-art",
+          "clone-mascot-pip"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "sun"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "mascot-sway"
+    ],
+    "default": "mascot-sway",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "fictional-mascot-placeholder"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "172-179",
+        "heading": "A5. `ContactBand` [NEW] (About \"Get in touch\")"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about"
+  ],
+  "tags": []
+}

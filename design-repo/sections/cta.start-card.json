@@ -1,0 +1,81 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "cta.start-card",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Start card",
+  "purpose": "Sidebar (or end-of-article) card prompting to start using the product.",
+  "source": {
+    "file": "src/components/extra/learn.jsx",
+    "tag": "StartCard",
+    "lines": "41-49",
+    "id": "learn-jsx#StartCard"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "cta.start-card",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 24,
+        "required": false
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "329-353",
+        "heading": "X7. Learn article `/learn/:slug` (68; samples `acid-transactions-sql`, `best-analytics-db-"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "learn-article"
+  ],
+  "tags": []
+}

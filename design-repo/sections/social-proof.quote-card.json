@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "social-proof.quote-card",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Quote card with offset lift",
+  "purpose": "Linked white card with a large orange quote mark, customer quote, company logo, name and role.",
+  "source": {
+    "file": "src/components/architecture/QuoteCard.jsx",
+    "tag": "QuoteCard",
+    "lines": "6-39",
+    "id": "QuoteCard-jsx#QuoteCard"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/platform/QuoteCard.jsx",
+      "tag": "QuoteCard",
+      "lines": "7-37",
+      "id": "QuoteCard-jsx#QuoteCard"
+    }
+  ],
+  "semantic": {
+    "id": "social-proof.quote-card",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "quote": {
+        "type": "text",
+        "maxWords": 58,
+        "required": true
+      },
+      "name": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "role": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "logo": {
+        "type": "asset",
+        "roles": [
+          "customer-logo"
+        ],
+        "required": true
+      },
+      "href": {
+        "type": "link",
+        "labelMaxWords": 1,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "measured for the h2, lede and sub fields (CLONE_SPEC [Nch/Mw] counts); estimated for the remaining fields"
+  },
+  "variants": [
+    "architecture",
+    "platform"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 4: figure is a row at >=1302 (gap 40), column below"
+  },
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "358-367",
+        "heading": "Quote card (margin-top 56; 24 below 1302)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": [],
+  "notes": "Quote budget: measured 24 words (architecture instance, 172ch) and 53 words (platform instance, 336ch); the budget is 58 because the clone reference copy of the platform instance is 58 words."
+}

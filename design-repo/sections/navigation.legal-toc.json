@@ -1,0 +1,110 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "navigation.legal-toc",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Legal table of contents",
+  "purpose": "Sticky, scroll-spied table of contents (nested or numbered) beside the document.",
+  "source": {
+    "file": "src/components/company/legal.jsx",
+    "tag": "Toc",
+    "lines": "81-123",
+    "id": "legal-jsx#Toc"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/generic.jsx",
+      "tag": "LegalTocShell",
+      "lines": "402-453",
+      "id": "generic-jsx#LegalTocShell"
+    }
+  ],
+  "semantic": {
+    "id": "navigation.legal-toc",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "items": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 20,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          },
+          "id": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "children": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 10,
+            "item": {
+              "label": {
+                "type": "text",
+                "maxWords": 8,
+                "required": true
+              },
+              "id": {
+                "type": "text",
+                "maxWords": 1,
+                "required": true
+              }
+            },
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "nested",
+    "numbered"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "accordion-single-open"
+    ],
+    "default": "accordion-single-open",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY F1: TOC right of content at >=1302, stacked above below"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "partially-measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "259-277",
+        "heading": "F1. `LegalPage` [NEW] (Privacy, Terms; Support-policy variant)"
+      }
+    ],
+    "note": "PAGES_SPEC_EXTRA section 2 UNMEASURED: X18 TOC nesting (terms-of-service, candidate-privacy)"
+  },
+  "usedInTemplates": [
+    "legal-toc"
+  ],
+  "tags": []
+}

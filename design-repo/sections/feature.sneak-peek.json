@@ -1,0 +1,86 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.sneak-peek",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Sneak peek row",
+  "purpose": "Coral panel with a bobbing book cover beside a heading and text.",
+  "source": {
+    "file": "src/components/extra/splitForm.jsx",
+    "tag": "SneakPeek",
+    "lines": "90-111",
+    "id": "splitForm-jsx#SneakPeek"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.sneak-peek",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 60,
+        "required": true
+      },
+      "cover": {
+        "type": "asset",
+        "roles": [
+          "book-cover"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "coral-red"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "float-bob"
+    ],
+    "default": "float-bob",
+    "reducedMotionFallback": "unchanged-measured"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-book-cover"
+  ],
+  "evidence": {
+    "level": "partially-measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "713-732",
+        "heading": "X19. Split-form LP `/together-ai`, `/duckdb-book-form`, `/sql-duckdb-book-form` (NEW, one "
+      }
+    ],
+    "note": "PAGES_SPEC_EXTRA section 2 UNMEASURED: Sneak Peek mobile image block"
+  },
+  "usedInTemplates": [
+    "split-form-lp"
+  ],
+  "tags": [],
+  "notes": "The original keeps the bob running under reduced motion (src/components/extra/splitForm.jsx comment)."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "card.lift",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Lift card",
+  "purpose": "Card shell with a dark backing layer; the inner card lifts by a per-use pixel offset on hover (>=960px) and returns on press.",
+  "source": {
+    "file": "src/components/ui/LiftCard.jsx",
+    "tag": "LiftCard",
+    "lines": "7-24",
+    "id": "LiftCard-jsx#LiftCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "lift": "number(px)",
+    "hoverFrom": [
+      "lg",
+      "always"
+    ],
+    "press": "boolean",
+    "tint": "surface token",
+    "as": "element"
+  },
+  "tokens": [
+    "card.lift.transition",
+    "card.lift.lift.blog"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "98-104",
+        "heading": "Border / surface language (applies everywhere)"
+      }
+    ]
+  },
+  "uses": [
+    "asset.placeholder"
+  ]
+}

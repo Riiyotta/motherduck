@@ -1,0 +1,162 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.agent-interfaces",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Agent interfaces with terminal simulation",
+  "purpose": "Sky section: heading, sub-text, client tabs over a terminal typing simulation and three stacked link cards.",
+  "source": {
+    "file": "src/components/AgentNative.jsx",
+    "tag": "AgentNative",
+    "lines": "8-34",
+    "id": "AgentNative-jsx#AgentNative"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/agent/AgentTerminal.jsx",
+      "tag": "AgentTerminal",
+      "lines": "13-86",
+      "id": "AgentTerminal-jsx#AgentTerminal"
+    },
+    {
+      "file": "src/components/agent/AgentCards.jsx",
+      "tag": "AgentCards",
+      "lines": "27-56",
+      "id": "AgentCards-jsx#AgentCards"
+    }
+  ],
+  "semantic": {
+    "id": "feature.agent-interfaces",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "sub": {
+        "type": "text",
+        "maxWords": 17,
+        "required": true
+      },
+      "clientTabs": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "icon": {
+            "type": "asset",
+            "roles": [
+              "partner-tool-logo"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "footerLabel": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "footerNote": {
+        "type": "text",
+        "maxWords": 7,
+        "required": true
+      },
+      "docsAction": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 16,
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          },
+          "icon": {
+            "type": "asset",
+            "roles": [
+              "generic-ui-glyph"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "measured for the h2, lede and sub fields (CLONE_SPEC [Nch/Mw] counts); estimated for the remaining fields"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "sky"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "typing-sim",
+      "caret-blink",
+      "dither-canvas",
+      "offset-lift"
+    ],
+    "default": "typing-sim",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 8: row with align-items flex-end at >=1302"
+  },
+  "generatedAssetRoles": [
+    "generic-ui-glyph",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "487-523",
+        "heading": "8. Agent-native section (bg **#97D4FF**, overflow clip, no top border)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": []
+}

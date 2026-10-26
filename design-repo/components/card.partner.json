@@ -1,0 +1,34 @@
+{
+  "id": "card.partner",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Partner card",
+  "purpose": "Ecosystem card with logo box, name and category tags.",
+  "source": {
+    "file": "src/components/content/eco.jsx",
+    "tag": "PartnerCard",
+    "lines": "75-96",
+    "id": "eco-jsx#PartnerCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "name": "text(max 3 words)",
+    "tags": "list(max 3)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "468-486",
+        "heading": "E2. `PartnerCard` [NEW]"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "asset.placeholder"
+  ]
+}

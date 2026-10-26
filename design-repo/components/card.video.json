@@ -1,0 +1,34 @@
+{
+  "id": "card.video",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Video card",
+  "purpose": "Video index card with thumbnail, tags, title and duration.",
+  "source": {
+    "file": "src/components/content/videos.jsx",
+    "tag": "VideoCard",
+    "lines": "67-89",
+    "id": "videos-jsx#VideoCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 13 words)",
+    "duration": "text(max 2 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "409-419",
+        "heading": "V3. `VideoCard` [NEW, on `LiftCard lift={14}`]"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "asset.placeholder"
+  ]
+}

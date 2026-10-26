@@ -1,0 +1,81 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "pricing.band",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Pricing band",
+  "purpose": "Compact band summarizing pricing with an action.",
+  "source": {
+    "file": "src/components/extra/persona2.jsx",
+    "tag": "PricingBand2",
+    "lines": "199-211",
+    "id": "persona2-jsx#PricingBand2"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "pricing.band",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 30,
+        "required": true
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "480-563",
+        "heading": "X12. Persona landing `/product/for-founders`, `/product/for-operators` (one template, two "
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "persona-landing"
+  ],
+  "tags": []
+}

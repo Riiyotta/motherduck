@@ -1,0 +1,112 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "lp.checklist-split",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Split checklist",
+  "purpose": "LP band with two paragraphs beside a titled checklist.",
+  "source": {
+    "file": "src/components/company/lp.jsx",
+    "tag": "SplitChecklist",
+    "lines": "273-289",
+    "id": "lp-jsx#SplitChecklist"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/lpBlocks.jsx",
+      "tag": "FitChecklist",
+      "lines": "66-79",
+      "id": "lpBlocks-jsx#FitChecklist"
+    }
+  ],
+  "semantic": {
+    "id": "lp.checklist-split",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "paragraphs": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 50,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 5,
+        "required": false
+      },
+      "checks": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 6,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 14,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream",
+    "sun"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "278-304",
+        "heading": "G. Gated LP template blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "gated-lp",
+    "lp-book-own-nav",
+    "lp-ducklake-full"
+  ],
+  "tags": []
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.sand-grid",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Sand grid hero for video index",
+  "purpose": "Page-opening sand-textured hero band whose featured video overlaps it.",
+  "source": {
+    "file": "src/components/content/videos.jsx",
+    "tag": "SandGridHero",
+    "lines": "12-20",
+    "id": "videos-jsx#SandGridHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.sand-grid",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "388-395",
+        "heading": "V1. `SandGridHero` (video index) and `SandBand` (video detail) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "video-index"
+  ],
+  "tags": []
+}

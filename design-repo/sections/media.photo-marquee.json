@@ -1,0 +1,84 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "media.photo-marquee",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Team photo strip",
+  "purpose": "Auto-scrolling strip of candid team photo tiles.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "PhotoMarquee",
+    "lines": "336-383",
+    "id": "careers-jsx#PhotoMarquee"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "media.photo-marquee",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": false,
+  "content": {
+    "fields": {
+      "photos": {
+        "type": "list",
+        "minItems": 10,
+        "maxItems": 30,
+        "item": {
+          "photo": {
+            "type": "asset",
+            "roles": [
+              "team-photo"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "marquee-scroll"
+    ],
+    "default": "marquee-scroll",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-photo-placeholder"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "217-220",
+        "heading": "B5. `PhotoMarquee` [NEW] (Careers gallery)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "careers"
+  ],
+  "tags": [],
+  "retrievalReason": "Auto-scrolling strip of real team photographs with no text; nothing here can be reused in a generated page and it has no retrievable content."
+}

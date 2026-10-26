@@ -1,0 +1,95 @@
+{
+  "description": "Component-scoped tokens for header.",
+  "tokens": {
+    "header.zIndex": {
+      "value": "99",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.eyebrowHeight": {
+      "value": "40px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.eyebrowHeightSm": {
+      "value": "70px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.navHeight": {
+      "value": "80px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.navHeightSm": {
+      "value": "70px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.borderWidth": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.borderTransition": {
+      "value": "200ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.totalXl": {
+      "value": "122px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.totalMdLg": {
+      "value": "112px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    },
+    "header.totalSm": {
+      "value": "142px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "pricing.duckdb-support-panel",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Engine support pricing panel",
+  "purpose": "Single panel with the plan switcher pill, support tiers and a contact action.",
+  "source": {
+    "file": "src/components/marketing/pricing.jsx",
+    "tag": "DuckDBSupportPanel",
+    "lines": "353-368",
+    "id": "pricing-jsx#DuckDBSupportPanel"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "pricing.duckdb-support-panel",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 30,
+        "required": true
+      },
+      "tiers": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "item": {
+          "name": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 30,
+            "required": true
+          },
+          "action": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "pillTabs": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "391-432",
+        "heading": "B20. Pricing blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "pricing-support"
+  ],
+  "tags": []
+}

@@ -1,0 +1,39 @@
+{
+  "id": "card.paper",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Paper card",
+  "purpose": "Research paper row card.",
+  "source": {
+    "file": "src/components/extra/research.jsx",
+    "tag": "PaperCard",
+    "lines": "35-49",
+    "id": "research-jsx#PaperCard"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/marketing/bespoke.jsx",
+      "tag": "PaperList",
+      "lines": "337-365",
+      "id": "bespoke-jsx#PaperList"
+    }
+  ],
+  "props": {
+    "title": "text(max 11 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "461-477",
+        "heading": "X11. Research paper `/research/:slug` (6; samples `declarative-caching-in-motherduck`, `mo"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift"
+  ]
+}

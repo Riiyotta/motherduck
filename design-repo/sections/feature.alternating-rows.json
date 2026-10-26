@@ -1,0 +1,110 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.alternating-rows",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Alternating feature rows",
+  "purpose": "Tag title followed by five two-column rows alternating image and text, each with chip, H3, body and optional link.",
+  "source": {
+    "file": "src/components/marketing/hypertenancy.jsx",
+    "tag": "AlternatingFeatureRows",
+    "lines": "102-125",
+    "id": "hypertenancy-jsx#AlternatingFeatureRows"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.alternating-rows",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "tag": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "rows": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 5,
+        "item": {
+          "chip": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 7,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": true
+          },
+          "image": {
+            "type": "asset",
+            "roles": [
+              "product-screenshot",
+              "architecture-diagram"
+            ],
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 4,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": 728,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B17: rows 2-col at every width >=728"
+  },
+  "generatedAssetRoles": [
+    "generated-diagram",
+    "generated-product-visual"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "322-337",
+        "heading": "B17. Hypertenancy-only blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-hypertenancy"
+  ],
+  "tags": []
+}

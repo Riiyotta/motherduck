@@ -1,0 +1,118 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "social-proof.customer-case-grid",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Customer case study grid",
+  "purpose": "Sky section with clouds: heading, sub-text and a five-card grid (wide quote, stat, three small) linking to case studies with tinted hover states.",
+  "source": {
+    "file": "src/components/Customers.jsx",
+    "tag": "Customers",
+    "lines": "27-82",
+    "id": "Customers-jsx#Customers"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/customers/CaseCard.jsx",
+      "tag": "CaseCard",
+      "lines": "7-33",
+      "id": "CaseCard-jsx#CaseCard"
+    }
+  ],
+  "semantic": {
+    "id": "social-proof.customer-case-grid",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "sub": {
+        "type": "text",
+        "maxWords": 11,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 5,
+        "item": {
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "customer-logo"
+            ],
+            "required": true
+          },
+          "text": {
+            "type": "text",
+            "maxWords": 15,
+            "required": true
+          },
+          "stat": {
+            "type": "text",
+            "maxWords": 3,
+            "required": false
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 4,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "measured for the h2, lede and sub fields (CLONE_SPEC [Nch/Mw] counts); estimated for the remaining fields"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "sky"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 960,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 7: row1 2 cards, row2 3 cards; column below 960"
+  },
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "461-486",
+        "heading": "7. Customers section (bg **#97D4FF**, `border-top:2px solid #383838`, overflow clip)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": []
+}

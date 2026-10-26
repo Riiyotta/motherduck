@@ -1,0 +1,111 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.read-next-grid",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Read-next grid",
+  "purpose": "Full-bleed grid of recommended articles with a view-all link.",
+  "source": {
+    "file": "src/components/extra/readNext.jsx",
+    "tag": "ReadNextGrid",
+    "lines": "48-63",
+    "id": "readNext-jsx#ReadNextGrid"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/readNext.jsx",
+      "tag": "ReadNextCard",
+      "lines": "18-46",
+      "id": "readNext-jsx#ReadNextCard"
+    }
+  ],
+  "semantic": {
+    "id": "listing.read-next-grid",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 6,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 11,
+            "required": true
+          },
+          "type": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "thumb": {
+            "type": "asset",
+            "roles": [
+              "editorial-thumbnail"
+            ],
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "footerLink": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 3,
+      "lg": 3,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_EXTRA X2"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "207-230",
+        "heading": "X2. Glossary term `/glossary/:slug` (347; samples `acid`, `ai`)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "glossary-term",
+    "learn-article"
+  ],
+  "tags": []
+}

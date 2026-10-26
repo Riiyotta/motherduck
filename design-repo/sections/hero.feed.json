@@ -1,0 +1,86 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.feed",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Feed index hero with typewriter heading",
+  "purpose": "Page-opening for feed indexes: typewritten H1, lede and doodles (blog, news, around-the-web, learn).",
+  "source": {
+    "file": "src/components/content/FeedHero.jsx",
+    "tag": "FeedHero",
+    "lines": "124-141",
+    "id": "FeedHero-jsx#FeedHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.feed",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 20,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "blog",
+    "news",
+    "quack",
+    "learn"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "typewriter-h1",
+      "caret-blink"
+    ],
+    "default": "typewriter-h1",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "170-180",
+        "heading": "F1. `FeedHero` (L1, L9) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-index",
+    "learn-index",
+    "news-index",
+    "quack-index"
+  ],
+  "tags": []
+}

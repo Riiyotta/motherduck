@@ -1,0 +1,128 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "runtime.mega-menu",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Desktop mega menu panels",
+  "purpose": "Click-open dropdown panels (Product, Community, Company) anchored under the header nav.",
+  "source": {
+    "file": "src/components/header/MegaMenus.jsx",
+    "tag": "Panel",
+    "lines": "13-22",
+    "id": "MegaMenus-jsx#Panel"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "runtime.mega-menu",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "dropdown-enter"
+    ],
+    "default": "dropdown-enter",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about",
+    "author",
+    "azure-waitlist",
+    "blog-index",
+    "blog-post",
+    "book-brief",
+    "book-chapter",
+    "careers",
+    "case-detail",
+    "case-index",
+    "community-code",
+    "community-oss",
+    "contact-chooser",
+    "contact-form",
+    "ecosystem-detail",
+    "ecosystem-index",
+    "eu-region",
+    "event-detail",
+    "events-index",
+    "events-past",
+    "gated-lp",
+    "glossary-index",
+    "glossary-term",
+    "home",
+    "learn-article",
+    "learn-index",
+    "legal-plain",
+    "legal-toc",
+    "lp-divemaxxing",
+    "lp-ducklake-full",
+    "lp-jev",
+    "news-index",
+    "persona-landing",
+    "podcast-episode",
+    "podcast-index",
+    "pricing",
+    "pricing-support",
+    "product-ducklake",
+    "product-feature",
+    "product-hypertenancy",
+    "product-overview",
+    "product-persona",
+    "prose-sidebar-form",
+    "quack-index",
+    "research-index",
+    "research-paper",
+    "split-form-lp",
+    "startups",
+    "support-hub",
+    "trust-security",
+    "video-detail",
+    "video-index",
+    "vs-comparison",
+    "vs-index",
+    "webinar-detail"
+  ],
+  "tags": [],
+  "retrievalReason": "Interactive dropdown overlay opened from the header on click; it is header runtime UI, not a composable page section."
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.jobs-board",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Open positions board",
+  "purpose": "Filterable board of open roles grouped by department with a map illustration.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "JobsBoard",
+    "lines": "259-324",
+    "id": "careers-jsx#JobsBoard"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/company/careers.jsx",
+      "tag": "JobCard",
+      "lines": "239-256",
+      "id": "careers-jsx#JobCard"
+    }
+  ],
+  "semantic": {
+    "id": "listing.jobs-board",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "filters": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 3,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "groups": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 3,
+        "item": {
+          "name": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "jobs": {
+            "type": "list",
+            "minItems": 1,
+            "maxItems": 6,
+            "item": {
+              "title": {
+                "type": "text",
+                "maxWords": 8,
+                "required": true
+              },
+              "location": {
+                "type": "text",
+                "maxWords": 3,
+                "required": true
+              },
+              "href": {
+                "type": "link",
+                "labelMaxWords": 1,
+                "required": false
+              }
+            },
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "art": {
+        "type": "asset",
+        "roles": [
+          "spot-illustration"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "scroll-animate-in",
+      "offset-lift"
+    ],
+    "default": "scroll-animate-in",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "203-216",
+        "heading": "B4. `JobsBoard` [NEW] (Careers \"Open positions\", anchor `#open-positions`)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "careers"
+  ],
+  "tags": []
+}

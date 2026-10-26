@@ -1,0 +1,85 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "navigation.pagination",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Pagination",
+  "purpose": "Numbered page links with ellipsis windows.",
+  "source": {
+    "file": "src/components/extra/events.jsx",
+    "tag": "Pagination",
+    "lines": "342-353",
+    "id": "events-jsx#Pagination"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/events.jsx",
+      "tag": "pageWindow",
+      "lines": "310-316",
+      "id": "events-jsx#pageWindow"
+    }
+  ],
+  "semantic": {
+    "id": "navigation.pagination",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "current": {
+        "type": "number",
+        "min": 1,
+        "max": 13,
+        "required": true
+      },
+      "last": {
+        "type": "number",
+        "min": 1,
+        "max": 13,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "264-280",
+        "heading": "X4. Past events `/events/past` and `/events/past/page/:n` (variant of EventsHub L10)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "events-past"
+  ],
+  "tags": []
+}

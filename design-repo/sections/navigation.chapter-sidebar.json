@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "navigation.chapter-sidebar",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Chapter sidebar with email reveal",
+  "purpose": "Sticky sidebar with chapter navigation and an email field that reveals consent checkboxes on focus.",
+  "source": {
+    "file": "src/components/extra/bookChapter.jsx",
+    "tag": "ChapterSidebar",
+    "lines": "24-64",
+    "id": "bookChapter-jsx#ChapterSidebar"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "navigation.chapter-sidebar",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "chapters": {
+        "type": "list",
+        "minItems": 11,
+        "maxItems": 11,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "emailLabel": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "consents": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "reveal-popover"
+    ],
+    "default": "reveal-popover",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "733-753",
+        "heading": "X20. Book chapter summary `/duckdb-book-summary-chapter1` … `chapter11` (NEW)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "book-chapter"
+  ],
+  "tags": []
+}

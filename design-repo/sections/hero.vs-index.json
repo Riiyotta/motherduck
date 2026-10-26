@@ -1,0 +1,79 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.vs-index",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Comparisons index hero",
+  "purpose": "Page-opening: heading and lede for the comparisons index.",
+  "source": {
+    "file": "src/components/extra/vsIndex.jsx",
+    "tag": "VsIndexHero",
+    "lines": "11-28",
+    "id": "vsIndex-jsx#VsIndexHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.vs-index",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 35,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "647-655",
+        "heading": "X15. Comparisons index `/vs`"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "vs-index"
+  ],
+  "tags": []
+}

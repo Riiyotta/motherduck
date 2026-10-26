@@ -1,0 +1,80 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "media.team-photo",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Full-width team photo",
+  "purpose": "Full-width 1.6:1 group photo.",
+  "source": {
+    "file": "src/components/company/about.jsx",
+    "tag": "TeamPhoto",
+    "lines": "69-78",
+    "id": "about-jsx#TeamPhoto"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "media.team-photo",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "photo": {
+        "type": "asset",
+        "roles": [
+          "team-photo"
+        ],
+        "required": true
+      },
+      "caption": {
+        "type": "text",
+        "maxWords": 10,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-photo-placeholder"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "165-167",
+        "heading": "A3. `FullWidthPhoto` [NEW, trivial] (About \"Our team\")"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about"
+  ],
+  "tags": []
+}

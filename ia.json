@@ -1,0 +1,3268 @@
+{
+  "$comment": "Hand-edit this file only; IA.md and matrix.csv are generated. Route accounting: meta.totalRoutes is the number of distinct URLs in the live sitemap (1583); every template routeCount is the number of those URLs that the clone resolves to that template, and the counts sum to 1583. The 7 client-redirect source URLs (REDIRECTS in src/routes.js) are counted under the template of their destination page and listed in redirectSources. Two routes exist only in the clone route table and have no sitemap equivalent (/product/guides, /glossary); they are listed in cloneOnlyRoutes of two templates with routeCount 0. The sitemap-served-by-clone check passed for all 1583 URLs except /lp/agents-run-your-analytics-full, which still renders the not-found-style stub.",
+  "meta": {
+    "title": "MotherDuck clone: information architecture",
+    "source": "https://motherduck.com/ (live sitemap, 1583 URLs) as reproduced by the React/Vite clone in this repo",
+    "status": "measured-from-clone-code",
+    "productionApproved": false,
+    "totalRoutes": 1583,
+    "totalTemplates": 71,
+    "generatedBy": "Authored with the ia-builder skill from src/routes.js, src/App.jsx, src/pages/** and src/components/**; routes counted by matching sitemap paths against route patterns"
+  },
+  "categories": {
+    "SHELL": "Chrome that wraps pages: skip link, announcement bar, headers, menus, footers and the alternative navs of sub-apps.",
+    "HERO": "Page-opening block: headline, lede and primary action, sometimes with art or meta.",
+    "FEATURES": "Product explanation and capability modules: diagrams, feature cards, comparisons, directories of tools.",
+    "PROOF": "Social proof: customer logos, quotes, case-study cards, investors, testimonials.",
+    "CONTENT": "Substantive reading material and structured information: article bodies, FAQs, tables, transcripts, event and partner details.",
+    "EDITORIAL": "Feeds and teasers of dated or curated editorial items: posts, news, videos, events, episodes, recommendations.",
+    "CONVERSION": "Blocks whose job is to capture a lead, registration, subscription or click-through: forms, CTA bands, gated downloads, registration bars.",
+    "COMMERCE": "Pricing and cost-model blocks: plans, matrices, calculators.",
+    "LEGAL": "Legal and policy documents and their navigation.",
+    "UTILITY": "Navigation and interaction helpers: filters, search, pagination, tables of contents, modals, back links and floating buttons.",
+    "APP": "A self-contained interactive app surface embedded as a page."
+  },
+  "sections": {
+    "shell.skip-link": {
+      "category": "SHELL",
+      "description": "Visually hidden \"skip to main content\" anchor, the first focusable element; becomes a visible boxed link pinned to the top-left on focus and targets the main landmark.",
+      "scope": "Rendered by the app root on every route, including the chrome-less and own-nav ones.",
+      "implementedBy": "src/App.jsx > App"
+    },
+    "shell.announcement-bar": {
+      "category": "SHELL",
+      "description": "Full-width accent strip above the navbar carrying a one-line announcement and an arrow link; on narrow viewports it collapses once the page is scrolled.",
+      "scope": "Part of the fixed site header, so it appears on every route that carries the full site chrome (1445 routes).",
+      "implementedBy": "src/components/Header.jsx > Eyebrow"
+    },
+    "shell.site-header": {
+      "category": "SHELL",
+      "description": "Fixed top navigation: wordmark, primary links, dropdown triggers and action buttons, plus a scroll-driven bottom border. Its offset (--header-total) is applied to the page wrapper.",
+      "scope": "Carried by every template whose chrome is full or dark (1445 routes); absent on own-nav, lp-only and bare routes.",
+      "implementedBy": "src/components/Header.jsx > Header"
+    },
+    "shell.mega-menus": {
+      "category": "SHELL",
+      "description": "Click-open dropdown panels under the Product, Community and Company nav items; closes on outside click or Escape.",
+      "scope": "Opened from the site header on all 1445 routes that carry it.",
+      "implementedBy": "src/components/header/MegaMenus.jsx > MENUS"
+    },
+    "shell.mobile-menu": {
+      "category": "SHELL",
+      "description": "Slide-in navigation panel used below the desktop breakpoint.",
+      "scope": "Toggled from the site header on all 1445 routes that carry it.",
+      "implementedBy": "src/components/header/MobileMenu.jsx"
+    },
+    "shell.site-footer": {
+      "category": "SHELL",
+      "description": "Dark footer: wordmark and social glyphs on the left, four link columns, open-source note, legal links and two compliance badge placeholders.",
+      "scope": "Closes every full or dark chrome route (1445 routes); absent on own-nav, lp-only and bare routes.",
+      "implementedBy": "src/components/Footer.jsx"
+    },
+    "shell.dive-nav": {
+      "category": "SHELL",
+      "description": "Compact top bar of the Dive Gallery sub-app (replaces the site header).",
+      "scope": "Used instead of the site header by the gallery and dive-detail templates, 136 routes in total.",
+      "implementedBy": "src/components/content/diveChrome.jsx > DiveNav"
+    },
+    "shell.dive-footer": {
+      "category": "SHELL",
+      "description": "Short footer of the Dive Gallery sub-app (replaces the site footer).",
+      "scope": "Used instead of the site footer by the gallery and dive-detail templates, 136 routes in total.",
+      "implementedBy": "src/components/content/diveChrome.jsx > DiveFooter"
+    },
+    "shell.lp-anchor-nav": {
+      "category": "SHELL",
+      "description": "Fixed single-purpose landing-page bar: logo that returns to top, in-page anchor links and one primary call to action. The site header and footer are hidden through a body attribute while this page is mounted.",
+      "scope": "Only on the book landing page that renders without site chrome (reached directly and via a redirect, 1 routes).",
+      "implementedBy": "src/pages/extra/LpExtra.jsx > LpNav"
+    },
+    "hero.home-hero": {
+      "category": "HERO",
+      "description": "Homepage opening: headline with primary calls to action, an interactive product simulation (ask panel, code panels) and a customer logo strip.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Hero.jsx > Hero"
+    },
+    "hero.persona-hero": {
+      "category": "HERO",
+      "description": "Audience landing opening: headline, supporting line and actions, in a text or illustrated variant; the /product overview adds quick links to the three audience pages.",
+      "scope": "Product overview and the three audience pages (4 routes).",
+      "implementedBy": "src/components/marketing/persona.jsx > PersonaHero"
+    },
+    "hero.product-hero-centered": {
+      "category": "HERO",
+      "description": "Centered product-feature opening: product chip (optionally with a status pill), headline, sub-line, actions and decorative art.",
+      "scope": "Feature pages for Dives, Flights, MCP server and the (clone-only) Guides page.",
+      "implementedBy": "src/components/marketing/feature.jsx > ProductHeroCentered"
+    },
+    "hero.split-hero": {
+      "category": "HERO",
+      "description": "Two-column product opening: text and actions on one side, illustration on the other.",
+      "scope": "Postgres integration page only.",
+      "implementedBy": "src/components/marketing/feature.jsx > SplitHero"
+    },
+    "hero.ducklake-hero": {
+      "category": "HERO",
+      "description": "Opening of the DuckLake page: headline and actions over a horizon-style illustration.",
+      "scope": "DuckLake product page only.",
+      "implementedBy": "src/components/marketing/ducklake.jsx > DuckLakeHero"
+    },
+    "hero.dark-hero": {
+      "category": "HERO",
+      "description": "Dark-background opening of the Hypertenancy page: headline, actions and a tabbed code panel.",
+      "scope": "Hypertenancy product page only.",
+      "implementedBy": "src/components/marketing/hypertenancy.jsx > DarkHero"
+    },
+    "hero.left-hero": {
+      "category": "HERO",
+      "description": "Left-aligned page opening with headline, lede and optional action, parametrised by page (startups, research, trust, community).",
+      "scope": "The four bespoke product pages: startups, research, trust and open source.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > LeftHero"
+    },
+    "hero.persona2-hero": {
+      "category": "HERO",
+      "description": "Opening of the founder and operator landing pages: headline, lede, actions and a product visual.",
+      "scope": "The two persona landing pages (2 routes).",
+      "implementedBy": "src/components/extra/persona2.jsx > PersonaHero2"
+    },
+    "hero.vs-hero": {
+      "category": "HERO",
+      "description": "Opening of a competitor comparison page: headline naming the competitor, lede and a primary action.",
+      "scope": "The six competitor comparison pages.",
+      "implementedBy": "src/components/marketing/vs.jsx > VsHero"
+    },
+    "hero.vs-index-hero": {
+      "category": "HERO",
+      "description": "Opening of the comparisons index: headline and lede introducing the competitor list.",
+      "scope": "The comparisons index only.",
+      "implementedBy": "src/components/extra/vsIndex.jsx > VsIndexHero"
+    },
+    "hero.eu-hero": {
+      "category": "HERO",
+      "description": "EU region page opening: headline, lede and an inline interest form.",
+      "scope": "EU region page only.",
+      "implementedBy": "src/components/extra/euRegion.jsx > EuHero"
+    },
+    "hero.about-hero": {
+      "category": "HERO",
+      "description": "Illustrated about-page opening with a ticker band.",
+      "scope": "About page only.",
+      "implementedBy": "src/components/company/about.jsx > AboutHero"
+    },
+    "hero.careers-hero": {
+      "category": "HERO",
+      "description": "Illustrated careers opening; the collage drops under the text below the wide breakpoint.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > CareersHero"
+    },
+    "hero.support-hero": {
+      "category": "HERO",
+      "description": "Customer-support opening: headline and lede with support illustration.",
+      "scope": "Customer support overview only.",
+      "implementedBy": "src/components/company/contact.jsx > SupportHero"
+    },
+    "hero.contact-support-title": {
+      "category": "HERO",
+      "description": "Sand-grid title band carrying only the page heading, overlapped by the form column beneath.",
+      "scope": "Contact support form page only.",
+      "implementedBy": "src/pages/extra/ContactSupport.jsx > ContactSupport"
+    },
+    "hero.book-hero": {
+      "category": "HERO",
+      "description": "Book landing opening: cover art, headline and primary download action.",
+      "scope": "Free book brief page only.",
+      "implementedBy": "src/components/company/book.jsx > BookHero"
+    },
+    "hero.lp-hero": {
+      "category": "HERO",
+      "description": "Gated landing-page opening: eyebrow chip, headline, sub-line, optional body and fine print, and a single call to action that scrolls to the form; optional cover image.",
+      "scope": "Every gated landing page, including the bespoke book LPs (9 routes).",
+      "implementedBy": "src/components/company/lp.jsx > LPHero"
+    },
+    "hero.feed-hero": {
+      "category": "HERO",
+      "description": "Opening band for listing pages (blog, news, quack feed, learn): headline, optional lede and scroll-linked doodles; the blog variant types its headline.",
+      "scope": "Blog index, news, web-links feed and learn hub (4 routes).",
+      "implementedBy": "src/components/content/FeedHero.jsx"
+    },
+    "hero.events-hero": {
+      "category": "HERO",
+      "description": "Events listing opening: headline, lede, decorative doodles and an illustration.",
+      "scope": "Upcoming and past events listings (14 routes).",
+      "implementedBy": "src/pages/content/EventsHub.jsx > EventsHero"
+    },
+    "hero.case-title-hero": {
+      "category": "HERO",
+      "description": "Case-studies index title band.",
+      "scope": "Case studies index only.",
+      "implementedBy": "src/components/content/cases.jsx > TitleHero"
+    },
+    "hero.case-detail-hero": {
+      "category": "HERO",
+      "description": "Customer story opening: customer logo, headline, key facts and company profile card.",
+      "scope": "Every case study detail page (23 routes).",
+      "implementedBy": "src/components/content/cases.jsx > CaseDetailHero"
+    },
+    "hero.sand-grid-hero": {
+      "category": "HERO",
+      "description": "Sand-grid title band for the videos index; the featured video card overlaps its lower edge.",
+      "scope": "Videos index only.",
+      "implementedBy": "src/components/content/videos.jsx > SandGridHero"
+    },
+    "hero.sand-grid-band": {
+      "category": "HERO",
+      "description": "Empty sand-grid band behind the top of a video page; the player frame overlaps it. A webinar page re-implements the same band inline.",
+      "scope": "Video detail pages and standard webinar pages (160 routes).",
+      "implementedBy": "src/components/content/videos.jsx > SandBand"
+    },
+    "hero.eco-hero": {
+      "category": "HERO",
+      "description": "Ecosystem index opening: headline, lede and a \"become a partner\" action that opens the partner modal.",
+      "scope": "Ecosystem index only.",
+      "implementedBy": "src/components/content/eco.jsx > EcoHero"
+    },
+    "hero.author-hero": {
+      "category": "HERO",
+      "description": "Author profile opening: photo, name and bio with decorative stickers.",
+      "scope": "Every author page (120 routes).",
+      "implementedBy": "src/components/extra/author.jsx > AuthorHero"
+    },
+    "hero.learn-hero": {
+      "category": "HERO",
+      "description": "Learn-article opening: article title and meta.",
+      "scope": "Every learn article (68 routes).",
+      "implementedBy": "src/components/extra/learn.jsx > LearnHero"
+    },
+    "hero.research-hero": {
+      "category": "HERO",
+      "description": "Research-paper opening: paper title and meta.",
+      "scope": "Every research paper page (6 routes).",
+      "implementedBy": "src/components/extra/research.jsx > ResearchHero"
+    },
+    "hero.event-hero": {
+      "category": "HERO",
+      "description": "Event detail opening on a sand band: back link, headline and meta row (type tag, date and time, location).",
+      "scope": "Every event detail page (251 routes).",
+      "implementedBy": "src/components/extra/events.jsx > EventHero"
+    },
+    "hero.glossary-hero": {
+      "category": "HERO",
+      "description": "Glossary index opening: headline, lede and total term count.",
+      "scope": "Glossary index (clone-only route).",
+      "implementedBy": "src/components/extra/glossary.jsx > GlossaryHero"
+    },
+    "hero.podcast-hero": {
+      "category": "HERO",
+      "description": "Dark podcast landing opening: show title, tagline and platform tiles.",
+      "scope": "Podcast index only.",
+      "implementedBy": "src/components/extra/podcast.jsx > PodcastHero"
+    },
+    "hero.split-form-hero": {
+      "category": "HERO",
+      "description": "Centered opening of a split-form landing page: headline, lede and optional partner logo pair.",
+      "scope": "The three split-form landing pages (3 routes).",
+      "implementedBy": "src/components/extra/splitForm.jsx > SplitHero"
+    },
+    "hero.dive-gallery-hero": {
+      "category": "HERO",
+      "description": "Gallery intro: illustration beside headline and lede.",
+      "scope": "Dive gallery index only.",
+      "implementedBy": "src/pages/content/DiveGallery.jsx > DiveGallery"
+    },
+    "hero.divemaxxing-hero": {
+      "category": "HERO",
+      "description": "Opening of the dive-contest landing page: headline and entry action.",
+      "scope": "Dive contest landing page only.",
+      "implementedBy": "src/components/extra/divemaxxing.jsx > Hero"
+    },
+    "hero.jev-hero": {
+      "category": "HERO",
+      "description": "Dark opening of the savings landing page with pill actions and headline figures.",
+      "scope": "Savings landing page only.",
+      "implementedBy": "src/components/extra/jev.jsx > Hero"
+    },
+    "features.marquee-band": {
+      "category": "FEATURES",
+      "description": "Full-width colored strip with a scrolling (or still) repeated label, used as a section divider.",
+      "scope": "Product overview and the six competitor pages (7 routes).",
+      "implementedBy": "src/components/marketing/MarqueeBand.jsx"
+    },
+    "features.architecture-diagram": {
+      "category": "FEATURES",
+      "description": "Homepage section explaining the platform architecture with an animated diagram, storage stack, accordion and a quote card.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Architecture.jsx > Architecture"
+    },
+    "features.platform-overview": {
+      "category": "FEATURES",
+      "description": "Homepage section of product cards and a platform diagram.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Platform.jsx > Platform"
+    },
+    "features.integrations-ecosystem": {
+      "category": "FEATURES",
+      "description": "Homepage band of integration glyphs in an arc with hover tooltips.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Integrations.jsx > Integrations"
+    },
+    "features.agent-native-showcase": {
+      "category": "FEATURES",
+      "description": "Homepage section on agent-native use: terminal animation and agent cards over a dither canvas.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/AgentNative.jsx > AgentNative"
+    },
+    "features.use-case-split": {
+      "category": "FEATURES",
+      "description": "Product overview grid of use-case cells, each with an ink tag, copy and art.",
+      "scope": "Product overview only.",
+      "implementedBy": "src/components/marketing/overview.jsx > UseCaseSplit"
+    },
+    "features.old-world-new-world": {
+      "category": "FEATURES",
+      "description": "Two-column before/after story: sticky art that scales on scroll beside stacked text items, with tag and caption plates.",
+      "scope": "Product overview only.",
+      "implementedBy": "src/components/marketing/overview.jsx > OldWorldNewWorld"
+    },
+    "features.agent-card-carousel": {
+      "category": "FEATURES",
+      "description": "Auto-advancing carousel of agent capability cards.",
+      "scope": "Product overview only.",
+      "implementedBy": "src/components/marketing/overview.jsx > AgentCardCarousel"
+    },
+    "features.divemaxxing-embed": {
+      "category": "FEATURES",
+      "description": "Framed embed placeholder showing an example dive.",
+      "scope": "Dive contest landing page only.",
+      "implementedBy": "src/components/extra/divemaxxing.jsx > Embed"
+    },
+    "features.persona-split-rows": {
+      "category": "FEATURES",
+      "description": "Stack of colored two-column rows (text with sub-items on one side, a colored art panel on the other) alternating sides; compact variant used for value rows on the pricing page.",
+      "scope": "Audience pages and the pricing page (4 routes).",
+      "implementedBy": "src/components/marketing/persona.jsx > PersonaSplitRows"
+    },
+    "features.feature-grid": {
+      "category": "FEATURES",
+      "description": "Grid of capability cards with icon art, heading and short body.",
+      "scope": "Product overview and the three audience pages (4 routes).",
+      "implementedBy": "src/components/marketing/persona.jsx > FeatureGrid"
+    },
+    "features.architecture-panel": {
+      "category": "FEATURES",
+      "description": "Large framed panel illustrating the data architecture, in coral or ink tone.",
+      "scope": "Product overview and the three audience pages (4 routes).",
+      "implementedBy": "src/components/marketing/persona.jsx > ArchitecturePanel"
+    },
+    "features.ecosystem-diagram": {
+      "category": "FEATURES",
+      "description": "Diagram of partner tools around the platform with connecting wires.",
+      "scope": "Product overview and the three audience pages (4 routes).",
+      "implementedBy": "src/components/marketing/persona.jsx > EcosystemDiagram"
+    },
+    "features.video-frame": {
+      "category": "FEATURES",
+      "description": "Static video player frame with a play affordance.",
+      "scope": "Dives page only.",
+      "implementedBy": "src/components/marketing/feature.jsx > VideoFrame"
+    },
+    "features.media-frame": {
+      "category": "FEATURES",
+      "description": "Heading with lede above a large framed product screenshot.",
+      "scope": "Dives and Flights pages.",
+      "implementedBy": "src/components/marketing/feature.jsx > MediaFrame"
+    },
+    "features.problem-cards": {
+      "category": "FEATURES",
+      "description": "Heading plus three problem/solution cards.",
+      "scope": "MCP server and Postgres integration pages.",
+      "implementedBy": "src/components/marketing/feature.jsx > ProblemCards"
+    },
+    "features.sticky-stack": {
+      "category": "FEATURES",
+      "description": "Stack of full-width feature cards that stick and overlay as the page scrolls, under an intro heading; each card has heading, body, optional link and art.",
+      "scope": "Product feature pages, DuckLake and the competitor pages (11 routes).",
+      "implementedBy": "src/components/marketing/StickyStack.jsx"
+    },
+    "features.live-embed": {
+      "category": "FEATURES",
+      "description": "Framed live-embed placeholder of an interactive dive with heading and lede.",
+      "scope": "Dives page only.",
+      "implementedBy": "src/components/marketing/feature.jsx > LiveEmbed"
+    },
+    "features.gallery-teaser": {
+      "category": "FEATURES",
+      "description": "Teaser strip of sample dives linking to the gallery.",
+      "scope": "Dives page only.",
+      "implementedBy": "src/components/marketing/feature.jsx > GalleryTeaser"
+    },
+    "features.cookbook-grid": {
+      "category": "FEATURES",
+      "description": "Heading above a grid of six cookbook cards.",
+      "scope": "Flights page only.",
+      "implementedBy": "src/components/marketing/feature.jsx > CookbookGrid"
+    },
+    "features.browser-window-demo": {
+      "category": "FEATURES",
+      "description": "Browser-window mockup demonstrating the guided workflow.",
+      "scope": "Guides feature page (clone-only route).",
+      "implementedBy": "src/components/marketing/feature.jsx > BrowserWindowDemo"
+    },
+    "features.format-compare": {
+      "category": "FEATURES",
+      "description": "Tag plate and two panels comparing two table formats, with label chips.",
+      "scope": "DuckLake page only.",
+      "implementedBy": "src/components/marketing/ducklake.jsx > FormatCompare"
+    },
+    "features.resource-carousel": {
+      "category": "FEATURES",
+      "description": "Auto-advancing carousel of resource cards (articles, videos).",
+      "scope": "DuckLake page only.",
+      "implementedBy": "src/components/marketing/ducklake.jsx > ResourceCarousel"
+    },
+    "features.alternating-feature-rows": {
+      "category": "FEATURES",
+      "description": "Rows alternating text and illustration, each describing one tenancy capability.",
+      "scope": "Hypertenancy page only.",
+      "implementedBy": "src/components/marketing/hypertenancy.jsx > AlternatingFeatureRows"
+    },
+    "features.program-benefits": {
+      "category": "FEATURES",
+      "description": "Benefit cards for the startup program.",
+      "scope": "Startups page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > ProgramBenefits"
+    },
+    "features.persona-split-sticky": {
+      "category": "FEATURES",
+      "description": "Split layout with a sticky text column beside scrolling persona panels.",
+      "scope": "Startups page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > PersonaSplitSticky"
+    },
+    "features.repo-grid": {
+      "category": "FEATURES",
+      "description": "Grid of open-source repository cards.",
+      "scope": "Open source community page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > RepoGrid"
+    },
+    "features.dark-features": {
+      "category": "FEATURES",
+      "description": "Dark section of feature cards for a persona landing page.",
+      "scope": "The two persona landing pages (2 routes).",
+      "implementedBy": "src/components/extra/persona2.jsx > DarkFeatures"
+    },
+    "features.split-media": {
+      "category": "FEATURES",
+      "description": "Two-column text and media block.",
+      "scope": "Founder landing page only.",
+      "implementedBy": "src/components/extra/persona2.jsx > SplitMedia"
+    },
+    "features.gallery-row": {
+      "category": "FEATURES",
+      "description": "Row of example gallery thumbnails.",
+      "scope": "Operator landing page only.",
+      "implementedBy": "src/components/extra/persona2.jsx > GalleryRow"
+    },
+    "features.security-split": {
+      "category": "FEATURES",
+      "description": "Two-column security statement.",
+      "scope": "Operator landing page only.",
+      "implementedBy": "src/components/extra/persona2.jsx > SecuritySplit"
+    },
+    "features.agent-links": {
+      "category": "FEATURES",
+      "description": "Row of links and prompts for working with the product through AI agents.",
+      "scope": "The two persona landing pages (2 routes).",
+      "implementedBy": "src/components/extra/persona2.jsx > AgentLinks"
+    },
+    "features.vs-why-band": {
+      "category": "FEATURES",
+      "description": "Strip of reasons to choose the platform, below the index hero.",
+      "scope": "Comparisons index only.",
+      "implementedBy": "src/components/extra/vsIndex.jsx > WhyBand"
+    },
+    "features.all-comparisons": {
+      "category": "FEATURES",
+      "description": "Grid of cards linking to every competitor comparison.",
+      "scope": "Comparisons index only.",
+      "implementedBy": "src/components/extra/vsIndex.jsx > AllComparisons"
+    },
+    "features.benchmark-panel": {
+      "category": "FEATURES",
+      "description": "Heading, bullets and a benchmark chart comparing performance against the competitor; absent on one comparison page.",
+      "scope": "Competitor comparison pages (6 routes).",
+      "implementedBy": "src/components/marketing/vs.jsx > BenchmarkPanel"
+    },
+    "features.compare-cards": {
+      "category": "FEATURES",
+      "description": "Cards linking to the other competitor comparisons, excluding the current one.",
+      "scope": "The six competitor pages.",
+      "implementedBy": "src/components/marketing/vs.jsx > CompareCards"
+    },
+    "features.azure-steps": {
+      "category": "FEATURES",
+      "description": "Horizontal row of numbered steps (stacked on small screens) with a steps illustration; the first step is tinted and carries a \"you are here\" tag.",
+      "scope": "Azure page only.",
+      "implementedBy": "src/components/extra/azure.jsx > AzureSteps"
+    },
+    "features.values-cards": {
+      "category": "FEATURES",
+      "description": "Row of expandable company-value cards; scrolls horizontally at tablet widths.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > ValuesCards"
+    },
+    "features.benefits-card": {
+      "category": "FEATURES",
+      "description": "Employee-benefits card with stickers, combined with the \"join us\" ticker band in one section.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > BenefitsCard"
+    },
+    "features.tech-partner-directory": {
+      "category": "FEATURES",
+      "description": "Technology partner cards in a three-column grid with a join-us card inserted after the third; filtered by category chips and search.",
+      "scope": "Ecosystem index only.",
+      "implementedBy": "src/components/content/eco.jsx > PartnerCard"
+    },
+    "proof.customer-stories": {
+      "category": "PROOF",
+      "description": "Homepage customer section: case-study cards and logos.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Customers.jsx > Customers"
+    },
+    "proof.quote-carousel": {
+      "category": "PROOF",
+      "description": "Autoplaying carousel of customer quotes with logo, name, role and an optional case-study link; variants per page.",
+      "scope": "Pricing, Hypertenancy and the competitor pages (8 routes).",
+      "implementedBy": "src/components/marketing/QuoteCarousel.jsx"
+    },
+    "proof.quote-spotlight": {
+      "category": "PROOF",
+      "description": "Single large customer quote with tag line and attribution.",
+      "scope": "Flights, MCP server, Postgres integration and startups pages.",
+      "implementedBy": "src/components/marketing/QuoteSpotlight.jsx"
+    },
+    "proof.case-study-carousel": {
+      "category": "PROOF",
+      "description": "Horizontal carousel of customer-story cards.",
+      "scope": "Product overview and the three audience pages (4 routes).",
+      "implementedBy": "src/components/marketing/persona.jsx > CaseStudyCarousel"
+    },
+    "proof.logo-bar": {
+      "category": "PROOF",
+      "description": "Row of customer logos on the comparison pages.",
+      "scope": "The six competitor pages.",
+      "implementedBy": "src/components/marketing/vs.jsx > LogoBar"
+    },
+    "proof.investor-logos": {
+      "category": "PROOF",
+      "description": "Row of investor and partner logos for the startups program.",
+      "scope": "Startups page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > InvestorLogos"
+    },
+    "proof.logo-marquee": {
+      "category": "PROOF",
+      "description": "Auto-scrolling marquee of customer logos.",
+      "scope": "Startups page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > LogoMarquee"
+    },
+    "proof.persona2-logo-strip": {
+      "category": "PROOF",
+      "description": "Customer logo strip under a persona hero.",
+      "scope": "The two persona landing pages (2 routes).",
+      "implementedBy": "src/components/extra/persona2.jsx > LogoStrip2"
+    },
+    "proof.industry-swiper": {
+      "category": "PROOF",
+      "description": "Swiper of industry tabs, each with example use-case tiles.",
+      "scope": "The two persona landing pages (2 routes).",
+      "implementedBy": "src/components/extra/persona2.jsx > IndustrySwiper"
+    },
+    "proof.eu-partners": {
+      "category": "PROOF",
+      "description": "Grid of EU-region partner logos and blurbs.",
+      "scope": "EU region page only.",
+      "implementedBy": "src/components/extra/euRegion.jsx > EuPartners"
+    },
+    "proof.investors": {
+      "category": "PROOF",
+      "description": "Investor logo list.",
+      "scope": "About page only.",
+      "implementedBy": "src/components/company/about.jsx > Investors"
+    },
+    "proof.team-photo": {
+      "category": "PROOF",
+      "description": "Full-width team photo in a bordered frame.",
+      "scope": "About page only.",
+      "implementedBy": "src/components/company/about.jsx > TeamPhoto"
+    },
+    "proof.careers-testimonials": {
+      "category": "PROOF",
+      "description": "Dark band with an employee testimonial carousel (vertical slides at wide widths, horizontal below).",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > Testimonials"
+    },
+    "proof.testimonial-carousel": {
+      "category": "PROOF",
+      "description": "Hero carousel of customer testimonial slides linking to stories.",
+      "scope": "Case studies index only.",
+      "implementedBy": "src/components/content/cases.jsx > TestimonialCarousel"
+    },
+    "proof.case-study-grid": {
+      "category": "PROOF",
+      "description": "Three-column grid of case-study cards with decorative doodles, filtered by category chips.",
+      "scope": "Case studies index only.",
+      "implementedBy": "src/components/content/cases.jsx > CaseStudyCard"
+    },
+    "proof.case-quote-band": {
+      "category": "PROOF",
+      "description": "Pull-quote band under a case-study hero.",
+      "scope": "Every case study detail page (23 routes).",
+      "implementedBy": "src/components/content/cases.jsx > QuoteBand"
+    },
+    "proof.consulting-partner-directory": {
+      "category": "PROOF",
+      "description": "Consulting partner cards in the same card style as technology partners, under their own heading.",
+      "scope": "Ecosystem index only.",
+      "implementedBy": "src/components/content/eco.jsx > PartnerCard"
+    },
+    "content.faq-accordion": {
+      "category": "CONTENT",
+      "description": "Ruled accordion of question/answer rows with optional inline links and a trailing empty row; variants per page.",
+      "scope": "Product feature pages, pricing, startups, product overview and DuckDB users pages, competitor pages and some case studies (36 routes).",
+      "implementedBy": "src/components/marketing/FAQ.jsx"
+    },
+    "content.faq-section-article": {
+      "category": "CONTENT",
+      "description": "FAQ block placed under an article or video: heading and accordion rows sized for article width.",
+      "scope": "Video detail, learn articles, glossary terms and book chapters (575 routes).",
+      "implementedBy": "src/components/content/videos.jsx > FAQSection"
+    },
+    "content.lp-faq": {
+      "category": "CONTENT",
+      "description": "FAQ accordion that is part of a gated landing page, styled to match the LP bands.",
+      "scope": "Landing pages with a FAQ band (4 routes).",
+      "implementedBy": "src/components/company/lp.jsx > FAQSection"
+    },
+    "content.lp-band-sections": {
+      "category": "CONTENT",
+      "description": "Sequence of full-width colored bands (sun, white, cream, ink, teal), each with title, intro and a body widget (stat rows, card grids, checklists, chapter lists, quotes, code window) that differs per landing page.",
+      "scope": "Every gated landing page body; band contents vary per page (9 routes).",
+      "implementedBy": "src/components/company/lp.jsx > LPSection"
+    },
+    "content.article-prose": {
+      "category": "CONTENT",
+      "description": "Long-form body renderer for generated article blocks: headings, paragraphs, lists, quotes, code, tables, admonitions and footnotes.",
+      "scope": "Every article-shaped page: blog, case study, video, webinar, learn, research, glossary, book chapter, ecosystem partner, community code (972 routes).",
+      "implementedBy": "src/components/content/ArticleProse.jsx"
+    },
+    "content.compact-page-title": {
+      "category": "CONTENT",
+      "description": "Compact all-caps page heading above long-form text; the same heading style is inlined in the community-code page.",
+      "scope": "Generic prose pages and community code (12 routes).",
+      "implementedBy": "src/components/extra/generic.jsx > GenericPage"
+    },
+    "content.shape-prose": {
+      "category": "CONTENT",
+      "description": "Placeholder policy-style prose generated from a measured block shape, 816px column.",
+      "scope": "Generic prose pages (11 routes).",
+      "implementedBy": "src/components/extra/generic.jsx > ShapeProse"
+    },
+    "content.origin-story": {
+      "category": "CONTENT",
+      "description": "Company origin narrative as prose beside an image.",
+      "scope": "About page only.",
+      "implementedBy": "src/components/company/about.jsx > OriginStory"
+    },
+    "content.how-we-work": {
+      "category": "CONTENT",
+      "description": "Text and imagery on how the team works.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > HowWeWork"
+    },
+    "content.video-feature": {
+      "category": "CONTENT",
+      "description": "Featured culture video frame with caption.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > VideoFeature"
+    },
+    "content.jobs-board": {
+      "category": "CONTENT",
+      "description": "Open-roles board (an embedded job board rebuilt from static data): select filters and a list of job cards.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > JobsBoard"
+    },
+    "content.photo-marquee": {
+      "category": "CONTENT",
+      "description": "Auto-scrolling strip of team photos.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > PhotoMarquee"
+    },
+    "content.support-body": {
+      "category": "CONTENT",
+      "description": "Support overview body: a grid of support option cards, a yellow callout card and a status-page link.",
+      "scope": "Customer support overview only.",
+      "implementedBy": "src/components/company/contact.jsx > SupportBody"
+    },
+    "content.contact-support-help": {
+      "category": "CONTENT",
+      "description": "Right-hand help column: heading, long copy and three link actions (overview, policy, status).",
+      "scope": "Contact support form page only.",
+      "implementedBy": "src/pages/extra/ContactSupport.jsx > ContactSupport"
+    },
+    "content.book-body": {
+      "category": "CONTENT",
+      "description": "Book brief body: offer card, descriptive copy, chapter banner and chapter cards linking to the chapter summaries.",
+      "scope": "Free book brief page only.",
+      "implementedBy": "src/components/company/book.jsx > BookBody"
+    },
+    "content.research-chips": {
+      "category": "CONTENT",
+      "description": "Row of topic chips filtering the paper list.",
+      "scope": "Research page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > ResearchChips"
+    },
+    "content.trust-section": {
+      "category": "CONTENT",
+      "description": "Tabbed trust and security content.",
+      "scope": "Trust and security page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > TrustSection"
+    },
+    "content.code-sample": {
+      "category": "CONTENT",
+      "description": "Heading, lede and tabbed SQL code panel with copy button.",
+      "scope": "DuckLake page only.",
+      "implementedBy": "src/components/marketing/ducklake.jsx > CodeSample"
+    },
+    "content.comparison-table": {
+      "category": "CONTENT",
+      "description": "Feature-by-feature table of the platform against the named competitor.",
+      "scope": "The six competitor pages.",
+      "implementedBy": "src/components/marketing/vs.jsx > ComparisonTable"
+    },
+    "content.last-updated-note": {
+      "category": "CONTENT",
+      "description": "Small \"last updated\" note under the comparison table.",
+      "scope": "The six competitor pages.",
+      "implementedBy": "src/components/marketing/vs.jsx > LastUpdated"
+    },
+    "content.azure-coming": {
+      "category": "CONTENT",
+      "description": "Heading with an intro paragraph above a grid of four numbered cards (illustration, number, title, short text) describing what is coming to Azure.",
+      "scope": "Azure page only.",
+      "implementedBy": "src/components/extra/azure.jsx > AzureComing"
+    },
+    "content.azure-faq": {
+      "category": "CONTENT",
+      "description": "Azure-specific FAQ accordion with its own styling.",
+      "scope": "Azure page only.",
+      "implementedBy": "src/components/extra/azure.jsx > AzureFaq"
+    },
+    "content.case-lede": {
+      "category": "CONTENT",
+      "description": "Lede paragraph with accent left rule that opens the case-study article column.",
+      "scope": "Every case study detail page (23 routes).",
+      "implementedBy": "src/pages/content/CaseDetail.jsx > CaseDetail"
+    },
+    "content.partner-detail": {
+      "category": "CONTENT",
+      "description": "Partner profile: logo card, name, category tags, prose body and external link icons.",
+      "scope": "Every ecosystem partner page (84 routes).",
+      "implementedBy": "src/pages/content/EcosystemDetail.jsx > EcosystemDetail"
+    },
+    "content.video-player-frame": {
+      "category": "CONTENT",
+      "description": "Static 16:9 video player frame.",
+      "scope": "Video detail pages (149 routes).",
+      "implementedBy": "src/components/content/videos.jsx > VideoPlayerFrame"
+    },
+    "content.video-title-meta": {
+      "category": "CONTENT",
+      "description": "Tag chips, headline and date under the player.",
+      "scope": "Video detail pages (149 routes).",
+      "implementedBy": "src/pages/content/VideoDetail.jsx > VideoDetail"
+    },
+    "content.transcript": {
+      "category": "CONTENT",
+      "description": "Collapsible timestamped transcript.",
+      "scope": "Video detail pages (149 routes).",
+      "implementedBy": "src/components/content/videos.jsx > Transcript"
+    },
+    "content.webinar-player": {
+      "category": "CONTENT",
+      "description": "Player frame that can be gated behind a registration modal before play.",
+      "scope": "Standard webinar and video pages (11 routes).",
+      "implementedBy": "src/components/extra/webinar.jsx > Player"
+    },
+    "content.webinar-meta": {
+      "category": "CONTENT",
+      "description": "Tag chips, headline, date and featured author links under the webinar player.",
+      "scope": "Standard webinar and video pages (11 routes).",
+      "implementedBy": "src/components/extra/webinar.jsx > WebinarStandard"
+    },
+    "content.article-hero-header": {
+      "category": "CONTENT",
+      "description": "Blog article header: back link, headline, topic chips, date and read time, byline links and share buttons.",
+      "scope": "Every blog post (272 routes).",
+      "implementedBy": "src/pages/content/BlogPost.jsx > Hero"
+    },
+    "content.event-body": {
+      "category": "CONTENT",
+      "description": "Event article column beside a sticky sidebar that holds the registration action.",
+      "scope": "Every event detail page (251 routes).",
+      "implementedBy": "src/components/extra/events.jsx > EventBody"
+    },
+    "content.glossary-term-header": {
+      "category": "CONTENT",
+      "description": "Term headline, last-updated stamp and summary paragraph.",
+      "scope": "Every glossary term page (347 routes).",
+      "implementedBy": "src/pages/extra/GlossaryTerm.jsx > GlossaryTerm"
+    },
+    "content.related-terms": {
+      "category": "CONTENT",
+      "description": "Chip list of related glossary terms.",
+      "scope": "Every glossary term page (347 routes).",
+      "implementedBy": "src/components/extra/glossary.jsx > RelatedTerms"
+    },
+    "content.glossary-letters": {
+      "category": "CONTENT",
+      "description": "A-Z grouped term lists with anchors, filtered by the search bar.",
+      "scope": "Glossary index (clone-only route).",
+      "implementedBy": "src/components/extra/glossary.jsx > LetterSection"
+    },
+    "content.chapter-header": {
+      "category": "CONTENT",
+      "description": "Chapter number, read-time label above the chapter headline.",
+      "scope": "Every book chapter summary (11 routes).",
+      "implementedBy": "src/components/extra/bookChapter.jsx > ChapterHeader"
+    },
+    "content.chapter-sidebar": {
+      "category": "CONTENT",
+      "description": "Sidebar for navigating the book chapter summaries.",
+      "scope": "Every book chapter summary (11 routes).",
+      "implementedBy": "src/components/extra/bookChapter.jsx > ChapterSidebar"
+    },
+    "content.episode-body": {
+      "category": "CONTENT",
+      "description": "Dark episode page body: title, meta, summary, platform tiles, embedded player with chapters, paywall card and transcript.",
+      "scope": "Every podcast episode page (11 routes).",
+      "implementedBy": "src/components/extra/podcast.jsx > EpisodeBody"
+    },
+    "content.dive-detail-card": {
+      "category": "CONTENT",
+      "description": "Detail card of one dive: embedded interactive preview, title, author and actions.",
+      "scope": "Every dive detail page (135 routes).",
+      "implementedBy": "src/components/extra/dive.jsx > DiveCard"
+    },
+    "content.dive-prompts-used": {
+      "category": "CONTENT",
+      "description": "List of prompts used to build the dive.",
+      "scope": "Every dive detail page (135 routes).",
+      "implementedBy": "src/components/extra/dive.jsx > PromptsUsed"
+    },
+    "content.dive-comments": {
+      "category": "CONTENT",
+      "description": "Comment thread under a dive.",
+      "scope": "Every dive detail page (135 routes).",
+      "implementedBy": "src/components/extra/dive.jsx > Comments"
+    },
+    "content.divemaxxing-what-is-a-dive": {
+      "category": "CONTENT",
+      "description": "Explainer of what a dive is.",
+      "scope": "Dive contest landing page only.",
+      "implementedBy": "src/components/extra/divemaxxing.jsx > WhatsADive"
+    },
+    "content.divemaxxing-competition": {
+      "category": "CONTENT",
+      "description": "Competition rules overview.",
+      "scope": "Dive contest landing page only.",
+      "implementedBy": "src/components/extra/divemaxxing.jsx > Competition"
+    },
+    "content.divemaxxing-judges": {
+      "category": "CONTENT",
+      "description": "Judges panel.",
+      "scope": "Dive contest landing page only.",
+      "implementedBy": "src/components/extra/divemaxxing.jsx > Judges"
+    },
+    "content.divemaxxing-timeline": {
+      "category": "CONTENT",
+      "description": "Contest timeline.",
+      "scope": "Dive contest landing page only.",
+      "implementedBy": "src/components/extra/divemaxxing.jsx > Timeline"
+    },
+    "content.divemaxxing-prizes": {
+      "category": "CONTENT",
+      "description": "Prize list.",
+      "scope": "Dive contest landing page only.",
+      "implementedBy": "src/components/extra/divemaxxing.jsx > Prizes"
+    },
+    "content.sneak-peek": {
+      "category": "CONTENT",
+      "description": "Pre-wrapped bullet list previewing what the ebook contains, under the split panel.",
+      "scope": "Two of the three split-form pages.",
+      "implementedBy": "src/components/extra/splitForm.jsx > SneakPeek"
+    },
+    "editorial.home-blog-teaser": {
+      "category": "EDITORIAL",
+      "description": "Homepage strip of latest blog cards.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Blog.jsx > Blog"
+    },
+    "editorial.featured-post-card": {
+      "category": "EDITORIAL",
+      "description": "Large horizontal card for the newest blog post.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/components/content/feedCards.jsx > FeaturedPostCard"
+    },
+    "editorial.post-card-grid": {
+      "category": "EDITORIAL",
+      "description": "Grid of post cards (thumbnail, topic or type badge, title, date) laid out on the shared feed grid.",
+      "scope": "Blog index, news and web-links feed (3 routes).",
+      "implementedBy": "src/components/content/feedCards.jsx > PostCard"
+    },
+    "editorial.news-digest-card": {
+      "category": "EDITORIAL",
+      "description": "Wide card summarising the latest news digest.",
+      "scope": "News index only.",
+      "implementedBy": "src/components/content/feedCards.jsx > NewsDigestCard"
+    },
+    "editorial.learn-card-grid": {
+      "category": "EDITORIAL",
+      "description": "Two-column grid of learn guide cards with icon, title, description and link.",
+      "scope": "Learn hub only.",
+      "implementedBy": "src/pages/content/LearnHub.jsx > LearnCard"
+    },
+    "editorial.featured-video": {
+      "category": "EDITORIAL",
+      "description": "Large featured video card overlapping the videos hero.",
+      "scope": "Videos index only.",
+      "implementedBy": "src/components/content/videos.jsx > FeaturedVideo"
+    },
+    "editorial.video-card-grid": {
+      "category": "EDITORIAL",
+      "description": "Three-column grid of video cards with a subscribe tile inserted.",
+      "scope": "Videos index only.",
+      "implementedBy": "src/components/content/videos.jsx > VideoCard"
+    },
+    "editorial.related-videos": {
+      "category": "EDITORIAL",
+      "description": "Three related video cards under a video page.",
+      "scope": "Video detail pages (149 routes).",
+      "implementedBy": "src/components/content/videos.jsx > RelatedVideos"
+    },
+    "editorial.event-row-list": {
+      "category": "EDITORIAL",
+      "description": "Vertical list of upcoming events, each a bordered row with date block, title, description, location, type tag and details button; a subscribe banner follows the first.",
+      "scope": "Upcoming events only.",
+      "implementedBy": "src/pages/content/EventsHub.jsx > EventRow"
+    },
+    "editorial.past-event-list": {
+      "category": "EDITORIAL",
+      "description": "Vertical list of past events with recording tags.",
+      "scope": "Past events listing (13 routes).",
+      "implementedBy": "src/components/extra/events.jsx > PastEventRow"
+    },
+    "editorial.more-events": {
+      "category": "EDITORIAL",
+      "description": "Strip of other upcoming events under an event.",
+      "scope": "Every event detail page (251 routes).",
+      "implementedBy": "src/components/extra/events.jsx > MoreEvents"
+    },
+    "editorial.paper-list": {
+      "category": "EDITORIAL",
+      "description": "List of research paper cards.",
+      "scope": "Research page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > PaperList"
+    },
+    "editorial.social-carousel": {
+      "category": "EDITORIAL",
+      "description": "Autoplaying carousel of community social posts.",
+      "scope": "Open source community page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > SocialCarousel"
+    },
+    "editorial.eu-webinars": {
+      "category": "EDITORIAL",
+      "description": "Cards for EU-region webinars.",
+      "scope": "EU region page only.",
+      "implementedBy": "src/components/extra/euRegion.jsx > EuWebinars"
+    },
+    "editorial.eu-posts": {
+      "category": "EDITORIAL",
+      "description": "Post cards for EU-region articles.",
+      "scope": "EU region page only.",
+      "implementedBy": "src/components/extra/euRegion.jsx > EuPosts"
+    },
+    "editorial.recommendation-carousel": {
+      "category": "EDITORIAL",
+      "description": "Sticky sidebar carousel recommending two articles and a webinar.",
+      "scope": "Every blog post (272 routes).",
+      "implementedBy": "src/components/content/RecCarousel.jsx"
+    },
+    "editorial.read-next-grid": {
+      "category": "EDITORIAL",
+      "description": "Grid of \"read next\" cards with a footer link back to the parent index.",
+      "scope": "Learn articles and glossary terms (415 routes).",
+      "implementedBy": "src/components/extra/readNext.jsx"
+    },
+    "editorial.author-content-grid": {
+      "category": "EDITORIAL",
+      "description": "Grid of the author’s posts and videos.",
+      "scope": "Every author page (120 routes).",
+      "implementedBy": "src/components/extra/author.jsx > AuthorGrid"
+    },
+    "editorial.latest-episode": {
+      "category": "EDITORIAL",
+      "description": "Large dark card for the newest podcast episode.",
+      "scope": "Podcast index only.",
+      "implementedBy": "src/components/extra/podcast.jsx > LatestEpisode"
+    },
+    "editorial.episode-grid": {
+      "category": "EDITORIAL",
+      "description": "Grid of podcast episode cards.",
+      "scope": "Podcast index only.",
+      "implementedBy": "src/components/extra/podcast.jsx > EpisodeGrid"
+    },
+    "editorial.dive-card-grid": {
+      "category": "EDITORIAL",
+      "description": "Gallery grid of dive cards (thumbnail, tags, author, vote buttons) plus its own load-more link.",
+      "scope": "Dive gallery index only.",
+      "implementedBy": "src/pages/content/DiveGallery.jsx > DiveCard"
+    },
+    "conversion.cta-band": {
+      "category": "CONVERSION",
+      "description": "Closing call-to-action band with headline, optional sub-line and one or two buttons; variants per page.",
+      "scope": "Product feature pages, DuckLake, Hypertenancy and the competitor pages (12 routes).",
+      "implementedBy": "src/components/marketing/CTABand.jsx"
+    },
+    "conversion.yellow-cta": {
+      "category": "CONVERSION",
+      "description": "Yellow band with headline and action between the architecture panel and the ecosystem diagram.",
+      "scope": "Two of the three audience pages.",
+      "implementedBy": "src/components/marketing/persona.jsx > YellowCTA"
+    },
+    "conversion.contact-form": {
+      "category": "CONVERSION",
+      "description": "Contact sales form on the overview and DuckDB-user pages with validation and a success state.",
+      "scope": "Product overview and DuckDB users page (2 routes).",
+      "implementedBy": "src/components/marketing/persona.jsx > ContactForm"
+    },
+    "conversion.newsletter-signup": {
+      "category": "CONVERSION",
+      "description": "Inline newsletter signup band with a large mascot, in the DuckLake page.",
+      "scope": "DuckLake page only.",
+      "implementedBy": "src/components/marketing/ducklake.jsx > NewsletterSignup"
+    },
+    "conversion.apply-form": {
+      "category": "CONVERSION",
+      "description": "Startup-program application form that the hero action scrolls to.",
+      "scope": "Startups page only.",
+      "implementedBy": "src/components/marketing/bespoke.jsx > ApplyForm"
+    },
+    "conversion.persona2-pricing-band": {
+      "category": "CONVERSION",
+      "description": "Pricing summary band on a persona landing page with start action.",
+      "scope": "The two persona landing pages (2 routes).",
+      "implementedBy": "src/components/extra/persona2.jsx > PricingBand2"
+    },
+    "conversion.persona2-closing-band": {
+      "category": "CONVERSION",
+      "description": "Closing call to action of a persona landing page.",
+      "scope": "The two persona landing pages (2 routes).",
+      "implementedBy": "src/components/extra/persona2.jsx > ClosingBand2"
+    },
+    "conversion.azure-waitlist": {
+      "category": "CONVERSION",
+      "description": "Waitlist opening styled as a code editor, with a playful and a plain form.",
+      "scope": "Azure page only.",
+      "implementedBy": "src/components/extra/azure.jsx > AzureWaitlist"
+    },
+    "conversion.azure-vote": {
+      "category": "CONVERSION",
+      "description": "Interest block on the Azure page: a headline and intro beside a query-style card showing a region count, with a link that scrolls up to the waitlist form, and a region-map illustration. It has no voting control of its own.",
+      "scope": "Azure page only.",
+      "implementedBy": "src/components/extra/azure.jsx > AzureVote"
+    },
+    "conversion.azure-closing": {
+      "category": "CONVERSION",
+      "description": "Closing action of the Azure page.",
+      "scope": "Azure page only.",
+      "implementedBy": "src/components/extra/azure.jsx > AzureClosing"
+    },
+    "conversion.contact-band": {
+      "category": "CONVERSION",
+      "description": "About-page band inviting visitors to get in touch.",
+      "scope": "About page only.",
+      "implementedBy": "src/components/company/about.jsx > ContactBand"
+    },
+    "conversion.community-cta": {
+      "category": "CONVERSION",
+      "description": "About-page community call to action.",
+      "scope": "About page only.",
+      "implementedBy": "src/components/company/about.jsx > CommunityCTA"
+    },
+    "conversion.careers-closing-cta": {
+      "category": "CONVERSION",
+      "description": "Closing call to action of the careers page.",
+      "scope": "Careers page only.",
+      "implementedBy": "src/components/company/careers.jsx > ClosingCTA"
+    },
+    "conversion.contact-chooser": {
+      "category": "CONVERSION",
+      "description": "Contact hub: headline and a set of cards, each linking to a contact path.",
+      "scope": "Contact hub only.",
+      "implementedBy": "src/components/company/contact.jsx > ContactChooser"
+    },
+    "conversion.contact-split-form": {
+      "category": "CONVERSION",
+      "description": "Hero with a product-expert request form pulled up over it and an illustration on the form edge.",
+      "scope": "Product expert contact page and its onboarding redirect (2 routes).",
+      "implementedBy": "src/components/company/contact.jsx > ContactSplitForm"
+    },
+    "conversion.support-request-form": {
+      "category": "CONVERSION",
+      "description": "Support request form (name, email, company, message) with validation and local success state.",
+      "scope": "Contact support form page only.",
+      "implementedBy": "src/pages/extra/ContactSupport.jsx > SupportForm"
+    },
+    "conversion.gated-form": {
+      "category": "CONVERSION",
+      "description": "Download form that closes a gated landing page: name, email, company fields, consent and submit, with local success state.",
+      "scope": "Gated landing pages and the book LP variants (8 routes).",
+      "implementedBy": "src/components/company/lp.jsx > GatedFormSection"
+    },
+    "conversion.gated-form-alt": {
+      "category": "CONVERSION",
+      "description": "Variant of the gated download form used on the long DuckLake guide LP.",
+      "scope": "DuckLake guide LP only.",
+      "implementedBy": "src/components/extra/lpBlocks.jsx > GatedFormSection2"
+    },
+    "conversion.split-form-panel": {
+      "category": "CONVERSION",
+      "description": "Two-column panel: sun prose column beside a cream lead form with success overlay.",
+      "scope": "The three split-form pages (3 routes).",
+      "implementedBy": "src/components/extra/splitForm.jsx > SplitPanel"
+    },
+    "conversion.side-form": {
+      "category": "CONVERSION",
+      "description": "Registration or download form in a side column beside generic prose.",
+      "scope": "The two generic pages that carry a form.",
+      "implementedBy": "src/components/extra/generic.jsx > SideForm"
+    },
+    "conversion.form-bar": {
+      "category": "CONVERSION",
+      "description": "Bottom bar that scrolls to the side form on small screens.",
+      "scope": "The two generic pages that carry a form.",
+      "implementedBy": "src/components/extra/generic.jsx > FormBar"
+    },
+    "conversion.webinar-register-lp": {
+      "category": "CONVERSION",
+      "description": "Registration landing: centered headline, logo pair, body copy and registration form beside a cover image.",
+      "scope": "On-demand webinar pages with a registration form.",
+      "implementedBy": "src/components/extra/webinar.jsx > WebinarRegisterLP"
+    },
+    "conversion.webinar-side-form": {
+      "category": "CONVERSION",
+      "description": "Webinar page with banner and copy beside a registration form.",
+      "scope": "One webinar page.",
+      "implementedBy": "src/components/extra/webinar.jsx > WebinarSideForm"
+    },
+    "conversion.subscribe-tile": {
+      "category": "CONVERSION",
+      "description": "Newsletter subscribe tile that sits inside feed grids.",
+      "scope": "Blog and videos listings (2 routes).",
+      "implementedBy": "src/components/content/subscribe.jsx > SubscribeTile"
+    },
+    "conversion.subscribe-banner": {
+      "category": "CONVERSION",
+      "description": "Wide newsletter banner inside a feed, spanning the grid.",
+      "scope": "News and upcoming events listings (2 routes).",
+      "implementedBy": "src/components/content/subscribe.jsx > SubscribeBanner"
+    },
+    "conversion.subscribe-band": {
+      "category": "CONVERSION",
+      "description": "Full-width newsletter band closing an article.",
+      "scope": "Blog post pages (272 routes).",
+      "implementedBy": "src/components/content/subscribe.jsx > SubscribeBand"
+    },
+    "conversion.mobile-subscribe-button": {
+      "category": "CONVERSION",
+      "description": "Floating subscribe button for small screens.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/components/content/subscribe.jsx > MobileSubscribeButton"
+    },
+    "conversion.floating-get-started": {
+      "category": "CONVERSION",
+      "description": "Get-started button pinned to the viewport bottom-right while the article is on screen; static after the grid on small screens.",
+      "scope": "Blog post pages (272 routes).",
+      "implementedBy": "src/pages/content/BlogPost.jsx > BlogPost"
+    },
+    "conversion.eco-join-card": {
+      "category": "CONVERSION",
+      "description": "Card inviting tools to join the partner program, opens the partner modal.",
+      "scope": "Ecosystem index only.",
+      "implementedBy": "src/components/content/eco.jsx > JoinFlockCard"
+    },
+    "conversion.eco-build-cta": {
+      "category": "CONVERSION",
+      "description": "Closing \"build with us\" band.",
+      "scope": "Ecosystem index only.",
+      "implementedBy": "src/components/content/eco.jsx > BuildCTA"
+    },
+    "conversion.speaker-banner": {
+      "category": "CONVERSION",
+      "description": "Sand banner inviting speaker applications.",
+      "scope": "Upcoming and past events listings (14 routes).",
+      "implementedBy": "src/pages/content/EventsHub.jsx > SpeakerBanner"
+    },
+    "conversion.event-newsletter-band": {
+      "category": "CONVERSION",
+      "description": "Newsletter band under an event.",
+      "scope": "Every event detail page (251 routes).",
+      "implementedBy": "src/components/extra/events.jsx > EventNewsletterBand"
+    },
+    "conversion.mobile-register-bar": {
+      "category": "CONVERSION",
+      "description": "Sticky bottom registration bar for small screens that hides while the sidebar action is visible.",
+      "scope": "Every event detail page (251 routes).",
+      "implementedBy": "src/components/extra/events.jsx > MobileRegisterBar"
+    },
+    "conversion.author-subscribe": {
+      "category": "CONVERSION",
+      "description": "Subscribe band closing an author page.",
+      "scope": "Every author page (120 routes).",
+      "implementedBy": "src/components/extra/author.jsx > AuthorSubscribe"
+    },
+    "conversion.learn-start-card": {
+      "category": "CONVERSION",
+      "description": "Get-started card in the sidebar at wide widths and inline below the body otherwise.",
+      "scope": "Every learn article (68 routes).",
+      "implementedBy": "src/components/extra/learn.jsx > StartCard"
+    },
+    "conversion.term-promo": {
+      "category": "CONVERSION",
+      "description": "Promotional block inserted inside the term body on terms that define one.",
+      "scope": "Glossary term pages (347 routes).",
+      "implementedBy": "src/components/extra/glossary.jsx > TermPromo"
+    },
+    "conversion.chapter-cta": {
+      "category": "CONVERSION",
+      "description": "Call to action below the chapter headline.",
+      "scope": "Every book chapter summary (11 routes).",
+      "implementedBy": "src/components/extra/bookChapter.jsx > ChapterCta"
+    },
+    "conversion.book-panel": {
+      "category": "CONVERSION",
+      "description": "Book promotion panel inline in the chapter article.",
+      "scope": "Every book chapter summary (11 routes).",
+      "implementedBy": "src/components/extra/bookChapter.jsx > BookPanel"
+    },
+    "conversion.read-ebook-bar": {
+      "category": "CONVERSION",
+      "description": "Sticky bottom bar pointing to the ebook.",
+      "scope": "Every book chapter summary (11 routes).",
+      "implementedBy": "src/components/extra/bookChapter.jsx > ReadEbookBar"
+    },
+    "conversion.jev-closing": {
+      "category": "CONVERSION",
+      "description": "Closing call to action of the savings landing page.",
+      "scope": "Savings landing page only.",
+      "implementedBy": "src/components/extra/jev.jsx > Closing"
+    },
+    "commerce.pricing-hero": {
+      "category": "COMMERCE",
+      "description": "Pricing page opening: the pricing tab strip (active on the first tab), a centered all-caps page title and a one-line lede.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/marketing/pricing.jsx > PricingHero"
+    },
+    "commerce.tier-cards": {
+      "category": "COMMERCE",
+      "description": "Plan tier cards with price, feature bullets and action.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/marketing/pricing.jsx > TierCards"
+    },
+    "commerce.plan-matrix": {
+      "category": "COMMERCE",
+      "description": "Feature comparison table across plans, with a region select.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/marketing/pricing.jsx > PlanMatrix"
+    },
+    "commerce.instances": {
+      "category": "COMMERCE",
+      "description": "Compute instance cards with sizes.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/marketing/pricing.jsx > InstancesSection"
+    },
+    "commerce.pricing-final-cta": {
+      "category": "COMMERCE",
+      "description": "Closing sign-up band of the pricing page.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/marketing/pricing.jsx > FinalCTA"
+    },
+    "commerce.duckdb-support-panel": {
+      "category": "COMMERCE",
+      "description": "Panel presenting the DuckDB support offering.",
+      "scope": "DuckDB support pricing page only.",
+      "implementedBy": "src/components/marketing/pricing.jsx > DuckDBSupportPanel"
+    },
+    "commerce.jev-calculator": {
+      "category": "COMMERCE",
+      "description": "Interactive savings calculator with range slider and result figures.",
+      "scope": "Savings landing page only.",
+      "implementedBy": "src/components/extra/jev.jsx > Calculator"
+    },
+    "commerce.jev-pricing": {
+      "category": "COMMERCE",
+      "description": "Dark pricing block of the savings landing page.",
+      "scope": "Savings landing page only.",
+      "implementedBy": "src/components/extra/jev.jsx > Pricing"
+    },
+    "legal.document-title": {
+      "category": "LEGAL",
+      "description": "Page-title header of a legal document (optionally with a subtitle). A near-identical second implementation, LegalTocShell in src/components/extra/generic.jsx, serves the terms of service and candidate privacy routes.",
+      "scope": "All legal documents that carry a table of contents (4 routes).",
+      "implementedBy": "src/components/company/legal.jsx > LegalShell"
+    },
+    "legal.toc-sidebar": {
+      "category": "LEGAL",
+      "description": "Bordered \"table of contents\" card with scroll-spy and collapsible sub-sections, sticky on the right at wide widths. Second implementation inside LegalTocShell.",
+      "scope": "All legal documents that carry a table of contents (4 routes).",
+      "implementedBy": "src/components/company/legal.jsx > Toc"
+    },
+    "legal.document-article": {
+      "category": "LEGAL",
+      "description": "Long-form legal text with headings matched to the table of contents (privacy policy, terms of use, terms of service, candidate privacy); body is placeholder prose of measured shape.",
+      "scope": "All legal documents that carry a table of contents (4 routes).",
+      "implementedBy": "src/components/company/legal.jsx > PrivacyPolicy"
+    },
+    "legal.support-policy-document": {
+      "category": "LEGAL",
+      "description": "Compact-title support policy: dated lede and paragraphs around a bordered table; no table of contents.",
+      "scope": "Support policy page only.",
+      "implementedBy": "src/components/company/legal.jsx > SupportPolicy"
+    },
+    "utility.search-filter-panel": {
+      "category": "UTILITY",
+      "description": "Bordered panel with search field and select dropdowns (topic, type, location) and a clear action.",
+      "scope": "Blog index, web-links feed and both events listings (16 routes).",
+      "implementedBy": "src/components/content/filters.jsx > SearchFilterPanel"
+    },
+    "utility.category-chips": {
+      "category": "UTILITY",
+      "description": "Row of category filter chips that drive a query parameter.",
+      "scope": "Case studies, videos and ecosystem indexes (3 routes).",
+      "implementedBy": "src/components/content/CategoryChips.jsx"
+    },
+    "utility.search-field": {
+      "category": "UTILITY",
+      "description": "Standalone search input committing to a query parameter, paired with category chips.",
+      "scope": "Videos and ecosystem indexes (2 routes).",
+      "implementedBy": "src/components/content/filters.jsx > SearchField"
+    },
+    "utility.load-more-footer": {
+      "category": "UTILITY",
+      "description": "Infinite-load footer with a load-more link that is also an intersection sentinel.",
+      "scope": "Blog, news, web-links feed and videos (4 routes).",
+      "implementedBy": "src/components/content/bits.jsx > FeedFooter"
+    },
+    "utility.events-tabs": {
+      "category": "UTILITY",
+      "description": "Upcoming / Past chip pair switching between the two event listings.",
+      "scope": "Upcoming and past events listings (14 routes).",
+      "implementedBy": "src/pages/content/EventsHub.jsx > EventsHub"
+    },
+    "utility.pagination": {
+      "category": "UTILITY",
+      "description": "Numbered page links with ellipsis windows for the past events archive.",
+      "scope": "Past events listing (13 routes).",
+      "implementedBy": "src/components/extra/events.jsx > Pagination"
+    },
+    "utility.partner-modal": {
+      "category": "UTILITY",
+      "description": "Modal opened from the ecosystem hero, join card and closing band, for applying to the partner program.",
+      "scope": "Ecosystem index only.",
+      "implementedBy": "src/components/content/eco.jsx > PartnerModal"
+    },
+    "utility.gated-video-modal": {
+      "category": "UTILITY",
+      "description": "Registration modal that unlocks playback of a gated webinar video.",
+      "scope": "Standard webinar and video pages (11 routes).",
+      "implementedBy": "src/components/extra/webinar.jsx > GatedVideoModal"
+    },
+    "utility.back-link": {
+      "category": "UTILITY",
+      "description": "Small uppercase back link to the parent index.",
+      "scope": "Ecosystem partner pages (84 routes).",
+      "implementedBy": "src/components/content/bits.jsx > BackLink"
+    },
+    "utility.back-to-top-rail": {
+      "category": "UTILITY",
+      "description": "Floating back-to-top button spanning the article via an absolutely positioned rail; shows after 600px of scroll.",
+      "scope": "Every case study detail page (23 routes).",
+      "implementedBy": "src/components/content/cases.jsx > BackToTop"
+    },
+    "utility.back-to-top-event": {
+      "category": "UTILITY",
+      "description": "Floating back-to-top button that fades in between 300 and 500px of scroll (a separate implementation from the case-study one).",
+      "scope": "Every event detail page (251 routes).",
+      "implementedBy": "src/components/extra/events.jsx > EventBackToTop"
+    },
+    "utility.blog-toc": {
+      "category": "UTILITY",
+      "description": "Sticky sidebar table of contents built from article headings.",
+      "scope": "Every blog post (272 routes).",
+      "implementedBy": "src/components/content/Toc.jsx > BlogToc"
+    },
+    "utility.video-toc-sidebar": {
+      "category": "UTILITY",
+      "description": "Sticky table-of-contents sidebar beside video-style article body.",
+      "scope": "Video detail pages (149 routes).",
+      "implementedBy": "src/components/content/videos.jsx > VideoSidebar"
+    },
+    "utility.toc-fab": {
+      "category": "UTILITY",
+      "description": "Floating button that opens a table-of-contents sheet on narrow screens.",
+      "scope": "Video detail and learn articles (217 routes).",
+      "implementedBy": "src/components/content/videos.jsx > TocFab"
+    },
+    "utility.learn-sidebar": {
+      "category": "UTILITY",
+      "description": "Sticky sidebar for learn articles: table of contents and start card at wide widths.",
+      "scope": "Every learn article (68 routes).",
+      "implementedBy": "src/components/extra/learn.jsx > LearnSidebar"
+    },
+    "utility.research-toc-box": {
+      "category": "UTILITY",
+      "description": "Table-of-contents box shown beneath the article below the wide breakpoint.",
+      "scope": "Every research paper (6 routes).",
+      "implementedBy": "src/components/extra/research.jsx > TocBox"
+    },
+    "utility.research-sidebar": {
+      "category": "UTILITY",
+      "description": "Sticky sidebar with table of contents and paper card at wide widths.",
+      "scope": "Every research paper (6 routes).",
+      "implementedBy": "src/components/extra/research.jsx > ResearchSidebar"
+    },
+    "utility.view-paper-fab": {
+      "category": "UTILITY",
+      "description": "Floating action linking to the full paper.",
+      "scope": "Every research paper (6 routes).",
+      "implementedBy": "src/components/extra/research.jsx > ViewPaperFab"
+    },
+    "utility.glossary-bar": {
+      "category": "UTILITY",
+      "description": "Sticky bar with search and A-Z jump letters.",
+      "scope": "Glossary index (clone-only route).",
+      "implementedBy": "src/components/extra/glossary.jsx > GlossaryBar"
+    },
+    "utility.back-to-glossary": {
+      "category": "UTILITY",
+      "description": "Back link to the glossary index.",
+      "scope": "Every glossary term page (347 routes).",
+      "implementedBy": "src/components/extra/glossary.jsx > BackToGlossary"
+    },
+    "utility.chapter-back-link": {
+      "category": "UTILITY",
+      "description": "Back link to the book contents list.",
+      "scope": "Every book chapter summary (11 routes).",
+      "implementedBy": "src/pages/extra/BookChapter.jsx > BookChapter"
+    },
+    "utility.browse-dives-link": {
+      "category": "UTILITY",
+      "description": "Link back to the dive gallery.",
+      "scope": "Every dive detail page (135 routes).",
+      "implementedBy": "src/components/extra/dive.jsx > BrowseDivesLink"
+    },
+    "utility.dive-search-filter-bar": {
+      "category": "UTILITY",
+      "description": "Cream band with pill search and format/topic filter pills.",
+      "scope": "Dive gallery index only.",
+      "implementedBy": "src/pages/content/DiveGallery.jsx > DiveGallery"
+    },
+    "utility.dive-sort-toolbar": {
+      "category": "UTILITY",
+      "description": "Sort dropdown plus Pick and Hackathon toggle pills.",
+      "scope": "Dive gallery index only.",
+      "implementedBy": "src/pages/content/DiveGallery.jsx > SortMenu"
+    },
+    "utility.episode-back": {
+      "category": "UTILITY",
+      "description": "Back link to the podcast index.",
+      "scope": "Every podcast episode page (11 routes).",
+      "implementedBy": "src/components/extra/podcast.jsx > EpisodeBack"
+    },
+    "app.try-workspace": {
+      "category": "APP",
+      "description": "Full-viewport separate chat-style app: own top bar with mascot and actions, model tabs, prompt box, example cards, right rail, dismissible tip and mascot. Non-functional in the clone.",
+      "scope": "Try page only; no site header or footer.",
+      "implementedBy": "src/pages/extra/Try.jsx > Try"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "src/pages/Home.jsx; the last two blocks share a wrapper div.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.home-hero",
+        "features.architecture-diagram",
+        "features.platform-overview",
+        "features.integrations-ecosystem",
+        "proof.customer-stories",
+        "features.agent-native-showcase",
+        "editorial.home-blog-teaser",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-overview",
+      "name": "Product overview",
+      "routeCount": 1,
+      "routes": [
+        "/product"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "/product is a ProductRouter block list of its own, unlike the three audience pages.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.persona-hero",
+        "features.marquee-band",
+        "features.use-case-split",
+        "features.old-world-new-world",
+        "features.agent-card-carousel",
+        "features.architecture-panel",
+        "features.feature-grid",
+        "features.ecosystem-diagram",
+        "proof.case-study-carousel",
+        "content.faq-accordion",
+        "conversion.contact-form",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-persona-solutions",
+      "name": "Audience page (app developers and data teams)",
+      "routeCount": 2,
+      "routes": [
+        "/product/app-developers",
+        "/product/data-teams"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.persona-hero",
+        "features.persona-split-rows",
+        "features.feature-grid",
+        "features.architecture-panel",
+        "conversion.yellow-cta",
+        "features.ecosystem-diagram",
+        "proof.case-study-carousel",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-persona-duckdb",
+      "name": "Audience page (DuckDB users)",
+      "routeCount": 1,
+      "routes": [
+        "/product/duckdb-users"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "Split from the other two audience pages: it drops the yellow CTA and adds an FAQ and contact form.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.persona-hero",
+        "features.persona-split-rows",
+        "features.feature-grid",
+        "features.architecture-panel",
+        "features.ecosystem-diagram",
+        "proof.case-study-carousel",
+        "content.faq-accordion",
+        "conversion.contact-form",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-dives",
+      "name": "Product feature: Dives",
+      "routeCount": 1,
+      "routes": [
+        "/product/dives"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.product-hero-centered",
+        "features.video-frame",
+        "features.media-frame",
+        "features.sticky-stack",
+        "features.live-embed",
+        "features.gallery-teaser",
+        "content.faq-accordion",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-flights",
+      "name": "Product feature: Flights",
+      "routeCount": 1,
+      "routes": [
+        "/product/flights"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.product-hero-centered",
+        "features.media-frame",
+        "features.sticky-stack",
+        "proof.quote-spotlight",
+        "features.cookbook-grid",
+        "content.faq-accordion",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-mcp-server",
+      "name": "Product feature: MCP server",
+      "routeCount": 1,
+      "routes": [
+        "/product/mcp-server"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.product-hero-centered",
+        "features.problem-cards",
+        "features.sticky-stack",
+        "proof.quote-spotlight",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-postgres",
+      "name": "Product feature: Postgres integration",
+      "routeCount": 1,
+      "routes": [
+        "/product/postgres-integration"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "Same block order as the MCP server page but with a split hero instead of the centered one.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.split-hero",
+        "features.problem-cards",
+        "features.sticky-stack",
+        "proof.quote-spotlight",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-guides",
+      "name": "Product feature: Guides",
+      "routeCount": 0,
+      "routes": [],
+      "routePattern": null,
+      "chrome": "full",
+      "cloneOnlyRoutes": [
+        "/product/guides"
+      ],
+      "note": "Route exists only in the clone route table (no sitemap equivalent), so routeCount is 0.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.product-hero-centered",
+        "features.browser-window-demo",
+        "features.sticky-stack",
+        "content.faq-accordion",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-ducklake",
+      "name": "Product: DuckLake",
+      "routeCount": 1,
+      "routes": [
+        "/product/ducklake"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.ducklake-hero",
+        "features.format-compare",
+        "conversion.newsletter-signup",
+        "features.sticky-stack",
+        "content.code-sample",
+        "features.resource-carousel",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.product-hypertenancy",
+      "name": "Product: Hypertenancy",
+      "routeCount": 1,
+      "routes": [
+        "/product/hypertenancy"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.dark-hero",
+        "proof.quote-carousel",
+        "features.alternating-feature-rows",
+        "content.faq-accordion",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.startups",
+      "name": "Startups program",
+      "routeCount": 1,
+      "routes": [
+        "/startups"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.left-hero",
+        "proof.quote-spotlight",
+        "proof.investor-logos",
+        "features.program-benefits",
+        "proof.logo-marquee",
+        "features.persona-split-sticky",
+        "conversion.apply-form",
+        "content.faq-accordion",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.research-hub",
+      "name": "Research hub",
+      "routeCount": 1,
+      "routes": [
+        "/research"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.left-hero",
+        "content.research-chips",
+        "editorial.paper-list",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.trust-security",
+      "name": "Trust and security",
+      "routeCount": 1,
+      "routes": [
+        "/trust-and-security"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.left-hero",
+        "content.trust-section",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.open-source-community",
+      "name": "Community and open source",
+      "routeCount": 1,
+      "routes": [
+        "/community-and-open-source"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.left-hero",
+        "features.repo-grid",
+        "editorial.social-carousel",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.pricing",
+      "name": "Pricing",
+      "routeCount": 1,
+      "routes": [
+        "/product/pricing"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "commerce.pricing-hero",
+        "commerce.tier-cards",
+        "proof.quote-carousel",
+        "commerce.plan-matrix",
+        "commerce.instances",
+        "features.persona-split-rows",
+        "content.faq-accordion",
+        "commerce.pricing-final-cta",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.pricing-duckdb-support",
+      "name": "Pricing: DuckDB support",
+      "routeCount": 1,
+      "routes": [
+        "/product/pricing/duckdb-support"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "commerce.duckdb-support-panel",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.persona-founders",
+      "name": "Persona landing: founders",
+      "routeCount": 1,
+      "routes": [
+        "/product/for-founders"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "One component (PersonaLanding) with a per-route block order; the two routes differ in order and blocks, so they are two templates.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.persona2-hero",
+        "proof.persona2-logo-strip",
+        "features.dark-features",
+        "features.split-media",
+        "proof.industry-swiper",
+        "conversion.persona2-pricing-band",
+        "features.agent-links",
+        "conversion.persona2-closing-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.persona-operators",
+      "name": "Persona landing: operators",
+      "routeCount": 1,
+      "routes": [
+        "/product/for-operators"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.persona2-hero",
+        "proof.persona2-logo-strip",
+        "features.dark-features",
+        "features.gallery-row",
+        "features.security-split",
+        "conversion.persona2-pricing-band",
+        "proof.industry-swiper",
+        "features.agent-links",
+        "conversion.persona2-closing-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.eu-region",
+      "name": "EU region",
+      "routeCount": 1,
+      "routes": [
+        "/product/eu-region"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.eu-hero",
+        "proof.eu-partners",
+        "editorial.eu-webinars",
+        "editorial.eu-posts",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.azure-waitlist",
+      "name": "Azure waitlist",
+      "routeCount": 1,
+      "routes": [
+        "/product/azure"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "conversion.azure-waitlist",
+        "content.azure-coming",
+        "conversion.azure-vote",
+        "features.azure-steps",
+        "content.azure-faq",
+        "conversion.azure-closing",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.vs-comparison",
+      "name": "Competitor comparison",
+      "routeCount": 6,
+      "routes": [
+        "/vs/clickhouse-alternative",
+        "/vs/databricks-alternative",
+        "/vs/postgresql-alternative",
+        "/vs/snowflake-alternative",
+        "/vs/bigquery-alternative",
+        "/vs/redshift-alternative"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "One component (VsPage) driven by a per-competitor config; the benchmark panel is absent on /vs/clickhouse-alternative.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.vs-hero",
+        "features.marquee-band",
+        "content.comparison-table",
+        "content.last-updated-note",
+        "proof.logo-bar",
+        "features.benchmark-panel",
+        "proof.quote-carousel",
+        "features.sticky-stack",
+        "features.compare-cards",
+        "content.faq-accordion",
+        "conversion.cta-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.vs-index",
+      "name": "Comparisons index",
+      "routeCount": 1,
+      "routes": [
+        "/vs"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.vs-index-hero",
+        "features.vs-why-band",
+        "features.all-comparisons",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.about",
+      "name": "About",
+      "routeCount": 1,
+      "routes": [
+        "/about-us"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.about-hero",
+        "content.origin-story",
+        "proof.team-photo",
+        "proof.investors",
+        "conversion.contact-band",
+        "conversion.community-cta",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.careers",
+      "name": "Careers",
+      "routeCount": 1,
+      "routes": [
+        "/careers"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.careers-hero",
+        "content.how-we-work",
+        "content.video-feature",
+        "features.values-cards",
+        "content.jobs-board",
+        "content.photo-marquee",
+        "features.benefits-card",
+        "proof.careers-testimonials",
+        "conversion.careers-closing-cta",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.contact-hub",
+      "name": "Contact hub",
+      "routeCount": 1,
+      "routes": [
+        "/contact-us"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "conversion.contact-chooser",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.contact-product-expert",
+      "name": "Contact: product expert",
+      "routeCount": 2,
+      "routes": [
+        "/contact-us/product-expert",
+        "/onboarding-sessions"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "redirectSources": [
+        "/onboarding-sessions -> /contact-us/product-expert"
+      ],
+      "note": "Also reached by the /onboarding-sessions client redirect.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "conversion.contact-split-form",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.customer-support",
+      "name": "Customer support overview",
+      "routeCount": 1,
+      "routes": [
+        "/customer-support"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.support-hero",
+        "content.support-body",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.contact-support-form",
+      "name": "Contact support form",
+      "routeCount": 1,
+      "routes": [
+        "/contact-us/support"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "The form column is pulled up over the title band; DOM order is title, form column, help column.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.contact-support-title",
+        "conversion.support-request-form",
+        "content.contact-support-help",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.legal-toc-document",
+      "name": "Legal document with table of contents",
+      "routeCount": 4,
+      "routes": [
+        "/terms-of-use",
+        "/terms-of-service",
+        "/privacy-policy",
+        "/candidate-privacy"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "Privacy policy and terms of use use LegalShell in company/legal.jsx; terms of service and candidate privacy use a duplicate shell (LegalTocShell) in extra/generic.jsx. Same page shape, so one template; the duplicate is a reuse finding.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "legal.document-title",
+        "legal.toc-sidebar",
+        "legal.document-article",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.legal-support-policy",
+      "name": "Support policy",
+      "routeCount": 1,
+      "routes": [
+        "/support-policy"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "legal.support-policy-document",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.generic-prose-page",
+      "name": "Generic prose page",
+      "routeCount": 9,
+      "routes": [
+        "/local-dev-cloud-prod-dagster-motherduck",
+        "/acceptable-use-policy",
+        "/motherduck-terms-of-service",
+        "/getting-started-with-motherduck",
+        "/hack-night",
+        "/react-components-testing",
+        "/forms/finance-onboarding",
+        "/fees-addendum",
+        "/divemaxxing/rules"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "content.compact-page-title",
+        "content.shape-prose",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.generic-prose-page-with-form",
+      "name": "Generic prose page with side form",
+      "routeCount": 2,
+      "routes": [
+        "/live-demo",
+        "/duckdb-book-brief-orig"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "Same component as the plain generic page; split because only these routes carry the form and bottom bar.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "content.compact-page-title",
+        "content.shape-prose",
+        "conversion.side-form",
+        "conversion.form-bar",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.community-code",
+      "name": "Community code",
+      "routeCount": 1,
+      "routes": [
+        "/community-code"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "content.compact-page-title",
+        "content.article-prose",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.gated-lp-guide",
+      "name": "Gated landing page (guide or report)",
+      "routeCount": 5,
+      "routes": [
+        "/duckdb-cheatsheet-full",
+        "/lp/ai-analytics-eval-field-guide-full",
+        "/lp/postgres-analytics-guide-full",
+        "/lp/data-ai-survey-full",
+        "/lp/agents-run-your-analytics-full"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "One component (Gated) hosting several LP bodies built from the same LPHero / LPSection / GatedFormSection shell; bodies differ per slug. /lp/agents-run-your-analytics-full is mapped here but the clone has no body for that slug yet and renders the not-found style stub.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.lp-hero",
+        "content.lp-band-sections",
+        "conversion.gated-form",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.gated-lp-guide-faq",
+      "name": "Gated landing page with FAQ",
+      "routeCount": 2,
+      "routes": [
+        "/lp/guide-to-bi-in-the-agentic-era-full",
+        "/lp/ducklake-lakehouse-table-format-book-full"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "Same shell as the plain gated LP plus an FAQ band before the form.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.lp-hero",
+        "content.lp-band-sections",
+        "content.lp-faq",
+        "conversion.gated-form",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.gated-book-brief",
+      "name": "Free book brief",
+      "routeCount": 1,
+      "routes": [
+        "/duckdb-book-brief"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.book-hero",
+        "content.book-body",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.lp-ducklake-guide",
+      "name": "Landing page: DuckLake guide",
+      "routeCount": 1,
+      "routes": [
+        "/ducklake-open-table-format-full"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "Reuses the LP shell but with extra blocks (outline cards, color cards, dark table, fit checklist) and its own gated form variant.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.lp-hero",
+        "content.lp-band-sections",
+        "content.lp-faq",
+        "conversion.gated-form-alt",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.lp-ducklake-book-only",
+      "name": "Landing page: DuckLake book (LP-only chrome)",
+      "routeCount": 1,
+      "routes": [
+        "/ducklake-open-table-format-guide"
+      ],
+      "routePattern": null,
+      "chrome": "lp-only",
+      "redirectSources": [
+        "/ducklake-open-table-format-guide -> /lp/ducklake-lakehouse-table-format-book"
+      ],
+      "note": "Site header and footer are hidden through body[data-xm-lp-only] while mounted. In the sitemap this page is only reachable through the /ducklake-open-table-format-guide redirect.",
+      "sections": [
+        "shell.skip-link",
+        "shell.lp-anchor-nav",
+        "hero.lp-hero",
+        "content.lp-band-sections",
+        "content.lp-faq",
+        "conversion.gated-form"
+      ]
+    },
+    {
+      "id": "template.lp-divemaxxing",
+      "name": "Landing page: dive contest",
+      "routeCount": 1,
+      "routes": [
+        "/divemaxxing-full"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.divemaxxing-hero",
+        "features.divemaxxing-embed",
+        "content.divemaxxing-what-is-a-dive",
+        "content.divemaxxing-competition",
+        "content.divemaxxing-judges",
+        "content.divemaxxing-timeline",
+        "content.divemaxxing-prizes",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.lp-savings",
+      "name": "Landing page: savings calculator",
+      "routeCount": 1,
+      "routes": [
+        "/jev-full"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.jev-hero",
+        "commerce.jev-calculator",
+        "commerce.jev-pricing",
+        "conversion.jev-closing",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.split-form-lp-sneak-peek",
+      "name": "Split-form landing with sneak peek",
+      "routeCount": 2,
+      "routes": [
+        "/duckdb-book-form",
+        "/sql-duckdb-book-form"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.split-form-hero",
+        "conversion.split-form-panel",
+        "content.sneak-peek",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.split-form-lp",
+      "name": "Split-form landing",
+      "routeCount": 1,
+      "routes": [
+        "/together-ai"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.split-form-hero",
+        "conversion.split-form-panel",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.book-chapter",
+      "name": "Book chapter summary",
+      "routeCount": 11,
+      "routes": [
+        "/duckdb-book-summary-chapter11",
+        "/duckdb-book-summary-chapter5",
+        "/duckdb-book-summary-chapter6",
+        "/duckdb-book-summary-chapter8",
+        "/duckdb-book-summary-chapter9",
+        "/duckdb-book-summary-chapter3",
+        "/duckdb-book-summary-chapter4",
+        "/duckdb-book-summary-chapter2",
+        "/duckdb-book-summary-chapter1",
+        "/duckdb-book-summary-chapter10",
+        "/duckdb-book-summary-chapter7"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "DOM order; on wide screens the sidebar is placed to the left of the article.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "utility.chapter-back-link",
+        "content.chapter-header",
+        "conversion.chapter-cta",
+        "conversion.book-panel",
+        "content.article-prose",
+        "content.chapter-sidebar",
+        "content.faq-section-article",
+        "conversion.read-ebook-bar",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "routeCount": 1,
+      "routes": [
+        "/blog"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.feed-hero",
+        "utility.search-filter-panel",
+        "editorial.featured-post-card",
+        "editorial.post-card-grid",
+        "conversion.subscribe-tile",
+        "utility.load-more-footer",
+        "conversion.mobile-subscribe-button",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog post",
+      "routeCount": 272,
+      "routes": [
+        "/blog/hello-world",
+        "/blog/in-the-news-podcasts-conferences",
+        "/blog/analyze-sqlite-databases-duckdb",
+        "/blog/python-faker-duckdb-exploration",
+        "/blog/solving-advent-code-duckdb-dbt"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/blog/{slug}",
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "content.article-hero-header",
+        "content.article-prose",
+        "utility.blog-toc",
+        "editorial.recommendation-carousel",
+        "conversion.floating-get-started",
+        "conversion.subscribe-band",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.case-index",
+      "name": "Case studies index",
+      "routeCount": 1,
+      "routes": [
+        "/case-studies"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.case-title-hero",
+        "proof.testimonial-carousel",
+        "utility.category-chips",
+        "proof.case-study-grid",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.case-detail",
+      "name": "Case study detail",
+      "routeCount": 23,
+      "routes": [
+        "/case-studies/dexibit",
+        "/case-studies/dominik-moritz",
+        "/case-studies/gardyn",
+        "/case-studies/kultura-capital",
+        "/case-studies/finqore"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/case-studies/{slug}",
+      "chrome": "full",
+      "redirectSources": [
+        "/case-study-dexibit -> /case-studies/dexibit",
+        "/case-study-saasworks -> /case-studies/finqore",
+        "/case-study-dominik-moritz -> /case-studies/dominik-moritz"
+      ],
+      "note": "FAQ is shown only for stories that have profile FAQ data.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.case-detail-hero",
+        "proof.case-quote-band",
+        "content.case-lede",
+        "content.article-prose",
+        "content.faq-accordion",
+        "utility.back-to-top-rail",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.video-index",
+      "name": "Videos index",
+      "routeCount": 1,
+      "routes": [
+        "/videos"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.sand-grid-hero",
+        "editorial.featured-video",
+        "utility.category-chips",
+        "utility.search-field",
+        "editorial.video-card-grid",
+        "conversion.subscribe-tile",
+        "utility.load-more-footer",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.video-detail",
+      "name": "Video detail",
+      "routeCount": 149,
+      "routes": [
+        "/videos/unleashing-duckdb-dbt-for-local-analytics-triumphs",
+        "/videos/working-with-sql-with-your-favorite-editor-check-this",
+        "/videos/one-data-tool-with-all-its-dependencies-duckdb-and-extensions",
+        "/videos/motherduck-ga-produck-tour",
+        "/videos/no-sql-standard-for-7-years"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/videos/{slug}",
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.sand-grid-band",
+        "content.video-player-frame",
+        "content.video-title-meta",
+        "content.article-prose",
+        "utility.video-toc-sidebar",
+        "utility.toc-fab",
+        "content.transcript",
+        "content.faq-section-article",
+        "editorial.related-videos",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.ecosystem-index",
+      "name": "Ecosystem index",
+      "routeCount": 1,
+      "routes": [
+        "/ecosystem"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.eco-hero",
+        "utility.category-chips",
+        "utility.search-field",
+        "features.tech-partner-directory",
+        "conversion.eco-join-card",
+        "proof.consulting-partner-directory",
+        "conversion.eco-build-cta",
+        "utility.partner-modal",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.ecosystem-detail",
+      "name": "Ecosystem partner detail",
+      "routeCount": 84,
+      "routes": [
+        "/ecosystem/sqlmesh",
+        "/ecosystem/meltano",
+        "/ecosystem/hex",
+        "/ecosystem/dlt",
+        "/ecosystem/evidence"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/ecosystem/{slug}",
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "utility.back-link",
+        "content.partner-detail",
+        "content.article-prose",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.news-index",
+      "name": "News index",
+      "routeCount": 1,
+      "routes": [
+        "/duckdb-news"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.feed-hero",
+        "editorial.news-digest-card",
+        "editorial.post-card-grid",
+        "conversion.subscribe-banner",
+        "utility.load-more-footer",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.web-links-feed",
+      "name": "Web links feed",
+      "routeCount": 1,
+      "routes": [
+        "/quacking-around-the-web"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.feed-hero",
+        "utility.search-filter-panel",
+        "editorial.post-card-grid",
+        "utility.load-more-footer",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.learn-hub",
+      "name": "Learn hub",
+      "routeCount": 1,
+      "routes": [
+        "/learn"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.feed-hero",
+        "editorial.learn-card-grid",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.events-upcoming",
+      "name": "Events: upcoming",
+      "routeCount": 1,
+      "routes": [
+        "/events"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.events-hero",
+        "conversion.speaker-banner",
+        "utility.events-tabs",
+        "utility.search-filter-panel",
+        "editorial.event-row-list",
+        "conversion.subscribe-banner",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.events-past",
+      "name": "Events: past archive",
+      "routeCount": 13,
+      "routes": [
+        "/events/past",
+        "/events/past/page/2",
+        "/events/past/page/3",
+        "/events/past/page/4",
+        "/events/past/page/5",
+        "/events/past/page/6",
+        "/events/past/page/7",
+        "/events/past/page/8",
+        "/events/past/page/9",
+        "/events/past/page/10",
+        "/events/past/page/11",
+        "/events/past/page/12",
+        "/events/past/page/13"
+      ],
+      "routePattern": "/events/past/page/{n}",
+      "routeRange": [
+        2,
+        13
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.events-hero",
+        "conversion.speaker-banner",
+        "utility.events-tabs",
+        "utility.search-filter-panel",
+        "editorial.past-event-list",
+        "utility.pagination",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.dive-gallery",
+      "name": "Dive gallery",
+      "routeCount": 1,
+      "routes": [
+        "/dive-gallery"
+      ],
+      "routePattern": null,
+      "chrome": "own-nav",
+      "note": "App.jsx matches the /dive-gallery prefix, so it also removes the site chrome for the dive detail pages.",
+      "sections": [
+        "shell.skip-link",
+        "shell.dive-nav",
+        "hero.dive-gallery-hero",
+        "utility.dive-search-filter-bar",
+        "utility.dive-sort-toolbar",
+        "editorial.dive-card-grid",
+        "shell.dive-footer"
+      ]
+    },
+    {
+      "id": "template.dive-detail",
+      "name": "Dive detail",
+      "routeCount": 135,
+      "routes": [
+        "/dive-gallery/dives/nyc-taxi-operations-dashboard",
+        "/dive-gallery/dives/nyc-311-service-requests",
+        "/dive-gallery/dives/nba-game-quality-explorer-2025-26-by-matson",
+        "/dive-gallery/dives/dive-into-pivoting",
+        "/dive-gallery/dives/galactic-coffee-theme-gallery"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/dive-gallery/dives/{slug}",
+      "chrome": "own-nav",
+      "sections": [
+        "shell.skip-link",
+        "shell.dive-nav",
+        "utility.browse-dives-link",
+        "content.dive-detail-card",
+        "content.dive-prompts-used",
+        "content.dive-comments",
+        "shell.dive-footer"
+      ]
+    },
+    {
+      "id": "template.author",
+      "name": "Author profile",
+      "routeCount": 120,
+      "routes": [
+        "/authors/antony-courtney",
+        "/authors/yves-le-maout",
+        "/authors/jordan-tigani",
+        "/authors/nick-ursa",
+        "/authors/tino-tereshko"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/authors/{slug}",
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.author-hero",
+        "editorial.author-content-grid",
+        "conversion.author-subscribe",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.learn-article",
+      "name": "Learn article",
+      "routeCount": 68,
+      "routes": [
+        "/learn/product-analytics-motherduck-duckdb",
+        "/learn/dataframes",
+        "/learn/sql-group-by-examples-duckdb",
+        "/learn/pandas-dataframes-guide",
+        "/learn/web-assembly"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/learn/{slug}",
+      "chrome": "full",
+      "note": "FAQ is shown only for articles that have FAQ data.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.learn-hero",
+        "content.article-prose",
+        "utility.learn-sidebar",
+        "conversion.learn-start-card",
+        "utility.toc-fab",
+        "content.faq-section-article",
+        "editorial.read-next-grid",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.research-paper",
+      "name": "Research paper",
+      "routeCount": 6,
+      "routes": [
+        "/research/efficient-data-wrangling-llms-code-generation",
+        "/research/motherduck-duckdb-in-the-cloud-and-in-the-client",
+        "/research/declarative-caching-in-motherduck",
+        "/research/query-log-informed-schema-descriptions-text-to-sql",
+        "/research/results-on-results-cached-partial-results",
+        "/research/cost-based-hybrid-query-optimization-in-motherduck"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.research-hero",
+        "content.article-prose",
+        "utility.view-paper-fab",
+        "utility.research-toc-box",
+        "utility.research-sidebar",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.glossary-index",
+      "name": "Glossary index",
+      "routeCount": 0,
+      "routes": [],
+      "routePattern": null,
+      "chrome": "full",
+      "cloneOnlyRoutes": [
+        "/glossary"
+      ],
+      "note": "Route exists only in the clone route table; the live sitemap has no /glossary URL, so routeCount is 0.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.glossary-hero",
+        "utility.glossary-bar",
+        "content.glossary-letters",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.glossary-term",
+      "name": "Glossary term",
+      "routeCount": 347,
+      "routes": [
+        "/glossary/exploratory-data-analysis-eda",
+        "/glossary/aggregation",
+        "/glossary/ai",
+        "/glossary/amazon-s3",
+        "/glossary/analyze"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/glossary/{slug}",
+      "chrome": "full",
+      "redirectSources": [
+        "/glossary/dlt -> /glossary/data-load-tool-dlt",
+        "/glossary/time-series-database -> /glossary/time-series"
+      ],
+      "note": "Term promo and FAQ appear only on terms that define them.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "utility.back-to-glossary",
+        "content.glossary-term-header",
+        "content.article-prose",
+        "conversion.term-promo",
+        "content.related-terms",
+        "content.faq-section-article",
+        "editorial.read-next-grid",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.event-detail",
+      "name": "Event detail",
+      "routeCount": 251,
+      "routes": [
+        "/events/duckcon-4-by-duckdb-labs-and-foundation-2024",
+        "/events/movedata-by-airbyte-fixing-the-data-engineering-lifecycle-2023",
+        "/events/opendi-summit-on-open-data-and-open-infrastructures-2023",
+        "/events/datatune-nashville-2024-2024",
+        "/events/osa-con-23-what-the-duck-2023"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/events/{slug}",
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.event-hero",
+        "content.event-body",
+        "conversion.event-newsletter-band",
+        "editorial.more-events",
+        "utility.back-to-top-event",
+        "conversion.mobile-register-bar",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.webinar-standard",
+      "name": "Webinar or video page",
+      "routeCount": 11,
+      "routes": [
+        "/webinar/scaling-duckdb-panel",
+        "/video/fix-slow-postrges-analytics",
+        "/webinar/building-data-apps-and-customer-facing-analytics",
+        "/webinar/practical-ai-use-cases-for-data",
+        "/webinar/getting-started-with-motherduck-hosted-ducklake",
+        "/webinar/from-raw-data-to-insights",
+        "/webinar/simplifying-the-transformation-layer",
+        "/webinar/ducklake-livestream",
+        "/video/reliable-ai-agents-for-business-analytics-llms-warehouse",
+        "/webinar/building-an-efficient-data-stack",
+        "/webinar/unlocking-duckdb-in-your-gold-layer"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "note": "The webinar component has three variants (standard, register LP, side form) with different layouts; they are three templates.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.sand-grid-band",
+        "content.webinar-player",
+        "content.webinar-meta",
+        "content.article-prose",
+        "utility.gated-video-modal",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.webinar-register-lp",
+      "name": "Webinar registration landing",
+      "routeCount": 3,
+      "routes": [
+        "/webinar/data-discoverability-secoda-motherduck",
+        "/webinar/ducking-easy-insights-motherduck-dbt",
+        "/webinar/scaling-duckdb-panel-ondemand"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "conversion.webinar-register-lp",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.webinar-side-form",
+      "name": "Webinar with side form",
+      "routeCount": 1,
+      "routes": [
+        "/webinar/take-flight-with-the-modern-duck-stack"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "conversion.webinar-side-form",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.podcast-index",
+      "name": "Podcast index",
+      "routeCount": 1,
+      "routes": [
+        "/explain-analyze"
+      ],
+      "routePattern": null,
+      "chrome": "dark",
+      "note": "Sets body[data-theme=dark] for the dark header theme.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "hero.podcast-hero",
+        "editorial.latest-episode",
+        "editorial.episode-grid",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.podcast-episode",
+      "name": "Podcast episode",
+      "routeCount": 11,
+      "routes": [
+        "/explain-analyze/0001-ai-tooling-wars",
+        "/explain-analyze/0002-github-stars-65-lines-markdown",
+        "/explain-analyze/0003-duckdb-breaks-the-lakehouse",
+        "/explain-analyze/0004-data-infra-printing-money",
+        "/explain-analyze/0005-data-viz-javascript",
+        "/explain-analyze/0006-ai-inside-sql",
+        "/explain-analyze/0007-safest-bet-ai-hardware",
+        "/explain-analyze/0008-ai-still-writes-python-311",
+        "/explain-analyze/0009-agents-md-vs-skills",
+        "/explain-analyze/0010-aws-bought-ducklabs",
+        "/explain-analyze/0011-reliable-ai-agents-checkpoints"
+      ],
+      "routePattern": null,
+      "chrome": "dark",
+      "note": "Sets body[data-theme=dark] for the dark header theme.",
+      "sections": [
+        "shell.skip-link",
+        "shell.announcement-bar",
+        "shell.site-header",
+        "shell.mega-menus",
+        "shell.mobile-menu",
+        "utility.episode-back",
+        "content.episode-body",
+        "shell.site-footer"
+      ]
+    },
+    {
+      "id": "template.try-app",
+      "name": "Try app",
+      "routeCount": 1,
+      "routes": [
+        "/try"
+      ],
+      "routePattern": null,
+      "chrome": "bare",
+      "note": "Exact-path match in App.jsx: no header, footer or header offset; only the skip link is kept.",
+      "sections": [
+        "shell.skip-link",
+        "app.try-workspace"
+      ]
+    }
+  ]
+}

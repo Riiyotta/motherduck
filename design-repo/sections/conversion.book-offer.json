@@ -1,0 +1,103 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.book-offer",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Book offer card",
+  "purpose": "Split offer card: teal cover panel and a sun email form with two consents.",
+  "source": {
+    "file": "src/components/company/book.jsx",
+    "tag": "BookOffer",
+    "lines": "31-66",
+    "id": "book-jsx#BookOffer"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "conversion.book-offer",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "emailLabel": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "consents": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 1,
+        "required": true
+      },
+      "cover": {
+        "type": "asset",
+        "roles": [
+          "book-cover"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY H1"
+  },
+  "generatedAssetRoles": [
+    "generated-book-cover"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "305-311",
+        "heading": "H1. `BookOffer` [NEW] (Book brief)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "book-brief"
+  ],
+  "tags": []
+}

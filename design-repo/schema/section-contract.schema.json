@@ -1,0 +1,526 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "section-contract.schema.json",
+  "title": "Section contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "version",
+    "title",
+    "purpose",
+    "source",
+    "semantic",
+    "retrievalEligible",
+    "content",
+    "variants",
+    "allowedSurfaces",
+    "constraints",
+    "motion",
+    "responsive",
+    "generatedAssetRoles",
+    "evidence",
+    "usedInTemplates"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+(-[a-z]+)*\\.[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "kind": {
+      "const": "section"
+    },
+    "version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source": {
+      "$ref": "#/definitions/source"
+    },
+    "sourceAlternates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source"
+      }
+    },
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "SHELL",
+            "HERO",
+            "FEATURES",
+            "SOCIAL_PROOF",
+            "PRICING",
+            "COMPARISON",
+            "FAQ",
+            "CTA",
+            "CONVERSION",
+            "CONTENT",
+            "EDITORIAL",
+            "LISTING",
+            "NAVIGATION",
+            "MEDIA",
+            "LEGAL",
+            "DIVIDER",
+            "RUNTIME",
+            "APP"
+          ]
+        }
+      }
+    },
+    "retrievalEligible": {
+      "type": "boolean"
+    },
+    "retrievalReason": {
+      "type": "string",
+      "minLength": 30
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fields",
+        "copyBudgetBasis"
+      ],
+      "properties": {
+        "fields": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "$ref": "#/definitions/field"
+          }
+        },
+        "copyBudgetBasis": {
+          "type": "string",
+          "minLength": 20
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowedSurfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "cream",
+          "sky",
+          "yellow",
+          "sun",
+          "ink",
+          "white",
+          "sand",
+          "teal",
+          "coral-red",
+          "garden",
+          "aqua",
+          "peach",
+          "sky-tint",
+          "mint",
+          "pink"
+        ]
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onePerPage": {
+          "type": "boolean"
+        },
+        "maxPerPage": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "minPerPage": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mustBeFirst": {
+          "type": "boolean"
+        },
+        "mustBeLast": {
+          "type": "boolean"
+        },
+        "mustFollowNav": {
+          "type": "boolean"
+        },
+        "mustPrecedeFooter": {
+          "type": "boolean"
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowedPatterns",
+        "default",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "allowedPatterns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "accordion-single-open",
+              "bar-slide",
+              "caret-blink",
+              "carousel-autoplay",
+              "carousel-swipe",
+              "cursor-blink-steps",
+              "dither-canvas",
+              "dropdown-enter",
+              "fab-pop",
+              "fade-swap",
+              "faq-multi-open",
+              "feature-rise",
+              "feed-spin",
+              "flicker",
+              "float-bob",
+              "float-drift",
+              "glow-pulse",
+              "hero-window-in",
+              "jev-cursor-blink",
+              "jev-type",
+              "marquee-scroll",
+              "mascot-sway",
+              "modal-rise",
+              "none",
+              "offset-lift",
+              "parallax-scroll",
+              "reveal-popover",
+              "reveal-up",
+              "scroll-animate-in",
+              "sheet-in",
+              "sticky-stack-scrub",
+              "story-scale-scrub",
+              "sun-rotate",
+              "tilt-hover",
+              "tooltip-fade",
+              "typewriter-h1",
+              "typing-sim",
+              "wire-flow"
+            ]
+          }
+        },
+        "default": {
+          "enum": [
+            "accordion-single-open",
+            "bar-slide",
+            "caret-blink",
+            "carousel-autoplay",
+            "carousel-swipe",
+            "cursor-blink-steps",
+            "dither-canvas",
+            "dropdown-enter",
+            "fab-pop",
+            "fade-swap",
+            "faq-multi-open",
+            "feature-rise",
+            "feed-spin",
+            "flicker",
+            "float-bob",
+            "float-drift",
+            "glow-pulse",
+            "hero-window-in",
+            "jev-cursor-blink",
+            "jev-type",
+            "marquee-scroll",
+            "mascot-sway",
+            "modal-rise",
+            "none",
+            "offset-lift",
+            "parallax-scroll",
+            "reveal-popover",
+            "reveal-up",
+            "scroll-animate-in",
+            "sheet-in",
+            "sticky-stack-scrub",
+            "story-scale-scrub",
+            "sun-rotate",
+            "tilt-hover",
+            "tooltip-fade",
+            "typewriter-h1",
+            "typing-sim",
+            "wire-flow"
+          ]
+        },
+        "reducedMotionFallback": {
+          "enum": [
+            "static",
+            "paused",
+            "instant",
+            "unchanged-measured"
+          ]
+        }
+      }
+    },
+    "responsive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "columns",
+        "stackBelowPx",
+        "hiddenBelowPx",
+        "evidence"
+      ],
+      "properties": {
+        "columns": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "xl",
+            "lg",
+            "md",
+            "sm"
+          ],
+          "properties": {
+            "xl": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "lg": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "md": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "sm": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "stackBelowPx": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "hiddenBelowPx": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "evidence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "generatedAssetRoles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "specRefs"
+      ],
+      "properties": {
+        "level": {
+          "enum": [
+            "measured",
+            "partially-measured",
+            "inferred"
+          ]
+        },
+        "specRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "doc",
+              "lines"
+            ],
+            "properties": {
+              "doc": {
+                "type": "string"
+              },
+              "lines": {
+                "type": "string"
+              },
+              "heading": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "usedInTemplates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "file",
+        "tag",
+        "lines"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^[0-9]+(-[0-9]+)?$"
+        }
+      }
+    },
+    "field": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "text",
+            "link",
+            "asset",
+            "list",
+            "enum",
+            "code",
+            "number",
+            "boolean"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "maxWords": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "labelMaxWords": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "minItems": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "maxItems": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "item": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/field"
+          }
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "maxLines": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "retrievalEligible": {
+            "const": false
+          }
+        },
+        "required": [
+          "retrievalEligible"
+        ]
+      },
+      "then": {
+        "required": [
+          "retrievalReason"
+        ]
+      }
+    }
+  ]
+}

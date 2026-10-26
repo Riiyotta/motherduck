@@ -1,0 +1,61 @@
+{
+  "description": "Component-scoped tokens for tooltip.",
+  "tokens": {
+    "tooltip.background": {
+      "value": "#383838",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    },
+    "tooltip.color": {
+      "value": "#FFFFFF",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    },
+    "tooltip.paddingY": {
+      "value": "6px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    },
+    "tooltip.paddingX": {
+      "value": "8px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    },
+    "tooltip.radius": {
+      "value": "4px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    },
+    "tooltip.arrow": {
+      "value": "4px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    },
+    "tooltip.fadeMs": {
+      "value": "150ms",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    }
+  }
+}

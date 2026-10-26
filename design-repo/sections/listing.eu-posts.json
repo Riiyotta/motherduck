@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.eu-posts",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Regional posts",
+  "purpose": "Post cards related to the region.",
+  "source": {
+    "file": "src/components/extra/euRegion.jsx",
+    "tag": "EuPosts",
+    "lines": "132-152",
+    "id": "euRegion-jsx#EuPosts"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "listing.eu-posts",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 3,
+        "item": {
+          "thumb": {
+            "type": "asset",
+            "roles": [
+              "editorial-thumbnail"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 12,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "564-594",
+        "heading": "X13. EU region `/product/eu-region`"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "eu-region"
+  ],
+  "tags": []
+}

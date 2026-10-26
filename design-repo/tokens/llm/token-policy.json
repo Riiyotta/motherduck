@@ -1,0 +1,85 @@
+{
+  "policyVersion": "1.0.0",
+  "description": "What is enforced versus convention for token usage in PageSpecs. Category names are exactly the keys of token-catalog.json categories.",
+  "rawValueRestrictions": {
+    "color": {
+      "rule": "TOKEN_RAW_COLOR",
+      "forbid": [
+        "hex colour literals",
+        "rgb()/rgba()/hsl()/hsla() literals"
+      ],
+      "use": "a semantic colour id from the catalog; section backgrounds are named through node.surface"
+    },
+    "surface": {
+      "rule": "TOKEN_UNKNOWN",
+      "forbid": [
+        "any value that is not a catalog surface id"
+      ],
+      "use": "node.surface from the closed surface list, further limited to the contract allowedSurfaces (TOKEN_SURFACE_NOT_ALLOWED)"
+    },
+    "theme": {
+      "rule": "TOKEN_THEME_BINDING",
+      "forbid": [
+        "dark outside the podcast templates",
+        "surfaces outside themeSurfaces"
+      ],
+      "use": "light or dark"
+    },
+    "spacing": {
+      "rule": "TOKEN_RAW_SPACING",
+      "forbid": [
+        "px / rem / em / vh / vw literals in content"
+      ],
+      "use": "spacing is owned by section contracts; no PageSpec field carries spacing"
+    },
+    "fontFamily": {
+      "rule": "TOKEN_RAW_FONT",
+      "forbid": [
+        "font-family declarations",
+        "the licensed faces (Aeonik Fono, Aeonik Mono)"
+      ],
+      "use": "the families in the catalog; typography is owned by section contracts"
+    },
+    "fontSize": {
+      "rule": "TOKEN_RAW_FONT",
+      "forbid": [
+        "font-size declarations"
+      ],
+      "use": "type roles in the catalog"
+    }
+  },
+  "themeBindings": {
+    "dark": [
+      "podcast-index",
+      "podcast-episode"
+    ],
+    "light": "all"
+  },
+  "themeSurfaces": {
+    "dark": [
+      "cream",
+      "ink"
+    ],
+    "light": null
+  },
+  "overrides": {
+    "pageSpecTokenOverrideField": null,
+    "closedTokenReferences": [
+      "theme",
+      "nodes[].surface"
+    ],
+    "gap": "The PageSpec schema has no free-form style or token-override field (MASTER-GUIDE 3.21): styling is owned by section and component contracts. The only token references a PageSpec carries are the closed `theme` enum and the closed per-node `surface` enum, both validated against the catalog and the contracts. Adversarial coverage for spacing, font and raw-colour values therefore targets text content (TOKEN_RAW_*) and the catalog/policy files (drift cases in extraction/prove_drift.py), not a nonexistent override field."
+  },
+  "enforcement": [
+    "TOKEN_UNKNOWN",
+    "TOKEN_RAW_COLOR",
+    "TOKEN_RAW_SPACING",
+    "TOKEN_RAW_FONT",
+    "TOKEN_SURFACE_NOT_ALLOWED",
+    "TOKEN_THEME_BINDING",
+    "TOKEN_THEME_COMBINATION"
+  ],
+  "conventionOnly": [
+    "semantic colour roles outside surface.* are documentation for generators; PageSpec content cannot reference them"
+  ]
+}

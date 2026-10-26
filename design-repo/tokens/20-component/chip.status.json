@@ -1,0 +1,37 @@
+{
+  "description": "Component-scoped tokens for chip.status.",
+  "tokens": {
+    "chip.status.chipBackground": {
+      "value": "#FAF175",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "281"
+      }
+    },
+    "chip.status.chipBorder": {
+      "value": "2px solid #EBCD00",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "281"
+      }
+    },
+    "chip.status.chipRadius": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "281"
+      }
+    },
+    "chip.status.dot": {
+      "value": "8px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "281"
+      }
+    }
+  }
+}

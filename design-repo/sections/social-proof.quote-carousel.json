@@ -1,0 +1,114 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "social-proof.quote-carousel",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Quote carousel",
+  "purpose": "Carousel of customer quote slides with logo, name, role, optional tag title, arrows and dots; autoplays.",
+  "source": {
+    "file": "src/components/marketing/QuoteCarousel.jsx",
+    "tag": "QuoteCarousel",
+    "lines": "33-117",
+    "id": "QuoteCarousel-jsx#QuoteCarousel"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "social-proof.quote-carousel",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "tag": {
+        "type": "text",
+        "maxWords": 5,
+        "required": false
+      },
+      "slides": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 3,
+        "item": {
+          "quote": {
+            "type": "text",
+            "maxWords": 60,
+            "required": true
+          },
+          "name": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "role": {
+            "type": "text",
+            "maxWords": 5,
+            "required": true
+          },
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "customer-logo"
+            ],
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream",
+    "sky"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "carousel-autoplay"
+    ],
+    "default": "carousel-autoplay",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B6"
+  },
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "193-202",
+        "heading": "B6. `QuoteCarousel` (vs, pricing, hypertenancy)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "pricing",
+    "product-hypertenancy",
+    "vs-comparison"
+  ],
+  "tags": []
+}

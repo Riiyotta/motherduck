@@ -1,0 +1,116 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.trust-section",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Trust and security article",
+  "purpose": "Tabbed security and compliance content with headings, prose and certification badges.",
+  "source": {
+    "file": "src/components/marketing/bespoke.jsx",
+    "tag": "TrustSection",
+    "lines": "375-429",
+    "id": "bespoke-jsx#TrustSection"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "editorial.trust-section",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "tabs": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "blocks": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 12,
+        "item": {
+          "heading": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 120,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "badges": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 4,
+        "item": {
+          "badge": {
+            "type": "asset",
+            "roles": [
+              "compliance-badge"
+            ],
+            "required": true
+          }
+        },
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "placeholder-badge"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "459-487",
+        "heading": "B22. Research / Trust / Community blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "trust-security"
+  ],
+  "tags": []
+}

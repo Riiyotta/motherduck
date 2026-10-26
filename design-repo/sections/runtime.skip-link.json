@@ -1,0 +1,131 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "runtime.skip-link",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Skip to main content link",
+  "purpose": "Visually hidden first focusable link that jumps to main content.",
+  "source": {
+    "file": "src/App.jsx",
+    "tag": "href=\"#main-content\"",
+    "lines": "39-45",
+    "id": "App-jsx#href-main-content"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "runtime.skip-link",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "183"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about",
+    "author",
+    "azure-waitlist",
+    "blog-index",
+    "blog-post",
+    "book-brief",
+    "book-chapter",
+    "careers",
+    "case-detail",
+    "case-index",
+    "community-code",
+    "community-oss",
+    "contact-chooser",
+    "contact-form",
+    "dive-detail",
+    "dive-gallery",
+    "ecosystem-detail",
+    "ecosystem-index",
+    "eu-region",
+    "event-detail",
+    "events-index",
+    "events-past",
+    "gated-lp",
+    "glossary-index",
+    "glossary-term",
+    "home",
+    "learn-article",
+    "learn-index",
+    "legal-plain",
+    "legal-toc",
+    "lp-book-own-nav",
+    "lp-divemaxxing",
+    "lp-ducklake-full",
+    "lp-jev",
+    "news-index",
+    "persona-landing",
+    "podcast-episode",
+    "podcast-index",
+    "pricing",
+    "pricing-support",
+    "product-ducklake",
+    "product-feature",
+    "product-hypertenancy",
+    "product-overview",
+    "product-persona",
+    "prose-sidebar-form",
+    "quack-index",
+    "research-index",
+    "research-paper",
+    "split-form-lp",
+    "startups",
+    "support-hub",
+    "trust-security",
+    "try-app",
+    "video-detail",
+    "video-index",
+    "vs-comparison",
+    "vs-index",
+    "webinar-detail"
+  ],
+  "tags": [],
+  "retrievalReason": "Accessibility utility rendered by the app shell on every route; it carries no page content a generated page should compose."
+}

@@ -1,0 +1,230 @@
+{
+  "description": "Spacing scale: pixel values used 28+ times by the implemented gap / padding / margin utilities (histogram in measured-values.json).",
+  "tokens": {
+    "spacing.2": {
+      "value": "2px",
+      "type": "spacing",
+      "usageCount": 59,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.4": {
+      "value": "4px",
+      "type": "spacing",
+      "usageCount": 150,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.6": {
+      "value": "6px",
+      "type": "spacing",
+      "usageCount": 90,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.8": {
+      "value": "8px",
+      "type": "spacing",
+      "usageCount": 323,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.10": {
+      "value": "10px",
+      "type": "spacing",
+      "usageCount": 117,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.12": {
+      "value": "12px",
+      "type": "spacing",
+      "usageCount": 290,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.14": {
+      "value": "14px",
+      "type": "spacing",
+      "usageCount": 63,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.16": {
+      "value": "16px",
+      "type": "spacing",
+      "usageCount": 369,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.18": {
+      "value": "18px",
+      "type": "spacing",
+      "usageCount": 28,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.20": {
+      "value": "20px",
+      "type": "spacing",
+      "usageCount": 299,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.24": {
+      "value": "24px",
+      "type": "spacing",
+      "usageCount": 478,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.28": {
+      "value": "28px",
+      "type": "spacing",
+      "usageCount": 53,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.30": {
+      "value": "30px",
+      "type": "spacing",
+      "usageCount": 51,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.32": {
+      "value": "32px",
+      "type": "spacing",
+      "usageCount": 358,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.36": {
+      "value": "36px",
+      "type": "spacing",
+      "usageCount": 38,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.40": {
+      "value": "40px",
+      "type": "spacing",
+      "usageCount": 249,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.48": {
+      "value": "48px",
+      "type": "spacing",
+      "usageCount": 84,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.52": {
+      "value": "52px",
+      "type": "spacing",
+      "usageCount": 72,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.56": {
+      "value": "56px",
+      "type": "spacing",
+      "usageCount": 49,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.60": {
+      "value": "60px",
+      "type": "spacing",
+      "usageCount": 40,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.64": {
+      "value": "64px",
+      "type": "spacing",
+      "usageCount": 132,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.72": {
+      "value": "72px",
+      "type": "spacing",
+      "usageCount": 62,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.80": {
+      "value": "80px",
+      "type": "spacing",
+      "usageCount": 119,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.100": {
+      "value": "100px",
+      "type": "spacing",
+      "usageCount": 66,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    },
+    "spacing.120": {
+      "value": "120px",
+      "type": "spacing",
+      "usageCount": 58,
+      "source": {
+        "file": "src/**/*.jsx",
+        "lines": "histogram of gap/padding/margin px utilities computed at build time"
+      }
+    }
+  }
+}

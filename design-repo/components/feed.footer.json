@@ -1,0 +1,32 @@
+{
+  "id": "feed.footer",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Feed footer",
+  "purpose": "Load-more link with spinner for infinite-scroll feeds.",
+  "source": {
+    "file": "src/components/content/bits.jsx",
+    "tag": "FeedFooter",
+    "lines": "55-63",
+    "id": "bits-jsx#FeedFooter"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "label": "text(max 4 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "251-258",
+        "heading": "F9. Infinite scroll + paging (L1, L5)"
+      }
+    ]
+  },
+  "uses": [
+    "link.underline"
+  ]
+}

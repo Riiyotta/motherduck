@@ -1,0 +1,128 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "lp.stat-benchmark-band",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Benchmark notes and stat row",
+  "purpose": "Sun LP band with a heading, two benchmark cards and a four-up stat row.",
+  "source": {
+    "file": "src/components/company/lp.jsx",
+    "tag": "BenchmarkCards",
+    "lines": "100-123",
+    "id": "lp-jsx#BenchmarkCards"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/company/lp.jsx",
+      "tag": "StatRow",
+      "lines": "128-139",
+      "id": "lp-jsx#StatRow"
+    },
+    {
+      "file": "src/components/company/lp.jsx",
+      "tag": "FindingCards",
+      "lines": "176-180",
+      "id": "lp-jsx#FindingCards"
+    },
+    {
+      "file": "src/components/company/lp.jsx",
+      "tag": "LPSection",
+      "lines": "60-83",
+      "id": "lp-jsx#LPSection"
+    }
+  ],
+  "semantic": {
+    "id": "lp.stat-benchmark-band",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "intro": {
+        "type": "text",
+        "maxWords": 28,
+        "required": false
+      },
+      "benchmarks": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "note": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "stats": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 4,
+        "item": {
+          "value": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "note": {
+            "type": "text",
+            "maxWords": 9,
+            "required": true
+          }
+        },
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "sun",
+    "white",
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "278-304",
+        "heading": "G. Gated LP template blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "gated-lp"
+  ],
+  "tags": []
+}

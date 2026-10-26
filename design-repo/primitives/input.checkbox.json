@@ -1,0 +1,45 @@
+{
+  "id": "input.checkbox",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Checkbox",
+  "purpose": "Square checkbox row with label.",
+  "source": {
+    "file": "src/components/ui/Checkbox.jsx",
+    "tag": "Checkbox",
+    "lines": "8-36",
+    "id": "Checkbox-jsx#Checkbox"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "variant": [
+      "outline",
+      "solid"
+    ],
+    "size": [
+      "md",
+      "sm"
+    ],
+    "label": "text(max 10 words)",
+    "checked": "boolean"
+  },
+  "tokens": [
+    "input.checkbox.box"
+  ],
+  "states": [
+    "unchecked",
+    "checked",
+    "hover",
+    "focus"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "119-125",
+        "heading": "P4. `Checkbox`"
+      }
+    ]
+  }
+}

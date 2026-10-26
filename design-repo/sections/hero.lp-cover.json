@@ -1,0 +1,112 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.lp-cover",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Gated landing page hero with tilted cover",
+  "purpose": "Page-opening: chip, H1, sub-heading, optional body, fine print, primary action and a 3D-tilted cover or preview image.",
+  "source": {
+    "file": "src/components/company/lp.jsx",
+    "tag": "LPHero",
+    "lines": "16-56",
+    "id": "lp-jsx#LPHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.lp-cover",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "chip": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 17,
+        "required": true
+      },
+      "subhead": {
+        "type": "text",
+        "maxWords": 19,
+        "required": true
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 56,
+        "required": false
+      },
+      "finePrint": {
+        "type": "text",
+        "maxWords": 22,
+        "required": false
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "cover": {
+        "type": "asset",
+        "roles": [
+          "book-cover",
+          "product-screenshot"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tilt-hover"
+    ],
+    "default": "tilt-hover",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY G1"
+  },
+  "generatedAssetRoles": [
+    "generated-book-cover",
+    "generated-product-visual"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "278-304",
+        "heading": "G. Gated LP template blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "gated-lp",
+    "lp-book-own-nav",
+    "lp-ducklake-full"
+  ],
+  "tags": []
+}

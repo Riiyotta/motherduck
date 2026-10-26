@@ -1,0 +1,61 @@
+{
+  "description": "Component-scoped tokens for tile.icon.",
+  "tokens": {
+    "tile.icon.toolSize": {
+      "value": "48px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "578"
+      }
+    },
+    "tile.icon.toolRadius": {
+      "value": "8px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "578"
+      }
+    },
+    "tile.icon.arcSize": {
+      "value": "72px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "578"
+      }
+    },
+    "tile.icon.arcRadius": {
+      "value": "14px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "578"
+      }
+    },
+    "tile.icon.toolHoverLift": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "578"
+      }
+    },
+    "tile.icon.arcHoverLift": {
+      "value": "3px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "578"
+      }
+    },
+    "tile.icon.transition": {
+      "value": "200ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "578"
+      }
+    }
+  }
+}

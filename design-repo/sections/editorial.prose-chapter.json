@@ -1,0 +1,161 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.prose-chapter",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Prose chapter",
+  "purpose": "One heading-bounded chapter of long-form prose: an H2 heading and a sequence of blocks (paragraph, list, code, figure, callout, quote). Repeated once per chapter; never the whole article.",
+  "source": {
+    "file": "src/components/content/ArticleProse.jsx",
+    "tag": "ArticleProse",
+    "lines": "135-141",
+    "id": "ArticleProse-jsx#ArticleProse"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/proseExtras.jsx",
+      "tag": "Admonition",
+      "lines": "21-33",
+      "id": "proseExtras-jsx#Admonition"
+    },
+    {
+      "file": "src/components/content/ArticleProse.jsx",
+      "tag": "Block",
+      "lines": "102-133",
+      "id": "ArticleProse-jsx#Block"
+    }
+  ],
+  "semantic": {
+    "id": "editorial.prose-chapter",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "maxWords": 12,
+        "required": false
+      },
+      "blocks": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 14,
+        "item": {
+          "kind": {
+            "type": "enum",
+            "values": [
+              "paragraph",
+              "list",
+              "code",
+              "figure",
+              "callout",
+              "quote",
+              "footnotes"
+            ],
+            "required": true
+          },
+          "text": {
+            "type": "text",
+            "maxWords": 140,
+            "required": false
+          },
+          "items": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 8,
+            "item": {
+              "text": {
+                "type": "text",
+                "maxWords": 40,
+                "required": true
+              }
+            },
+            "required": false
+          },
+          "code": {
+            "type": "code",
+            "maxLines": 25,
+            "required": false
+          },
+          "figure": {
+            "type": "asset",
+            "roles": [
+              "chart-figure",
+              "product-screenshot"
+            ],
+            "required": false
+          },
+          "caption": {
+            "type": "text",
+            "maxWords": 12,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "minPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-chart",
+    "generated-product-visual"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "637-676",
+        "heading": "6. `ArticleProse`: full prose styles"
+      },
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "811-824",
+        "heading": "8. ArticleProse additions (build once; used by X2, X7, X8, X10, X11, X17, X19, X20)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-post",
+    "book-chapter",
+    "case-detail",
+    "community-code",
+    "ecosystem-detail",
+    "glossary-term",
+    "learn-article",
+    "research-paper",
+    "video-detail",
+    "webinar-detail"
+  ],
+  "tags": [],
+  "notes": "One contract instance per H2 chapter; long pages are many nodes. Inline code and tables are expressed inside blocks. Admonition and footnote blocks come from the proseExtras additions (PAGES_SPEC_EXTRA section 8)."
+}

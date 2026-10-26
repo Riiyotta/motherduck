@@ -1,0 +1,30 @@
+{
+  "id": "tag.tilted",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Tilted tag",
+  "purpose": "Rotated label sticker.",
+  "source": {
+    "file": "src/components/company/bits.jsx",
+    "tag": "TiltedTag",
+    "lines": "4-13",
+    "id": "bits-jsx#TiltedTag"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "label": "text(max 3 words)",
+    "rotationDeg": "number"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "126-131",
+        "heading": "P5. `TiltedTag` (rotated label sticker)"
+      }
+    ]
+  }
+}

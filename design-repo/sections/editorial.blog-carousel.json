@@ -1,0 +1,134 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.blog-carousel",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Fresh content carousel",
+  "purpose": "Yellow section: heading, sub-text, mascot and a Swiper carousel of up to 20 content cards (video, blog, case study, ecosystem) with prev/next arrows.",
+  "source": {
+    "file": "src/components/Blog.jsx",
+    "tag": "Blog",
+    "lines": "35-92",
+    "id": "Blog-jsx#Blog"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/blog/BlogCard.jsx",
+      "tag": "BlogCard",
+      "lines": "6-38",
+      "id": "BlogCard-jsx#BlogCard"
+    }
+  ],
+  "semantic": {
+    "id": "editorial.blog-carousel",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "sub": {
+        "type": "text",
+        "maxWords": 13,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 20,
+        "item": {
+          "thumb": {
+            "type": "asset",
+            "roles": [
+              "editorial-thumbnail",
+              "video-thumbnail"
+            ],
+            "required": true
+          },
+          "type": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 13,
+            "required": true
+          },
+          "meta": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      },
+      "mascot": {
+        "type": "asset",
+        "roles": [
+          "company-mascot-art",
+          "clone-mascot-pip"
+        ],
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "measured for the h2, lede and sub fields (CLONE_SPEC [Nch/Mw] counts); estimated for the remaining fields"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "yellow"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "carousel-swipe",
+      "offset-lift"
+    ],
+    "default": "carousel-swipe",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 3,
+      "lg": 2,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 9 breakpoints table: slidesPerView 1 / 1.5 / 2 / 2.5 / 3.35"
+  },
+  "generatedAssetRoles": [
+    "fictional-mascot-placeholder",
+    "generated-illustration",
+    "generated-video-poster"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "524-545",
+        "heading": "9. Blog / \"fresh\" section (bg **#F9EE3E**, `border-bottom:2px solid #383838`)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": []
+}

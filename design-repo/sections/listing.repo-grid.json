@@ -1,0 +1,99 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.repo-grid",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Open source repo grid",
+  "purpose": "Four open source project cards with mark, name, body and link.",
+  "source": {
+    "file": "src/components/marketing/bespoke.jsx",
+    "tag": "RepoGrid",
+    "lines": "436-471",
+    "id": "bespoke-jsx#RepoGrid"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "listing.repo-grid",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "mark": {
+            "type": "asset",
+            "roles": [
+              "partner-tool-logo"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 24,
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B22"
+  },
+  "generatedAssetRoles": [
+    "generic-ui-glyph",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "459-487",
+        "heading": "B22. Research / Trust / Community blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "community-oss"
+  ],
+  "tags": []
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.side-form",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Sidebar request form",
+  "purpose": "Bordered sidebar form with floating-label fields, consent checkboxes and a submit; fixed mobile bar scrolls to it.",
+  "source": {
+    "file": "src/components/extra/generic.jsx",
+    "tag": "SideForm",
+    "lines": "301-333",
+    "id": "generic-jsx#SideForm"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "conversion.side-form",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "fields": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 6,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "type": {
+            "type": "enum",
+            "values": [
+              "text",
+              "email"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "consents": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_EXTRA X17: sidebar at >=1302"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "676-704",
+        "heading": "X17. Generic page (= the `/support-policy` variant of F1 `LegalPage`; same classes as `/co"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "prose-sidebar-form"
+  ],
+  "tags": []
+}

@@ -1,0 +1,45 @@
+{
+  "description": "Component-scoped tokens for panel.terminal.",
+  "tokens": {
+    "panel.terminal.background": {
+      "value": "#16161E",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "508"
+      }
+    },
+    "panel.terminal.lineHeight": {
+      "value": "21px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "508"
+      }
+    },
+    "panel.terminal.caretWidth": {
+      "value": "7px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "508"
+      }
+    },
+    "panel.terminal.caretHeight": {
+      "value": "15px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "508"
+      }
+    },
+    "panel.terminal.caretBlink": {
+      "value": "1s steps(1) infinite",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "508"
+      }
+    }
+  }
+}

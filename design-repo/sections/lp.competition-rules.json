@@ -1,0 +1,89 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "lp.competition-rules",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Competition rules",
+  "purpose": "Rules and categories of the competition.",
+  "source": {
+    "file": "src/components/extra/divemaxxing.jsx",
+    "tag": "Competition",
+    "lines": "93-114",
+    "id": "divemaxxing-jsx#Competition"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "lp.competition-rules",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 6,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 5,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 30,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "754-810",
+        "heading": "X21. Gated LP bodies (reuse G shell: `LPHero`, `LPSection`, FAQ, `GatedFormSection`)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "lp-divemaxxing"
+  ],
+  "tags": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "panel.code",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Code panel",
+  "purpose": "Syntax-highlighted code panel on the prism palette.",
+  "source": {
+    "file": "src/components/marketing/ducklake.jsx",
+    "tag": "CodePanel",
+    "lines": "51-86",
+    "id": "ducklake-jsx#CodePanel"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "lines": "list(max 14)",
+    "language": "string"
+  },
+  "tokens": [
+    "code.bg",
+    "code.keyword"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "300-321",
+        "heading": "B16. DuckLake-only blocks"
+      }
+    ]
+  }
+}

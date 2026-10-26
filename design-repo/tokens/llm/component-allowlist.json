@@ -1,0 +1,5083 @@
+{
+  "allowlistVersion": "1.0.0",
+  "description": "Closed list of everything a generator may instantiate or set. Every id has a matching contract file and every contract file has an entry (extraction/verify_all.py enforces parity). nodeSettableProperties must equal the property list of a PageSpec node in schema/pagespec.schema.json.",
+  "nodeSettableProperties": [
+    "id",
+    "section",
+    "variant",
+    "surface",
+    "content",
+    "motion"
+  ],
+  "pageSettableProperties": [
+    "pageSpecVersion",
+    "mode",
+    "template",
+    "route",
+    "theme",
+    "meta",
+    "nodes"
+  ],
+  "entries": [
+    {
+      "id": "button.offset",
+      "kind": "primitive",
+      "file": "primitives/button.offset.json",
+      "settable": [
+        "arrow",
+        "disabled",
+        "fullWidth",
+        "label",
+        "size",
+        "variant"
+      ]
+    },
+    {
+      "id": "link.underline",
+      "kind": "primitive",
+      "file": "primitives/link.underline.json",
+      "settable": [
+        "icon",
+        "label",
+        "size",
+        "uppercase"
+      ]
+    },
+    {
+      "id": "input.text",
+      "kind": "primitive",
+      "file": "primitives/input.text.json",
+      "settable": [
+        "error",
+        "label",
+        "multiline",
+        "type",
+        "variant"
+      ]
+    },
+    {
+      "id": "input.checkbox",
+      "kind": "primitive",
+      "file": "primitives/input.checkbox.json",
+      "settable": [
+        "checked",
+        "label",
+        "size",
+        "variant"
+      ]
+    },
+    {
+      "id": "input.search",
+      "kind": "primitive",
+      "file": "primitives/input.search.json",
+      "settable": [
+        "placeholder",
+        "value"
+      ]
+    },
+    {
+      "id": "input.select",
+      "kind": "primitive",
+      "file": "primitives/input.select.json",
+      "settable": [
+        "label",
+        "options",
+        "value"
+      ]
+    },
+    {
+      "id": "layout.container",
+      "kind": "primitive",
+      "file": "primitives/layout.container.json",
+      "settable": [
+        "as",
+        "padX"
+      ]
+    },
+    {
+      "id": "asset.placeholder",
+      "kind": "primitive",
+      "file": "primitives/asset.placeholder.json",
+      "settable": [
+        "height",
+        "kind",
+        "label",
+        "ratio",
+        "width"
+      ]
+    },
+    {
+      "id": "icon.arrow",
+      "kind": "primitive",
+      "file": "primitives/icon.arrow.json",
+      "settable": [
+        "size"
+      ]
+    },
+    {
+      "id": "icon.chevron",
+      "kind": "primitive",
+      "file": "primitives/icon.chevron.json",
+      "settable": [
+        "open"
+      ]
+    },
+    {
+      "id": "chip.label",
+      "kind": "primitive",
+      "file": "primitives/chip.label.json",
+      "settable": [
+        "label",
+        "status",
+        "tall"
+      ]
+    },
+    {
+      "id": "tag.tilted",
+      "kind": "primitive",
+      "file": "primitives/tag.tilted.json",
+      "settable": [
+        "label",
+        "rotationDeg"
+      ]
+    },
+    {
+      "id": "tooltip",
+      "kind": "primitive",
+      "file": "primitives/tooltip.json",
+      "settable": [
+        "label"
+      ]
+    },
+    {
+      "id": "decor.doodle",
+      "kind": "primitive",
+      "file": "primitives/decor.doodle.json",
+      "settable": [
+        "kind",
+        "size"
+      ]
+    },
+    {
+      "id": "card.lift",
+      "kind": "component",
+      "file": "components/card.lift.json",
+      "settable": [
+        "as",
+        "hoverFrom",
+        "lift",
+        "press",
+        "tint"
+      ]
+    },
+    {
+      "id": "accordion.item",
+      "kind": "component",
+      "file": "components/accordion.item.json",
+      "settable": [
+        "body",
+        "open",
+        "title"
+      ]
+    },
+    {
+      "id": "card.quote",
+      "kind": "component",
+      "file": "components/card.quote.json",
+      "settable": [
+        "logo",
+        "name",
+        "quote",
+        "role"
+      ]
+    },
+    {
+      "id": "card.product",
+      "kind": "component",
+      "file": "components/card.product.json",
+      "settable": [
+        "body",
+        "title",
+        "tone"
+      ]
+    },
+    {
+      "id": "card.case-link",
+      "kind": "component",
+      "file": "components/card.case-link.json",
+      "settable": [
+        "hoverTint",
+        "logo",
+        "text"
+      ]
+    },
+    {
+      "id": "card.blog",
+      "kind": "component",
+      "file": "components/card.blog.json",
+      "settable": [
+        "meta",
+        "title",
+        "type"
+      ]
+    },
+    {
+      "id": "card.post",
+      "kind": "component",
+      "file": "components/card.post.json",
+      "settable": [
+        "badge",
+        "date",
+        "title"
+      ]
+    },
+    {
+      "id": "card.featured-post",
+      "kind": "component",
+      "file": "components/card.featured-post.json",
+      "settable": [
+        "excerpt",
+        "title"
+      ]
+    },
+    {
+      "id": "card.case-study",
+      "kind": "component",
+      "file": "components/card.case-study.json",
+      "settable": [
+        "bullets",
+        "title"
+      ]
+    },
+    {
+      "id": "card.video",
+      "kind": "component",
+      "file": "components/card.video.json",
+      "settable": [
+        "duration",
+        "title"
+      ]
+    },
+    {
+      "id": "card.partner",
+      "kind": "component",
+      "file": "components/card.partner.json",
+      "settable": [
+        "name",
+        "tags"
+      ]
+    },
+    {
+      "id": "card.learn",
+      "kind": "component",
+      "file": "components/card.learn.json",
+      "settable": [
+        "body",
+        "title"
+      ]
+    },
+    {
+      "id": "card.event-row",
+      "kind": "component",
+      "file": "components/card.event-row.json",
+      "settable": [
+        "location",
+        "title"
+      ]
+    },
+    {
+      "id": "card.read-next",
+      "kind": "component",
+      "file": "components/card.read-next.json",
+      "settable": [
+        "title",
+        "type"
+      ]
+    },
+    {
+      "id": "card.term",
+      "kind": "component",
+      "file": "components/card.term.json",
+      "settable": [
+        "summary",
+        "term"
+      ]
+    },
+    {
+      "id": "card.episode",
+      "kind": "component",
+      "file": "components/card.episode.json",
+      "settable": [
+        "meta",
+        "title"
+      ]
+    },
+    {
+      "id": "card.paper",
+      "kind": "component",
+      "file": "components/card.paper.json",
+      "settable": [
+        "title"
+      ]
+    },
+    {
+      "id": "card.instance",
+      "kind": "component",
+      "file": "components/card.instance.json",
+      "settable": [
+        "body",
+        "name"
+      ]
+    },
+    {
+      "id": "card.job",
+      "kind": "component",
+      "file": "components/card.job.json",
+      "settable": [
+        "location",
+        "title"
+      ]
+    },
+    {
+      "id": "card.value",
+      "kind": "component",
+      "file": "components/card.value.json",
+      "settable": [
+        "body",
+        "title"
+      ]
+    },
+    {
+      "id": "carousel.swiper-shell",
+      "kind": "component",
+      "file": "components/carousel.swiper-shell.json",
+      "settable": [
+        "autoplayMs",
+        "loop",
+        "slidesPerView"
+      ]
+    },
+    {
+      "id": "panel.terminal",
+      "kind": "component",
+      "file": "components/panel.terminal.json",
+      "settable": [
+        "client",
+        "lines"
+      ]
+    },
+    {
+      "id": "panel.code",
+      "kind": "component",
+      "file": "components/panel.code.json",
+      "settable": [
+        "language",
+        "lines"
+      ]
+    },
+    {
+      "id": "diagram.wire",
+      "kind": "component",
+      "file": "components/diagram.wire.json",
+      "settable": [
+        "consumer",
+        "durationMs"
+      ]
+    },
+    {
+      "id": "diagram.slab",
+      "kind": "component",
+      "file": "components/diagram.slab.json",
+      "settable": [
+        "label"
+      ]
+    },
+    {
+      "id": "prose.article",
+      "kind": "component",
+      "file": "components/prose.article.json",
+      "settable": [
+        "blocks"
+      ]
+    },
+    {
+      "id": "feed.footer",
+      "kind": "component",
+      "file": "components/feed.footer.json",
+      "settable": [
+        "label"
+      ]
+    },
+    {
+      "id": "state.no-results",
+      "kind": "component",
+      "file": "components/state.no-results.json",
+      "settable": [
+        "message"
+      ]
+    },
+    {
+      "id": "card.subscribe-tile",
+      "kind": "component",
+      "file": "components/card.subscribe-tile.json",
+      "settable": [
+        "title"
+      ]
+    },
+    {
+      "id": "marquee.band",
+      "kind": "component",
+      "file": "components/marquee.band.json",
+      "settable": [
+        "copies",
+        "label"
+      ]
+    },
+    {
+      "id": "reveal.on-scroll",
+      "kind": "component",
+      "file": "components/reveal.on-scroll.json",
+      "settable": [
+        "enabled"
+      ]
+    },
+    {
+      "id": "shell.header",
+      "kind": "section",
+      "file": "sections/shell.header.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "eyebrowLink",
+        "eyebrowText",
+        "logo",
+        "navGroups",
+        "navLinks",
+        "primaryAction"
+      ],
+      "variants": [
+        "default",
+        "dark"
+      ]
+    },
+    {
+      "id": "shell.footer",
+      "kind": "section",
+      "file": "sections/shell.footer.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "badges",
+        "columns",
+        "legalLinks",
+        "logo",
+        "poweredByLine",
+        "social"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "shell.lp-nav",
+      "kind": "section",
+      "file": "sections/shell.lp-nav.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "anchors",
+        "logo",
+        "primaryAction"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "shell.dive-nav",
+      "kind": "section",
+      "file": "sections/shell.dive-nav.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "items"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "shell.dive-footer",
+      "kind": "section",
+      "file": "sections/shell.dive-footer.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "legal",
+        "links"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.skip-link",
+      "kind": "section",
+      "file": "sections/runtime.skip-link.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.mega-menu",
+      "kind": "section",
+      "file": "sections/runtime.mega-menu.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.mobile-menu",
+      "kind": "section",
+      "file": "sections/runtime.mobile-menu.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.back-to-top",
+      "kind": "section",
+      "file": "sections/runtime.back-to-top.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.toc-fab",
+      "kind": "section",
+      "file": "sections/runtime.toc-fab.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.view-paper-fab",
+      "kind": "section",
+      "file": "sections/runtime.view-paper-fab.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.mobile-register-bar",
+      "kind": "section",
+      "file": "sections/runtime.mobile-register-bar.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.mobile-subscribe-button",
+      "kind": "section",
+      "file": "sections/runtime.mobile-subscribe-button.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.gated-video-modal",
+      "kind": "section",
+      "file": "sections/runtime.gated-video-modal.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.partner-modal",
+      "kind": "section",
+      "file": "sections/runtime.partner-modal.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.form-success-overlay",
+      "kind": "section",
+      "file": "sections/runtime.form-success-overlay.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.floating-cta",
+      "kind": "section",
+      "file": "sections/runtime.floating-cta.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.read-ebook-bar",
+      "kind": "section",
+      "file": "sections/runtime.read-ebook-bar.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.form-bar",
+      "kind": "section",
+      "file": "sections/runtime.form-bar.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "runtime.story-art-scrub",
+      "kind": "section",
+      "file": "sections/runtime.story-art-scrub.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "app.try-shell",
+      "kind": "section",
+      "file": "sections/app.try-shell.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "headline",
+        "prompts",
+        "tip"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.home",
+      "kind": "section",
+      "file": "sections/hero.home.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "agentLine",
+        "customerLogos",
+        "h1",
+        "lede",
+        "logoStripLabel",
+        "media",
+        "primaryAction",
+        "secondaryAction",
+        "tabs"
+      ],
+      "variants": [
+        "control",
+        "video"
+      ]
+    },
+    {
+      "id": "hero.product-centered",
+      "kind": "section",
+      "file": "sections/hero.product-centered.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chip",
+        "h1",
+        "lede",
+        "primaryAction",
+        "secondaryAction",
+        "status"
+      ],
+      "variants": [
+        "dives",
+        "flights",
+        "guides",
+        "mcp"
+      ]
+    },
+    {
+      "id": "hero.split-product",
+      "kind": "section",
+      "file": "sections/hero.split-product.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chip",
+        "h1",
+        "illustration",
+        "lede",
+        "primaryAction",
+        "secondaryAction"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.ducklake",
+      "kind": "section",
+      "file": "sections/hero.ducklake.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chip",
+        "h1",
+        "lede",
+        "primaryAction",
+        "secondaryAction",
+        "status"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.hypertenancy-dark",
+      "kind": "section",
+      "file": "sections/hero.hypertenancy-dark.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chip",
+        "h1",
+        "lede",
+        "media",
+        "primaryAction",
+        "secondaryAction"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.persona",
+      "kind": "section",
+      "file": "sections/hero.persona.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chip",
+        "h1",
+        "inlineLinks",
+        "lede",
+        "media",
+        "primaryAction",
+        "secondaryAction"
+      ],
+      "variants": [
+        "default",
+        "overview",
+        "illustration"
+      ]
+    },
+    {
+      "id": "hero.left",
+      "kind": "section",
+      "file": "sections/hero.left.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "startups",
+        "research",
+        "trust",
+        "community"
+      ]
+    },
+    {
+      "id": "hero.vs",
+      "kind": "section",
+      "file": "sections/hero.vs.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede",
+        "primaryAction",
+        "secondaryAction",
+        "subhead"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.pricing",
+      "kind": "section",
+      "file": "sections/hero.pricing.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede",
+        "tabs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.page-illustrated",
+      "kind": "section",
+      "file": "sections/hero.page-illustrated.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "illustration",
+        "lede",
+        "primaryAction",
+        "secondaryAction",
+        "ticker"
+      ],
+      "variants": [
+        "about",
+        "careers",
+        "support",
+        "book"
+      ]
+    },
+    {
+      "id": "hero.lp-cover",
+      "kind": "section",
+      "file": "sections/hero.lp-cover.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "chip",
+        "cover",
+        "finePrint",
+        "h1",
+        "subhead"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.split-form-lp",
+      "kind": "section",
+      "file": "sections/hero.split-form-lp.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede",
+        "logos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.feed",
+      "kind": "section",
+      "file": "sections/hero.feed.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "blog",
+        "news",
+        "quack",
+        "learn"
+      ]
+    },
+    {
+      "id": "hero.title-band",
+      "kind": "section",
+      "file": "sections/hero.title-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.sand-grid",
+      "kind": "section",
+      "file": "sections/hero.sand-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.ecosystem",
+      "kind": "section",
+      "file": "sections/hero.ecosystem.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.events",
+      "kind": "section",
+      "file": "sections/hero.events.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.glossary",
+      "kind": "section",
+      "file": "sections/hero.glossary.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.learn-article",
+      "kind": "section",
+      "file": "sections/hero.learn-article.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede",
+        "meta",
+        "tags"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.research-paper",
+      "kind": "section",
+      "file": "sections/hero.research-paper.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "authors",
+        "h1",
+        "venue"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.author",
+      "kind": "section",
+      "file": "sections/hero.author.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "bio",
+        "links",
+        "name",
+        "portrait",
+        "role"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.event-detail",
+      "kind": "section",
+      "file": "sections/hero.event-detail.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "date",
+        "h1",
+        "image",
+        "location",
+        "type"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.podcast",
+      "kind": "section",
+      "file": "sections/hero.podcast.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede",
+        "platforms"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.persona-landing",
+      "kind": "section",
+      "file": "sections/hero.persona-landing.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede",
+        "media",
+        "primaryAction",
+        "secondaryAction"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.vs-index",
+      "kind": "section",
+      "file": "sections/hero.vs-index.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.eu-region",
+      "kind": "section",
+      "file": "sections/hero.eu-region.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "form",
+        "h1",
+        "lede",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.dive-gallery",
+      "kind": "section",
+      "file": "sections/hero.dive-gallery.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "image",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.divemaxxing",
+      "kind": "section",
+      "file": "sections/hero.divemaxxing.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.jev",
+      "kind": "section",
+      "file": "sections/hero.jev.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.isolated-compute",
+      "kind": "section",
+      "file": "sections/feature.isolated-compute.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "consumers",
+        "diagram",
+        "h2",
+        "items",
+        "lede",
+        "storageChip",
+        "storageItems"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.quote-card",
+      "kind": "section",
+      "file": "sections/social-proof.quote-card.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "href",
+        "logo",
+        "name",
+        "quote",
+        "role"
+      ],
+      "variants": [
+        "architecture",
+        "platform"
+      ]
+    },
+    {
+      "id": "feature.platform-diagram",
+      "kind": "section",
+      "file": "sections/feature.platform-diagram.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "lede",
+        "scaleTiers",
+        "slabs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.product-card-trio",
+      "kind": "section",
+      "file": "sections/feature.product-card-trio.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.integrations-arc",
+      "kind": "section",
+      "file": "sections/feature.integrations-arc.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "link",
+        "sub",
+        "tiles"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.integrations-bar",
+      "kind": "section",
+      "file": "sections/feature.integrations-bar.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chip",
+        "logos",
+        "mascot",
+        "title",
+        "trailing"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.customer-case-grid",
+      "kind": "section",
+      "file": "sections/social-proof.customer-case-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "sub"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.agent-interfaces",
+      "kind": "section",
+      "file": "sections/feature.agent-interfaces.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "clientTabs",
+        "docsAction",
+        "footerLabel",
+        "footerNote",
+        "h2",
+        "sub"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.blog-carousel",
+      "kind": "section",
+      "file": "sections/editorial.blog-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "mascot",
+        "sub"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.sticky-stack",
+      "kind": "section",
+      "file": "sections/feature.sticky-stack.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "intro"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.quote-carousel",
+      "kind": "section",
+      "file": "sections/social-proof.quote-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "slides",
+        "tag"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.quote-spotlight",
+      "kind": "section",
+      "file": "sections/social-proof.quote-spotlight.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "href",
+        "logo",
+        "name",
+        "quote",
+        "role",
+        "tag"
+      ],
+      "variants": [
+        "default",
+        "postgres",
+        "startups"
+      ]
+    },
+    {
+      "id": "faq.accordion",
+      "kind": "section",
+      "file": "sections/faq.accordion.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "illustration",
+        "items"
+      ],
+      "variants": [
+        "full",
+        "contained",
+        "lp",
+        "video"
+      ]
+    },
+    {
+      "id": "cta.band",
+      "kind": "section",
+      "file": "sections/cta.band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "lede",
+        "primaryAction",
+        "secondaryAction"
+      ],
+      "variants": [
+        "product",
+        "vs"
+      ]
+    },
+    {
+      "id": "divider.marquee-band",
+      "kind": "section",
+      "file": "sections/divider.marquee-band.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "copies",
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "divider.ticker-band",
+      "kind": "section",
+      "file": "sections/divider.ticker-band.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "comparison.vs-table",
+      "kind": "section",
+      "file": "sections/comparison.vs-table.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "competitorLogo",
+        "competitorName",
+        "h2",
+        "lede",
+        "rows"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.logo-bar",
+      "kind": "section",
+      "file": "sections/social-proof.logo-bar.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "logos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "comparison.benchmark-panel",
+      "kind": "section",
+      "file": "sections/comparison.benchmark-panel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "chart",
+        "h2",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "comparison.compare-cards",
+      "kind": "section",
+      "file": "sections/comparison.compare-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "label"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.problem-cards",
+      "kind": "section",
+      "file": "sections/feature.problem-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.media-frame",
+      "kind": "section",
+      "file": "sections/media.media-frame.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "lede",
+        "media"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.video-frame",
+      "kind": "section",
+      "file": "sections/media.video-frame.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "poster"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.live-embed",
+      "kind": "section",
+      "file": "sections/media.live-embed.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "embed",
+        "h2",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.gallery-teaser",
+      "kind": "section",
+      "file": "sections/listing.gallery-teaser.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h2",
+        "thumbs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.browser-window-demo",
+      "kind": "section",
+      "file": "sections/feature.browser-window-demo.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "caption",
+        "chart",
+        "demo",
+        "h2",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.cookbook-grid",
+      "kind": "section",
+      "file": "sections/listing.cookbook-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.code-panel-band",
+      "kind": "section",
+      "file": "sections/media.code-panel-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "code",
+        "h2",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.format-compare",
+      "kind": "section",
+      "file": "sections/feature.format-compare.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "lede",
+        "panels"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.newsletter-signup",
+      "kind": "section",
+      "file": "sections/conversion.newsletter-signup.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "consent",
+        "cover",
+        "emailLabel",
+        "h2",
+        "lede",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.code-sample",
+      "kind": "section",
+      "file": "sections/media.code-sample.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "code",
+        "h2",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.resource-carousel",
+      "kind": "section",
+      "file": "sections/listing.resource-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.code-tabs-panel",
+      "kind": "section",
+      "file": "sections/feature.code-tabs-panel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "lede",
+        "tabs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.alternating-rows",
+      "kind": "section",
+      "file": "sections/feature.alternating-rows.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "rows",
+        "tag"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.persona-split-rows",
+      "kind": "section",
+      "file": "sections/feature.persona-split-rows.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "rows"
+      ],
+      "variants": [
+        "default",
+        "compact"
+      ]
+    },
+    {
+      "id": "feature.feature-grid",
+      "kind": "section",
+      "file": "sections/feature.feature-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.architecture-panel",
+      "kind": "section",
+      "file": "sections/feature.architecture-panel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "caption",
+        "diagram",
+        "tab"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.yellow-band",
+      "kind": "section",
+      "file": "sections/cta.yellow-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h2",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.ecosystem-diagram",
+      "kind": "section",
+      "file": "sections/feature.ecosystem-diagram.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "tiles"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.case-study-carousel",
+      "kind": "section",
+      "file": "sections/social-proof.case-study-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "slides"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.contact-form",
+      "kind": "section",
+      "file": "sections/conversion.contact-form.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "fields",
+        "h2",
+        "intro",
+        "mascot",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.use-case-split",
+      "kind": "section",
+      "file": "sections/feature.use-case-split.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cases"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.old-world-new-world",
+      "kind": "section",
+      "file": "sections/feature.old-world-new-world.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "panels"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.agent-card-carousel",
+      "kind": "section",
+      "file": "sections/feature.agent-card-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "pricing.tier-cards",
+      "kind": "section",
+      "file": "sections/pricing.tier-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "annualStrip",
+        "tiers"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "pricing.plan-matrix",
+      "kind": "section",
+      "file": "sections/pricing.plan-matrix.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "groups",
+        "regionLabel"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "pricing.instances",
+      "kind": "section",
+      "file": "sections/pricing.instances.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "marketplaces"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.final",
+      "kind": "section",
+      "file": "sections/cta.final.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "primaryAction",
+        "secondaryAction"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "pricing.duckdb-support-panel",
+      "kind": "section",
+      "file": "sections/pricing.duckdb-support-panel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lede",
+        "pillTabs",
+        "tiers"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.investor-logos",
+      "kind": "section",
+      "file": "sections/social-proof.investor-logos.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label",
+        "logos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.program-benefits",
+      "kind": "section",
+      "file": "sections/feature.program-benefits.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.logo-marquee",
+      "kind": "section",
+      "file": "sections/social-proof.logo-marquee.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "logos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.persona-split-sticky",
+      "kind": "section",
+      "file": "sections/feature.persona-split-sticky.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "rows"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.apply-form",
+      "kind": "section",
+      "file": "sections/conversion.apply-form.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "fields",
+        "h2",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "navigation.research-chips",
+      "kind": "section",
+      "file": "sections/navigation.research-chips.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chips"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.paper-list",
+      "kind": "section",
+      "file": "sections/listing.paper-list.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "papers"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.trust-section",
+      "kind": "section",
+      "file": "sections/editorial.trust-section.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "badges",
+        "blocks",
+        "tabs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.repo-grid",
+      "kind": "section",
+      "file": "sections/listing.repo-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.social-carousel",
+      "kind": "section",
+      "file": "sections/social-proof.social-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "posts"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.logo-strip",
+      "kind": "section",
+      "file": "sections/social-proof.logo-strip.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "label",
+        "logos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.dark-features",
+      "kind": "section",
+      "file": "sections/feature.dark-features.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "items"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.split-media",
+      "kind": "section",
+      "file": "sections/feature.split-media.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "h2",
+        "media"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.gallery-row",
+      "kind": "section",
+      "file": "sections/listing.gallery-row.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "thumbs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.security-split",
+      "kind": "section",
+      "file": "sections/feature.security-split.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "media",
+        "rows"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "pricing.band",
+      "kind": "section",
+      "file": "sections/pricing.band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.industry-swiper",
+      "kind": "section",
+      "file": "sections/social-proof.industry-swiper.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "slides"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.agent-links",
+      "kind": "section",
+      "file": "sections/feature.agent-links.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.closing-band",
+      "kind": "section",
+      "file": "sections/cta.closing-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "primaryAction",
+        "secondaryAction"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.eu-partners",
+      "kind": "section",
+      "file": "sections/listing.eu-partners.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "partners"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.eu-webinars",
+      "kind": "section",
+      "file": "sections/listing.eu-webinars.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.eu-posts",
+      "kind": "section",
+      "file": "sections/listing.eu-posts.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.azure-waitlist",
+      "kind": "section",
+      "file": "sections/conversion.azure-waitlist.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "fields",
+        "h1",
+        "lede",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.azure-coming",
+      "kind": "section",
+      "file": "sections/feature.azure-coming.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "items"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.azure-vote",
+      "kind": "section",
+      "file": "sections/conversion.azure-vote.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "options",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.azure-steps",
+      "kind": "section",
+      "file": "sections/feature.azure-steps.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "steps"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.azure-closing",
+      "kind": "section",
+      "file": "sections/cta.azure-closing.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.all-comparisons",
+      "kind": "section",
+      "file": "sections/listing.all-comparisons.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.origin-story",
+      "kind": "section",
+      "file": "sections/editorial.origin-story.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "art",
+        "h2",
+        "paragraphs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.team-photo",
+      "kind": "section",
+      "file": "sections/media.team-photo.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "caption",
+        "photo"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.investors",
+      "kind": "section",
+      "file": "sections/social-proof.investors.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "logos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.contact-band",
+      "kind": "section",
+      "file": "sections/cta.contact-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "character",
+        "h2",
+        "tag"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.community-join",
+      "kind": "section",
+      "file": "sections/cta.community-join.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "banner",
+        "h2",
+        "link"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.how-we-work",
+      "kind": "section",
+      "file": "sections/feature.how-we-work.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "features",
+        "h2",
+        "photos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.video-feature",
+      "kind": "section",
+      "file": "sections/media.video-feature.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "poster"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.values-cards",
+      "kind": "section",
+      "file": "sections/feature.values-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.jobs-board",
+      "kind": "section",
+      "file": "sections/listing.jobs-board.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "art",
+        "filters",
+        "groups",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.photo-marquee",
+      "kind": "section",
+      "file": "sections/media.photo-marquee.json",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "photos"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.benefits-card",
+      "kind": "section",
+      "file": "sections/feature.benefits-card.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "art",
+        "h2",
+        "items"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.testimonials",
+      "kind": "section",
+      "file": "sections/social-proof.testimonials.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "slides"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.closing",
+      "kind": "section",
+      "file": "sections/cta.closing.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "art",
+        "body",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.contact-chooser",
+      "kind": "section",
+      "file": "sections/cta.contact-chooser.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h1",
+        "lede"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.contact-split-form",
+      "kind": "section",
+      "file": "sections/conversion.contact-split-form.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "bullets",
+        "fields",
+        "h1",
+        "logos",
+        "note",
+        "submit"
+      ],
+      "variants": [
+        "product-expert",
+        "support"
+      ]
+    },
+    {
+      "id": "feature.support-cards",
+      "kind": "section",
+      "file": "sections/feature.support-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "lede",
+        "statusLink"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.yellow-callout",
+      "kind": "section",
+      "file": "sections/cta.yellow-callout.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "art",
+        "body",
+        "h3"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "legal.document-header",
+      "kind": "section",
+      "file": "sections/legal.document-header.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h1",
+        "lastUpdated",
+        "lead"
+      ],
+      "variants": [
+        "default",
+        "sidebar-form"
+      ]
+    },
+    {
+      "id": "navigation.legal-toc",
+      "kind": "section",
+      "file": "sections/navigation.legal-toc.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "items"
+      ],
+      "variants": [
+        "nested",
+        "numbered"
+      ]
+    },
+    {
+      "id": "legal.clause-section",
+      "kind": "section",
+      "file": "sections/legal.clause-section.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "heading",
+        "items",
+        "level",
+        "paragraphs",
+        "table"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.side-form",
+      "kind": "section",
+      "file": "sections/conversion.side-form.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "consents",
+        "fields",
+        "submit",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.stat-benchmark-band",
+      "kind": "section",
+      "file": "sections/lp.stat-benchmark-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "benchmarks",
+        "h2",
+        "intro",
+        "stats"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.prose-two-col",
+      "kind": "section",
+      "file": "sections/lp.prose-two-col.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "paragraphs"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.card-band",
+      "kind": "section",
+      "file": "sections/lp.card-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "intro"
+      ],
+      "variants": [
+        "outline",
+        "tabbed",
+        "steps",
+        "dark",
+        "muted",
+        "part",
+        "spectrum",
+        "color",
+        "finding"
+      ]
+    },
+    {
+      "id": "lp.numbered-list",
+      "kind": "section",
+      "file": "sections/lp.numbered-list.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "items"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.checklist-split",
+      "kind": "section",
+      "file": "sections/lp.checklist-split.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "checks",
+        "h2",
+        "paragraphs",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.authors",
+      "kind": "section",
+      "file": "sections/lp.authors.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "authors",
+        "h2",
+        "intro"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.insight-bars",
+      "kind": "section",
+      "file": "sections/lp.insight-bars.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "caption",
+        "h2",
+        "quote"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.code-window",
+      "kind": "section",
+      "file": "sections/lp.code-window.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "code",
+        "h2",
+        "intro"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.pg-sign-cards",
+      "kind": "section",
+      "file": "sections/lp.pg-sign-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "eyebrow",
+        "intro",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.pg-architecture-panel",
+      "kind": "section",
+      "file": "sections/lp.pg-architecture-panel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "bodies",
+        "eyebrow",
+        "intro",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.pg-chapter-list",
+      "kind": "section",
+      "file": "sections/lp.pg-chapter-list.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "callout",
+        "eyebrow",
+        "rows",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.pg-quote-cards",
+      "kind": "section",
+      "file": "sections/lp.pg-quote-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "eyebrow",
+        "quotes",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.comparison-dark-table",
+      "kind": "section",
+      "file": "sections/lp.comparison-dark-table.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "head",
+        "intro",
+        "note",
+        "rows"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.gated-form",
+      "kind": "section",
+      "file": "sections/conversion.gated-form.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "fields",
+        "h2",
+        "intro",
+        "submit",
+        "thumb"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.book-offer",
+      "kind": "section",
+      "file": "sections/conversion.book-offer.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "consents",
+        "cover",
+        "emailLabel",
+        "submit",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.chapter-cards",
+      "kind": "section",
+      "file": "sections/listing.chapter-cards.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "banner",
+        "cards"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.split-lead-form",
+      "kind": "section",
+      "file": "sections/conversion.split-lead-form.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "fields",
+        "formTitle",
+        "prose",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "feature.sneak-peek",
+      "kind": "section",
+      "file": "sections/feature.sneak-peek.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "body",
+        "cover",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.whats-a-dive",
+      "kind": "section",
+      "file": "sections/lp.whats-a-dive.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "body",
+        "h2",
+        "media"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.competition-rules",
+      "kind": "section",
+      "file": "sections/lp.competition-rules.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "items"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.judges",
+      "kind": "section",
+      "file": "sections/lp.judges.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "judges"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.timeline",
+      "kind": "section",
+      "file": "sections/lp.timeline.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "steps"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.prizes",
+      "kind": "section",
+      "file": "sections/lp.prizes.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "prizes"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.embed-frame",
+      "kind": "section",
+      "file": "sections/media.embed-frame.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "caption",
+        "embed"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "lp.jev-calculator",
+      "kind": "section",
+      "file": "sections/lp.jev-calculator.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "inputs",
+        "resultLabel"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "pricing.jev-plans",
+      "kind": "section",
+      "file": "sections/pricing.jev-plans.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "plans"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.jev-closing",
+      "kind": "section",
+      "file": "sections/cta.jev-closing.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.article-header",
+      "kind": "section",
+      "file": "sections/editorial.article-header.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "authors",
+        "backLink",
+        "date",
+        "h1",
+        "readMinutes",
+        "share",
+        "tags",
+        "updated"
+      ],
+      "variants": [
+        "blog-post",
+        "glossary-term",
+        "book-chapter",
+        "prose-page"
+      ]
+    },
+    {
+      "id": "editorial.article-lede",
+      "kind": "section",
+      "file": "sections/editorial.article-lede.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "text"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.prose-chapter",
+      "kind": "section",
+      "file": "sections/editorial.prose-chapter.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "blocks",
+        "heading"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "navigation.article-toc",
+      "kind": "section",
+      "file": "sections/navigation.article-toc.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "items",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.read-next-carousel",
+      "kind": "section",
+      "file": "sections/editorial.read-next-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "slides"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.subscribe-band",
+      "kind": "section",
+      "file": "sections/conversion.subscribe-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "consent",
+        "emailLabel",
+        "icon",
+        "submit",
+        "title"
+      ],
+      "variants": [
+        "default",
+        "events",
+        "author"
+      ]
+    },
+    {
+      "id": "conversion.subscribe-inline-banner",
+      "kind": "section",
+      "file": "sections/conversion.subscribe-inline-banner.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "emailLabel",
+        "icon",
+        "submit",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.video-meta",
+      "kind": "section",
+      "file": "sections/editorial.video-meta.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "date",
+        "featuring",
+        "h1",
+        "tags"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.video-player-frame",
+      "kind": "section",
+      "file": "sections/media.video-player-frame.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "backLink",
+        "embed",
+        "poster"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.transcript",
+      "kind": "section",
+      "file": "sections/editorial.transcript.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "lines"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.related-videos",
+      "kind": "section",
+      "file": "sections/listing.related-videos.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "hero.case-detail",
+      "kind": "section",
+      "file": "sections/hero.case-detail.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "backLink",
+        "facts",
+        "h1",
+        "logo"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.case-quote-band",
+      "kind": "section",
+      "file": "sections/social-proof.case-quote-band.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "logo",
+        "name",
+        "portrait",
+        "quote",
+        "role"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "social-proof.testimonial-carousel",
+      "kind": "section",
+      "file": "sections/social-proof.testimonial-carousel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "slides"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.partner-header",
+      "kind": "section",
+      "file": "sections/editorial.partner-header.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "backLink",
+        "h1",
+        "logo",
+        "tags"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.partner-links",
+      "kind": "section",
+      "file": "sections/editorial.partner-links.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "links"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.event-description",
+      "kind": "section",
+      "file": "sections/editorial.event-description.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "agenda",
+        "paragraphs",
+        "speakers"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.event-registration",
+      "kind": "section",
+      "file": "sections/conversion.event-registration.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "details",
+        "register"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.more-events",
+      "kind": "section",
+      "file": "sections/listing.more-events.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.dive-card",
+      "kind": "section",
+      "file": "sections/editorial.dive-card.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "author",
+        "description",
+        "h1",
+        "preview",
+        "tags"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.dive-prompts",
+      "kind": "section",
+      "file": "sections/editorial.dive-prompts.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "prompts"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.dive-comments",
+      "kind": "section",
+      "file": "sections/editorial.dive-comments.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "comments"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.episode-header",
+      "kind": "section",
+      "file": "sections/editorial.episode-header.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "date",
+        "duration",
+        "h1",
+        "platforms",
+        "summary",
+        "tagline"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "media.episode-player",
+      "kind": "section",
+      "file": "sections/media.episode-player.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chapters",
+        "embed",
+        "poster"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.episode-unlock",
+      "kind": "section",
+      "file": "sections/conversion.episode-unlock.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "emailLabel",
+        "submit",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "editorial.episode-transcript",
+      "kind": "section",
+      "file": "sections/editorial.episode-transcript.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "lines"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "conversion.webinar-register",
+      "kind": "section",
+      "file": "sections/conversion.webinar-register.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "body",
+        "consents",
+        "fields",
+        "h1",
+        "lede",
+        "logos",
+        "submit"
+      ],
+      "variants": [
+        "register-lp",
+        "side-form"
+      ]
+    },
+    {
+      "id": "conversion.book-panel",
+      "kind": "section",
+      "file": "sections/conversion.book-panel.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "cover"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "navigation.chapter-sidebar",
+      "kind": "section",
+      "file": "sections/navigation.chapter-sidebar.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chapters",
+        "consents",
+        "emailLabel",
+        "submit"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.start-card",
+      "kind": "section",
+      "file": "sections/cta.start-card.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.paper-card",
+      "kind": "section",
+      "file": "sections/cta.paper-card.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.term-promo",
+      "kind": "section",
+      "file": "sections/cta.term-promo.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.related-terms",
+      "kind": "section",
+      "file": "sections/listing.related-terms.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "terms"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.read-next-grid",
+      "kind": "section",
+      "file": "sections/listing.read-next-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "footerLink"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "navigation.search-filter",
+      "kind": "section",
+      "file": "sections/navigation.search-filter.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "searchPlaceholder",
+        "selects",
+        "tabs"
+      ],
+      "variants": [
+        "default",
+        "search-only",
+        "events"
+      ]
+    },
+    {
+      "id": "navigation.category-chips",
+      "kind": "section",
+      "file": "sections/navigation.category-chips.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chips",
+        "heading"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "navigation.glossary-bar",
+      "kind": "section",
+      "file": "sections/navigation.glossary-bar.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "letters",
+        "searchPlaceholder"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "navigation.dive-filter",
+      "kind": "section",
+      "file": "sections/navigation.dive-filter.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "rows",
+        "searchPlaceholder"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "navigation.pagination",
+      "kind": "section",
+      "file": "sections/navigation.pagination.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "current",
+        "last"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.featured-post",
+      "kind": "section",
+      "file": "sections/listing.featured-post.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "chip",
+        "date",
+        "excerpt",
+        "href",
+        "thumb",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.post-grid",
+      "kind": "section",
+      "file": "sections/listing.post-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "loadMore"
+      ],
+      "variants": [
+        "default",
+        "badge"
+      ]
+    },
+    {
+      "id": "listing.news-digest",
+      "kind": "section",
+      "file": "sections/listing.news-digest.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "h2",
+        "items"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.case-grid",
+      "kind": "section",
+      "file": "sections/listing.case-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.featured-video",
+      "kind": "section",
+      "file": "sections/listing.featured-video.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "duration",
+        "href",
+        "tags",
+        "thumb",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.video-grid",
+      "kind": "section",
+      "file": "sections/listing.video-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.partner-grid",
+      "kind": "section",
+      "file": "sections/listing.partner-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2",
+        "joinCard"
+      ],
+      "variants": [
+        "technology",
+        "consulting"
+      ]
+    },
+    {
+      "id": "cta.build-with",
+      "kind": "section",
+      "file": "sections/cta.build-with.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.learn-grid",
+      "kind": "section",
+      "file": "sections/listing.learn-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "cta.speaker-banner",
+      "kind": "section",
+      "file": "sections/cta.speaker-banner.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "action",
+        "body",
+        "icon",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.event-list",
+      "kind": "section",
+      "file": "sections/listing.event-list.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "rows"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.past-event-list",
+      "kind": "section",
+      "file": "sections/listing.past-event-list.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "rows"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.glossary-letter",
+      "kind": "section",
+      "file": "sections/listing.glossary-letter.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "letter",
+        "terms"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.author-feed",
+      "kind": "section",
+      "file": "sections/listing.author-feed.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "h2"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.dive-grid",
+      "kind": "section",
+      "file": "sections/listing.dive-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards",
+        "sortLabel"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.latest-episode",
+      "kind": "section",
+      "file": "sections/listing.latest-episode.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "heading",
+        "href",
+        "poster",
+        "summary",
+        "title"
+      ],
+      "variants": [
+        "default"
+      ]
+    },
+    {
+      "id": "listing.episode-grid",
+      "kind": "section",
+      "file": "sections/listing.episode-grid.json",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "surface",
+        "content",
+        "motion"
+      ],
+      "contentFields": [
+        "cards"
+      ],
+      "variants": [
+        "default"
+      ]
+    }
+  ]
+}

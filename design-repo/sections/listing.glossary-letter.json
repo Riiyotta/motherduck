@@ -1,0 +1,101 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.glossary-letter",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Glossary letter group",
+  "purpose": "One letter heading and its term cards (repeated A to Z).",
+  "source": {
+    "file": "src/components/extra/glossary.jsx",
+    "tag": "LetterSection",
+    "lines": "70-82",
+    "id": "glossary-jsx#LetterSection"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/glossary.jsx",
+      "tag": "TermCard",
+      "lines": "10-20",
+      "id": "glossary-jsx#TermCard"
+    }
+  ],
+  "semantic": {
+    "id": "listing.glossary-letter",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "letter": {
+        "type": "text",
+        "maxWords": 1,
+        "required": true
+      },
+      "terms": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 60,
+        "item": {
+          "term": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "summary": {
+            "type": "text",
+            "maxWords": 30,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "175-206",
+        "heading": "X1. Glossary index `/glossary`"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "glossary-index"
+  ],
+  "tags": []
+}

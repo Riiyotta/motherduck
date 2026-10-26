@@ -1,0 +1,111 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.more-events",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "More upcoming events",
+  "purpose": "Heading and cards of other upcoming events.",
+  "source": {
+    "file": "src/components/extra/events.jsx",
+    "tag": "MoreEvents",
+    "lines": "206-221",
+    "id": "events-jsx#MoreEvents"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/events.jsx",
+      "tag": "MoreCard",
+      "lines": "192-204",
+      "id": "events-jsx#MoreCard"
+    }
+  ],
+  "semantic": {
+    "id": "listing.more-events",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 3,
+        "item": {
+          "type": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true
+          },
+          "date": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "location": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "231-263",
+        "heading": "X3. Event detail `/events/:slug` (251; samples `ai-council-2026` upcoming, `ai-by-the-bay-"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "event-detail"
+  ],
+  "tags": []
+}

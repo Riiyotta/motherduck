@@ -1,0 +1,29 @@
+{
+  "id": "diagram.slab",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Isometric slab",
+  "purpose": "Skewed-label isometric slab used in the platform diagram.",
+  "source": {
+    "file": "src/components/platform/Slab.jsx",
+    "tag": "Slab",
+    "lines": "27-49",
+    "id": "Slab-jsx#Slab"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "label": "text(max 3 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "373-403",
+        "heading": "Isometric platform diagram (margin-top 56)"
+      }
+    ]
+  }
+}

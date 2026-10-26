@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.news-digest",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "News digest card",
+  "purpose": "Monthly digest card at the head of the news feed with a heading and items.",
+  "source": {
+    "file": "src/components/content/feedCards.jsx",
+    "tag": "NewsDigestCard",
+    "lines": "122-141",
+    "id": "feedCards-jsx#NewsDigestCard"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/content/feedCards.jsx",
+      "tag": "NewsletterThumb",
+      "lines": "34-60",
+      "id": "feedCards-jsx#NewsletterThumb"
+    }
+  ],
+  "semantic": {
+    "id": "listing.news-digest",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "items": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 8,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 12,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "244-250",
+        "heading": "F8. `NewsDigestCard` (News only) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "news-index"
+  ],
+  "tags": []
+}

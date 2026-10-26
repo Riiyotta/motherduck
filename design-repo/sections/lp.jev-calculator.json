@@ -1,0 +1,103 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "lp.jev-calculator",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Cost calculator",
+  "purpose": "Interactive cost calculator with sliders and a typed result (formula UNMEASURED in the source spec).",
+  "source": {
+    "file": "src/components/extra/jev.jsx",
+    "tag": "Calculator",
+    "lines": "96-150",
+    "id": "jev-jsx#Calculator"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "lp.jev-calculator",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "inputs": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 5,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "min": {
+            "type": "number",
+            "min": 0,
+            "max": 100000,
+            "required": true
+          },
+          "max": {
+            "type": "number",
+            "min": 0,
+            "max": 1000000,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "resultLabel": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "jev-type",
+      "jev-cursor-blink"
+    ],
+    "default": "jev-type",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "partially-measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "754-810",
+        "heading": "X21. Gated LP bodies (reuse G shell: `LPHero`, `LPSection`, FAQ, `GatedFormSection`)"
+      }
+    ],
+    "note": "PAGES_SPEC_EXTRA section 2 UNMEASURED: jev calculator formula"
+  },
+  "usedInTemplates": [
+    "lp-jev"
+  ],
+  "tags": [],
+  "notes": "PAGES_SPEC_EXTRA section 2 lists the calculator formula as UNMEASURED; this contract defines the content shape only."
+}

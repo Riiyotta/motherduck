@@ -1,0 +1,4327 @@
+{
+  "description": "Font families (free substitutes for the two commercial faces), the full type-role table (size / line-height / letter-spacing / weight per role) and the weight and tracking scales derived from it.",
+  "tokens": {
+    "fontFamily.fono": {
+      "value": [
+        "\"Space Grotesk\"",
+        "sans-serif"
+      ],
+      "type": "fontFamily",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "83"
+      },
+      "substituteFor": "Aeonik Fono",
+      "license": "free substitute (Space Grotesk, OFL); the original is commercial and must not be downloaded",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "108"
+      }
+    },
+    "fontFamily.mono": {
+      "value": [
+        "\"Fragment Mono\"",
+        "ui-monospace",
+        "monospace"
+      ],
+      "type": "fontFamily",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "84"
+      },
+      "substituteFor": "Aeonik Mono",
+      "license": "free substitute (Fragment Mono, OFL); the original is commercial",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "109"
+      }
+    },
+    "fontFamily.sans": {
+      "value": [
+        "Inter",
+        "system-ui",
+        "sans-serif"
+      ],
+      "type": "fontFamily",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "85"
+      },
+      "substituteFor": null,
+      "license": "Inter, OFL",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "110"
+      }
+    },
+    "fontFamily.code": {
+      "value": [
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "\"Liberation Mono\"",
+        "\"Courier New\"",
+        "monospace"
+      ],
+      "type": "fontFamily",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      },
+      "substituteFor": "Source Code Pro (not loaded on the original; system monospace)",
+      "license": "system monospace stack",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "112"
+      }
+    },
+    "fontFamily.jet": {
+      "value": [
+        "\"JetBrains Mono\"",
+        "ui-monospace",
+        "monospace"
+      ],
+      "type": "fontFamily",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "88"
+      },
+      "substituteFor": null,
+      "license": "JetBrains Mono, OFL",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "111"
+      }
+    },
+    "fontFamily.museo": {
+      "value": [
+        "MuseoModerno",
+        "sans-serif"
+      ],
+      "type": "fontFamily",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "64"
+      },
+      "substituteFor": null,
+      "license": "MuseoModerno 900, OFL (hypertenancy hero line 2 only)",
+      "evidence": {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "17"
+      }
+    },
+    "fontSize.h1": {
+      "value": {
+        "size": "44px",
+        "lineHeight": "48px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "94"
+      }
+    },
+    "fontSize.h1-md": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "43.6px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "95"
+      }
+    },
+    "fontSize.h1-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "30.52px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "96"
+      }
+    },
+    "fontSize.h2": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "97"
+      }
+    },
+    "fontSize.h2-lg": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "98"
+      }
+    },
+    "fontSize.h2-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "99"
+      }
+    },
+    "fontSize.h2-agent": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px",
+        "letterSpacing": "0.03em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "100"
+      }
+    },
+    "fontSize.h2-agent-lg": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "43.2px",
+        "letterSpacing": "0.03em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "101"
+      }
+    },
+    "fontSize.h2-agent-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.03em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "102"
+      }
+    },
+    "fontSize.h2-blog": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "103"
+      }
+    },
+    "fontSize.h2-blog-lg": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "43.2px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "104"
+      }
+    },
+    "fontSize.h2-blog-md": {
+      "value": {
+        "size": "30px",
+        "lineHeight": "36px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "105"
+      }
+    },
+    "fontSize.card-h3": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "106"
+      }
+    },
+    "fontSize.card-h3-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "107"
+      }
+    },
+    "fontSize.stat": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px",
+        "letterSpacing": "0.03em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "108"
+      }
+    },
+    "fontSize.stat-lg": {
+      "value": {
+        "size": "48px",
+        "lineHeight": "57.6px",
+        "letterSpacing": "0.03em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "109"
+      }
+    },
+    "fontSize.stat-sm": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px",
+        "letterSpacing": "0.03em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "110"
+      }
+    },
+    "fontSize.blog-h3": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "22.5px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "111"
+      }
+    },
+    "fontSize.blog-h3-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "20px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "112"
+      }
+    },
+    "fontSize.slab-label": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "113"
+      }
+    },
+    "fontSize.slab-label-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "114"
+      }
+    },
+    "fontSize.eyebrow": {
+      "value": {
+        "size": "12.5px",
+        "lineHeight": "15px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "115"
+      }
+    },
+    "fontSize.eyebrow-sm": {
+      "value": {
+        "size": "12.5px",
+        "lineHeight": "17.5px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "116"
+      }
+    },
+    "fontSize.h2-mono": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "119"
+      }
+    },
+    "fontSize.h2-mono-lg": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "120"
+      }
+    },
+    "fontSize.h2-mono-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "121"
+      }
+    },
+    "fontSize.label": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "122"
+      }
+    },
+    "fontSize.accordion-title": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "123"
+      }
+    },
+    "fontSize.accordion-title-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "19.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "124"
+      }
+    },
+    "fontSize.diagram-title": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "16px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "125"
+      }
+    },
+    "fontSize.quote-mark": {
+      "value": {
+        "size": "48px",
+        "lineHeight": "48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "126"
+      }
+    },
+    "fontSize.quote-mark-sm": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "56px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "127"
+      }
+    },
+    "fontSize.bar-title": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "24px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "128"
+      }
+    },
+    "fontSize.bar-title-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "16.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "129"
+      }
+    },
+    "fontSize.agent-h3": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "130"
+      }
+    },
+    "fontSize.chip": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "12px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "131"
+      }
+    },
+    "fontSize.lede-hero": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "134"
+      }
+    },
+    "fontSize.lede-hero-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "135"
+      }
+    },
+    "fontSize.lede": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px",
+        "letterSpacing": "0.4px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "136"
+      }
+    },
+    "fontSize.lede-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "137"
+      }
+    },
+    "fontSize.sub": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "138"
+      }
+    },
+    "fontSize.sub-blog": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "139"
+      }
+    },
+    "fontSize.sub-blog-sm": {
+      "value": {
+        "size": "15px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "140"
+      }
+    },
+    "fontSize.nav": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "141"
+      }
+    },
+    "fontSize.nav-mobile": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "142"
+      }
+    },
+    "fontSize.button": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "143"
+      }
+    },
+    "fontSize.accordion-body": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "144"
+      }
+    },
+    "fontSize.card-body": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "145"
+      }
+    },
+    "fontSize.diagram-body": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "0.24px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "146"
+      }
+    },
+    "fontSize.pill": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "12px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "147"
+      }
+    },
+    "fontSize.quote": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "148"
+      }
+    },
+    "fontSize.quote-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "149"
+      }
+    },
+    "fontSize.caption": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "150"
+      }
+    },
+    "fontSize.customer-quote": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px",
+        "letterSpacing": "0.4px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "151"
+      }
+    },
+    "fontSize.customer-quote-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "152"
+      }
+    },
+    "fontSize.agent-link": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "11.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "153"
+      }
+    },
+    "fontSize.meta": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "154"
+      }
+    },
+    "fontSize.tooltip": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "155"
+      }
+    },
+    "fontSize.footer-heading": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "700"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "156"
+      }
+    },
+    "fontSize.footer-heading-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "700"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "157"
+      }
+    },
+    "fontSize.footer-link": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "20.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "158"
+      }
+    },
+    "fontSize.footer-link-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "18.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "159"
+      }
+    },
+    "fontSize.legal": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "160"
+      }
+    },
+    "fontSize.page-h1": {
+      "value": {
+        "size": "80px",
+        "lineHeight": "96px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "61"
+      }
+    },
+    "fontSize.page-h1-md": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "62"
+      }
+    },
+    "fontSize.page-h1-sm": {
+      "value": {
+        "size": "30px",
+        "lineHeight": "42px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "63"
+      }
+    },
+    "fontSize.careers-h1-sm": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "64"
+      }
+    },
+    "fontSize.about-h1": {
+      "value": {
+        "size": "80px",
+        "lineHeight": "96px",
+        "letterSpacing": "1.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "65"
+      }
+    },
+    "fontSize.about-h1-md": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px",
+        "letterSpacing": "1.12px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "66"
+      }
+    },
+    "fontSize.about-h1-sm": {
+      "value": {
+        "size": "30px",
+        "lineHeight": "42px",
+        "letterSpacing": "0.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "67"
+      }
+    },
+    "fontSize.compact-h1": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "69"
+      }
+    },
+    "fontSize.compact-h1-48": {
+      "value": {
+        "size": "48px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "70"
+      }
+    },
+    "fontSize.compact-h1-48t": {
+      "value": {
+        "size": "48px",
+        "lineHeight": "57.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "71"
+      }
+    },
+    "fontSize.compact-h1-40": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "56px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "72"
+      }
+    },
+    "fontSize.compact-h1-32": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "73"
+      }
+    },
+    "fontSize.compact-h1-24": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "74"
+      }
+    },
+    "fontSize.page-sub": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px",
+        "letterSpacing": "0.64px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "75"
+      }
+    },
+    "fontSize.page-sub-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "76"
+      }
+    },
+    "fontSize.page-sub-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.36px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "77"
+      }
+    },
+    "fontSize.page-h2": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "78"
+      }
+    },
+    "fontSize.page-h2-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "79"
+      }
+    },
+    "fontSize.page-h2-xs": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "80"
+      }
+    },
+    "fontSize.careers-h2": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "81"
+      }
+    },
+    "fontSize.careers-h2-md": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "82"
+      }
+    },
+    "fontSize.careers-h2-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "83"
+      }
+    },
+    "fontSize.feature-h3": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px",
+        "letterSpacing": "0.64px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "84"
+      }
+    },
+    "fontSize.feature-h3-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "85"
+      }
+    },
+    "fontSize.lp-h1": {
+      "value": {
+        "size": "52px",
+        "lineHeight": "59.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "86"
+      }
+    },
+    "fontSize.lp-h1-lg": {
+      "value": {
+        "size": "44px",
+        "lineHeight": "50.6px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "87"
+      }
+    },
+    "fontSize.lp-h1-md": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "36.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "88"
+      }
+    },
+    "fontSize.lp-sub": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "26.4px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "89"
+      }
+    },
+    "fontSize.lp-sub-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "90"
+      }
+    },
+    "fontSize.lp-h2": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "52px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "91"
+      }
+    },
+    "fontSize.lp-h2-md": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "41.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "92"
+      }
+    },
+    "fontSize.lp-h2-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "31.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "93"
+      }
+    },
+    "fontSize.lp-form-h2": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "43.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "94"
+      }
+    },
+    "fontSize.lp-eyebrow": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "12px",
+        "letterSpacing": "0.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "95"
+      }
+    },
+    "fontSize.lp-tab": {
+      "value": {
+        "size": "11px",
+        "lineHeight": "18.7px",
+        "letterSpacing": "1.1px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "96"
+      }
+    },
+    "fontSize.lp-card-h3": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "23.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "97"
+      }
+    },
+    "fontSize.lp-step-h3": {
+      "value": {
+        "size": "17px",
+        "lineHeight": "22.1px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "98"
+      }
+    },
+    "fontSize.lp-finding-h3": {
+      "value": {
+        "size": "19px",
+        "lineHeight": "24.7px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "99"
+      }
+    },
+    "fontSize.lp-card-h3-lg": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "41.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "100"
+      }
+    },
+    "fontSize.lp-stat": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "36.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "101"
+      }
+    },
+    "fontSize.lp-body": {
+      "value": {
+        "size": "15px",
+        "lineHeight": "25.5px",
+        "letterSpacing": "0.3px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "102"
+      }
+    },
+    "fontSize.lp-step-body": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "103"
+      }
+    },
+    "fontSize.faq-q": {
+      "value": {
+        "size": "23px",
+        "lineHeight": "32.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "104"
+      }
+    },
+    "fontSize.faq-a": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "105"
+      }
+    },
+    "fontSize.legal-lead": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "106"
+      }
+    },
+    "fontSize.legal-lead-md": {
+      "value": {
+        "size": "15px",
+        "lineHeight": "24px",
+        "letterSpacing": "0.3px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "107"
+      }
+    },
+    "fontSize.legal-body": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "108"
+      }
+    },
+    "fontSize.toc-title": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.36px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "109"
+      }
+    },
+    "fontSize.toc-link": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "110"
+      }
+    },
+    "fontSize.toc-link-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "111"
+      }
+    },
+    "fontSize.ticker": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "18px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "112"
+      }
+    },
+    "fontSize.ticker-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "14px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "113"
+      }
+    },
+    "fontSize.ticker-lg": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "24px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "114"
+      }
+    },
+    "fontSize.ticker-lg-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "16px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "115"
+      }
+    },
+    "fontSize.link-label": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "117"
+      }
+    },
+    "fontSize.link-muted": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "118"
+      }
+    },
+    "fontSize.button-lg": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "119"
+      }
+    },
+    "fontSize.input": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "120"
+      }
+    },
+    "fontSize.input-ph": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "121"
+      }
+    },
+    "fontSize.input-float": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "122"
+      }
+    },
+    "fontSize.input-error": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "123"
+      }
+    },
+    "fontSize.check-label": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "124"
+      }
+    },
+    "fontSize.check-label-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "125"
+      }
+    },
+    "fontSize.h1-mono-xl": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "68"
+      }
+    },
+    "fontSize.h1-mono-xl-md": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "43.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "69"
+      }
+    },
+    "fontSize.h1-mono-xl-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "39.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "70"
+      }
+    },
+    "fontSize.h1-left-lg": {
+      "value": {
+        "size": "48px",
+        "lineHeight": "57.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "71"
+      }
+    },
+    "fontSize.h1-left-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "72"
+      }
+    },
+    "fontSize.h1-left-sm-tall": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "73"
+      }
+    },
+    "fontSize.h1-trust": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px",
+        "letterSpacing": "0.02em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "74"
+      }
+    },
+    "fontSize.h1-trust-lg": {
+      "value": {
+        "size": "48px",
+        "lineHeight": "57.6px",
+        "letterSpacing": "0.02em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "75"
+      }
+    },
+    "fontSize.h1-trust-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.02em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "76"
+      }
+    },
+    "fontSize.h1-mono": {
+      "value": {
+        "size": "44px",
+        "lineHeight": "52.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "77"
+      }
+    },
+    "fontSize.h1-mono-md": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "43.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "78"
+      }
+    },
+    "fontSize.h1-mono-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "79"
+      }
+    },
+    "fontSize.h1-vs": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "80"
+      }
+    },
+    "fontSize.h1-vs-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "81"
+      }
+    },
+    "fontSize.h1-persona": {
+      "value": {
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "82"
+      }
+    },
+    "fontSize.h1-persona-md": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "83"
+      }
+    },
+    "fontSize.h1-persona-sm": {
+      "value": {
+        "size": "30px",
+        "lineHeight": "42px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "84"
+      }
+    },
+    "fontSize.h1-persona-sm-alt": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "85"
+      }
+    },
+    "fontSize.hero-tagline-mono": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "86"
+      }
+    },
+    "fontSize.hero-tagline-mono-lg": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "87"
+      }
+    },
+    "fontSize.research-tagline": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "30px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "88"
+      }
+    },
+    "fontSize.research-tagline-lg": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "24px",
+        "letterSpacing": "0.4px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "89"
+      }
+    },
+    "fontSize.research-tagline-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "90"
+      }
+    },
+    "fontSize.h2-mono-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "91"
+      }
+    },
+    "fontSize.h2-mono-tall-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "92"
+      }
+    },
+    "fontSize.h2-mono-faq-md": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "93"
+      }
+    },
+    "fontSize.h2-mono-tall": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "94"
+      }
+    },
+    "fontSize.h2-mono-xs": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "95"
+      }
+    },
+    "fontSize.h2-mono-52": {
+      "value": {
+        "size": "52px",
+        "lineHeight": "72.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "96"
+      }
+    },
+    "fontSize.h2-mono-36": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "50.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "97"
+      }
+    },
+    "fontSize.h2-mono-30": {
+      "value": {
+        "size": "30px",
+        "lineHeight": "36px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "98"
+      }
+    },
+    "fontSize.tag-40": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "99"
+      }
+    },
+    "fontSize.tag-40-tall": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "56px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "100"
+      }
+    },
+    "fontSize.tag-18": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "101"
+      }
+    },
+    "fontSize.tag-16": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "19.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "102"
+      }
+    },
+    "fontSize.marquee": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "103"
+      }
+    },
+    "fontSize.marquee-alt": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "104"
+      }
+    },
+    "fontSize.marquee-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "105"
+      }
+    },
+    "fontSize.faq-q-lg": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "106"
+      }
+    },
+    "fontSize.faq-q-md": {
+      "value": {
+        "size": "17px",
+        "lineHeight": "23.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "107"
+      }
+    },
+    "fontSize.faq-q-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "108"
+      }
+    },
+    "fontSize.card-h3-mono": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "109"
+      }
+    },
+    "fontSize.card-h3-mono-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "110"
+      }
+    },
+    "fontSize.card-h3-mono-sm": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "24px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "111"
+      }
+    },
+    "fontSize.card-h3-mono-tall": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "112"
+      }
+    },
+    "fontSize.card-h3-mono-tall-md": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "28px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "113"
+      }
+    },
+    "fontSize.card-h3-mono-tall-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "114"
+      }
+    },
+    "fontSize.persona-h2": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "56px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "115"
+      }
+    },
+    "fontSize.persona-h2-lg": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "116"
+      }
+    },
+    "fontSize.persona-h2-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "117"
+      }
+    },
+    "fontSize.paper-h3": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "25px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "118"
+      }
+    },
+    "fontSize.paper-h3-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "22.5px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "119"
+      }
+    },
+    "fontSize.resource-h3": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "28px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "120"
+      }
+    },
+    "fontSize.sub-head": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "122"
+      }
+    },
+    "fontSize.sub-head-sm": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "28px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "123"
+      }
+    },
+    "fontSize.quote-carousel": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "24px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "124"
+      }
+    },
+    "fontSize.quote-carousel-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "125"
+      }
+    },
+    "fontSize.quote-spot": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "126"
+      }
+    },
+    "fontSize.quote-spot-lg": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "28.6px",
+        "letterSpacing": "0.44px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "127"
+      }
+    },
+    "fontSize.quote-spot-md": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "0.4px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "128"
+      }
+    },
+    "fontSize.case-quote": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "30.8px",
+        "letterSpacing": "0.44px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "129"
+      }
+    },
+    "fontSize.case-quote-short": {
+      "value": {
+        "size": "44px",
+        "lineHeight": "61.6px",
+        "letterSpacing": "0.88px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "130"
+      }
+    },
+    "fontSize.person-name-lg": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "131"
+      }
+    },
+    "fontSize.person-name-lg-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "132"
+      }
+    },
+    "fontSize.person-name": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "133"
+      }
+    },
+    "fontSize.person-role": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "134"
+      }
+    },
+    "fontSize.link-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "135"
+      }
+    },
+    "fontSize.button-tier": {
+      "value": {
+        "size": "15px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "136"
+      }
+    },
+    "fontSize.chip-mono": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "12px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "137"
+      }
+    },
+    "fontSize.chip-mono-tall": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "138"
+      }
+    },
+    "fontSize.price": {
+      "value": {
+        "size": "64px",
+        "lineHeight": "76.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "139"
+      }
+    },
+    "fontSize.price-lg": {
+      "value": {
+        "size": "46px",
+        "lineHeight": "55.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "140"
+      }
+    },
+    "fontSize.price-md": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "141"
+      }
+    },
+    "fontSize.tier-name": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "142"
+      }
+    },
+    "fontSize.tier-name-lg": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "143"
+      }
+    },
+    "fontSize.body-xl": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "144"
+      }
+    },
+    "fontSize.body-lg": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "145"
+      }
+    },
+    "fontSize.body-md": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "146"
+      }
+    },
+    "fontSize.body-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "147"
+      }
+    },
+    "fontSize.code-block": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "23.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "148"
+      }
+    },
+    "fontSize.code-inline": {
+      "value": {
+        "size": "15px",
+        "lineHeight": "18.75px",
+        "letterSpacing": "0.3px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "149"
+      }
+    },
+    "fontSize.feed-h1": {
+      "value": {
+        "size": "80px",
+        "lineHeight": "96px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "61"
+      }
+    },
+    "fontSize.feed-h1-md": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "62"
+      }
+    },
+    "fontSize.feed-h1-sm": {
+      "value": {
+        "size": "30px",
+        "lineHeight": "42px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "63"
+      }
+    },
+    "fontSize.feed-h1-sm-alt": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "64"
+      }
+    },
+    "fontSize.news-h1-lg": {
+      "value": {
+        "size": "64px",
+        "lineHeight": "76.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "65"
+      }
+    },
+    "fontSize.news-h1-md": {
+      "value": {
+        "size": "54px",
+        "lineHeight": "64.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "66"
+      }
+    },
+    "fontSize.quack-h1-lg": {
+      "value": {
+        "size": "72px",
+        "lineHeight": "86.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "67"
+      }
+    },
+    "fontSize.eco-h1": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px",
+        "letterSpacing": "1.12px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "68"
+      }
+    },
+    "fontSize.eco-h1-lg": {
+      "value": {
+        "size": "48px",
+        "lineHeight": "57.6px",
+        "letterSpacing": "0.96px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "69"
+      }
+    },
+    "fontSize.eco-h1-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "70"
+      }
+    },
+    "fontSize.hero-tagline-mono-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "71"
+      }
+    },
+    "fontSize.events-h1": {
+      "value": {
+        "size": "52px",
+        "lineHeight": "62.4px",
+        "letterSpacing": "1.04px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "72"
+      }
+    },
+    "fontSize.events-h1-lg": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px",
+        "letterSpacing": "0.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "73"
+      }
+    },
+    "fontSize.events-h1-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "39.2px",
+        "letterSpacing": "0.56px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "74"
+      }
+    },
+    "fontSize.events-lede": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "30.8px",
+        "letterSpacing": "0.44px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "75"
+      }
+    },
+    "fontSize.events-lede-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "76"
+      }
+    },
+    "fontSize.video-h1": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "77"
+      }
+    },
+    "fontSize.video-h1-lg": {
+      "value": {
+        "size": "52px",
+        "lineHeight": "62.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "78"
+      }
+    },
+    "fontSize.video-h1-md": {
+      "value": {
+        "size": "42px",
+        "lineHeight": "58.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "79"
+      }
+    },
+    "fontSize.video-h1-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "80"
+      }
+    },
+    "fontSize.section-h2-mono": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "81"
+      }
+    },
+    "fontSize.section-h2-mono-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "82"
+      }
+    },
+    "fontSize.section-h2-mono-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "83"
+      }
+    },
+    "fontSize.section-h2-mono-tall": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "84"
+      }
+    },
+    "fontSize.article-h1": {
+      "value": {
+        "size": "44px",
+        "lineHeight": "52.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "86"
+      }
+    },
+    "fontSize.article-h1-md": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "46.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "87"
+      }
+    },
+    "fontSize.article-h1-md-case": {
+      "value": {
+        "size": "36px",
+        "lineHeight": "50.4px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "88"
+      }
+    },
+    "fontSize.article-h1-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "39.2px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "89"
+      }
+    },
+    "fontSize.video-detail-h1": {
+      "value": {
+        "size": "38px",
+        "lineHeight": "45.6px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "90"
+      }
+    },
+    "fontSize.video-detail-h1-lg": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "91"
+      }
+    },
+    "fontSize.video-detail-h1-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "92"
+      }
+    },
+    "fontSize.partner-h1": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "93"
+      }
+    },
+    "fontSize.partner-h1-lg": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "38.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "94"
+      }
+    },
+    "fontSize.partner-h1-sm": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "44.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "95"
+      }
+    },
+    "fontSize.card-title-mono": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "28px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "97"
+      }
+    },
+    "fontSize.card-title-mono-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "98"
+      }
+    },
+    "fontSize.featured-title": {
+      "value": {
+        "size": "25px",
+        "lineHeight": "35px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "99"
+      }
+    },
+    "fontSize.featured-title-lg": {
+      "value": {
+        "size": "19px",
+        "lineHeight": "26.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "100"
+      }
+    },
+    "fontSize.featured-title-md": {
+      "value": {
+        "size": "17px",
+        "lineHeight": "23.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "101"
+      }
+    },
+    "fontSize.featured-title-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "102"
+      }
+    },
+    "fontSize.card-date": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "103"
+      }
+    },
+    "fontSize.card-date-md": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "104"
+      }
+    },
+    "fontSize.card-excerpt": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "105"
+      }
+    },
+    "fontSize.card-excerpt-md": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "106"
+      }
+    },
+    "fontSize.subscribe-title": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "107"
+      }
+    },
+    "fontSize.subscribe-title-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.36px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "108"
+      }
+    },
+    "fontSize.filter-title": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "110"
+      }
+    },
+    "fontSize.filter-title-lg": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "111"
+      }
+    },
+    "fontSize.select-label": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "112"
+      }
+    },
+    "fontSize.select-option": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "113"
+      }
+    },
+    "fontSize.toc-title-fono": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "21.6px",
+        "letterSpacing": "calc(0.36px + 0.01em)"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "115"
+      }
+    },
+    "fontSize.toc-title-fono-lg": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "calc(0.32px + 0.01em)"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "116"
+      }
+    },
+    "fontSize.toc-link-blog": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "117"
+      }
+    },
+    "fontSize.rec-chip": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "118"
+      }
+    },
+    "fontSize.rec-chip-lg": {
+      "value": {
+        "size": "13px",
+        "lineHeight": "18.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "119"
+      }
+    },
+    "fontSize.rec-chip-md": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "120"
+      }
+    },
+    "fontSize.rec-title": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "23.4px",
+        "letterSpacing": "calc(0.36px + 0.01em)",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "121"
+      }
+    },
+    "fontSize.rec-title-lg": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "calc(0.32px + 0.01em)",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "122"
+      }
+    },
+    "fontSize.rec-title-md": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "calc(0.28px + 0.01em)",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "123"
+      }
+    },
+    "fontSize.case-quote-xl": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "31.2px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "125"
+      }
+    },
+    "fontSize.case-quote-xl-lg": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "28.6px",
+        "letterSpacing": "0.44px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "126"
+      }
+    },
+    "fontSize.case-quote-xl-md": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "0.4px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "127"
+      }
+    },
+    "fontSize.person-name-lg-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "128"
+      }
+    },
+    "fontSize.person-role-lg": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "129"
+      }
+    },
+    "fontSize.person-role-lg-lg": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "130"
+      }
+    },
+    "fontSize.person-role-lg-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "131"
+      }
+    },
+    "fontSize.case-card-h3": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "132"
+      }
+    },
+    "fontSize.case-card-h3-sm": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "24px",
+        "letterSpacing": "normal",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "133"
+      }
+    },
+    "fontSize.case-card-li": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "134"
+      }
+    },
+    "fontSize.case-card-li-lg": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "135"
+      }
+    },
+    "fontSize.case-band-quote": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "30.8px",
+        "letterSpacing": "0.44px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "136"
+      }
+    },
+    "fontSize.case-band-quote-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "137"
+      }
+    },
+    "fontSize.case-band-quote-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "400"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "138"
+      }
+    },
+    "fontSize.case-lede": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px",
+        "letterSpacing": "0.4px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "139"
+      }
+    },
+    "fontSize.case-lede-lg": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "140"
+      }
+    },
+    "fontSize.profile-name": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "38.4px",
+        "letterSpacing": "0.48px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "141"
+      }
+    },
+    "fontSize.profile-name-sm": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px",
+        "letterSpacing": "0.4px",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "142"
+      }
+    },
+    "fontSize.profile-role": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "143"
+      }
+    },
+    "fontSize.profile-role-lg": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "144"
+      }
+    },
+    "fontSize.video-feat-title": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "32.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "146"
+      }
+    },
+    "fontSize.video-feat-title-lg": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "31.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "147"
+      }
+    },
+    "fontSize.video-feat-title-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "148"
+      }
+    },
+    "fontSize.video-feat-title-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "149"
+      }
+    },
+    "fontSize.duration": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.36px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "150"
+      }
+    },
+    "fontSize.duration-sm": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "0.32px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "151"
+      }
+    },
+    "fontSize.video-tag": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "0.24px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "152"
+      }
+    },
+    "fontSize.video-tag-sm": {
+      "value": {
+        "size": "10px",
+        "lineHeight": "14px",
+        "letterSpacing": "0.2px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "153"
+      }
+    },
+    "fontSize.kicker-chip": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "154"
+      }
+    },
+    "fontSize.video-tag-link": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "0.01em"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "155"
+      }
+    },
+    "fontSize.faq-a-md": {
+      "value": {
+        "size": "15px",
+        "lineHeight": "22.5px",
+        "letterSpacing": "0.3px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "156"
+      }
+    },
+    "fontSize.faq-a-sm": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "21px",
+        "letterSpacing": "0.28px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "157"
+      }
+    },
+    "fontSize.related-h2": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "158"
+      }
+    },
+    "fontSize.related-h2-md": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "56px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "159"
+      }
+    },
+    "fontSize.related-h2-sm": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "160"
+      }
+    },
+    "fontSize.partner-name": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "162"
+      }
+    },
+    "fontSize.partner-name-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "38.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "163"
+      }
+    },
+    "fontSize.partner-name-sm": {
+      "value": {
+        "size": "20px",
+        "lineHeight": "32px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "164"
+      }
+    },
+    "fontSize.eco-tag": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "0.24px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "165"
+      }
+    },
+    "fontSize.event-month": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "28.8px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "167"
+      }
+    },
+    "fontSize.event-month-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "168"
+      }
+    },
+    "fontSize.event-day": {
+      "value": {
+        "size": "56px",
+        "lineHeight": "67.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "169"
+      }
+    },
+    "fontSize.event-day-md": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "170"
+      }
+    },
+    "fontSize.event-year": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal",
+        "fontWeight": "500"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "171"
+      }
+    },
+    "fontSize.event-year-md": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "14px",
+        "letterSpacing": "normal",
+        "fontWeight": "500"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "172"
+      }
+    },
+    "fontSize.event-title": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "30.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "173"
+      }
+    },
+    "fontSize.event-title-lg": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "174"
+      }
+    },
+    "fontSize.event-loc": {
+      "value": {
+        "size": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "500"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "175"
+      }
+    },
+    "fontSize.event-loc-lg": {
+      "value": {
+        "size": "13px",
+        "lineHeight": "18.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "500"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "176"
+      }
+    },
+    "fontSize.event-tag": {
+      "value": {
+        "size": "12px",
+        "lineHeight": "12px",
+        "letterSpacing": "normal",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "177"
+      }
+    },
+    "fontSize.news-digest-h2": {
+      "value": {
+        "size": "32px",
+        "lineHeight": "41.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "179"
+      }
+    },
+    "fontSize.news-digest-h2-md": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "36.4px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "180"
+      }
+    },
+    "fontSize.news-digest-h2-sm": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "28.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "181"
+      }
+    },
+    "fontSize.news-item": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "500"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "182"
+      }
+    },
+    "fontSize.news-item-md": {
+      "value": {
+        "size": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal",
+        "fontWeight": "500"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "183"
+      }
+    },
+    "fontSize.learn-title": {
+      "value": {
+        "size": "24px",
+        "lineHeight": "33.6px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "184"
+      }
+    },
+    "fontSize.learn-title-md": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "185"
+      }
+    },
+    "fontSize.dive-h1": {
+      "value": {
+        "size": "40px",
+        "lineHeight": "48px",
+        "letterSpacing": "normal",
+        "fontWeight": "700"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "187"
+      }
+    },
+    "fontSize.dive-h1-sm": {
+      "value": {
+        "size": "28px",
+        "lineHeight": "33.6px",
+        "letterSpacing": "normal",
+        "fontWeight": "700"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "188"
+      }
+    },
+    "fontSize.dive-lede": {
+      "value": {
+        "size": "15px",
+        "lineHeight": "24px",
+        "letterSpacing": "0.3px",
+        "fontWeight": "300"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "189"
+      }
+    },
+    "fontSize.dive-card-title": {
+      "value": {
+        "size": "22px",
+        "lineHeight": "30.8px",
+        "letterSpacing": "normal",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "190"
+      }
+    },
+    "fontSize.dive-card-title-sm": {
+      "value": {
+        "size": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "fontWeight": "600"
+      },
+      "type": "fontSize",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "191"
+      }
+    },
+    "fontWeight.300": {
+      "value": 300,
+      "type": "fontWeight",
+      "usedByRoles": 65,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "fontWeight.400": {
+      "value": 400,
+      "type": "fontWeight",
+      "usedByRoles": 36,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "fontWeight.500": {
+      "value": 500,
+      "type": "fontWeight",
+      "usedByRoles": 6,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "fontWeight.600": {
+      "value": 600,
+      "type": "fontWeight",
+      "usedByRoles": 20,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "fontWeight.700": {
+      "value": 700,
+      "type": "fontWeight",
+      "usedByRoles": 4,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p01em": {
+      "value": "0.01em",
+      "type": "letterSpacing",
+      "usedByRoles": 34,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p02em": {
+      "value": "0.02em",
+      "type": "letterSpacing",
+      "usedByRoles": 3,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p03em": {
+      "value": "0.03em",
+      "type": "letterSpacing",
+      "usedByRoles": 6,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p24px": {
+      "value": "0.24px",
+      "type": "letterSpacing",
+      "usedByRoles": 3,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p28px": {
+      "value": "0.28px",
+      "type": "letterSpacing",
+      "usedByRoles": 14,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p2px": {
+      "value": "0.2px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p32px": {
+      "value": "0.32px",
+      "type": "letterSpacing",
+      "usedByRoles": 22,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p36px": {
+      "value": "0.36px",
+      "type": "letterSpacing",
+      "usedByRoles": 15,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p3px": {
+      "value": "0.3px",
+      "type": "letterSpacing",
+      "usedByRoles": 5,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p44px": {
+      "value": "0.44px",
+      "type": "letterSpacing",
+      "usedByRoles": 5,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p48px": {
+      "value": "0.48px",
+      "type": "letterSpacing",
+      "usedByRoles": 11,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p4px": {
+      "value": "0.4px",
+      "type": "letterSpacing",
+      "usedByRoles": 7,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p56px": {
+      "value": "0.56px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p64px": {
+      "value": "0.64px",
+      "type": "letterSpacing",
+      "usedByRoles": 2,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p6px": {
+      "value": "0.6px",
+      "type": "letterSpacing",
+      "usedByRoles": 2,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p88px": {
+      "value": "0.88px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p8px": {
+      "value": "0.8px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.0p96px": {
+      "value": "0.96px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.1p04px": {
+      "value": "1.04px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.1p12px": {
+      "value": "1.12px",
+      "type": "letterSpacing",
+      "usedByRoles": 2,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.1p1px": {
+      "value": "1.1px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.1p6px": {
+      "value": "1.6px",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.calc(0p28px + 0p01em)": {
+      "value": "calc(0.28px + 0.01em)",
+      "type": "letterSpacing",
+      "usedByRoles": 1,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.calc(0p32px + 0p01em)": {
+      "value": "calc(0.32px + 0.01em)",
+      "type": "letterSpacing",
+      "usedByRoles": 2,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.calc(0p36px + 0p01em)": {
+      "value": "calc(0.36px + 0.01em)",
+      "type": "letterSpacing",
+      "usedByRoles": 2,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    },
+    "letterSpacing.normal": {
+      "value": "normal",
+      "type": "letterSpacing",
+      "usedByRoles": 49,
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "derived from the fontSize role table"
+      }
+    }
+  }
+}

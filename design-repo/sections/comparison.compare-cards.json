@@ -1,0 +1,96 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "comparison.compare-cards",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "More-comparisons card grid",
+  "purpose": "Aqua marquee label followed by up to five cards linking to the other comparison pages.",
+  "source": {
+    "file": "src/components/marketing/vs.jsx",
+    "tag": "CompareCards",
+    "lines": "203-250",
+    "id": "vs-jsx#CompareCards"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "comparison.compare-cards",
+    "category": "COMPARISON"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 5,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 30,
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 3,
+      "lg": 3,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B8"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "222-226",
+        "heading": "B8. `CompareCards` (vs): a `MarqueeBand` (aqua, \"More Comparisons\") followed by a grid"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "vs-comparison"
+  ],
+  "tags": []
+}

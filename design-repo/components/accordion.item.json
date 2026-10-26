@@ -1,0 +1,51 @@
+{
+  "id": "accordion.item",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Accordion item",
+  "purpose": "Collapsible row with title, chevron and body.",
+  "source": {
+    "file": "src/components/ui/Accordion.jsx",
+    "tag": "Accordion",
+    "lines": "59-62",
+    "id": "Accordion-jsx#Accordion"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/architecture/Accordion.jsx",
+      "tag": "Accordion",
+      "lines": "72-82",
+      "id": "Accordion-jsx#Accordion"
+    },
+    {
+      "file": "src/components/marketing/FAQ.jsx",
+      "tag": "Item",
+      "lines": "54-94",
+      "id": "FAQ-jsx#Item"
+    }
+  ],
+  "props": {
+    "title": "text(max 14 words)",
+    "body": "text(max 96 words)",
+    "open": "boolean"
+  },
+  "tokens": [
+    "accordion.card.bodyTransition"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "443-453",
+        "heading": "V6. `FAQSection` (video detail): reuse `ui/Accordion.jsx`"
+      }
+    ]
+  },
+  "uses": [
+    "link.underline",
+    "icon.chevron"
+  ],
+  "notes": "Two behaviours exist: single-open card accordion (architecture) and multi-open ruled rows (FAQ)."
+}

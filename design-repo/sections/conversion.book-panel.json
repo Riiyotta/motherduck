@@ -1,0 +1,80 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.book-panel",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Book panel",
+  "purpose": "Garden panel with a floating book cover (sticky in the sidebar at xl, inline in the article below).",
+  "source": {
+    "file": "src/components/extra/bookChapter.jsx",
+    "tag": "BookPanel",
+    "lines": "12-22",
+    "id": "bookChapter-jsx#BookPanel"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "conversion.book-panel",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cover": {
+        "type": "asset",
+        "roles": [
+          "book-cover"
+        ],
+        "required": true
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "garden"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-book-cover"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "733-753",
+        "heading": "X20. Book chapter summary `/duckdb-book-summary-chapter1` … `chapter11` (NEW)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "book-chapter"
+  ],
+  "tags": []
+}

@@ -1,0 +1,60 @@
+{
+  "id": "button.offset",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Offset button",
+  "purpose": "Primary action control: bordered button on a dark backing layer that lifts diagonally on hover and returns on press.",
+  "source": {
+    "file": "src/components/ui/OffsetButton.jsx",
+    "tag": "OffsetButton",
+    "lines": "41-58",
+    "id": "OffsetButton-jsx#OffsetButton"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "variant": [
+      "primary",
+      "secondary",
+      "white",
+      "ht",
+      "ht-dark"
+    ],
+    "size": [
+      "md",
+      "lg",
+      "xl",
+      "tier",
+      "submit",
+      "icon-44",
+      "icon-54",
+      "icon-60",
+      "icon-64"
+    ],
+    "arrow": "boolean",
+    "disabled": "boolean",
+    "fullWidth": "boolean",
+    "label": "text(max 6 words)"
+  },
+  "tokens": [
+    "button.offset.height",
+    "button.offset.lift",
+    "action.primary.bg",
+    "action.secondary.bg"
+  ],
+  "states": [
+    "default",
+    "hover",
+    "active",
+    "disabled"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "241-247",
+        "heading": "2d. Primary / secondary offset buttons"
+      }
+    ]
+  }
+}

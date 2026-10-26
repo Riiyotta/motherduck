@@ -1,0 +1,1237 @@
+{
+  "description": "Every colour in tailwind.config.js and tokens/*.js; values quoted from CLONE_SPEC section 0 and the per-page-group specs.",
+  "tokens": {
+    "color.cream": {
+      "value": "#F4EFEA",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "47"
+      }
+    },
+    "color.ink": {
+      "value": "#383838",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "48"
+      }
+    },
+    "color.sky": {
+      "value": "#97D4FF",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "49"
+      }
+    },
+    "color.sky-hover": {
+      "value": "#6FC2FF",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "50"
+      }
+    },
+    "color.sky-dark": {
+      "value": "#2BA5FF",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "51"
+      }
+    },
+    "color.sky-tint": {
+      "value": "#CEEBFF",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "52"
+      }
+    },
+    "color.pink": {
+      "value": "#FEB9E2",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "53"
+      }
+    },
+    "color.yellow": {
+      "value": "#F9EE3E",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "54"
+      }
+    },
+    "color.sun": {
+      "value": "#FFDE00",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "55"
+      }
+    },
+    "color.yellow-chip": {
+      "value": "#FAF175",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "56"
+      }
+    },
+    "color.yellow-chip-border": {
+      "value": "#EBCD00",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "57"
+      }
+    },
+    "color.orange": {
+      "value": "#FF9538",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "58"
+      }
+    },
+    "color.peach": {
+      "value": "#FFDCBD",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "59"
+      }
+    },
+    "color.mint": {
+      "value": "#B0FFF4",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "60"
+      }
+    },
+    "color.coral": {
+      "value": "#FFCBC8",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "61"
+      }
+    },
+    "color.garden": {
+      "value": "#16AA98",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "62"
+      }
+    },
+    "color.garden-dark": {
+      "value": "#068475",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "63"
+      }
+    },
+    "color.gray.400": {
+      "value": "#A1A1A1",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "65"
+      }
+    },
+    "color.gray.500": {
+      "value": "#818181",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "65"
+      }
+    },
+    "color.gray.600": {
+      "value": "#666666",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "65"
+      }
+    },
+    "color.hairline": {
+      "value": "#D7D7D7",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "66"
+      }
+    },
+    "color.surface-0": {
+      "value": "#FFFFFF",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "67"
+      }
+    },
+    "color.surface-1": {
+      "value": "#FCFCFB",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "68"
+      }
+    },
+    "color.surface-2": {
+      "value": "#F8F8F7",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "69"
+      }
+    },
+    "color.surface-3": {
+      "value": "#F0F0EF",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "70"
+      }
+    },
+    "color.sand": {
+      "value": "#ECE6DF",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "71"
+      }
+    },
+    "color.sand-dark": {
+      "value": "#E1D6CB",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "72"
+      }
+    },
+    "color.chip-gray": {
+      "value": "#E8E8E8",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "73"
+      }
+    },
+    "color.clay": {
+      "value": "#D97757",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "74"
+      }
+    },
+    "color.clay-hover": {
+      "value": "#DD8568",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "75"
+      }
+    },
+    "color.term.bg": {
+      "value": "#16161E",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.line": {
+      "value": "#2E2E38",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.rule": {
+      "value": "#34343E",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.text": {
+      "value": "#E8E6EC",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.dim": {
+      "value": "#8B8A96",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.prompt": {
+      "value": "#6E6D7A",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.token": {
+      "value": "#A5A0E8",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.hot": {
+      "value": "#E8837A",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.amber": {
+      "value": "#DFA348",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.term.caret": {
+      "value": "#C9C4EE",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "76"
+      }
+    },
+    "color.teal": {
+      "value": "#50C7B7",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "19"
+      }
+    },
+    "color.teal-bright": {
+      "value": "#53DBC9",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "20"
+      }
+    },
+    "color.coral-red": {
+      "value": "#FF7169",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "21"
+      }
+    },
+    "color.filter-bg": {
+      "value": "#EBE4DD",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "22"
+      }
+    },
+    "color.lp-orange": {
+      "value": "#E87D2F",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "23"
+      }
+    },
+    "color.bar-gray": {
+      "value": "#A8A29E",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "24"
+      }
+    },
+    "color.muted-card": {
+      "value": "#F8F6F3",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "25"
+      }
+    },
+    "color.step-label": {
+      "value": "#888888",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "26"
+      }
+    },
+    "color.error": {
+      "value": "#E23F35",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "27"
+      }
+    },
+    "color.valid": {
+      "value": "rgba(6,132,117,0.804)",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "28"
+      }
+    },
+    "color.survey.paper": {
+      "value": "#FFFAF0",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "29"
+      }
+    },
+    "color.survey.ink": {
+      "value": "#16120C",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "29"
+      }
+    },
+    "color.survey.track": {
+      "value": "#ECE3CB",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "29"
+      }
+    },
+    "color.survey.teal": {
+      "value": "#32C7BD",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "29"
+      }
+    },
+    "color.survey.orange": {
+      "value": "#E8892F",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "29"
+      }
+    },
+    "color.pg.panel": {
+      "value": "#0E0F0D",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.card": {
+      "value": "#16170F",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.card-hi": {
+      "value": "#15201C",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.card-bd": {
+      "value": "#2A2B24",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.head": {
+      "value": "#141312",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.body": {
+      "value": "#56544C",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.body-light": {
+      "value": "#A6A89E",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.rule": {
+      "value": "#E6E3DB",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.quote-rule": {
+      "value": "#EDEAE1",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.eyebrow": {
+      "value": "#0F9C8A",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.num-mute": {
+      "value": "#C9C4B6",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.sub": {
+      "value": "#6B6B6B",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.yellow": {
+      "value": "#FFDE02",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.callout-bg": {
+      "value": "#EFFAF7",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.callout-bd": {
+      "value": "#CDEBE5",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.callout-eyebrow": {
+      "value": "#0E8C7C",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.callout-body": {
+      "value": "#3F5C57",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.quote": {
+      "value": "#1B1C18",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.pg.connector": {
+      "value": "#8A8C82",
+      "type": "color",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "30"
+      }
+    },
+    "color.code.bg": {
+      "value": "#1E1E1E",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.keyword": {
+      "value": "#569CD6",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.string": {
+      "value": "#CE9178",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.comment": {
+      "value": "#6A9955",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.number": {
+      "value": "#B5CEA8",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.text": {
+      "value": "#D4D4D4",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.red": {
+      "value": "#FF5F57",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.yellow": {
+      "value": "#FEBC2E",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.code.green": {
+      "value": "#28C840",
+      "type": "color",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    },
+    "color.sand-chip": {
+      "value": "#ECE5DD",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "21"
+      }
+    },
+    "color.row-hover": {
+      "value": "#EFE8E0",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "22"
+      }
+    },
+    "color.aqua": {
+      "value": "#53DBC9",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "23"
+      }
+    },
+    "color.apricot": {
+      "value": "#FFC18A",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "24"
+      }
+    },
+    "color.stone": {
+      "value": "#E4DED7",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "25"
+      }
+    },
+    "color.tag-blue": {
+      "value": "#A5C4D8",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "26"
+      }
+    },
+    "color.tag-violet": {
+      "value": "#C8A9F2",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "27"
+      }
+    },
+    "color.ht-blue": {
+      "value": "#1276BF",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "28"
+      }
+    },
+    "color.ht-glow-1": {
+      "value": "rgba(193,162,255,0.75)",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "29"
+      }
+    },
+    "color.ht-glow-2": {
+      "value": "rgba(162,115,255,0.75)",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "30"
+      }
+    },
+    "color.field": {
+      "value": "rgba(248,248,247,0.7)",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "31"
+      }
+    },
+    "color.field-valid": {
+      "value": "rgba(6,132,117,0.804)",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "32"
+      }
+    },
+    "color.prism.bg": {
+      "value": "#383838",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.prism.text": {
+      "value": "#CCCCCC",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.prism.comment": {
+      "value": "#999999",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.prism.keyword": {
+      "value": "#CC99CD",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.prism.operator": {
+      "value": "#67CDCC",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.prism.string": {
+      "value": "#7EC699",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.prism.function": {
+      "value": "#F8C555",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.prism.number": {
+      "value": "#F08D49",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "color.eco.sources": {
+      "value": "#EBF9FF",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.sources-bd": {
+      "value": "#54B4DE",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.agents": {
+      "value": "#E8F5E9",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.agents-bd": {
+      "value": "#38C1B0",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.ingestion": {
+      "value": "#F7F1FF",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.ingestion-bd": {
+      "value": "#B291DE",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.bi": {
+      "value": "#F9FBE7",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.bi-bd": {
+      "value": "#B3C419",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.retl": {
+      "value": "#FFFDE7",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.retl-bd": {
+      "value": "#E1C427",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.transform": {
+      "value": "#ECEFF1",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.transform-bd": {
+      "value": "#84A6BC",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.dsai": {
+      "value": "#EAF0FF",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.dsai-bd": {
+      "value": "#7597EE",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.orch": {
+      "value": "#FFEBE9",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.orch-bd": {
+      "value": "#F38E84",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.dq": {
+      "value": "#FDEDDA",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.eco.dq-bd": {
+      "value": "#F5B161",
+      "type": "color",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "38"
+      }
+    },
+    "color.callout": {
+      "value": "#FEEFAD",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "23"
+      }
+    },
+    "color.inline-code-bg": {
+      "value": "rgba(56,56,56,0.08)",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "24"
+      }
+    },
+    "color.quote-bar": {
+      "value": "rgba(56,56,56,0.1)",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "25"
+      }
+    },
+    "color.rule-faint": {
+      "value": "rgba(56,56,56,0.15)",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "26"
+      }
+    },
+    "color.coral-soft": {
+      "value": "#FF9A94",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "27"
+      }
+    },
+    "color.coral-tile": {
+      "value": "rgba(255,113,105,0.08)",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "28"
+      }
+    },
+    "color.overlay": {
+      "value": "rgba(56,56,56,0.4)",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "29"
+      }
+    },
+    "color.select-bg": {
+      "value": "rgba(248,248,247,0.698)",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "30"
+      }
+    },
+    "color.code-dim.bg": {
+      "value": "#22272E",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.text": {
+      "value": "#ADBAC7",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.keyword": {
+      "value": "#F47067",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.title": {
+      "value": "#DCBDFB",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.attr": {
+      "value": "#59ACFF",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.string": {
+      "value": "#96D0FF",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.builtin": {
+      "value": "#F69D50",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.comment": {
+      "value": "#768390",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.name": {
+      "value": "#8DDB8C",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.section": {
+      "value": "#316DCA",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.bullet": {
+      "value": "#EAC55F",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.link": {
+      "value": "#6CB6FF",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.add": {
+      "value": "#B4F1B4",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.add-bg": {
+      "value": "#1B4721",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.del": {
+      "value": "#FFD8D3",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.code-dim.del-bg": {
+      "value": "#78191B",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "32"
+      }
+    },
+    "color.ecotag.orchestration": {
+      "value": "#F38E84",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.ecotag.agents": {
+      "value": "#38C1B0",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.ecotag.bi": {
+      "value": "#E5F174",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.ecotag.dq": {
+      "value": "#F5B161",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.ecotag.devtools": {
+      "value": "#F2A6C8",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.ecotag.dsai": {
+      "value": "#96B3FE",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.ecotag.retl": {
+      "value": "#F4DC5A",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.ecotag.apps": {
+      "value": "#A6EC85",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "38"
+      }
+    },
+    "color.dive-hover": {
+      "value": "rgba(255,255,255,0.18)",
+      "type": "color",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "42"
+      }
+    }
+  }
+}

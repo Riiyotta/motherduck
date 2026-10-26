@@ -1,0 +1,125 @@
+{
+  "description": "Semantic type roles mapped to type-role tokens.",
+  "tokens": {
+    "type.display": {
+      "ref": "fontSize.h1",
+      "description": "semantic display role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "94"
+      }
+    },
+    "type.heading": {
+      "ref": "fontSize.h2",
+      "description": "semantic heading role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "97"
+      }
+    },
+    "type.heading-mono": {
+      "ref": "fontSize.h2-mono",
+      "description": "semantic heading-mono role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "119"
+      }
+    },
+    "type.subheading": {
+      "ref": "fontSize.sub-head",
+      "description": "semantic subheading role",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "122"
+      }
+    },
+    "type.lede": {
+      "ref": "fontSize.lede",
+      "description": "semantic lede role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "136"
+      }
+    },
+    "type.body": {
+      "ref": "fontSize.body-lg",
+      "description": "semantic body role",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "145"
+      }
+    },
+    "type.body-small": {
+      "ref": "fontSize.body-md",
+      "description": "semantic body-small role",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "146"
+      }
+    },
+    "type.label": {
+      "ref": "fontSize.label",
+      "description": "semantic label role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "122"
+      }
+    },
+    "type.button": {
+      "ref": "fontSize.button",
+      "description": "semantic button role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "143"
+      }
+    },
+    "type.nav": {
+      "ref": "fontSize.nav",
+      "description": "semantic nav role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "141"
+      }
+    },
+    "type.quote": {
+      "ref": "fontSize.quote",
+      "description": "semantic quote role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "148"
+      }
+    },
+    "type.caption": {
+      "ref": "fontSize.caption",
+      "description": "semantic caption role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "150"
+      }
+    },
+    "type.footer-link": {
+      "ref": "fontSize.footer-link",
+      "description": "semantic footer-link role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "158"
+      }
+    },
+    "type.code": {
+      "ref": "fontSize.code-block",
+      "description": "semantic code role",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "148"
+      }
+    },
+    "type.stat": {
+      "ref": "fontSize.stat",
+      "description": "semantic stat role",
+      "evidence": {
+        "file": "tailwind.config.js",
+        "lines": "108"
+      }
+    }
+  }
+}

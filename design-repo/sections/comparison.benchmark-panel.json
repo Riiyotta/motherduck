@@ -1,0 +1,113 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "comparison.benchmark-panel",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Benchmark panel",
+  "purpose": "Panel with a heading, a benchmark chart and two bullet cards (omitted on the clickhouse comparison).",
+  "source": {
+    "file": "src/components/marketing/vs.jsx",
+    "tag": "BenchmarkPanel",
+    "lines": "158-195",
+    "id": "vs-jsx#BenchmarkPanel"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "comparison.benchmark-panel",
+    "category": "COMPARISON"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 25,
+        "required": true
+      },
+      "chart": {
+        "type": "asset",
+        "roles": [
+          "chart-figure"
+        ],
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 5,
+            "required": true
+          },
+          "bullets": {
+            "type": "list",
+            "minItems": 2,
+            "maxItems": 3,
+            "item": {
+              "text": {
+                "type": "text",
+                "maxWords": 20,
+                "required": true
+              }
+            },
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-chart"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "186-192",
+        "heading": "B5. `BenchmarkPanel` (vs except clickhouse)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "vs-comparison"
+  ],
+  "tags": []
+}

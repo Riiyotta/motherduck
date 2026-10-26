@@ -1,0 +1,172 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.isolated-compute",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Isolated compute accordion with animated wire diagram",
+  "purpose": "Sky section: heading, lede, single-open accordion of four capabilities beside a wire diagram of four compute consumers sharing one storage stack.",
+  "source": {
+    "file": "src/components/Architecture.jsx",
+    "tag": "Architecture",
+    "lines": "10-38",
+    "id": "Architecture-jsx#Architecture"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/architecture/Accordion.jsx",
+      "tag": "Accordion",
+      "lines": "72-82",
+      "id": "Accordion-jsx#Accordion"
+    },
+    {
+      "file": "src/components/architecture/Diagram.jsx",
+      "tag": "DiagramDesktop",
+      "lines": "80-101",
+      "id": "Diagram-jsx#DiagramDesktop"
+    },
+    {
+      "file": "src/components/architecture/StorageStack.jsx",
+      "tag": "StorageStack",
+      "lines": "15-39",
+      "id": "StorageStack-jsx#StorageStack"
+    }
+  ],
+  "semantic": {
+    "id": "feature.isolated-compute",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 19,
+        "required": true
+      },
+      "items": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 5,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 29,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "diagram": {
+        "type": "asset",
+        "roles": [
+          "architecture-diagram"
+        ],
+        "required": true
+      },
+      "consumers": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "size": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "storageChip": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "storageItems": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "icon": {
+            "type": "asset",
+            "roles": [
+              "partner-tool-logo",
+              "generic-ui-glyph"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "measured for the h2, lede and sub fields (CLONE_SPEC [Nch/Mw] counts); estimated for the remaining fields"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "sky"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion-single-open",
+      "wire-flow"
+    ],
+    "default": "accordion-single-open",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 4: accordion 400 + diagram 778 side by side at >=1302; vertical diagram variant below 728"
+  },
+  "generatedAssetRoles": [
+    "generated-diagram",
+    "generic-ui-glyph",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "311-367",
+        "heading": "4. Architecture section (bg **#97D4FF**, `border-top:2px solid #383838`, overflow clip)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": [],
+  "notes": "The only section whose H2 uses the mono face on the homepage. Wire timings in motion-patterns.json."
+}

@@ -1,0 +1,104 @@
+{
+  "description": "Measured icon box sizes.",
+  "tokens": {
+    "iconSize.14": {
+      "value": "14px",
+      "type": "size",
+      "use": "agent logo glyph in the hero prompt line",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "271"
+      }
+    },
+    "iconSize.16": {
+      "value": "16px",
+      "type": "size",
+      "use": "storage list / footer external icon / tooltip icon",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "355"
+      }
+    },
+    "iconSize.18": {
+      "value": "18px",
+      "type": "size",
+      "use": "eyebrow arrow icon",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "212"
+      }
+    },
+    "iconSize.20": {
+      "value": "20px",
+      "type": "size",
+      "use": "nav chevron / button arrow",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "222"
+      }
+    },
+    "iconSize.24": {
+      "value": "24px",
+      "type": "size",
+      "use": "hamburger / carousel chevrons",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "542"
+      }
+    },
+    "iconSize.28": {
+      "value": "28px",
+      "type": "size",
+      "use": "agent card icon / product card icon",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "519"
+      }
+    },
+    "iconSize.32": {
+      "value": "32px",
+      "type": "size",
+      "use": "mega menu item icon / footer social icon",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "233"
+      }
+    },
+    "iconSize.40": {
+      "value": "40px",
+      "type": "size",
+      "use": "language logos in the integrations bar",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "456"
+      }
+    },
+    "iconSize.44": {
+      "value": "44px",
+      "type": "size",
+      "use": "product card corner icon tab",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "408"
+      }
+    },
+    "iconSize.48": {
+      "value": "48px",
+      "type": "size",
+      "use": "tool tile (platform diagram)",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "389"
+      }
+    },
+    "iconSize.72": {
+      "value": "72px",
+      "type": "size",
+      "use": "integration arc tile",
+      "source": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "436"
+      }
+    }
+  }
+}

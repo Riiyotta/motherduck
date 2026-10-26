@@ -1,0 +1,86 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "navigation.glossary-bar",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Glossary search and letter bar",
+  "purpose": "Sticky bar with search, result count and A-Z letter links.",
+  "source": {
+    "file": "src/components/extra/glossary.jsx",
+    "tag": "GlossaryBar",
+    "lines": "44-68",
+    "id": "glossary-jsx#GlossaryBar"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "navigation.glossary-bar",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "searchPlaceholder": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "letters": {
+        "type": "list",
+        "minItems": 10,
+        "maxItems": 27,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "175-206",
+        "heading": "X1. Glossary index `/glossary`"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "glossary-index"
+  ],
+  "tags": []
+}

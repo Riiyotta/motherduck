@@ -1,0 +1,120 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.past-event-list",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Past event row list",
+  "purpose": "Paged list of past event rows with recording tags.",
+  "source": {
+    "file": "src/components/extra/events.jsx",
+    "tag": "PastEventRow",
+    "lines": "267-276",
+    "id": "events-jsx#PastEventRow"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/events.jsx",
+      "tag": "RecordingTag",
+      "lines": "47-53",
+      "id": "events-jsx#RecordingTag"
+    }
+  ],
+  "semantic": {
+    "id": "listing.past-event-list",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "rows": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 20,
+        "item": {
+          "month": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "day": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "year": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "type": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true
+          },
+          "location": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "recording": {
+            "type": "boolean",
+            "required": false
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "264-280",
+        "heading": "X4. Past events `/events/past` and `/events/past/page/:n` (variant of EventsHub L10)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "events-past"
+  ],
+  "tags": []
+}

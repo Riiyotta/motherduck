@@ -1,0 +1,178 @@
+{
+  "description": "Container, header and section layout values.",
+  "tokens": {
+    "layout.container.maxWidth.xl": {
+      "value": "1302px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.container.maxWidth.lg": {
+      "value": "960px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.container.maxWidth.md": {
+      "value": "728px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.container.maxWidth.sm": {
+      "value": "100%",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.container.paddingX.xl": {
+      "value": "30px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.container.paddingX.lg": {
+      "value": "20px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.container.paddingX.md": {
+      "value": "20px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.container.paddingX.sm": {
+      "value": "24px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    },
+    "layout.header.total.xl": {
+      "value": "122px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "180-200",
+        "heading": "1. Page skeleton and section order"
+      }
+    },
+    "layout.header.total.md": {
+      "value": "112px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "180-200",
+        "heading": "1. Page skeleton and section order"
+      }
+    },
+    "layout.header.total.lg": {
+      "value": "112px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "180-200",
+        "heading": "1. Page skeleton and section order"
+      }
+    },
+    "layout.header.total.sm": {
+      "value": "142px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "180-200",
+        "heading": "1. Page skeleton and section order"
+      }
+    },
+    "layout.section.hero.height": {
+      "value": "652px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "197"
+      }
+    },
+    "layout.section.architecture.padding": {
+      "value": "80px 0 180px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "313"
+      }
+    },
+    "layout.section.platform.paddingTop": {
+      "value": "100px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "370"
+      }
+    },
+    "layout.section.integrations.padding": {
+      "value": "220px 0 120px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "421"
+      }
+    },
+    "layout.section.customers.padding": {
+      "value": "80px 30px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "464"
+      }
+    },
+    "layout.section.agent.padding": {
+      "value": "80px 30px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "491"
+      }
+    },
+    "layout.section.blog.padding": {
+      "value": "80px 0",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "526"
+      }
+    },
+    "layout.section.footer.padding": {
+      "value": "90px 0 72px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "548"
+      }
+    },
+    "layout.grid.cards3.gap": {
+      "value": "24px",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "405"
+      }
+    },
+    "layout.grid.footerColumns": {
+      "value": "repeat(4, 200px) gap 32 (>=1302)",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "554"
+      }
+    },
+    "layout.header.offsetVar": {
+      "value": "--header-total",
+      "evidence": {
+        "file": "src/index.css",
+        "lines": "12-17"
+      }
+    }
+  }
+}

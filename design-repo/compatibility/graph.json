@@ -1,0 +1,179 @@
+{
+  "graphVersion": "1.0.0",
+  "description": "Rhythm and position rules JSON Schema cannot express. Each rule is implemented in schema/semantic_validate.py (RULES) under the same id; extraction/verify_all.py checks the two agree and that every real template satisfies every rule apart from the named exceptions.",
+  "rules": [
+    {
+      "id": "HEADER_FIRST",
+      "severity": "error",
+      "description": "The first node is the page navigation shell (site header, landing-page-only nav, or the dive gallery app nav).",
+      "params": {
+        "headerSections": [
+          "shell.header",
+          "shell.lp-nav",
+          "shell.dive-nav"
+        ]
+      },
+      "exceptions": [
+        {
+          "template": "try-app",
+          "reason": "The /try app renders no site chrome (App.jsx BARE_PATHS); its single node is the whole static app shell."
+        }
+      ]
+    },
+    {
+      "id": "FOOTER_LAST",
+      "severity": "error",
+      "description": "The last node is the page footer shell (site footer or the dive gallery footer).",
+      "params": {
+        "footerSections": [
+          "shell.footer",
+          "shell.dive-footer"
+        ]
+      },
+      "exceptions": [
+        {
+          "template": "lp-book-own-nav",
+          "reason": "The book landing page hides the site header and footer (extra-marketing.css lines 97-100) and ends with its gated form."
+        },
+        {
+          "template": "try-app",
+          "reason": "The /try app has no footer."
+        }
+      ]
+    },
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "description": "At most one HERO (page-opening composition) per page. The product-feature opener group offers two alternatives of which exactly one is used.",
+      "params": {},
+      "exceptions": []
+    },
+    {
+      "id": "HERO_FIRST_AFTER_NAV",
+      "severity": "warn",
+      "description": "When a page has a HERO it is the first non-shell node. Pages without a HERO (article, legal, form and index-style pages) are allowed; they are listed in params.heroOptionalTemplates, derived from templates.json.",
+      "params": {
+        "heroOptionalTemplates": [
+          "azure-waitlist",
+          "blog-post",
+          "book-chapter",
+          "community-code",
+          "contact-chooser",
+          "contact-form",
+          "dive-detail",
+          "ecosystem-detail",
+          "glossary-term",
+          "legal-plain",
+          "legal-toc",
+          "podcast-episode",
+          "pricing-support",
+          "prose-sidebar-form",
+          "try-app",
+          "video-detail",
+          "webinar-detail"
+        ]
+      },
+      "exceptions": []
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "description": "Two blocks of the same persuasion category (FAQ, SOCIAL_PROOF, CTA, CONVERSION) are not stacked directly. Feature, listing, editorial and navigation blocks legitimately repeat and are not restricted.",
+      "params": {
+        "categories": [
+          "FAQ",
+          "SOCIAL_PROOF",
+          "CTA",
+          "CONVERSION"
+        ]
+      },
+      "exceptions": [
+        {
+          "template": "startups",
+          "sections": [
+            "social-proof.quote-spotlight",
+            "social-proof.investor-logos"
+          ],
+          "reason": "Measured order in StartupsPage: quote spotlight, then investor logos."
+        },
+        {
+          "template": "about",
+          "sections": [
+            "cta.contact-band",
+            "cta.community-join"
+          ],
+          "reason": "Measured order in About.jsx: contact band, then community call-to-action."
+        },
+        {
+          "template": "event-detail",
+          "sections": [
+            "conversion.event-registration",
+            "conversion.subscribe-band"
+          ],
+          "reason": "The registration sidebar sits in the article row directly above the newsletter band (EventDetail.jsx)."
+        }
+      ]
+    },
+    {
+      "id": "NO_CONSECUTIVE_SCROLL_STAGES",
+      "severity": "error",
+      "description": "Two sections that scrub on scroll (sticky-stack-scrub, story-scale-scrub) are not adjacent.",
+      "params": {
+        "patterns": [
+          "sticky-stack-scrub",
+          "story-scale-scrub"
+        ]
+      },
+      "exceptions": []
+    },
+    {
+      "id": "NO_DUPLICATE_SECTION_VARIANT",
+      "severity": "error",
+      "description": "A (section, variant) pair appears once unless the template node is repeatable. One section may appear twice with different variants (the quote card on the homepage).",
+      "params": {},
+      "exceptions": []
+    },
+    {
+      "id": "RUNTIME_NOT_A_NODE",
+      "severity": "error",
+      "description": "Runtime UI (modals, drawers, floating and fixed bars, skip link, scroll effects) is listed in template.runtimeUi and never composed as a page node.",
+      "params": {},
+      "exceptions": []
+    },
+    {
+      "id": "MOTION_BUDGET",
+      "severity": "warn",
+      "description": "Number of sections whose motion is a continuous infinite loop. The ceiling is the largest count found in a real template (computed from templates.json and the contracts at write time).",
+      "params": {
+        "infinitePatterns": [
+          "caret-blink",
+          "carousel-autoplay",
+          "cursor-blink-steps",
+          "dither-canvas",
+          "feed-spin",
+          "flicker",
+          "float-bob",
+          "float-drift",
+          "glow-pulse",
+          "jev-cursor-blink",
+          "jev-type",
+          "marquee-scroll",
+          "mascot-sway",
+          "sun-rotate",
+          "wire-flow"
+        ],
+        "maxInfiniteSections": 3
+      },
+      "exceptions": []
+    },
+    {
+      "id": "CONTRACT_CONSTRAINTS",
+      "severity": "error",
+      "description": "Per-section constraints from the contracts: onePerPage, maxPerPage, minPerPage, mustBeFirst, mustBeLast, mustFollowNav, mustPrecedeFooter.",
+      "params": {},
+      "exceptions": []
+    }
+  ],
+  "checkedAgainst": "templates/templates.json",
+  "violationsAtWrite": 0
+}

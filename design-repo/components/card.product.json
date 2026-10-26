@@ -1,0 +1,42 @@
+{
+  "id": "card.product",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Product card",
+  "purpose": "Colored lift card with corner icon tab, one-word title, body and screenshot frame.",
+  "source": {
+    "file": "src/components/platform/ProductCard.jsx",
+    "tag": "ProductCard",
+    "lines": "6-35",
+    "id": "ProductCard-jsx#ProductCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 1 word)",
+    "body": "text(max 19 words)",
+    "tone": [
+      "peach",
+      "sky-tint",
+      "mint"
+    ]
+  },
+  "tokens": [
+    "card.lift.lift.product"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "404-413",
+        "heading": "Product cards (3-up), margin-top 56"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "asset.placeholder",
+    "link.underline"
+  ]
+}

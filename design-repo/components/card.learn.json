@@ -1,0 +1,34 @@
+{
+  "id": "card.learn",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Learn card",
+  "purpose": "Card with spot illustration, title, description and learn-more link.",
+  "source": {
+    "file": "src/pages/content/LearnHub.jsx",
+    "tag": "LearnCard",
+    "lines": "8-18",
+    "id": "LearnHub-jsx#LearnCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 8 words)",
+    "body": "text(max 35 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "578-587",
+        "heading": "K1. `LearnCard` + grid (L9) [NEW, on `LiftCard lift={14}`]"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "link.underline"
+  ]
+}

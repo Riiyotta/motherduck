@@ -1,0 +1,119 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.split-lead-form",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Split lead form panel",
+  "purpose": "Two-column bordered panel: sun prose column beside a lead capture form.",
+  "source": {
+    "file": "src/components/extra/splitForm.jsx",
+    "tag": "SplitPanel",
+    "lines": "72-85",
+    "id": "splitForm-jsx#SplitPanel"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/splitForm.jsx",
+      "tag": "LeadForm",
+      "lines": "35-70",
+      "id": "splitForm-jsx#LeadForm"
+    }
+  ],
+  "semantic": {
+    "id": "conversion.split-lead-form",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "prose": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 6,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 60,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "formTitle": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "fields": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 6,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "type": {
+            "type": "enum",
+            "values": [
+              "text",
+              "email"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_EXTRA X19: 619+619 at >=1302"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "713-732",
+        "heading": "X19. Split-form LP `/together-ai`, `/duckdb-book-form`, `/sql-duckdb-book-form` (NEW, one "
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "split-form-lp"
+  ],
+  "tags": []
+}

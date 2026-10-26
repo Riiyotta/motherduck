@@ -1,0 +1,159 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.webinar-register",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Webinar registration split",
+  "purpose": "Title, logos and body beside a registration form (register-LP and side-form layouts).",
+  "source": {
+    "file": "src/components/extra/webinar.jsx",
+    "tag": "WebinarRegisterLP",
+    "lines": "172-228",
+    "id": "webinar-jsx#WebinarRegisterLP"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/webinar.jsx",
+      "tag": "WebinarSideForm",
+      "lines": "231-265",
+      "id": "webinar-jsx#WebinarSideForm"
+    }
+  ],
+  "semantic": {
+    "id": "conversion.webinar-register",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false
+      },
+      "logos": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "customer-logo",
+              "partner-tool-logo"
+            ],
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "body": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 6,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 60,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "fields": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 6,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "type": {
+            "type": "enum",
+            "values": [
+              "text",
+              "email",
+              "textarea"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "consents": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 1,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "register-lp",
+    "side-form"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generic-ui-glyph",
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "354-379",
+        "heading": "X8. Webinar / video detail `/webinar/:slug` (13), `/video/:slug` (2) — variant of VideoDet"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "webinar-detail"
+  ],
+  "tags": []
+}

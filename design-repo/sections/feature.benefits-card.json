@@ -1,0 +1,100 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.benefits-card",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Benefits card",
+  "purpose": "Card listing five benefits.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "BenefitsCard",
+    "lines": "411-449",
+    "id": "careers-jsx#BenefitsCard"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.benefits-card",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "items": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 5,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 20,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "art": {
+        "type": "asset",
+        "roles": [
+          "spot-illustration"
+        ],
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "scroll-animate-in",
+      "parallax-scroll"
+    ],
+    "default": "scroll-animate-in",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "221-223",
+        "heading": "B6. `BenefitsCard` [NEW] (Careers)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "careers"
+  ],
+  "tags": []
+}

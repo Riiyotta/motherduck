@@ -1,0 +1,94 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.vs",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Comparison page hero",
+  "purpose": "Page-opening: two-line H1 naming the compared product, sub-heading and lede with two actions.",
+  "source": {
+    "file": "src/components/marketing/vs.jsx",
+    "tag": "VsHero",
+    "lines": "10-42",
+    "id": "vs-jsx#VsHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.vs",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "subhead": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 45,
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B1"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "156-165",
+        "heading": "B1. `VsHero` (T1 only)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "vs-comparison"
+  ],
+  "tags": []
+}

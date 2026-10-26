@@ -1,0 +1,120 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.case-grid",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Case study card grid",
+  "purpose": "Grid of case study cards.",
+  "source": {
+    "file": "src/components/content/cases.jsx",
+    "tag": "CaseStudyCard",
+    "lines": "94-119",
+    "id": "cases-jsx#CaseStudyCard"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "listing.case-grid",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 20,
+        "item": {
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "customer-logo"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true
+          },
+          "bullets": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 3,
+            "item": {
+              "text": {
+                "type": "text",
+                "maxWords": 14,
+                "required": true
+              }
+            },
+            "required": false
+          },
+          "categories": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 3,
+            "item": {
+              "label": {
+                "type": "text",
+                "maxWords": 2,
+                "required": true
+              }
+            },
+            "required": false
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 3,
+      "lg": 2,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_CONTENT C4"
+  },
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "348-358",
+        "heading": "C4. `CaseStudyCard` [NEW, on `LiftCard lift={14}`]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "case-index"
+  ],
+  "tags": []
+}

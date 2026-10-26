@@ -1,0 +1,35 @@
+{
+  "id": "input.search",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Search field",
+  "purpose": "Text field with a leading magnifier glyph.",
+  "source": {
+    "file": "src/components/content/filters.jsx",
+    "tag": "SearchField",
+    "lines": "8-21",
+    "id": "filters-jsx#SearchField"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "placeholder": "text(max 5 words)",
+    "value": "string"
+  },
+  "tokens": [
+    "input.text.height"
+  ],
+  "states": [
+    "default",
+    "focus"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "181-194",
+        "heading": "F2. `SearchFilterPanel` (Blog, Events, Quack) [NEW]"
+      }
+    ]
+  }
+}

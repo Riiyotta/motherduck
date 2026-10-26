@@ -1,0 +1,150 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.contact-split-form",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Contact split form",
+  "purpose": "Split panel: sales-contact form with logo list on one side and bullet text on the other.",
+  "source": {
+    "file": "src/components/company/contact.jsx",
+    "tag": "ContactSplitForm",
+    "lines": "124-168",
+    "id": "contact-jsx#ContactSplitForm"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/company/contact.jsx",
+      "tag": "ExpertForm",
+      "lines": "76-120",
+      "id": "contact-jsx#ExpertForm"
+    },
+    {
+      "file": "src/pages/extra/ContactSupport.jsx",
+      "tag": "ContactSupport",
+      "lines": "58-99",
+      "id": "ContactSupport-jsx#ContactSupport"
+    }
+  ],
+  "semantic": {
+    "id": "conversion.contact-split-form",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "bullets": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 3,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 14,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "logos": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 9,
+        "item": {
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "customer-logo"
+            ],
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "fields": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 6,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "type": {
+            "type": "enum",
+            "values": [
+              "text",
+              "email",
+              "textarea"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": true
+      },
+      "note": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "product-expert",
+    "support"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 728,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY D1"
+  },
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "240-249",
+        "heading": "D1. `ContactSplitForm` [NEW] (Product expert)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "contact-form"
+  ],
+  "tags": []
+}

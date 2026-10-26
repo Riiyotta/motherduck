@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.gallery-teaser",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Gallery teaser",
+  "purpose": "Heading and three gallery thumbnails with a link to the full gallery.",
+  "source": {
+    "file": "src/components/marketing/feature.jsx",
+    "tag": "GalleryTeaser",
+    "lines": "245-264",
+    "id": "feature-jsx#GalleryTeaser"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "listing.gallery-teaser",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "thumbs": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "image": {
+            "type": "asset",
+            "roles": [
+              "product-screenshot"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 5,
+            "required": false
+          }
+        },
+        "required": true
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-product-visual"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "278-299",
+        "heading": "B15. `CTA`-less helpers on product pages"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-feature"
+  ],
+  "tags": []
+}

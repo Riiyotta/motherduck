@@ -1,0 +1,183 @@
+/* Marketing page group (PAGES_SPEC_MARKETING.md §2e motion, §3 textures). Imported by src/components/marketing/bits.jsx. */
+
+/* MuseoModerno 900 (OFL, Google Fonts) – hypertenancy hero line 2 only */
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&display=swap');
+
+/* ---------- §2e keyframes ---------- */
+@keyframes mk-bob {
+  0% { transform: translate(0, -8px); }
+  50% { transform: translate(0, 8px); }
+  100% { transform: translate(0, -8px); }
+}
+.mk-bob { animation: mk-bob 3s ease-in-out infinite; }
+/* measured: persona sticky art + book Sneak Peek cover, all widths; the original keeps it running under reduced motion */
+
+@keyframes mk-float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-20px) rotate(var(--float-rotate)); }
+}
+.mk-float {
+  animation: mk-float var(--float-dur) ease-in-out infinite;
+  animation-delay: var(--float-delay);
+}
+
+@keyframes mk-fade-out-half {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes mk-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.mk-fade-out { animation: mk-fade-out-half 0.4s ease-in-out both; }
+.mk-fade-in { animation: mk-fade-in 0.4s ease-in-out both; }
+
+/* reveal-up (ducklake ResourceCarousel) */
+.mk-reveal-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.mk-reveal-up.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- StickyStack (§3 B7): CSS scroll-driven, linear, fill both ---------- */
+@keyframes mk-stack-slide {
+  from { translate: 0 1000px; }
+  to { translate: 0 0; }
+}
+@keyframes mk-stack-scale {
+  from { scale: 1; }
+  to { scale: var(--scale-end, 0.9); }
+}
+.mk-stack-wrap {
+  view-timeline-name: --overlapping-cards;
+  view-timeline-axis: block;
+}
+@supports (animation-timeline: view()) {
+  .mk-stack-card[data-anim] {
+    animation-name: var(--stack-names);
+    animation-duration: auto;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: --overlapping-cards;
+    animation-range: var(--stack-ranges);
+  }
+}
+
+/* ---------- /product OldWorldNewWorld story art (measured): CSS view timeline on the "portal" box at the top of
+   the second panel (shared via timeline-scope). Panel 1: scale .9 -> 0 over cover -10%..40%; panel 2: 0 -> 1.1 over
+   cover 20%..80%; ease-in-out, fill both, >=728 only. The original keeps scrubbing under reduced motion (JS fallback),
+   so this is not gated. Without scroll-timeline support the art rests at .9 / 1.1. ---------- */
+@keyframes mk-story-scale {
+  from { transform: scale(var(--scale-from)); }
+  to { transform: scale(var(--scale-to)); }
+}
+.mk-story-scope { timeline-scope: --mk-story-portal; }
+/* the original's html scroll-padding-top (70px, 80px >=1302) insets its view timeline (view-timeline-inset: auto);
+   the clone has no scroll-padding, so the same inset is set explicitly */
+.mk-story-portal { view-timeline-name: --mk-story-portal; view-timeline-axis: block; view-timeline-inset: 70px 0px; }
+@media (min-width: 1302px) { .mk-story-portal { view-timeline-inset: 80px 0px; } }
+.mk-story-art--out { --scale-from: 0.9; --scale-to: 0; --story-range: cover -10% cover 40%; }
+.mk-story-art--in { --scale-from: 0; --scale-to: 1.1; --story-range: cover 20% cover 80%; }
+@media (min-width: 728px) {
+  .mk-story-art--out { transform: scale(0.9); }
+  .mk-story-art--in { transform: scale(1.1); }
+  @supports (animation-timeline: view()) {
+    .mk-story-art {
+      animation-name: mk-story-scale;
+      animation-duration: auto;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+      animation-timeline: --mk-story-portal;
+      animation-range: var(--story-range);
+    }
+  }
+}
+
+/* ---------- §3 B10 grid texture (648px PNG tile rebuilt: 1px lines every 58.9px) ---------- */
+.mk-grid-texture {
+  background-color: #F4EFEA;
+  background-image:
+    linear-gradient(to right, rgba(56, 56, 56, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 56, 56, 0.04) 1px, transparent 1px);
+  /* tile = 11 cells; the original scales the 648px tile per range: 534 (<728), 524 (728–959), 604 (960–1301), 648 */
+  background-size: 48.55px 48.55px;
+  background-position: calc(50% - 24px) 12px;
+}
+@media (min-width: 728px) { .mk-grid-texture { background-size: 47.64px 47.64px; background-position: 50% 9px; } }
+@media (min-width: 960px) { .mk-grid-texture { background-size: 54.91px 54.91px; } }
+@media (min-width: 1302px) { .mk-grid-texture { background-size: 58.9px 58.9px; background-position: 50% 0; } }
+@media (min-width: 1302px) { .mk-grid-texture--ht { background-size: 60.18px 60.18px; } }
+
+/* CookbookGrid (flights): the same tile on a ::before at reduced opacity (.75 / 550px tile <960; .65 / 640px tile) */
+.mk-cookbook-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.75;
+  background-image:
+    linear-gradient(to right, rgba(56, 56, 56, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 56, 56, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 50% 0;
+}
+@media (min-width: 960px) {
+  .mk-cookbook-bg::before { opacity: 0.65; background-size: 58.18px 58.18px; background-position: 50% 4%; }
+}
+
+/* ---------- Pill tabs (§2e pill-tab indicator) ---------- */
+.mk-pill-indicator { transition: left 0.2s ease-out; }
+.mk-pill-tab { transition: color 0.2s ease-out; }
+
+/* ---------- Chip tabs (§2e chip-tab, §3 B22) ---------- */
+.mk-chip {
+  position: relative;
+  background-color: #ECE5DD;
+  color: #383838;
+  transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+.mk-chip::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: transparent;
+}
+.mk-chip:hover { background-color: #E1D6CB; }
+.mk-chip:hover::after { background: rgba(56, 56, 56, 0.314); }
+.mk-chip[aria-selected='true'],
+.mk-chip[aria-current='page'] {
+  background-color: #383838;
+  color: #F4EFEA;
+}
+.mk-chip[aria-selected='true']::after,
+.mk-chip[aria-current='page']::after { background: #383838; }
+
+/* ---------- EcosystemDiagram tile (§2e eco-tile) ---------- */
+.mk-eco-tile {
+  transition: transform 0.2s cubic-bezier(0.34, 0, 0.12, 1), border-radius 0.2s cubic-bezier(0.34, 0, 0.12, 1);
+}
+.mk-eco-tile:hover {
+  transform: scale(1.15);
+  border-radius: 36px;
+  border-bottom-width: 4px;
+  z-index: 2;
+}
+
+/* Hidden scrollbar for horizontal tracks */
+.mk-no-scrollbar { scrollbar-width: none; }
+.mk-no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mk-fade-out,
+  .mk-fade-in { animation: none !important; }
+  .mk-reveal-up { opacity: 1; transform: none; transition: none; }
+  .mk-eco-tile { transition: none; }
+}

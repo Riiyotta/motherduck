@@ -1,0 +1,136 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.page-illustrated",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Illustrated page hero with ticker",
+  "purpose": "Page-opening: large heading, lede, optional actions and a right-hand illustration over a ticker strip.",
+  "source": {
+    "file": "src/components/company/about.jsx",
+    "tag": "AboutHero",
+    "lines": "11-46",
+    "id": "about-jsx#AboutHero"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/company/careers.jsx",
+      "tag": "CareersHero",
+      "lines": "15-37",
+      "id": "careers-jsx#CareersHero"
+    },
+    {
+      "file": "src/components/company/contact.jsx",
+      "tag": "SupportHero",
+      "lines": "171-185",
+      "id": "contact-jsx#SupportHero"
+    },
+    {
+      "file": "src/components/company/book.jsx",
+      "tag": "BookHero",
+      "lines": "12-28",
+      "id": "book-jsx#BookHero"
+    }
+  ],
+  "semantic": {
+    "id": "hero.page-illustrated",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false
+      },
+      "ticker": {
+        "type": "text",
+        "maxWords": 3,
+        "required": false
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": false
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": false
+      },
+      "illustration": {
+        "type": "asset",
+        "roles": [
+          "company-mascot-art",
+          "spot-illustration",
+          "team-photo"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "about",
+    "careers",
+    "support",
+    "book"
+  ],
+  "allowedSurfaces": [
+    "cream",
+    "sky",
+    "sun"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "marquee-scroll",
+      "none"
+    ],
+    "default": "marquee-scroll",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY A1"
+  },
+  "generatedAssetRoles": [
+    "fictional-mascot-placeholder",
+    "generated-illustration",
+    "generated-photo-placeholder",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "148-161",
+        "heading": "A1. `PageHeroIllustrated` [NEW] (About, Careers, Support, Book brief)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about",
+    "book-brief",
+    "careers",
+    "support-hub"
+  ],
+  "tags": []
+}

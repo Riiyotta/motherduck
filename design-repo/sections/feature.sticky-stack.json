@@ -1,0 +1,123 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.sticky-stack",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Sticky stacked feature cards",
+  "purpose": "Colored band with a heading and intro followed by 3 to 5 feature cards that stack and scale while scrolling; each has image, eyebrow, H3, body and optional link.",
+  "source": {
+    "file": "src/components/marketing/StickyStack.jsx",
+    "tag": "StickyStack",
+    "lines": "77-158",
+    "id": "StickyStack-jsx#StickyStack"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.sticky-stack",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "intro": {
+        "type": "text",
+        "maxWords": 40,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 5,
+        "item": {
+          "eyebrow": {
+            "type": "text",
+            "maxWords": 4,
+            "required": false
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 11,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 80,
+            "required": true
+          },
+          "image": {
+            "type": "asset",
+            "roles": [
+              "product-screenshot",
+              "spot-illustration"
+            ],
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 5,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "sun",
+    "yellow",
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "sticky-stack-scrub"
+    ],
+    "default": "sticky-stack-scrub",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 960,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B7: image + text columns at >=960, stacked below"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generated-product-visual",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "203-221",
+        "heading": "B7. `StickyStack` (all T1 and T2 pages)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-ducklake",
+    "product-feature",
+    "vs-comparison"
+  ],
+  "tags": [],
+  "notes": "Body budget 80w from the largest card (448ch) on the clickhouse comparison page (VsPage.jsx)."
+}

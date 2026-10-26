@@ -1,0 +1,173 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.platform-diagram",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Isometric platform diagram",
+  "purpose": "Cream section: heading, lede and an isometric stack of four slabs connected to seven cards (tools, products, storage, interfaces, scale tiers).",
+  "source": {
+    "file": "src/components/platform/PlatformDiagram.jsx",
+    "tag": "PlatformDiagram",
+    "lines": "141-149",
+    "id": "PlatformDiagram-jsx#PlatformDiagram"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/platform/DiagramCards.jsx",
+      "tag": "ToolsCard",
+      "lines": "33-58",
+      "id": "DiagramCards-jsx#ToolsCard"
+    },
+    {
+      "file": "src/components/platform/Slab.jsx",
+      "tag": "Slab",
+      "lines": "27-49",
+      "id": "Slab-jsx#Slab"
+    },
+    {
+      "file": "src/components/Platform.jsx",
+      "tag": "Platform",
+      "lines": "31-60",
+      "id": "Platform-jsx#Platform"
+    }
+  ],
+  "semantic": {
+    "id": "feature.platform-diagram",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 7,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 18,
+        "required": true
+      },
+      "slabs": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 5,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 7,
+        "maxItems": 7,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 10,
+            "required": false
+          },
+          "pills": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 5,
+            "item": {
+              "label": {
+                "type": "text",
+                "maxWords": 2,
+                "required": true
+              }
+            },
+            "required": false
+          },
+          "logos": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 7,
+            "item": {
+              "logo": {
+                "type": "asset",
+                "roles": [
+                  "partner-tool-logo"
+                ],
+                "required": true
+              }
+            },
+            "required": false
+          }
+        },
+        "required": true
+      },
+      "scaleTiers": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 5,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "measured for the h2, lede and sub fields (CLONE_SPEC [Nch/Mw] counts); estimated for the remaining fields"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift",
+      "tooltip-fade"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 5: three DOM variants (1240x634 / 688x575 / 327x1302 boxes)"
+  },
+  "generatedAssetRoles": [
+    "generic-ui-glyph",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "368-418",
+        "heading": "5. Platform section (bg #F4EFEA, `border-top:2px solid #383838`, overflow clip)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": []
+}

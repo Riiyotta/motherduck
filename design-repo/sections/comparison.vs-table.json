@@ -1,0 +1,119 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "comparison.vs-table",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Competitor comparison table",
+  "purpose": "Table comparing this product with one named competitor across 8-10 attribute rows, with competitor logo header.",
+  "source": {
+    "file": "src/components/marketing/vs.jsx",
+    "tag": "ComparisonTable",
+    "lines": "49-102",
+    "id": "vs-jsx#ComparisonTable"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "comparison.vs-table",
+    "category": "COMPARISON"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 65,
+        "required": false
+      },
+      "competitorName": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "rows": {
+        "type": "list",
+        "minItems": 6,
+        "maxItems": 10,
+        "item": {
+          "attribute": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true
+          },
+          "competitor": {
+            "type": "text",
+            "maxWords": 24,
+            "required": true
+          },
+          "ours": {
+            "type": "text",
+            "maxWords": 20,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "competitorLogo": {
+        "type": "asset",
+        "roles": [
+          "customer-logo",
+          "partner-tool-logo"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 3,
+      "lg": 3,
+      "md": 3,
+      "sm": 2
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B3"
+  },
+  "generatedAssetRoles": [
+    "generic-ui-glyph",
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "172-180",
+        "heading": "B3. `ComparisonTable` (vs)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "vs-comparison"
+  ],
+  "tags": [],
+  "notes": "Row counts: snowflake 8, clickhouse 8, databricks 8, redshift 8, bigquery 10, postgresql 10 (PAGES_SPEC_MARKETING section 4)."
+}

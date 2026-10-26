@@ -1,0 +1,94 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.origin-story",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Origin story with values art",
+  "purpose": "Heading and five paragraphs of company story beside a tilted-tag collage.",
+  "source": {
+    "file": "src/components/company/about.jsx",
+    "tag": "OriginStory",
+    "lines": "52-66",
+    "id": "about-jsx#OriginStory"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "editorial.origin-story",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "paragraphs": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 5,
+        "item": {
+          "text": {
+            "type": "text",
+            "maxWords": 60,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "art": {
+        "type": "asset",
+        "roles": [
+          "spot-illustration"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY A2"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "162-164",
+        "heading": "A2. `ProseWithImage` [NEW] (About \"Origin story\")"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about"
+  ],
+  "tags": []
+}

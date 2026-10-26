@@ -1,0 +1,77 @@
+{
+  "description": "Component-scoped tokens for input.text.",
+  "tokens": {
+    "input.text.height": {
+      "value": "58px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.paddingTop": {
+      "value": "16px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.paddingRight": {
+      "value": "40px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.paddingBottom": {
+      "value": "16px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.paddingLeft": {
+      "value": "24px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.borderWidth": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.radius": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.hoverBorder": {
+      "value": "#2BA5FF",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    },
+    "input.text.background": {
+      "value": "rgba(248,248,247,0.7)",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/TextInput.jsx",
+        "lines": "14-20"
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Base (spec §0 "Border / surface language", §1, §2) ---------- */
+@layer base {
+  :root {
+    --header-desktop: 80px;
+    --header-mobile: 70px;
+    --eyebrow-desktop: 40px;
+    --eyebrow-mobile: 70px;
+    /* eyebrow + nav + 2px border: 142 (<728) / 112 (728–1301) / 122 (>=1302) */
+    --header-total: 142px;
+  }
+  @media (min-width: 728px) {
+    :root { --header-total: 112px; }
+  }
+  @media (min-width: 1302px) {
+    :root { --header-total: 122px; }
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: theme('fontFamily.mono');
+    color: theme('colors.ink');
+    background-color: theme('colors.cream');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(255, 149, 56, 0.667);
+  }
+
+  /* Original's only scrollbar rules (5px classic scrollbar: content width 1435 @1440) */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: #888; }
+  ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+/* ---------- Offset-lift primitive (spec §0 "Offset shadow" press pattern, §2d) ----------
+   Used by src/components/ui/OffsetButton.jsx and LiftCard.jsx. Driven by CSS vars:
+   --lift (px), --lift-press (active duration), --lift-props (transition-property),
+   --lift-bg / --lift-hover-bg / --lift-active-bg (only when data-tint is set). */
+@layer components {
+  .lift {
+    background-color: theme('colors.ink');
+    border-radius: 2px;
+  }
+  .lift > .lift-inner {
+    position: relative;
+    transform: none;
+    transition-property: var(--lift-props, transform);
+    transition-duration: 120ms;
+    transition-timing-function: ease-in-out;
+  }
+  .lift > .lift-inner[data-tint] {
+    background-color: var(--lift-bg);
+  }
+
+  .lift[data-hover='always']:hover > .lift-inner {
+    transform: translate(var(--lift), calc(var(--lift) * -1));
+  }
+  .lift[data-hover='always']:hover > .lift-inner[data-tint] {
+    background-color: var(--lift-hover-bg, var(--lift-bg));
+  }
+  @media (min-width: 960px) {
+    .lift[data-hover='lg']:hover > .lift-inner {
+      transform: translate(var(--lift), calc(var(--lift) * -1));
+    }
+    .lift[data-hover='lg']:hover > .lift-inner[data-tint] {
+      background-color: var(--lift-hover-bg, var(--lift-bg));
+    }
+  }
+
+  .lift:active > .lift-inner,
+  .lift[data-hover]:active > .lift-inner {
+    transform: none;
+    transition-duration: var(--lift-press, 60ms);
+  }
+  .lift[data-hover]:active > .lift-inner[data-tint] {
+    background-color: var(--lift-active-bg, var(--lift-bg));
+  }
+
+  /* Original quote cards have no :active rule: they stay lifted while pressed */
+  @media (min-width: 960px) {
+    .lift[data-nopress][data-hover='lg']:hover:active > .lift-inner {
+      transform: translate(var(--lift), calc(var(--lift) * -1));
+      transition-duration: 120ms;
+    }
+  }
+
+  .lift[data-disabled] > .lift-inner {
+    transform: none !important;
+  }
+}
+
+/* ---------- Global keyframes (spec §0 keyframes / §11 motion inventory) ---------- */
+/* §11 #18 architecture wires: set --from / --to (stroke-dashoffset) and --wire-dur per path */
+@keyframes wire-flow {
+  from { stroke-dashoffset: var(--from); }
+  to { stroke-dashoffset: var(--to); }
+}
+/* §11 #19 integrations sun rays: 54s linear infinite */
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+/* §11 #20 orange glow: 4s ease-in-out infinite alternate */
+@keyframes glow {
+  from { opacity: 0; }
+  to { opacity: 0.6; }
+}
+/* §11 #22 terminal caret: 1s steps(1) infinite */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+/* §11 #2 desktop mega-menu enter: 200ms ease-out forwards */
+@keyframes dropdown-in {
+  from { top: 100%; opacity: 0; }
+  to { top: calc(100% + 16px); opacity: 1; }
+}
+
+/* "Get in touch" character slot (/about-us band, ecosystem partner, newsletter banner). The original plays an
+   8.008s Lottie loop (240 frames @ 29.97fps), also under prefers-reduced-motion. Its body layer rotates about the
+   body centre: 0 -> 10deg (f0-46) -> 11 (f63, overshoot) -> 10 (f79) -> 0 (f166) -> -1 (f195) -> 0 (f234), each
+   segment on the layer's own bezier; the eyes layer lifts (-5.6, -37.6 of 929 units) f32-44, holds to f135 and
+   returns by f155; eye swaps (blinks) at f77-82, f87-92, f196-201. Same timing applied to Pip (pivot: feet). */
+@keyframes pip-aster-sway {
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0.55); }
+  19.1667% { transform: rotate(10deg); animation-timing-function: cubic-bezier(0.5, 2.49, 0.67, 1.73); }
+  26.25% { transform: rotate(11deg); animation-timing-function: cubic-bezier(0.69, 1.43, 0.67, 1); }
+  32.9167% { transform: rotate(10deg); animation-timing-function: cubic-bezier(0.6, 0, 0.6, 1); }
+  69.1667% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.62, 0, 0.57, 1); }
+  81.25% { transform: rotate(-1deg); animation-timing-function: cubic-bezier(0.34, 0, 0.7, 1); }
+  97.5%, 100% { transform: rotate(0deg); }
+}
+@keyframes pip-aster-look {
+  0%, 13.3333% { transform: translate(0, 0); animation-timing-function: cubic-bezier(0.33, 0, 0.83, 1); }
+  18.3333%, 56.25% { transform: translate(1px, -7px); animation-timing-function: cubic-bezier(0.33, 0, 0.83, 1); }
+  64.5833%, 100% { transform: translate(0, 0); }
+}
+@keyframes pip-aster-blink {
+  0%, 32.0833%, 34.5833%, 36.25%, 38.75%, 81.6667%, 84.1667%, 100% { transform: scaleY(1); }
+  32.5%, 34.1667%, 36.6667%, 38.3333%, 82.0833%, 83.75% { transform: scaleY(0.1); }
+}
+.pip-aster { transform-box: view-box; animation: pip-aster-sway 8.008s infinite; }
+.pip-aster .pip-eyes { animation: pip-aster-look 8.008s infinite; }
+.pip-aster .pip-blink { transform-box: fill-box; transform-origin: center; animation: pip-aster-blink 8.008s linear infinite; }
+
+/* ---------- Continuous loops: in-view gating + reduced motion ----------
+   Original: wires / sun rays / glow only run while their container is within 200px of the viewport
+   (IO rootMargin "200px 0% 200px 0%"); containers carry data-inview. Under reduced motion the
+   original drops these animations entirely (rays at 0deg, glow at opacity 0, caret solid). */
+[data-inview='false'] :is(.animate-wire-flow, .animate-spin-slow, .animate-glow) {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Original renders no pulse layers under reduced motion: only the solid base wires remain. */
+  .animate-wire-flow {
+    display: none;
+  }
+  [data-motion='continuous'] {
+    animation-play-state: paused !important;
+  }
+  .animate-spin-slow,
+  .animate-blink {
+    animation: none !important;
+  }
+  .animate-glow {
+    animation: none !important;
+    opacity: 0;
+  }
+}
+
+/* Easing keywords (original uses CSS `ease-in-out`/`ease-out`, not Tailwind's cubic-bezier(.4,0,.2,1)).
+   Also mapped in tailwind.config.js; repeated here unlayered so it applies even when a running dev
+   server has a cached Tailwind config. */
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+.ease-out {
+  transition-timing-function: ease-out;
+}

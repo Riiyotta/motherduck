@@ -1,0 +1,113 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "navigation.article-toc",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Article table of contents",
+  "purpose": "Sticky sidebar list of the article H2 headings with active highlighting (floating button below the sidebar breakpoint).",
+  "source": {
+    "file": "src/components/content/Toc.jsx",
+    "tag": "BlogToc",
+    "lines": "29-41",
+    "id": "Toc-jsx#BlogToc"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/content/videos.jsx",
+      "tag": "VideoSidebar",
+      "lines": "117-127",
+      "id": "videos-jsx#VideoSidebar"
+    },
+    {
+      "file": "src/components/extra/learn.jsx",
+      "tag": "LearnSidebar",
+      "lines": "52-62",
+      "id": "learn-jsx#LearnSidebar"
+    },
+    {
+      "file": "src/components/extra/research.jsx",
+      "tag": "TocBox",
+      "lines": "25-32",
+      "id": "research-jsx#TocBox"
+    }
+  ],
+  "semantic": {
+    "id": "navigation.article-toc",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false
+      },
+      "items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 20,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true
+          },
+          "id": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 728,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_CONTENT B1: sidebar at >=728"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "259-295",
+        "heading": "B1. `ArticleLayout` (L2) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-post",
+    "learn-article",
+    "research-paper",
+    "video-detail"
+  ],
+  "tags": []
+}

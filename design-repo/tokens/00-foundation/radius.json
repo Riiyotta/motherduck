@@ -1,0 +1,117 @@
+{
+  "description": "Border radii.",
+  "tokens": {
+    "radius.DEFAULT": {
+      "value": "2px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "41"
+      }
+    },
+    "radius.sm": {
+      "value": "2px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "34"
+      }
+    },
+    "radius.tip": {
+      "value": "4px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "162"
+      }
+    },
+    "radius.md": {
+      "value": "8px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "35"
+      }
+    },
+    "radius.tile": {
+      "value": "14px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "162"
+      }
+    },
+    "radius.bubble": {
+      "value": "16px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "162"
+      }
+    },
+    "radius.pill": {
+      "value": "999px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "147"
+      }
+    },
+    "radius.lg": {
+      "value": "10px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "36"
+      }
+    },
+    "radius.xl": {
+      "value": "12px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "37"
+      }
+    },
+    "radius.2xl": {
+      "value": "20px",
+      "type": "radius",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "57"
+      }
+    },
+    "radius.frame": {
+      "value": "20px",
+      "type": "radius",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "58"
+      }
+    },
+    "radius.window": {
+      "value": "24px",
+      "type": "radius",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "59"
+      }
+    },
+    "radius.inner": {
+      "value": "12px",
+      "type": "radius",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "60"
+      }
+    },
+    "radius.code": {
+      "value": "3px",
+      "type": "radius",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "87"
+      }
+    }
+  }
+}

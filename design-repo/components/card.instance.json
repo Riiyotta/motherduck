@@ -1,0 +1,33 @@
+{
+  "id": "card.instance",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Instance size card",
+  "purpose": "Pricing instance card.",
+  "source": {
+    "file": "src/components/marketing/pricing.jsx",
+    "tag": "InstanceCard",
+    "lines": "272-299",
+    "id": "pricing-jsx#InstanceCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "name": "text(max 2 words)",
+    "body": "text(max 25 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "391-432",
+        "heading": "B20. Pricing blocks"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift"
+  ]
+}

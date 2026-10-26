@@ -1,0 +1,162 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "lp.card-band",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "LP card band",
+  "purpose": "LP band with a heading, optional intro and a grid of cards (outline, tabbed, stepped, dark, muted, part or spectrum treatments).",
+  "source": {
+    "file": "src/components/company/lp.jsx",
+    "tag": "CardGrid",
+    "lines": "155-173",
+    "id": "lp-jsx#CardGrid"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/company/lp.jsx",
+      "tag": "DarkFeatureGrid",
+      "lines": "242-253",
+      "id": "lp-jsx#DarkFeatureGrid"
+    },
+    {
+      "file": "src/components/company/lp.jsx",
+      "tag": "PartCards",
+      "lines": "257-269",
+      "id": "lp-jsx#PartCards"
+    },
+    {
+      "file": "src/components/company/lp.jsx",
+      "tag": "MutedCardGrid",
+      "lines": "353-366",
+      "id": "lp-jsx#MutedCardGrid"
+    },
+    {
+      "file": "src/components/company/lp.jsx",
+      "tag": "SpectrumCards",
+      "lines": "369-373",
+      "id": "lp-jsx#SpectrumCards"
+    },
+    {
+      "file": "src/components/extra/lpBlocks.jsx",
+      "tag": "OutlineCardGrid",
+      "lines": "14-25",
+      "id": "lpBlocks-jsx#OutlineCardGrid"
+    },
+    {
+      "file": "src/components/extra/lpBlocks.jsx",
+      "tag": "ColorCardGrid",
+      "lines": "30-42",
+      "id": "lpBlocks-jsx#ColorCardGrid"
+    }
+  ],
+  "semantic": {
+    "id": "lp.card-band",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "intro": {
+        "type": "text",
+        "maxWords": 38,
+        "required": false
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 7,
+        "item": {
+          "tab": {
+            "type": "text",
+            "maxWords": 3,
+            "required": false
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 30,
+            "required": true
+          },
+          "icon": {
+            "type": "asset",
+            "roles": [
+              "spot-illustration",
+              "generic-ui-glyph"
+            ],
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "outline",
+    "tabbed",
+    "steps",
+    "dark",
+    "muted",
+    "part",
+    "spectrum",
+    "color",
+    "finding"
+  ],
+  "allowedSurfaces": [
+    "sun",
+    "white",
+    "cream",
+    "teal",
+    "ink"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 3,
+      "lg": 3,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY G"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "278-304",
+        "heading": "G. Gated LP template blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "gated-lp",
+    "lp-book-own-nav",
+    "lp-ducklake-full"
+  ],
+  "tags": [],
+  "notes": "Same purpose (a card grid under an LP heading) with several visual treatments; normalised to one contract with variants."
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.azure-waitlist",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Cloud-provider waitlist form",
+  "purpose": "Opening waitlist block with heading, lede and the IDE-styled signup form (plain form variant also exists).",
+  "source": {
+    "file": "src/components/extra/azure.jsx",
+    "tag": "AzureWaitlist",
+    "lines": "221-236",
+    "id": "azure-jsx#AzureWaitlist"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/azure.jsx",
+      "tag": "IdeForm",
+      "lines": "58-174",
+      "id": "azure-jsx#IdeForm"
+    },
+    {
+      "file": "src/components/extra/azure.jsx",
+      "tag": "BoringForm",
+      "lines": "177-219",
+      "id": "azure-jsx#BoringForm"
+    }
+  ],
+  "semantic": {
+    "id": "conversion.azure-waitlist",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 30,
+        "required": true
+      },
+      "fields": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 5,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "partially-measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "595-646",
+        "heading": "X14. Azure waitlist `/product/azure`"
+      }
+    ],
+    "note": "PAGES_SPEC_EXTRA section 2 UNMEASURED: success copy and plain-form styling"
+  },
+  "usedInTemplates": [
+    "azure-waitlist"
+  ],
+  "tags": []
+}

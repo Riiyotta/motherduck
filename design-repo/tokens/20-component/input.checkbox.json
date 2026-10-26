@@ -1,0 +1,37 @@
+{
+  "description": "Component-scoped tokens for input.checkbox.",
+  "tokens": {
+    "input.checkbox.box": {
+      "value": "18px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/Checkbox.jsx",
+        "lines": "3-7"
+      }
+    },
+    "input.checkbox.borderWidth": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/Checkbox.jsx",
+        "lines": "3-7"
+      }
+    },
+    "input.checkbox.radius": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/Checkbox.jsx",
+        "lines": "3-7"
+      }
+    },
+    "input.checkbox.labelPaddingLeft": {
+      "value": "11px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/Checkbox.jsx",
+        "lines": "3-7"
+      }
+    }
+  }
+}

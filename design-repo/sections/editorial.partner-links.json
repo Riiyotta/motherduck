@@ -1,0 +1,91 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.partner-links",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Partner link icons",
+  "purpose": "Row of link tiles (docs, repository, site).",
+  "source": {
+    "file": "src/components/content/eco.jsx",
+    "tag": "LinkIcons",
+    "lines": "53-72",
+    "id": "eco-jsx#LinkIcons"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/content/eco.jsx",
+      "tag": "LinkIcon",
+      "lines": "34-48",
+      "id": "eco-jsx#LinkIcon"
+    }
+  ],
+  "semantic": {
+    "id": "editorial.partner-links",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "links": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 5,
+        "item": {
+          "kind": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "521-538",
+        "heading": "E6. `PartnerDetail` (L8) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "ecosystem-detail"
+  ],
+  "tags": []
+}

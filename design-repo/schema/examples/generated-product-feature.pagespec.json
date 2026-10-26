@@ -1,0 +1,708 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generated",
+  "template": "product-feature",
+  "route": "/example/product-feature",
+  "theme": "light",
+  "meta": {
+    "title": "Lumen Harbor sample page",
+    "brand": "Lumen Harbor",
+    "description": "A fictional example page built from the design system. Original copy, placeholder assets, reserved example domains."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "eyebrowText": "Inlet anchor from breeze juniper summit and",
+        "eyebrowLink": {
+          "label": "Thistle breeze for",
+          "href": "https://studio.example/beacon"
+        },
+        "logo": {
+          "role": "placeholder-brand-mark",
+          "alt": "Orchard kelp for",
+          "ref": "placeholder:placeholder-brand-mark-49"
+        },
+        "navGroups": [
+          {
+            "label": "Yarrow lantern",
+            "items": [
+              {
+                "label": "Willow umber in atlas juniper",
+                "href": {
+                  "label": "Cedar pebble from",
+                  "href": "https://studio.example/umber"
+                }
+              },
+              {
+                "label": "Harbor ferry and ribbon canvas",
+                "href": {
+                  "label": "Cobalt orchard and",
+                  "href": "https://studio.example/yarrow"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Vessel harvest",
+            "items": [
+              {
+                "label": "Prairie fathom with kelp marlin",
+                "href": {
+                  "label": "Trellis umber in",
+                  "href": "https://studio.example/saffron"
+                }
+              },
+              {
+                "label": "Prairie ledger in anchor current",
+                "href": {
+                  "label": "Signal oriole in",
+                  "href": "https://studio.example/alpine"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Zephyr mesa",
+            "items": [
+              {
+                "label": "Cedar harbor for pebble pebble",
+                "href": {
+                  "label": "Zephyr dune from",
+                  "href": "https://studio.example/pilot"
+                }
+              },
+              {
+                "label": "Ferry prairie with wicker willow",
+                "href": {
+                  "label": "Yarrow lattice in",
+                  "href": "https://studio.example/canvas"
+                }
+              }
+            ]
+          }
+        ],
+        "navLinks": [
+          {
+            "label": "Yarrow indigo",
+            "href": {
+              "label": "Vessel mosaic",
+              "href": "https://studio.example/summit"
+            }
+          },
+          {
+            "label": "Oriole beacon",
+            "href": {
+              "label": "Lattice bramble",
+              "href": "https://studio.example/willow"
+            }
+          }
+        ],
+        "primaryAction": {
+          "label": "Horizon horizon for",
+          "href": "https://studio.example/breeze"
+        }
+      },
+      "motion": {
+        "pattern": "dropdown-enter",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "hero.product-centered",
+      "variant": "dives",
+      "surface": "cream",
+      "content": {
+        "chip": "Meadow compass with orchard",
+        "h1": "Plan small batches with calm clarity",
+        "lede": "Lumen Harbor keeps schedules, notes and supplies in one shared workspace so small teams finish more with less noise.",
+        "primaryAction": {
+          "label": "Juniper pilot with",
+          "href": "https://studio.example/meadow"
+        }
+      },
+      "motion": {
+        "pattern": "float-drift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "media.video-frame",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "poster": {
+          "role": "generated-video-poster",
+          "alt": "Trellis fathom on",
+          "ref": "placeholder:generated-video-poster-64"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "media.media-frame",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Everything your crew needs in one place",
+        "lede": "A calm workspace for planning, tracking and sharing the work of small production teams.",
+        "media": {
+          "role": "generated-diagram",
+          "alt": "Summit horizon in",
+          "ref": "placeholder:generated-diagram-8"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.browser-window-demo",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Plan the week without the usual",
+        "lede": "Lumen Harbor keeps schedules, notes and supplies in one shared workspace so small teams finish more with less noise.",
+        "demo": {
+          "role": "generated-product-visual",
+          "alt": "Ribbon beacon for",
+          "ref": "placeholder:generated-product-visual-63"
+        },
+        "chart": {
+          "role": "generated-chart",
+          "alt": "Horizon lantern and",
+          "ref": "placeholder:generated-chart-78"
+        }
+      },
+      "motion": {
+        "pattern": "float-bob",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.problem-cards",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Built for teams that value quiet focus",
+        "lede": "A calm workspace for planning, tracking and sharing the work of small production teams.",
+        "cards": [
+          {
+            "title": "Weekly planning without the spreadsheet sprawl",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so everyone can see what changed and why without asking around."
+          },
+          {
+            "title": "A practical guide to calmer schedules",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so everyone can see what changed and why without asking around."
+          },
+          {
+            "title": "Notes from the studio floor",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so everyone can see what changed and why without asking around."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.sticky-stack",
+      "variant": "default",
+      "surface": "sun",
+      "content": {
+        "h2": "See the whole picture at a glance",
+        "intro": "A short overview of how the pieces fit together and where to start.",
+        "cards": [
+          {
+            "title": "Keeping suppliers and schedules in sync",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so everyone can see what changed and why without asking around.",
+            "image": {
+              "role": "generated-product-visual",
+              "alt": "Harvest ferry on",
+              "ref": "placeholder:generated-product-visual-73"
+            }
+          },
+          {
+            "title": "How small teams review their work",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so everyone can see what changed and why without asking around.",
+            "image": {
+              "role": "generated-product-visual",
+              "alt": "Marlin canvas across",
+              "ref": "placeholder:generated-product-visual-29"
+            }
+          },
+          {
+            "title": "Weekly planning without the spreadsheet sprawl",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so everyone can see what changed and why without asking around.",
+            "image": {
+              "role": "generated-product-visual",
+              "alt": "Wicker ember across",
+              "ref": "placeholder:generated-product-visual-61"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky-stack-scrub",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "media.live-embed",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Questions we hear",
+        "lede": "Lumen Harbor keeps schedules, notes and supplies in one shared workspace so small teams finish",
+        "embed": {
+          "role": "placeholder-embed",
+          "alt": "Hollow anchor from",
+          "ref": "placeholder:placeholder-embed-98"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "listing.gallery-teaser",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Everything your crew needs in",
+        "thumbs": [
+          {
+            "image": {
+              "role": "generated-product-visual",
+              "alt": "Alpine meadow across",
+              "ref": "placeholder:generated-product-visual-72"
+            }
+          },
+          {
+            "image": {
+              "role": "generated-product-visual",
+              "alt": "Indigo quartz and",
+              "ref": "placeholder:generated-product-visual-25"
+            }
+          },
+          {
+            "image": {
+              "role": "generated-product-visual",
+              "alt": "Pilot inlet across",
+              "ref": "placeholder:generated-product-visual-36"
+            }
+          }
+        ],
+        "action": {
+          "label": "Cedar anchor across",
+          "href": "https://studio.example/compass"
+        }
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "social-proof.quote-spotlight",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "tag": "Breeze fathom on ember zephyr",
+        "quote": "Our weekly review shrank from an hour to ten minutes, and nobody misses the old spreadsheet.",
+        "name": "Mira Alderton",
+        "role": "Studio lead",
+        "logo": {
+          "role": "placeholder-logo-row",
+          "alt": "Lantern thistle from",
+          "ref": "placeholder:placeholder-logo-row-98"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "listing.cookbook-grid",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Plan the week without the usual",
+        "cards": [
+          {
+            "title": "A practical guide to calmer",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so",
+            "link": {
+              "label": "Juniper beacon with",
+              "href": "https://studio.example/canvas"
+            }
+          },
+          {
+            "title": "Notes from the studio floor",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so",
+            "link": {
+              "label": "Oriole gable across",
+              "href": "https://studio.example/willow"
+            }
+          },
+          {
+            "title": "Keeping suppliers and schedules in",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so",
+            "link": {
+              "label": "Signal hollow for",
+              "href": "https://studio.example/umber"
+            }
+          },
+          {
+            "title": "How small teams review their",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so",
+            "link": {
+              "label": "Dune bramble with",
+              "href": "https://studio.example/trellis"
+            }
+          },
+          {
+            "title": "Weekly planning without the spreadsheet",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so",
+            "link": {
+              "label": "Current dune with",
+              "href": "https://studio.example/yarrow"
+            }
+          },
+          {
+            "title": "A practical guide to calmer",
+            "body": "Lumen Harbor groups tasks, notes and files by project, so",
+            "link": {
+              "label": "Signal oriole across",
+              "href": "https://studio.example/ledger"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "faq.accordion",
+      "variant": "full",
+      "surface": "cream",
+      "content": {
+        "items": [
+          {
+            "question": "How do I invite my team",
+            "answer": "Open the members page, add the email address of each person and choose a role. They receive an invitation straight away."
+          },
+          {
+            "question": "Can I import existing schedules",
+            "answer": "Open the members page, add the email address of each person and choose a role. They receive an invitation straight away."
+          },
+          {
+            "question": "Where are my files stored",
+            "answer": "Open the members page, add the email address of each person and choose a role. They receive an invitation straight away."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "faq-multi-open",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "cta.band",
+      "variant": "product",
+      "surface": "sky",
+      "content": {
+        "h2": "Built for teams that value quiet focus",
+        "primaryAction": {
+          "label": "Saffron oriole across",
+          "href": "https://studio.example/ferry"
+        }
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "surface": "ink",
+      "content": {
+        "logo": {
+          "role": "placeholder-brand-mark",
+          "alt": "Wicker ferry across",
+          "ref": "placeholder:placeholder-brand-mark-25"
+        },
+        "social": [
+          {
+            "label": "Tundra cobalt for",
+            "href": {
+              "label": "Ferry",
+              "href": "https://studio.example/ribbon"
+            }
+          },
+          {
+            "label": "Copper lagoon for",
+            "href": {
+              "label": "Dune",
+              "href": "https://studio.example/current"
+            }
+          },
+          {
+            "label": "Meadow harbor with",
+            "href": {
+              "label": "Ferry",
+              "href": "https://studio.example/summit"
+            }
+          },
+          {
+            "label": "Bramble ledger across",
+            "href": {
+              "label": "Anchor",
+              "href": "https://studio.example/beacon"
+            }
+          },
+          {
+            "label": "Willow quartz from",
+            "href": {
+              "label": "Summit",
+              "href": "https://studio.example/hollow"
+            }
+          },
+          {
+            "label": "Canvas juniper on",
+            "href": {
+              "label": "Canvas",
+              "href": "https://studio.example/copper"
+            }
+          }
+        ],
+        "columns": [
+          {
+            "groups": [
+              {
+                "heading": "Scope of the service",
+                "links": [
+                  {
+                    "label": "Atlas breeze for juniper juniper saffron and",
+                    "href": {
+                      "label": "Orchard saffron with",
+                      "href": "https://studio.example/oriole"
+                    }
+                  },
+                  {
+                    "label": "Umber lagoon for meadow kestrel marlin across",
+                    "href": {
+                      "label": "Lantern canvas in",
+                      "href": "https://studio.example/oriole"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Your responsibilities",
+                "links": [
+                  {
+                    "label": "Russet nimbus and fathom harbor ember and",
+                    "href": {
+                      "label": "Harbor lagoon in",
+                      "href": "https://studio.example/ember"
+                    }
+                  },
+                  {
+                    "label": "Alpine russet in willow wicker summit from",
+                    "href": {
+                      "label": "Mesa nimbus on",
+                      "href": "https://studio.example/trellis"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Changes to these terms",
+                "links": [
+                  {
+                    "label": "Fathom tundra from nimbus pilot compass for",
+                    "href": {
+                      "label": "Zephyr juniper from",
+                      "href": "https://studio.example/saffron"
+                    }
+                  },
+                  {
+                    "label": "Kestrel wicker and zephyr mosaic anchor from",
+                    "href": {
+                      "label": "Lattice lantern on",
+                      "href": "https://studio.example/oriole"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "How we handle data",
+                "links": [
+                  {
+                    "label": "Anchor bramble in inlet hollow indigo on",
+                    "href": {
+                      "label": "Cobalt bramble in",
+                      "href": "https://studio.example/canvas"
+                    }
+                  },
+                  {
+                    "label": "Vessel beacon from cedar hollow atlas for",
+                    "href": {
+                      "label": "Current hollow and",
+                      "href": "https://studio.example/quiver"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Contact and notices",
+                "links": [
+                  {
+                    "label": "Alpine meadow for nimbus beacon inlet and",
+                    "href": {
+                      "label": "Harbor kestrel from",
+                      "href": "https://studio.example/vessel"
+                    }
+                  },
+                  {
+                    "label": "Trellis copper with ember harvest indigo with",
+                    "href": {
+                      "label": "Harbor summit across",
+                      "href": "https://studio.example/ferry"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Scope of the service",
+                "links": [
+                  {
+                    "label": "Glacier yarrow across oriole atlas russet in",
+                    "href": {
+                      "label": "Anchor fathom with",
+                      "href": "https://studio.example/glacier"
+                    }
+                  },
+                  {
+                    "label": "Harvest compass across meadow jetty current across",
+                    "href": {
+                      "label": "Pilot hollow for",
+                      "href": "https://studio.example/trellis"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Your responsibilities",
+                "links": [
+                  {
+                    "label": "Breeze breeze from dune orchard quartz in",
+                    "href": {
+                      "label": "Dune compass for",
+                      "href": "https://studio.example/signal"
+                    }
+                  },
+                  {
+                    "label": "Kestrel kestrel across dune quiver ferry from",
+                    "href": {
+                      "label": "Compass dune across",
+                      "href": "https://studio.example/ledger"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Changes to these terms",
+                "links": [
+                  {
+                    "label": "Lagoon ferry from glacier vessel ledger in",
+                    "href": {
+                      "label": "Harvest russet for",
+                      "href": "https://studio.example/gable"
+                    }
+                  },
+                  {
+                    "label": "Jetty ribbon on harvest glacier indigo on",
+                    "href": {
+                      "label": "Hollow wicker across",
+                      "href": "https://studio.example/russet"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "poweredByLine": "Nimbus hollow on canvas",
+        "legalLinks": [
+          {
+            "label": "Glacier harbor in",
+            "href": {
+              "label": "Marlin quiver in",
+              "href": "https://studio.example/alpine"
+            }
+          },
+          {
+            "label": "Lattice hollow with",
+            "href": {
+              "label": "Cobalt thistle from",
+              "href": "https://studio.example/tundra"
+            }
+          },
+          {
+            "label": "Zephyr atlas for",
+            "href": {
+              "label": "Tundra orchard with",
+              "href": "https://studio.example/meadow"
+            }
+          }
+        ],
+        "badges": [
+          {
+            "img": {
+              "role": "placeholder-badge",
+              "alt": "Prairie lattice in",
+              "ref": "placeholder:placeholder-badge-93"
+            }
+          },
+          {
+            "img": {
+              "role": "placeholder-badge",
+              "alt": "Fathom umber in",
+              "ref": "placeholder:placeholder-badge-8"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    }
+  ]
+}

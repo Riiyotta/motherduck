@@ -1,0 +1,33 @@
+{
+  "id": "layout.container",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Container",
+  "purpose": "Centered page container: 100% / 728 / 960 / 1302 max width with 24 / 20 / 20 / 30 side padding.",
+  "source": {
+    "file": "src/components/ui/Container.jsx",
+    "tag": "Container",
+    "lines": "9-20",
+    "id": "Container-jsx#Container"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "padX": "number|string",
+    "as": "element"
+  },
+  "tokens": [
+    "layout.container.maxWidth.xl",
+    "layout.container.paddingX.xl"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "87-97",
+        "heading": "Layout system"
+      }
+    ]
+  }
+}

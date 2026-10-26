@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.split-product",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Split product hero with illustration",
+  "purpose": "Page-opening: chip, three-line H1, lede and two actions on the left; large product illustration on the right (below the text under 1302px).",
+  "source": {
+    "file": "src/components/marketing/feature.jsx",
+    "tag": "SplitHero",
+    "lines": "110-131",
+    "id": "feature-jsx#SplitHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.split-product",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "chip": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 17,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 24,
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 5,
+        "required": true
+      },
+      "illustration": {
+        "type": "asset",
+        "roles": [
+          "product-screenshot"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING section 4: illustration absolute right at >=1302"
+  },
+  "generatedAssetRoles": [
+    "generated-product-visual"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "488-533",
+        "heading": "4. Per-route block lists"
+      },
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "511"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-feature"
+  ],
+  "tags": []
+}

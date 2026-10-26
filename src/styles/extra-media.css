@@ -1,0 +1,122 @@
+/* PAGES_SPEC_EXTRA chunk B (X3 events, X4 past events, X8 webinars, X9/X10 podcast, /try).
+   Most values live inline as Tailwind arbitrary classes; this file holds the dark-theme overrides that must reach
+   into the shared Header (which is not edited) and a few pseudo-element / state rules. */
+
+/* ---------- X9 / X10 dark theme (§2): body ink, header dark variant ----------
+   X9/X10 set document.body.dataset.theme = 'dark' on mount. Only the header's nav row (.container) is restyled;
+   the eyebrow banner, mega menus (bg-white panels) and the mobile slide-in menu keep their normal look. */
+body[data-theme='dark'] {
+  background-color: #383838;
+}
+body[data-theme='dark'] header {
+  background-color: transparent;
+}
+body[data-theme='dark'] header > .container,
+body[data-theme='dark'] header > .container .text-ink:not(.bg-white *) {
+  color: #ffffff;
+}
+body[data-theme='dark'] header > .container .group:hover .group-hover\:border-ink:not(.bg-white *) {
+  border-color: #ffffff;
+}
+/* START FREE: ht-blue bg, 2px white border, white label, white backing (OffsetButton variant "ht" values). */
+/* OffsetButton sets --lift-bg inline, so the inner background is overridden directly. */
+body[data-theme='dark'] header > .container .lift:not(.bg-white *) {
+  background-color: #ffffff !important;
+}
+body[data-theme='dark'] header > .container .lift:not(.bg-white *) > .lift-inner {
+  background-color: #1276bf !important;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+/* ---------- X9 ASCII wordmark (own block-letter drawing; not the original art) ---------- */
+.ea-ascii {
+  margin: 0;
+  font-family: 'Fira Mono', ui-monospace, monospace;
+  font-weight: 400;
+  color: #f8f8f7;
+  white-space: pre;
+  font-size: 7px;
+  line-height: 7px;
+  letter-spacing: -0.5px;
+}
+@media (min-width: 728px) {
+  .ea-ascii { font-size: 10px; line-height: 10px; letter-spacing: -0.5px; }
+}
+@media (min-width: 960px) {
+  .ea-ascii { font-size: 13px; line-height: 13px; letter-spacing: -1px; }
+}
+@media (min-width: 1302px) {
+  .ea-ascii { font-size: 15px; line-height: 15px; letter-spacing: -1px; }
+}
+
+/* X9 sky block cursor (measured `iNfiBr`): 1.05s steps(2, start) infinite, opacity 1 for 0-49%, 0 from 50%.
+   The original keeps blinking under prefers-reduced-motion. */
+@keyframes ea-cursor-block {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.ea-cursor { animation: ea-cursor-block 1.05s steps(2, start) infinite; }
+
+/* X8 gated modal (measured `ghqoEY` >=960 / `dWInNU` <960): content rises 32px and fades in, 200ms ease-out
+   forwards, also under reduced motion; the overlay appears instantly. */
+@keyframes xm-modal-rise {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: none; }
+}
+.xm-modal-rise { animation: xm-modal-rise 200ms ease-out forwards; }
+
+/* X3 <960 fixed Register bar (measured): slides by its own height, 200ms ease-in-out; opacity switches to 0 only
+   once the slide-out has finished and back to 1 at the start of the slide-in. Not disabled by reduced motion. */
+.xm-regbar { transition: transform 200ms ease-in-out, opacity 0s linear 0s; }
+.xm-regbar[data-hidden] { transform: translateY(100%); opacity: 0; pointer-events: none; transition: transform 200ms ease-in-out, opacity 0s linear 200ms; }
+
+/* X9/X10 unlock e-mail field (TextInput restyled for the dark card) */
+.ea-input input {
+  height: 58px;
+  border-width: 1px !important;
+  border-color: #2f2f2f !important;
+  background-color: #161616 !important;
+  color: #f8f8f7 !important;
+}
+.ea-input input:focus {
+  border-color: #97d4ff !important;
+}
+.ea-input p {
+  color: #666666 !important;
+}
+.ea-check label {
+  color: #f8f8f7 !important;
+}
+.ea-check input:checked + span {
+  background-color: #97d4ff;
+  border-color: #97d4ff;
+}
+.ea-check span {
+  border-color: #f8f8f7;
+}
+
+/* X10 locked paywall area */
+.ea-locked {
+  max-height: 460px;
+  overflow: hidden;
+  filter: blur(6px);
+  -webkit-mask-image: linear-gradient(#000 30%, transparent 100%);
+  mask-image: linear-gradient(#000 30%, transparent 100%);
+}
+
+/* ---------- X8 sand band grid (same as the content sand-grid hero) is reused via .ct-sand-grid ---------- */
+
+/* ---------- /try shell fonts (Source Serif 4 heading; Geist chrome falls back to Inter) ---------- */
+.try-serif {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+.try-sans {
+  font-family: Geist, Inter, system-ui, sans-serif;
+}
+.try-ui {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.try-prompt::placeholder {
+  color: #8f8b7e;
+}

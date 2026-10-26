@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.event-detail",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Event detail hero",
+  "purpose": "Page-opening: event title, type tag, date and location for an event detail page.",
+  "source": {
+    "file": "src/components/extra/events.jsx",
+    "tag": "EventHero",
+    "lines": "68-85",
+    "id": "events-jsx#EventHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.event-detail",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 12,
+        "required": true
+      },
+      "type": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "date": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "location": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "image": {
+        "type": "asset",
+        "roles": [
+          "team-photo"
+        ],
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-photo-placeholder"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "231-263",
+        "heading": "X3. Event detail `/events/:slug` (251; samples `ai-council-2026` upcoming, `ai-by-the-bay-"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "event-detail"
+  ],
+  "tags": []
+}

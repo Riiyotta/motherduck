@@ -1,0 +1,40 @@
+{
+  "id": "diagram.wire",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Animated wire",
+  "purpose": "Three stacked dashed paths (halo, main, core) that flow into a shared node.",
+  "source": {
+    "file": "src/components/architecture/Wire.jsx",
+    "tag": "Wire",
+    "lines": "69-88",
+    "id": "Wire-jsx#Wire"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "consumer": [
+      "you",
+      "teammate",
+      "pipeline",
+      "agents"
+    ],
+    "durationMs": [
+      312.5,
+      625,
+      1250,
+      2500
+    ]
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "333-357",
+        "heading": "Diagram (right, 778×510 @1440)"
+      }
+    ]
+  }
+}

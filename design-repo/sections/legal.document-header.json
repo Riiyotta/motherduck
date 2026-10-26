@@ -1,0 +1,99 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "legal.document-header",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Legal document header",
+  "purpose": "Page title with last-updated date and lead paragraph.",
+  "source": {
+    "file": "src/components/company/legal.jsx",
+    "tag": "Intro",
+    "lines": "145-155",
+    "id": "legal-jsx#Intro"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/company/legal.jsx",
+      "tag": "LegalShell",
+      "lines": "130-142",
+      "id": "legal-jsx#LegalShell"
+    },
+    {
+      "file": "src/components/extra/generic.jsx",
+      "tag": "GenericPage",
+      "lines": "349-359",
+      "id": "generic-jsx#GenericPage"
+    }
+  ],
+  "semantic": {
+    "id": "legal.document-header",
+    "category": "LEGAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "lastUpdated": {
+        "type": "text",
+        "maxWords": 5,
+        "required": false
+      },
+      "lead": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default",
+    "sidebar-form"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "259-277",
+        "heading": "F1. `LegalPage` [NEW] (Privacy, Terms; Support-policy variant)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "legal-plain",
+    "legal-toc",
+    "prose-sidebar-form"
+  ],
+  "tags": []
+}

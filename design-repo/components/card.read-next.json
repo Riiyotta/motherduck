@@ -1,0 +1,33 @@
+{
+  "id": "card.read-next",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Read-next card",
+  "purpose": "Recommendation card with arrow.",
+  "source": {
+    "file": "src/components/extra/readNext.jsx",
+    "tag": "ReadNextCard",
+    "lines": "18-46",
+    "id": "readNext-jsx#ReadNextCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 11 words)",
+    "type": "text(max 2 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "207-230",
+        "heading": "X2. Glossary term `/glossary/:slug` (347; samples `acid`, `ai`)"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift"
+  ]
+}

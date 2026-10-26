@@ -1,0 +1,34 @@
+{
+  "id": "card.value",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Value card",
+  "purpose": "Expandable values card with mascot art.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "ValueCard",
+    "lines": "130-157",
+    "id": "careers-jsx#ValueCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 2 words)",
+    "body": "text(max 35 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "194-202",
+        "heading": "B3. `ValuesCards` [NEW] (Careers \"Our values\")"
+      }
+    ]
+  },
+  "uses": [
+    "asset.placeholder",
+    "icon.chevron"
+  ]
+}

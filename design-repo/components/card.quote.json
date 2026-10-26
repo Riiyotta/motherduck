@@ -1,0 +1,38 @@
+{
+  "id": "card.quote",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Quote card",
+  "purpose": "Offset-lift card with quote mark, quote, logo, name and role.",
+  "source": {
+    "file": "src/components/architecture/QuoteCard.jsx",
+    "tag": "QuoteCard",
+    "lines": "6-39",
+    "id": "QuoteCard-jsx#QuoteCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "quote": "text(max 53 words)",
+    "name": "text(max 4 words)",
+    "role": "text(max 4 words)",
+    "logo": "asset(customer-logo)"
+  },
+  "tokens": [
+    "card.lift.lift.quote"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "358-367",
+        "heading": "Quote card (margin-top 56; 24 below 1302)"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "asset.placeholder"
+  ]
+}

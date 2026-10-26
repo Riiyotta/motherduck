@@ -1,0 +1,101 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "cta.contact-chooser",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Contact chooser",
+  "purpose": "Page-level chooser with heading, lede and two contact option cards (sales, support).",
+  "source": {
+    "file": "src/components/company/contact.jsx",
+    "tag": "ContactChooser",
+    "lines": "22-67",
+    "id": "contact-jsx#ContactChooser"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "cta.contact-chooser",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 14,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY C1"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "234-239",
+        "heading": "C1. `ContactChooser` [NEW] (Contact us)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "contact-chooser"
+  ],
+  "tags": []
+}

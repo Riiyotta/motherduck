@@ -1,0 +1,29 @@
+{
+  "id": "reveal.on-scroll",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Reveal wrapper",
+  "purpose": "Wrapper that reveals children as they scroll into view.",
+  "source": {
+    "file": "src/components/content/bits.jsx",
+    "tag": "Reveal",
+    "lines": "18-21",
+    "id": "bits-jsx#Reveal"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "enabled": "boolean"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "698-727",
+        "heading": "8. Interactions summary"
+      }
+    ]
+  }
+}

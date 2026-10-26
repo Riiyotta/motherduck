@@ -1,0 +1,137 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "navigation.search-filter",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Search and filter panel",
+  "purpose": "Panel with a search field and one or two selects (topic, type, location); optionally Upcoming/Past tabs and a clear-all control.",
+  "source": {
+    "file": "src/components/content/filters.jsx",
+    "tag": "SearchFilterPanel",
+    "lines": "70-111",
+    "id": "filters-jsx#SearchFilterPanel"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/content/filters.jsx",
+      "tag": "SearchField",
+      "lines": "8-21",
+      "id": "filters-jsx#SearchField"
+    },
+    {
+      "file": "src/components/content/filters.jsx",
+      "tag": "Select",
+      "lines": "24-59",
+      "id": "filters-jsx#Select"
+    }
+  ],
+  "semantic": {
+    "id": "navigation.search-filter",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "searchPlaceholder": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "selects": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "options": {
+            "type": "list",
+            "minItems": 2,
+            "maxItems": 30,
+            "item": {
+              "text": {
+                "type": "text",
+                "maxWords": 4,
+                "required": true
+              }
+            },
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "tabs": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default",
+    "search-only",
+    "events"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 2,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_CONTENT F2"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "181-194",
+        "heading": "F2. `SearchFilterPanel` (Blog, Events, Quack) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-index",
+    "ecosystem-index",
+    "events-index",
+    "events-past",
+    "quack-index",
+    "video-index"
+  ],
+  "tags": []
+}

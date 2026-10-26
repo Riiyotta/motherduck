@@ -1,0 +1,37 @@
+{
+  "id": "card.case-link",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Customer case link card",
+  "purpose": "Lift card with customer logo, quote or stat and a read-case-study link; tinted hover and active states.",
+  "source": {
+    "file": "src/components/customers/CaseCard.jsx",
+    "tag": "CaseCard",
+    "lines": "7-33",
+    "id": "CaseCard-jsx#CaseCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "logo": "asset(customer-logo)",
+    "text": "text(max 11 words)",
+    "hoverTint": "surface token"
+  },
+  "tokens": [
+    "card.lift.lift.customer"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "461-486",
+        "heading": "7. Customers section (bg **#97D4FF**, `border-top:2px solid #383838`, overflow clip)"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "link.underline"
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "shell.header",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Site header with eyebrow banner",
+  "purpose": "Fixed site chrome: promotional eyebrow banner above a logo + primary navigation row with three click-open mega menus and a primary action.",
+  "source": {
+    "file": "src/components/Header.jsx",
+    "tag": "Header",
+    "lines": "52-181",
+    "id": "Header-jsx#Header"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/Header.jsx",
+      "tag": "Eyebrow",
+      "lines": "26-50",
+      "id": "Header-jsx#Eyebrow"
+    }
+  ],
+  "semantic": {
+    "id": "shell.header",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "eyebrowText": {
+        "type": "text",
+        "maxWords": 12,
+        "required": true
+      },
+      "eyebrowLink": {
+        "type": "link",
+        "labelMaxWords": 6,
+        "required": true
+      },
+      "logo": {
+        "type": "asset",
+        "roles": [
+          "brand-wordmark"
+        ],
+        "required": true
+      },
+      "navGroups": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "items": {
+            "type": "list",
+            "minItems": 2,
+            "maxItems": 15,
+            "item": {
+              "label": {
+                "type": "text",
+                "maxWords": 5,
+                "required": true
+              },
+              "description": {
+                "type": "text",
+                "maxWords": 7,
+                "required": false
+              },
+              "href": {
+                "type": "link",
+                "labelMaxWords": 5,
+                "required": true
+              }
+            },
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "navLinks": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 2,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default",
+    "dark"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "dropdown-enter",
+      "tooltip-fade",
+      "none"
+    ],
+    "default": "dropdown-enter",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 2b: desktop nav shown at >=1302 only, hamburger below"
+  },
+  "generatedAssetRoles": [
+    "placeholder-brand-mark"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "201-256",
+        "heading": "2. Header (fixed) = Eyebrow banner + Navbar"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about",
+    "author",
+    "azure-waitlist",
+    "blog-index",
+    "blog-post",
+    "book-brief",
+    "book-chapter",
+    "careers",
+    "case-detail",
+    "case-index",
+    "community-code",
+    "community-oss",
+    "contact-chooser",
+    "contact-form",
+    "ecosystem-detail",
+    "ecosystem-index",
+    "eu-region",
+    "event-detail",
+    "events-index",
+    "events-past",
+    "gated-lp",
+    "glossary-index",
+    "glossary-term",
+    "home",
+    "learn-article",
+    "learn-index",
+    "legal-plain",
+    "legal-toc",
+    "lp-divemaxxing",
+    "lp-ducklake-full",
+    "lp-jev",
+    "news-index",
+    "persona-landing",
+    "podcast-episode",
+    "podcast-index",
+    "pricing",
+    "pricing-support",
+    "product-ducklake",
+    "product-feature",
+    "product-hypertenancy",
+    "product-overview",
+    "product-persona",
+    "prose-sidebar-form",
+    "quack-index",
+    "research-index",
+    "research-paper",
+    "split-form-lp",
+    "startups",
+    "support-hub",
+    "trust-security",
+    "video-detail",
+    "video-index",
+    "vs-comparison",
+    "vs-index",
+    "webinar-detail"
+  ],
+  "tags": [],
+  "notes": "Eyebrow 40px (70px below 728), nav row 80px (70px below 1302), 2px bottom border turns solid at scrollY>0. --header-total is 122/112/142. The dark variant exists only on the podcast templates (PAGES_SPEC_EXTRA section 2)."
+}

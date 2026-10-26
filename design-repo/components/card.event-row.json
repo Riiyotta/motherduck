@@ -1,0 +1,40 @@
+{
+  "id": "card.event-row",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Event row",
+  "purpose": "Row with date block, type tag, title and location.",
+  "source": {
+    "file": "src/pages/content/EventsHub.jsx",
+    "tag": "EventRow",
+    "lines": "59-85",
+    "id": "EventsHub-jsx#EventRow"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/events.jsx",
+      "tag": "PastEventRow",
+      "lines": "267-276",
+      "id": "events-jsx#PastEventRow"
+    }
+  ],
+  "props": {
+    "title": "text(max 10 words)",
+    "location": "text(max 4 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "558-577",
+        "heading": "H4. `EventRow` [NEW, on `LiftCard lift={14}` at ≥960 only]"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift"
+  ]
+}

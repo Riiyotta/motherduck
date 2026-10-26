@@ -1,0 +1,703 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "reference",
+  "template": "vs-comparison",
+  "route": "/vs/snowflake-alternative",
+  "theme": "light",
+  "meta": {
+    "title": "Comparison page (reference reconstruction)",
+    "brand": "Northwind Data",
+    "description": "Reference-mode structure of /vs/snowflake-alternative using stand-in competitor naming (Warehouse F) as the clone does."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "eyebrowText": "Dashboard jump across pipeline pipeline queue across",
+        "eyebrowLink": {
+          "label": "Stream widget for",
+          "href": "#unit"
+        },
+        "logo": {
+          "role": "brand-wordmark",
+          "alt": "Handle metric on"
+        },
+        "navGroups": [
+          {
+            "label": "Network upload",
+            "items": [
+              {
+                "label": "Upload keyed on bridge trace",
+                "href": {
+                  "label": "Grain kernel on",
+                  "href": "#queue"
+                }
+              },
+              {
+                "label": "Bridge object for kernel output",
+                "href": {
+                  "label": "Pipeline metric for",
+                  "href": "#upload"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Widget handle",
+            "items": [
+              {
+                "label": "Gateway input with gateway grain",
+                "href": {
+                  "label": "Bucket trace and",
+                  "href": "#kernel"
+                }
+              },
+              {
+                "label": "Index object and module column",
+                "href": {
+                  "label": "Router kernel across",
+                  "href": "#queue"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Schema router",
+            "items": [
+              {
+                "label": "Index circuit across router upload",
+                "href": {
+                  "label": "Handle packet in",
+                  "href": "#query"
+                }
+              },
+              {
+                "label": "Query trace on network upload",
+                "href": {
+                  "label": "Output schema for",
+                  "href": "#keyed"
+                }
+              }
+            ]
+          }
+        ],
+        "navLinks": [
+          {
+            "label": "Record driver",
+            "href": {
+              "label": "Gateway object",
+              "href": "#packet"
+            }
+          },
+          {
+            "label": "Kernel output",
+            "href": {
+              "label": "Grain filter",
+              "href": "#module"
+            }
+          }
+        ],
+        "primaryAction": {
+          "label": "Engine upload across",
+          "href": "#layer"
+        }
+      },
+      "motion": {
+        "pattern": "dropdown-enter",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "hero.vs",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h1": "Northwind Data vs Warehouse F",
+        "subhead": "A lighter way to run analytics",
+        "lede": "See how a compact cloud warehouse compares with Warehouse F on cost, setup time and day-to-day speed.",
+        "primaryAction": {
+          "label": "Table bucket for",
+          "href": "#widget"
+        },
+        "secondaryAction": {
+          "label": "Network handle with",
+          "href": "#kernel"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "divider.marquee-band",
+      "variant": "default",
+      "surface": "yellow",
+      "content": {
+        "label": "Grain journal for layer",
+        "copies": 9
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "comparison.vs-table",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "How they compare",
+        "competitorName": "Warehouse F",
+        "rows": [
+          {
+            "attribute": "Input driver from pipeline query archive",
+            "competitor": "Network circuit with queue widget stream with",
+            "ours": "Filter stream with widget output trace from"
+          },
+          {
+            "attribute": "Bridge metric in upload gateway notice",
+            "competitor": "Index kernel with pipeline queue schema with",
+            "ours": "Unit column for bucket circuit metric and"
+          },
+          {
+            "attribute": "Notice vector for input grain column",
+            "competitor": "Unit schema in trace trace trace in",
+            "ours": "Packet factory on metric driver upload from"
+          },
+          {
+            "attribute": "Driver packet with handle layer network",
+            "competitor": "Widget input on jump pipeline jump in",
+            "ours": "Unit column for output vector object from"
+          },
+          {
+            "attribute": "Factory bucket on keyed bridge driver",
+            "competitor": "Kernel notice for schema dashboard handle for",
+            "ours": "Column kernel for query grain dashboard across"
+          },
+          {
+            "attribute": "Trace index and vector kernel handle",
+            "competitor": "Unit jump across dashboard export queue on",
+            "ours": "Metric factory from handle dashboard pipeline for"
+          }
+        ],
+        "competitorLogo": {
+          "role": "customer-logo",
+          "alt": "Schema output for"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "social-proof.logo-bar",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "logos": [
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Keyed filter with"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Upload grain from"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Keyed journal in"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Widget bucket from"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Trace queue on"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Launch launch and"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "tooltip-fade",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "comparison.benchmark-panel",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Queue upload and journal index kernel",
+        "lede": "Vector notice across gateway vector metric on",
+        "chart": {
+          "role": "chart-figure",
+          "alt": "Unit journal in"
+        },
+        "cards": [
+          {
+            "title": "Column kernel on column stream",
+            "bullets": [
+              {
+                "text": "Queue archive with widget queue object with"
+              },
+              {
+                "text": "Trace upload across bucket stream metric in"
+              }
+            ]
+          },
+          {
+            "title": "Filter input on input metric",
+            "bullets": [
+              {
+                "text": "Bucket packet and output journal column with"
+              },
+              {
+                "text": "Journal bridge with record module packet across"
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "social-proof.quote-carousel",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "slides": [
+          {
+            "quote": "Launch query and unit schema jump and",
+            "name": "Column pipeline from",
+            "role": "Filter object in network launch",
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Record module from"
+            }
+          },
+          {
+            "quote": "Factory unit with record index query and",
+            "name": "Table pipeline in",
+            "role": "Input handle and grain launch",
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Record unit across"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel-autoplay",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.sticky-stack",
+      "variant": "default",
+      "surface": "sun",
+      "content": {
+        "h2": "Queue kernel with driver filter pipeline on",
+        "intro": "Metric output from vector launch archive in",
+        "cards": [
+          {
+            "title": "Router engine across column module journal with",
+            "body": "Trace bucket and table record gateway with",
+            "image": {
+              "role": "product-screenshot",
+              "alt": "Unit export on"
+            }
+          },
+          {
+            "title": "Archive jump and kernel jump gateway on",
+            "body": "Output grain on grain record kernel for",
+            "image": {
+              "role": "product-screenshot",
+              "alt": "Queue stream with"
+            }
+          },
+          {
+            "title": "Keyed metric from network kernel stream in",
+            "body": "Driver table across pipeline trace stream in",
+            "image": {
+              "role": "product-screenshot",
+              "alt": "Trace factory on"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky-stack-scrub",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "comparison.compare-cards",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "label": "Keyed upload with",
+        "cards": [
+          {
+            "title": "Journal table and bucket layer network",
+            "body": "Circuit schema from handle index journal on",
+            "link": {
+              "label": "Grain factory from",
+              "href": "#bucket"
+            }
+          },
+          {
+            "title": "Vector export on circuit schema driver",
+            "body": "Upload factory from unit metric output in",
+            "link": {
+              "label": "Vector handle for",
+              "href": "#bucket"
+            }
+          },
+          {
+            "title": "Query module for export column module",
+            "body": "Notice output in circuit pipeline grain for",
+            "link": {
+              "label": "Bridge vector from",
+              "href": "#gateway"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "faq.accordion",
+      "variant": "full",
+      "surface": "cream",
+      "content": {
+        "items": [
+          {
+            "question": "Stream module in widget index gateway for",
+            "answer": "Packet journal and dashboard schema packet and"
+          },
+          {
+            "question": "Network handle in router stream module in",
+            "answer": "Grain notice on query packet upload from"
+          },
+          {
+            "question": "Notice filter from upload index export for",
+            "answer": "Query pipeline for factory output schema across"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "faq-multi-open",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "cta.band",
+      "variant": "product",
+      "surface": "sky",
+      "content": {
+        "h2": "Metric launch and object input column and",
+        "primaryAction": {
+          "label": "Upload circuit from",
+          "href": "#launch"
+        }
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "surface": "ink",
+      "content": {
+        "logo": {
+          "role": "brand-wordmark",
+          "alt": "Engine circuit in"
+        },
+        "social": [
+          {
+            "label": "Dashboard grain with",
+            "href": {
+              "label": "Handle",
+              "href": "#stream"
+            }
+          },
+          {
+            "label": "Router pipeline with",
+            "href": {
+              "label": "Pipeline",
+              "href": "#gateway"
+            }
+          },
+          {
+            "label": "Driver engine from",
+            "href": {
+              "label": "Input",
+              "href": "#object"
+            }
+          },
+          {
+            "label": "Kernel handle on",
+            "href": {
+              "label": "Kernel",
+              "href": "#factory"
+            }
+          },
+          {
+            "label": "Pipeline archive in",
+            "href": {
+              "label": "Queue",
+              "href": "#upload"
+            }
+          },
+          {
+            "label": "Journal kernel on",
+            "href": {
+              "label": "Archive",
+              "href": "#handle"
+            }
+          }
+        ],
+        "columns": [
+          {
+            "groups": [
+              {
+                "heading": "Upload trace from trace",
+                "links": [
+                  {
+                    "label": "Factory dashboard on trace network bridge and",
+                    "href": {
+                      "label": "Pipeline object in",
+                      "href": "#archive"
+                    }
+                  },
+                  {
+                    "label": "Pipeline unit for index filter handle with",
+                    "href": {
+                      "label": "Packet layer in",
+                      "href": "#table"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Keyed network for dashboard",
+                "links": [
+                  {
+                    "label": "Export journal on filter circuit module and",
+                    "href": {
+                      "label": "Layer keyed from",
+                      "href": "#handle"
+                    }
+                  },
+                  {
+                    "label": "Launch query for queue launch launch across",
+                    "href": {
+                      "label": "Input schema on",
+                      "href": "#kernel"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Column layer across module",
+                "links": [
+                  {
+                    "label": "Gateway circuit from metric circuit keyed on",
+                    "href": {
+                      "label": "Pipeline unit and",
+                      "href": "#query"
+                    }
+                  },
+                  {
+                    "label": "Packet trace from schema handle object with",
+                    "href": {
+                      "label": "Bridge engine and",
+                      "href": "#packet"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Trace router from factory",
+                "links": [
+                  {
+                    "label": "Metric journal and router router layer in",
+                    "href": {
+                      "label": "Vector kernel from",
+                      "href": "#module"
+                    }
+                  },
+                  {
+                    "label": "Queue pipeline for export input unit from",
+                    "href": {
+                      "label": "Column circuit and",
+                      "href": "#kernel"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Output handle from schema",
+                "links": [
+                  {
+                    "label": "Object router on unit grain schema in",
+                    "href": {
+                      "label": "Gateway packet with",
+                      "href": "#gateway"
+                    }
+                  },
+                  {
+                    "label": "Widget journal and engine module output with",
+                    "href": {
+                      "label": "Index launch for",
+                      "href": "#table"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Table launch on pipeline",
+                "links": [
+                  {
+                    "label": "Widget input in table packet packet and",
+                    "href": {
+                      "label": "Table index in",
+                      "href": "#object"
+                    }
+                  },
+                  {
+                    "label": "Metric table with driver object dashboard with",
+                    "href": {
+                      "label": "Vector unit in",
+                      "href": "#packet"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Queue journal with object",
+                "links": [
+                  {
+                    "label": "Column grain on module input input and",
+                    "href": {
+                      "label": "Upload bucket on",
+                      "href": "#schema"
+                    }
+                  },
+                  {
+                    "label": "Pipeline keyed for grain network widget from",
+                    "href": {
+                      "label": "Trace archive for",
+                      "href": "#circuit"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Filter module for driver",
+                "links": [
+                  {
+                    "label": "Metric packet from bucket schema index from",
+                    "href": {
+                      "label": "Filter driver with",
+                      "href": "#queue"
+                    }
+                  },
+                  {
+                    "label": "Widget table for export schema bridge with",
+                    "href": {
+                      "label": "Input object from",
+                      "href": "#router"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "poweredByLine": "Notice layer in unit",
+        "legalLinks": [
+          {
+            "label": "Bucket circuit from",
+            "href": {
+              "label": "Gateway archive across",
+              "href": "#vector"
+            }
+          },
+          {
+            "label": "Keyed stream in",
+            "href": {
+              "label": "Circuit schema and",
+              "href": "#gateway"
+            }
+          },
+          {
+            "label": "Query driver with",
+            "href": {
+              "label": "Module record with",
+              "href": "#network"
+            }
+          }
+        ],
+        "badges": [
+          {
+            "img": {
+              "role": "compliance-badge",
+              "alt": "Object unit on"
+            }
+          },
+          {
+            "img": {
+              "role": "compliance-badge",
+              "alt": "Module journal with"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    }
+  ]
+}

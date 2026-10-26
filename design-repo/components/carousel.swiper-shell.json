@@ -1,0 +1,34 @@
+{
+  "id": "carousel.swiper-shell",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Carousel shell",
+  "purpose": "Swiper track with arrows and optional dots; slides per view 1 / 1.5 / 2 / 2.5 / 3.35 at 0 / 500 / 728 / 960 / 1302.",
+  "source": {
+    "file": "src/components/Blog.jsx",
+    "tag": "BREAKPOINTS",
+    "lines": "21-27",
+    "id": "Blog-jsx#BREAKPOINTS"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "slidesPerView": "number",
+    "autoplayMs": "number",
+    "loop": "boolean"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "524-545",
+        "heading": "9. Blog / \"fresh\" section (bg **#F9EE3E**, `border-bottom:2px solid #383838`)"
+      }
+    ]
+  },
+  "uses": [
+    "button.offset"
+  ]
+}

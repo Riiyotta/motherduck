@@ -1,0 +1,76 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "runtime.toc-fab",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Table of contents floating button",
+  "purpose": "Floating button + sheet that exposes the article table of contents below the sidebar breakpoint.",
+  "source": {
+    "file": "src/components/content/videos.jsx",
+    "tag": "TocFab",
+    "lines": "130-149",
+    "id": "videos-jsx#TocFab"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "runtime.toc-fab",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "sheet-in",
+      "fab-pop"
+    ],
+    "default": "sheet-in",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "425-442",
+        "heading": "V5. `VideoMeta` + body/sidebar (video detail) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "learn-article",
+    "video-detail"
+  ],
+  "tags": [],
+  "retrievalReason": "Floating action button and bottom sheet used only below 1302px; it is navigation runtime UI, not a section of content."
+}

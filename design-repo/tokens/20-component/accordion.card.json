@@ -1,0 +1,68 @@
+{
+  "description": "Component-scoped tokens for accordion.card.",
+  "tokens": {
+    "accordion.card.openShadow": {
+      "value": "-4px 4px 0 0 #383838",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "324-332",
+        "heading": "Accordion (single-open, click toggles; no auto-advance)"
+      }
+    },
+    "accordion.card.closedBackground": {
+      "value": "#F8F8F7",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "324-332",
+        "heading": "Accordion (single-open, click toggles; no auto-advance)"
+      }
+    },
+    "accordion.card.openBackground": {
+      "value": "#FFFFFF",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "324-332",
+        "heading": "Accordion (single-open, click toggles; no auto-advance)"
+      }
+    },
+    "accordion.card.headerHeight": {
+      "value": "70px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "324-332",
+        "heading": "Accordion (single-open, click toggles; no auto-advance)"
+      }
+    },
+    "accordion.card.padding": {
+      "value": "24px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "324-332",
+        "heading": "Accordion (single-open, click toggles; no auto-advance)"
+      }
+    },
+    "accordion.card.cardTransition": {
+      "value": "200ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "324-332",
+        "heading": "Accordion (single-open, click toggles; no auto-advance)"
+      }
+    },
+    "accordion.card.bodyTransition": {
+      "value": "250ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "324-332",
+        "heading": "Accordion (single-open, click toggles; no auto-advance)"
+      }
+    }
+  }
+}

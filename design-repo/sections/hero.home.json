@@ -1,0 +1,158 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.home",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Homepage hero with tabbed product simulation",
+  "purpose": "Page-opening composition: headline, lede, primary + secondary actions, agent prompt-copy line, customer logo strip and an interactive product simulation panel with four tabs.",
+  "source": {
+    "file": "src/components/Hero.jsx",
+    "tag": "Hero",
+    "lines": "23-86",
+    "id": "Hero-jsx#Hero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.home",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 30,
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": true
+      },
+      "agentLine": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "logoStripLabel": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "customerLogos": {
+        "type": "list",
+        "minItems": 6,
+        "maxItems": 6,
+        "item": {
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "customer-logo"
+            ],
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      },
+      "tabs": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "panel": {
+            "type": "enum",
+            "values": [
+              "ask",
+              "sql",
+              "python",
+              "cli"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "media": {
+        "type": "asset",
+        "roles": [
+          "product-screenshot"
+        ],
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "measured for the h2, lede and sub fields (CLONE_SPEC [Nch/Mw] counts); estimated for the remaining fields"
+  },
+  "variants": [
+    "control",
+    "video"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "typing-sim",
+      "caret-blink",
+      "offset-lift",
+      "tooltip-fade"
+    ],
+    "default": "typing-sim",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 3: row layout only at >=1302 (gap 80, media 600), column below"
+  },
+  "generatedAssetRoles": [
+    "generated-product-visual",
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "257-310",
+        "heading": "3. Hero (`section`, bg #F4EFEA, overflow clip)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": [],
+  "notes": "Only the control variant is built. Section is 652px at 1440 (CLONE_SPEC section 1)."
+}

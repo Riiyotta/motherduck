@@ -1,0 +1,33 @@
+{
+  "id": "card.episode",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Episode card",
+  "purpose": "Dark podcast episode card.",
+  "source": {
+    "file": "src/components/extra/podcast.jsx",
+    "tag": "EpisodeCard",
+    "lines": "184-205",
+    "id": "podcast-jsx#EpisodeCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 10 words)",
+    "meta": "text(max 4 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "380-428",
+        "heading": "X9. Podcast index `/explain-analyze` (dark)"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift"
+  ]
+}

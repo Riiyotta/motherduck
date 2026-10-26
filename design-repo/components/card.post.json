@@ -1,0 +1,37 @@
+{
+  "id": "card.post",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Post card",
+  "purpose": "Feed card: thumbnail, chip or badge, title, date, optional excerpt.",
+  "source": {
+    "file": "src/components/content/feedCards.jsx",
+    "tag": "PostCard",
+    "lines": "63-91",
+    "id": "feedCards-jsx#PostCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 13 words)",
+    "date": "text(max 3 words)",
+    "badge": "text(max 2 words)"
+  },
+  "tokens": [
+    "card.lift.lift.content"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "201-207",
+        "heading": "F4. `PostCard` [NEW, on `LiftCard lift={14}`]"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "asset.placeholder"
+  ]
+}

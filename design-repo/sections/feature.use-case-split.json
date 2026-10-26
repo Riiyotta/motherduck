@@ -1,0 +1,94 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.use-case-split",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Use-case split",
+  "purpose": "Two-panel use case introduction with heading and per-use-case copy.",
+  "source": {
+    "file": "src/components/marketing/overview.jsx",
+    "tag": "UseCaseSplit",
+    "lines": "11-30",
+    "id": "overview-jsx#UseCaseSplit"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.use-case-split",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cases": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": true
+          },
+          "art": {
+            "type": "asset",
+            "roles": [
+              "spot-illustration"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B19"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "382-390",
+        "heading": "B19. /product-only bespoke blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-overview"
+  ],
+  "tags": []
+}

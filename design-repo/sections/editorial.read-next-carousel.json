@@ -1,0 +1,102 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.read-next-carousel",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Read-next carousel",
+  "purpose": "Sidebar carousel with three recommended items (blog, webinar).",
+  "source": {
+    "file": "src/components/content/RecCarousel.jsx",
+    "tag": "RecCarousel",
+    "lines": "24-69",
+    "id": "RecCarousel-jsx#RecCarousel"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "editorial.read-next-carousel",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "slides": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "chip": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 11,
+            "required": true
+          },
+          "thumb": {
+            "type": "asset",
+            "roles": [
+              "editorial-thumbnail",
+              "video-thumbnail"
+            ],
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "carousel-swipe"
+    ],
+    "default": "carousel-swipe",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generated-video-poster"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "259-295",
+        "heading": "B1. `ArticleLayout` (L2) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-post"
+  ],
+  "tags": []
+}

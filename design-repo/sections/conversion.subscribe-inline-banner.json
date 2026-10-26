@@ -1,0 +1,94 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.subscribe-inline-banner",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Inline subscribe banner",
+  "purpose": "Full-width subscribe banner inserted inside a feed or list after the first rows.",
+  "source": {
+    "file": "src/components/content/subscribe.jsx",
+    "tag": "SubscribeBanner",
+    "lines": "59-76",
+    "id": "subscribe-jsx#SubscribeBanner"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "conversion.subscribe-inline-banner",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "emailLabel": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": true
+      },
+      "icon": {
+        "type": "asset",
+        "roles": [
+          "spot-illustration"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "232-243",
+        "heading": "F7. `SubscribeBanner` (News grid, Events list) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "events-index",
+    "news-index"
+  ],
+  "tags": []
+}

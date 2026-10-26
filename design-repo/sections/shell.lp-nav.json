@@ -1,0 +1,100 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "shell.lp-nav",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Landing-page-only navigation bar",
+  "purpose": "White fixed bar (66px, 62 at lg, 77.8 at xl) with logo, in-page anchor links and a primary anchor button; replaces the site header and footer.",
+  "source": {
+    "file": "src/pages/extra/LpExtra.jsx",
+    "tag": "LpNav",
+    "lines": "60-72",
+    "id": "LpExtra-jsx#LpNav"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "shell.lp-nav",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "logo": {
+        "type": "asset",
+        "roles": [
+          "brand-wordmark"
+        ],
+        "required": true
+      },
+      "anchors": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 6,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "target": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "LpExtra.jsx: anchors hidden below 960, action button shown at >=1302"
+  },
+  "generatedAssetRoles": [
+    "placeholder-brand-mark"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "29"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "lp-book-own-nav"
+  ],
+  "tags": []
+}

@@ -1,0 +1,85 @@
+{
+  "description": "Component-scoped tokens for card.lift.",
+  "tokens": {
+    "card.lift.lift.quote": {
+      "value": "15px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.lift.product": {
+      "value": "10px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.lift.agent": {
+      "value": "10px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.lift.customer": {
+      "value": "14px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.lift.blog": {
+      "value": "14px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.lift.content": {
+      "value": "14px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.transition": {
+      "value": "120ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.pressTransition": {
+      "value": "60ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.borderWidth": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    },
+    "card.lift.liftActiveFrom": {
+      "value": "960px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "573"
+      }
+    }
+  }
+}

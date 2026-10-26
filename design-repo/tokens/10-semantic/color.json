@@ -1,0 +1,390 @@
+{
+  "description": "Semantic colour roles. Each resolves to one foundation colour; surface.* ids are the closed set of section backgrounds a PageSpec may name (node.surface).",
+  "tokens": {
+    "text.primary": {
+      "ref": "color.ink",
+      "description": "all text, all 2px borders, dark fills, footer bg",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "28"
+      }
+    },
+    "text.secondary": {
+      "ref": "color.gray.600",
+      "description": "secondary text",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "42"
+      }
+    },
+    "text.muted": {
+      "ref": "color.gray.500",
+      "description": "muted text (sub lines in menus)",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "43"
+      }
+    },
+    "text.inverse": {
+      "ref": "color.surface-0",
+      "description": "text on ink surfaces",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "153"
+      }
+    },
+    "text.link-hover": {
+      "ref": "color.sky-hover",
+      "description": "link hover underline colour",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "30"
+      }
+    },
+    "text.error": {
+      "ref": "color.error",
+      "description": "form error text and border",
+      "evidence": {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "47"
+      }
+    },
+    "text.on-terminal": {
+      "ref": "color.term.text",
+      "description": "main text inside terminal panels",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "49"
+      }
+    },
+    "text.on-terminal-dim": {
+      "ref": "color.term.dim",
+      "description": "dim text inside terminal panels",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "49"
+      }
+    },
+    "surface.cream": {
+      "ref": "color.cream",
+      "description": "page bg, header bg, secondary buttons",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "27"
+      }
+    },
+    "surface.sky": {
+      "ref": "color.sky",
+      "description": "sky sections, primary CTA fill",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "29"
+      }
+    },
+    "surface.yellow": {
+      "ref": "color.yellow",
+      "description": "blog section bg, dither pixels",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "34"
+      }
+    },
+    "surface.sun": {
+      "ref": "color.sun",
+      "description": "integrations sunburst, sun bands",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "35"
+      }
+    },
+    "surface.ink": {
+      "ref": "color.ink",
+      "description": "footer, dark fills, podcast body",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "28"
+      }
+    },
+    "surface.white": {
+      "ref": "color.surface-0",
+      "description": "cards and panels",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "46"
+      }
+    },
+    "surface.sand": {
+      "ref": "color.sand",
+      "description": "sand hero bands and grids",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "47"
+      }
+    },
+    "surface.teal": {
+      "ref": "color.teal",
+      "description": "teal LP and values bands",
+      "evidence": {
+        "file": "tokens/company.js",
+        "lines": "19"
+      }
+    },
+    "surface.coral-red": {
+      "ref": "color.coral-red",
+      "description": "coral split panels",
+      "evidence": {
+        "file": "tokens/company.js",
+        "lines": "21"
+      }
+    },
+    "surface.garden": {
+      "ref": "color.garden",
+      "description": "garden split panels, connected dot",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "41"
+      }
+    },
+    "surface.aqua": {
+      "ref": "color.aqua",
+      "description": "aqua marquee band",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "23"
+      }
+    },
+    "surface.peach": {
+      "ref": "color.peach",
+      "description": "product card 1",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "38"
+      }
+    },
+    "surface.sky-tint": {
+      "ref": "color.sky-tint",
+      "description": "product card 2",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "32"
+      }
+    },
+    "surface.mint": {
+      "ref": "color.mint",
+      "description": "product card 3",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "39"
+      }
+    },
+    "surface.pink": {
+      "ref": "color.pink",
+      "description": "eyebrow banner",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "33"
+      }
+    },
+    "surface.subtle": {
+      "ref": "color.surface-2",
+      "description": "closed accordion card, menu side column",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "46"
+      }
+    },
+    "surface.sunken": {
+      "ref": "color.surface-3",
+      "description": "chat bubble and hover wash",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "46"
+      }
+    },
+    "surface.terminal": {
+      "ref": "color.term.bg",
+      "description": "agent terminal panel",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "49"
+      }
+    },
+    "border.default": {
+      "ref": "color.ink",
+      "description": "2px solid borders everywhere",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "99"
+      }
+    },
+    "border.hairline": {
+      "ref": "color.hairline",
+      "description": "1px hairline rules (logo strip label rule, tool card rails)",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "45"
+      }
+    },
+    "border.focus": {
+      "ref": "color.sky-dark",
+      "description": "input hover and focus border",
+      "evidence": {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "111"
+      }
+    },
+    "border.valid": {
+      "ref": "color.valid",
+      "description": "filled and valid field border",
+      "evidence": {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "48"
+      }
+    },
+    "border.error": {
+      "ref": "color.error",
+      "description": "error field border",
+      "evidence": {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "47"
+      }
+    },
+    "action.primary.bg": {
+      "ref": "color.sky",
+      "description": "primary offset button fill",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "244"
+      }
+    },
+    "action.primary.bg-pressed": {
+      "ref": "color.sky-hover",
+      "description": "primary button :active fill",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "245"
+      }
+    },
+    "action.secondary.bg": {
+      "ref": "color.cream",
+      "description": "secondary button fill",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "244"
+      }
+    },
+    "action.secondary.bg-pressed": {
+      "ref": "color.sand-dark",
+      "description": "secondary button :active fill",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "245"
+      }
+    },
+    "action.send.bg": {
+      "ref": "color.clay",
+      "description": "chat send button",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "48"
+      }
+    },
+    "action.send.bg-hover": {
+      "ref": "color.clay-hover",
+      "description": "chat send button hover",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "48"
+      }
+    },
+    "accent.quote-mark": {
+      "ref": "color.orange",
+      "description": "quote marks, logo dots, glow",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "37"
+      }
+    },
+    "accent.chip-bg": {
+      "ref": "color.yellow-chip",
+      "description": "region and choose-your-stack chips",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "36"
+      }
+    },
+    "accent.chip-border": {
+      "ref": "color.yellow-chip-border",
+      "description": "region and choose-your-stack chip border",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "36"
+      }
+    },
+    "status.connected": {
+      "ref": "color.garden",
+      "description": "connected status dot and sql text",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "41"
+      }
+    },
+    "selection.bg": {
+      "ref": null,
+      "value": "rgba(255,149,56,0.667)",
+      "description": "::selection background (only global CSS rule found)",
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "102"
+      }
+    },
+    "code.keyword": {
+      "ref": "color.prism.keyword",
+      "description": "code panel keyword colour",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "code.string": {
+      "ref": "color.prism.string",
+      "description": "code panel string colour",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "code.function": {
+      "ref": "color.prism.function",
+      "description": "code panel function colour",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "code.comment": {
+      "ref": "color.prism.comment",
+      "description": "code panel comment colour",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "code.bg": {
+      "ref": "color.prism.bg",
+      "description": "code panel bg colour",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    },
+    "code.text": {
+      "ref": "color.prism.text",
+      "description": "code panel text colour",
+      "evidence": {
+        "file": "tokens/marketing.js",
+        "lines": "33"
+      }
+    }
+  }
+}

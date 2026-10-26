@@ -1,0 +1,51 @@
+{
+  "id": "input.text",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Floating-label text field",
+  "purpose": "Single or multi-line text field whose placeholder floats above the field or hides when filled.",
+  "source": {
+    "file": "src/components/ui/TextInput.jsx",
+    "tag": "TextInput",
+    "lines": "24-42",
+    "id": "TextInput-jsx#TextInput"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "variant": [
+      "float",
+      "hide"
+    ],
+    "multiline": "boolean",
+    "error": "text(max 8 words)",
+    "label": "text(max 4 words)",
+    "type": [
+      "text",
+      "email",
+      "search"
+    ]
+  },
+  "tokens": [
+    "input.text.height",
+    "border.focus",
+    "border.valid",
+    "border.error"
+  ],
+  "states": [
+    "default",
+    "hover",
+    "focus",
+    "valid",
+    "error"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "107-118",
+        "heading": "P3. `FloatingInput` / `FloatingTextarea` (all forms)"
+      }
+    ]
+  }
+}

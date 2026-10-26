@@ -1,0 +1,51 @@
+{
+  "id": "link.underline",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Underline link",
+  "purpose": "Text link with a 1px ink underline and optional trailing icon; non-link variant for out-of-scope destinations.",
+  "source": {
+    "file": "src/components/ui/UnderlineLink.jsx",
+    "tag": "UnderlineLink",
+    "lines": "43-60",
+    "id": "UnderlineLink-jsx#UnderlineLink"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "icon": [
+      "right",
+      "down",
+      "left",
+      "plus",
+      "external",
+      "reset",
+      "none"
+    ],
+    "size": [
+      "md",
+      "sm",
+      "sm-below-lg"
+    ],
+    "uppercase": "boolean",
+    "label": "text(max 6 words)"
+  },
+  "tokens": [
+    "text.link-hover",
+    "type.label"
+  ],
+  "states": [
+    "default",
+    "hover",
+    "active"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "95-103",
+        "heading": "P1. `UnderlineLink` (text link with arrow); not yet a shared primitive, but `Integrations."
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.featured-video",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Featured video",
+  "purpose": "Large featured video card overlapping the sand hero.",
+  "source": {
+    "file": "src/components/content/videos.jsx",
+    "tag": "FeaturedVideo",
+    "lines": "36-64",
+    "id": "videos-jsx#FeaturedVideo"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "listing.featured-video",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "thumb": {
+        "type": "asset",
+        "roles": [
+          "video-thumbnail"
+        ],
+        "required": true
+      },
+      "tags": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 3,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true
+      },
+      "duration": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "href": {
+        "type": "link",
+        "labelMaxWords": 1,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-video-poster"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "396-408",
+        "heading": "V2. `FeaturedVideo` (video index) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "video-index"
+  ],
+  "tags": []
+}

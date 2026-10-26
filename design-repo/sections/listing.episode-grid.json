@@ -1,0 +1,106 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.episode-grid",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Episode grid (dark)",
+  "purpose": "Grid of podcast episode cards.",
+  "source": {
+    "file": "src/components/extra/podcast.jsx",
+    "tag": "EpisodeGrid",
+    "lines": "207-216",
+    "id": "podcast-jsx#EpisodeGrid"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/podcast.jsx",
+      "tag": "EpisodeCard",
+      "lines": "184-205",
+      "id": "podcast-jsx#EpisodeCard"
+    }
+  ],
+  "semantic": {
+    "id": "listing.episode-grid",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 11,
+        "item": {
+          "number": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true
+          },
+          "date": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "duration": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "380-428",
+        "heading": "X9. Podcast index `/explain-analyze` (dark)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "podcast-index"
+  ],
+  "tags": []
+}

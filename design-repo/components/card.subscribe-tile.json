@@ -1,0 +1,33 @@
+{
+  "id": "card.subscribe-tile",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Subscribe tile",
+  "purpose": "Grid tile with decor, email field and consent for newsletter signup.",
+  "source": {
+    "file": "src/components/content/subscribe.jsx",
+    "tag": "SubscribeTile",
+    "lines": "40-56",
+    "id": "subscribe-jsx#SubscribeTile"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 8 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "215-231",
+        "heading": "F6. `SubscribeTile` (Blog grid, Video grid) [NEW]"
+      }
+    ]
+  },
+  "uses": [
+    "input.text",
+    "button.offset"
+  ]
+}

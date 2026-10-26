@@ -1,0 +1,105 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.author-feed",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Author post feed",
+  "purpose": "Heading with item count and a grid of the author posts and videos.",
+  "source": {
+    "file": "src/components/extra/author.jsx",
+    "tag": "AuthorGrid",
+    "lines": "66-84",
+    "id": "author-jsx#AuthorGrid"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "listing.author-feed",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 36,
+        "item": {
+          "thumb": {
+            "type": "asset",
+            "roles": [
+              "editorial-thumbnail",
+              "video-thumbnail"
+            ],
+            "required": true
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 13,
+            "required": true
+          },
+          "date": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generated-video-poster"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "308-328",
+        "heading": "X6. Author `/authors/:slug` (120; samples `alex-monahan` 31 items, `adi-polak` 1 item)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "author"
+  ],
+  "tags": []
+}

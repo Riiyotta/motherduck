@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.format-compare",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Two-format comparison panels",
+  "purpose": "Heading and two side-by-side diagram panels comparing two table formats.",
+  "source": {
+    "file": "src/components/marketing/ducklake.jsx",
+    "tag": "FormatCompare",
+    "lines": "124-143",
+    "id": "ducklake-jsx#FormatCompare"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.format-compare",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 23,
+        "required": true
+      },
+      "panels": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "diagram": {
+            "type": "asset",
+            "roles": [
+              "architecture-diagram"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B16"
+  },
+  "generatedAssetRoles": [
+    "generated-diagram"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "300-321",
+        "heading": "B16. DuckLake-only blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-ducklake"
+  ],
+  "tags": []
+}

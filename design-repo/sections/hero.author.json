@@ -1,0 +1,111 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.author",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Author hero",
+  "purpose": "Page-opening: author portrait, name, role and links.",
+  "source": {
+    "file": "src/components/extra/author.jsx",
+    "tag": "AuthorHero",
+    "lines": "42-64",
+    "id": "author-jsx#AuthorHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.author",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "name": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "role": {
+        "type": "text",
+        "maxWords": 8,
+        "required": false
+      },
+      "bio": {
+        "type": "text",
+        "maxWords": 40,
+        "required": false
+      },
+      "portrait": {
+        "type": "asset",
+        "roles": [
+          "person-portrait"
+        ],
+        "required": false
+      },
+      "links": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 2,
+            "required": true
+          }
+        },
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "fictional-person-avatar"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "308-328",
+        "heading": "X6. Author `/authors/:slug` (120; samples `alex-monahan` 31 items, `adi-polak` 1 item)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "author"
+  ],
+  "tags": []
+}

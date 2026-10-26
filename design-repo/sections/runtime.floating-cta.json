@@ -1,0 +1,74 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "runtime.floating-cta",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Floating get-started button",
+  "purpose": "Sticky offset button pinned to the viewport bottom-right while a blog article is on screen.",
+  "source": {
+    "file": "src/pages/content/BlogPost.jsx",
+    "tag": "Floating CTA overlay",
+    "lines": "94-102",
+    "id": "BlogPost-jsx#Floating-CTA-overlay"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "runtime.floating-cta",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "259-295",
+        "heading": "B1. `ArticleLayout` (L2) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-post"
+  ],
+  "tags": [],
+  "retrievalReason": "Sticky overlay button positioned over the article; it takes no page height and is utility UI rather than page content."
+}

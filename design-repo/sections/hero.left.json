@@ -1,0 +1,90 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.left",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Left-aligned page hero",
+  "purpose": "Page-opening: heading and lede aligned left with an optional apply action; used by startups, research, trust and community pages.",
+  "source": {
+    "file": "src/components/marketing/bespoke.jsx",
+    "tag": "LeftHero",
+    "lines": "51-73",
+    "id": "bespoke-jsx#LeftHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.left",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 40,
+        "required": true
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "startups",
+    "research",
+    "trust",
+    "community"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "433-458",
+        "heading": "B21. Startups blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "community-oss",
+    "research-index",
+    "startups",
+    "trust-security"
+  ],
+  "tags": []
+}

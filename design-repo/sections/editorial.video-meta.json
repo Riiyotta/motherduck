@@ -1,0 +1,115 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.video-meta",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Video meta",
+  "purpose": "Tag chips, title, date and featured speakers under a video player.",
+  "source": {
+    "file": "src/pages/content/VideoDetail.jsx",
+    "tag": "v.tags.map",
+    "lines": "36-46",
+    "id": "VideoDetail-jsx#v-tags-map"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/webinar.jsx",
+      "tag": "WebinarStandard",
+      "lines": "99-137",
+      "id": "webinar-jsx#WebinarStandard"
+    }
+  ],
+  "semantic": {
+    "id": "editorial.video-meta",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "tags": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true
+      },
+      "date": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "featuring": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 4,
+        "item": {
+          "name": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": false
+          }
+        },
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "425-442",
+        "heading": "V5. `VideoMeta` + body/sidebar (video detail) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "video-detail",
+    "webinar-detail"
+  ],
+  "tags": []
+}

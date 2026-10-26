@@ -1,0 +1,83 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "divider.marquee-band",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Marquee label band",
+  "purpose": "Full-width colored strip repeating a short label such as the reasons-to-choose label; used as a divider between a hero and the next content block.",
+  "source": {
+    "file": "src/components/marketing/MarqueeBand.jsx",
+    "tag": "MarqueeBand",
+    "lines": "13-63",
+    "id": "MarqueeBand-jsx#MarqueeBand"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "divider.marquee-band",
+    "category": "DIVIDER"
+  },
+  "retrievalEligible": false,
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "copies": {
+        "type": "number",
+        "min": 9,
+        "max": 17,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "yellow",
+    "sun",
+    "aqua"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "166-171",
+        "heading": "B2. `MarqueeBand` (vs ×2, persona, /product)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-overview",
+    "vs-comparison",
+    "vs-index"
+  ],
+  "tags": [],
+  "retrievalReason": "Decorative repeating-label strip with no independent content; it only separates neighbouring blocks, so retrieval would return noise.",
+  "notes": "Static (no scroll) in the clone: PAGES_SPEC_MARKETING B2 / ProductRouter still:true."
+}

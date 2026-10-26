@@ -1,0 +1,88 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "social-proof.investors",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Investors row",
+  "purpose": "Row of six investor logos under a rule.",
+  "source": {
+    "file": "src/components/company/about.jsx",
+    "tag": "Investors",
+    "lines": "91-107",
+    "id": "about-jsx#Investors"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "social-proof.investors",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 3,
+        "required": false
+      },
+      "logos": {
+        "type": "list",
+        "minItems": 6,
+        "maxItems": 6,
+        "item": {
+          "logo": {
+            "type": "asset",
+            "roles": [
+              "investor-logo"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 6,
+      "lg": 3,
+      "md": 3,
+      "sm": 2
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY A4"
+  },
+  "generatedAssetRoles": [
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "168-171",
+        "heading": "A4. `LogoRow` [NEW] (About \"Investors\")"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about"
+  ],
+  "tags": []
+}

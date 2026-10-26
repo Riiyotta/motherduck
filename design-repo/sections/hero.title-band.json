@@ -1,0 +1,74 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.title-band",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Title band",
+  "purpose": "Page-opening single heading band for the case study index.",
+  "source": {
+    "file": "src/components/content/cases.jsx",
+    "tag": "TitleHero",
+    "lines": "10-18",
+    "id": "cases-jsx#TitleHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.title-band",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "306-310",
+        "heading": "C1. `TitleHero` (case-study index) [NEW, trivial]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "case-index"
+  ],
+  "tags": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "card.featured-post",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Featured post card",
+  "purpose": "Large featured feed card.",
+  "source": {
+    "file": "src/components/content/feedCards.jsx",
+    "tag": "FeaturedPostCard",
+    "lines": "94-119",
+    "id": "feedCards-jsx#FeaturedPostCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 11 words)",
+    "excerpt": "text(max 45 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "208-214",
+        "heading": "F5. `FeaturedPostCard` (Blog only)"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "asset.placeholder"
+  ]
+}

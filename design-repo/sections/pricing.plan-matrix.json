@@ -1,0 +1,112 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "pricing.plan-matrix",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Plan comparison matrix",
+  "purpose": "Grouped feature matrix (4 groups, 43 rows) with a region selector.",
+  "source": {
+    "file": "src/components/marketing/pricing.jsx",
+    "tag": "PlanMatrix",
+    "lines": "198-265",
+    "id": "pricing-jsx#PlanMatrix"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "pricing.plan-matrix",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "groups": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "rows": {
+            "type": "list",
+            "minItems": 1,
+            "maxItems": 14,
+            "item": {
+              "feature": {
+                "type": "text",
+                "maxWords": 8,
+                "required": true
+              },
+              "values": {
+                "type": "list",
+                "minItems": 3,
+                "maxItems": 3,
+                "item": {
+                  "value": {
+                    "type": "text",
+                    "maxWords": 6,
+                    "required": true
+                  }
+                },
+                "required": true
+              }
+            },
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "regionLabel": {
+        "type": "text",
+        "maxWords": 3,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "391-432",
+        "heading": "B20. Pricing blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "pricing"
+  ],
+  "tags": []
+}

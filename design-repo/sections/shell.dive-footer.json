@@ -1,0 +1,93 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "shell.dive-footer",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Dive gallery app footer",
+  "purpose": "Compact 455px (at 1440) footer of the dive gallery app.",
+  "source": {
+    "file": "src/components/content/diveChrome.jsx",
+    "tag": "DiveFooter",
+    "lines": "83-123",
+    "id": "diveChrome-jsx#DiveFooter"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "shell.dive-footer",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "links": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 8,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 4,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "legal": {
+        "type": "text",
+        "maxWords": 12,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "594-636",
+        "heading": "D1. Dive gallery (L12): separate app chrome [NEW, self-contained]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "dive-detail",
+    "dive-gallery"
+  ],
+  "tags": []
+}

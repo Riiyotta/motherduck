@@ -1,0 +1,199 @@
+{
+  "theme": "light",
+  "default": true,
+  "description": "Default theme: every semantic colour resolved to a foundation value.",
+  "tokens": {
+    "text.primary": {
+      "resolvesTo": "color.ink",
+      "value": "#383838"
+    },
+    "text.secondary": {
+      "resolvesTo": "color.gray.600",
+      "value": "#666666"
+    },
+    "text.muted": {
+      "resolvesTo": "color.gray.500",
+      "value": "#818181"
+    },
+    "text.inverse": {
+      "resolvesTo": "color.surface-0",
+      "value": "#FFFFFF"
+    },
+    "text.link-hover": {
+      "resolvesTo": "color.sky-hover",
+      "value": "#6FC2FF"
+    },
+    "text.error": {
+      "resolvesTo": "color.error",
+      "value": "#E23F35"
+    },
+    "text.on-terminal": {
+      "resolvesTo": "color.term.text",
+      "value": "#E8E6EC"
+    },
+    "text.on-terminal-dim": {
+      "resolvesTo": "color.term.dim",
+      "value": "#8B8A96"
+    },
+    "surface.cream": {
+      "resolvesTo": "color.cream",
+      "value": "#F4EFEA"
+    },
+    "surface.sky": {
+      "resolvesTo": "color.sky",
+      "value": "#97D4FF"
+    },
+    "surface.yellow": {
+      "resolvesTo": "color.yellow",
+      "value": "#F9EE3E"
+    },
+    "surface.sun": {
+      "resolvesTo": "color.sun",
+      "value": "#FFDE00"
+    },
+    "surface.ink": {
+      "resolvesTo": "color.ink",
+      "value": "#383838"
+    },
+    "surface.white": {
+      "resolvesTo": "color.surface-0",
+      "value": "#FFFFFF"
+    },
+    "surface.sand": {
+      "resolvesTo": "color.sand",
+      "value": "#ECE6DF"
+    },
+    "surface.teal": {
+      "resolvesTo": "color.teal",
+      "value": "#50C7B7"
+    },
+    "surface.coral-red": {
+      "resolvesTo": "color.coral-red",
+      "value": "#FF7169"
+    },
+    "surface.garden": {
+      "resolvesTo": "color.garden",
+      "value": "#16AA98"
+    },
+    "surface.aqua": {
+      "resolvesTo": "color.aqua",
+      "value": "#53DBC9"
+    },
+    "surface.peach": {
+      "resolvesTo": "color.peach",
+      "value": "#FFDCBD"
+    },
+    "surface.sky-tint": {
+      "resolvesTo": "color.sky-tint",
+      "value": "#CEEBFF"
+    },
+    "surface.mint": {
+      "resolvesTo": "color.mint",
+      "value": "#B0FFF4"
+    },
+    "surface.pink": {
+      "resolvesTo": "color.pink",
+      "value": "#FEB9E2"
+    },
+    "surface.subtle": {
+      "resolvesTo": "color.surface-2",
+      "value": "#F8F8F7"
+    },
+    "surface.sunken": {
+      "resolvesTo": "color.surface-3",
+      "value": "#F0F0EF"
+    },
+    "surface.terminal": {
+      "resolvesTo": "color.term.bg",
+      "value": "#16161E"
+    },
+    "border.default": {
+      "resolvesTo": "color.ink",
+      "value": "#383838"
+    },
+    "border.hairline": {
+      "resolvesTo": "color.hairline",
+      "value": "#D7D7D7"
+    },
+    "border.focus": {
+      "resolvesTo": "color.sky-dark",
+      "value": "#2BA5FF"
+    },
+    "border.valid": {
+      "resolvesTo": "color.valid",
+      "value": "rgba(6,132,117,0.804)"
+    },
+    "border.error": {
+      "resolvesTo": "color.error",
+      "value": "#E23F35"
+    },
+    "action.primary.bg": {
+      "resolvesTo": "color.sky",
+      "value": "#97D4FF"
+    },
+    "action.primary.bg-pressed": {
+      "resolvesTo": "color.sky-hover",
+      "value": "#6FC2FF"
+    },
+    "action.secondary.bg": {
+      "resolvesTo": "color.cream",
+      "value": "#F4EFEA"
+    },
+    "action.secondary.bg-pressed": {
+      "resolvesTo": "color.sand-dark",
+      "value": "#E1D6CB"
+    },
+    "action.send.bg": {
+      "resolvesTo": "color.clay",
+      "value": "#D97757"
+    },
+    "action.send.bg-hover": {
+      "resolvesTo": "color.clay-hover",
+      "value": "#DD8568"
+    },
+    "accent.quote-mark": {
+      "resolvesTo": "color.orange",
+      "value": "#FF9538"
+    },
+    "accent.chip-bg": {
+      "resolvesTo": "color.yellow-chip",
+      "value": "#FAF175"
+    },
+    "accent.chip-border": {
+      "resolvesTo": "color.yellow-chip-border",
+      "value": "#EBCD00"
+    },
+    "status.connected": {
+      "resolvesTo": "color.garden",
+      "value": "#16AA98"
+    },
+    "selection.bg": {
+      "resolvesTo": null,
+      "value": "rgba(255,149,56,0.667)"
+    },
+    "code.keyword": {
+      "resolvesTo": "color.prism.keyword",
+      "value": "#CC99CD"
+    },
+    "code.string": {
+      "resolvesTo": "color.prism.string",
+      "value": "#7EC699"
+    },
+    "code.function": {
+      "resolvesTo": "color.prism.function",
+      "value": "#F8C555"
+    },
+    "code.comment": {
+      "resolvesTo": "color.prism.comment",
+      "value": "#999999"
+    },
+    "code.bg": {
+      "resolvesTo": "color.prism.bg",
+      "value": "#383838"
+    },
+    "code.text": {
+      "resolvesTo": "color.prism.text",
+      "value": "#CCCCCC"
+    }
+  }
+}

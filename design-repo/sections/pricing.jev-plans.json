@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "pricing.jev-plans",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Calculator plans",
+  "purpose": "Plan cards for the cost calculator landing page.",
+  "source": {
+    "file": "src/components/extra/jev.jsx",
+    "tag": "Pricing",
+    "lines": "159-236",
+    "id": "jev-jsx#Pricing"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "pricing.jev-plans",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "plans": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "item": {
+          "name": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "price": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "bullets": {
+            "type": "list",
+            "minItems": 1,
+            "maxItems": 6,
+            "item": {
+              "text": {
+                "type": "text",
+                "maxWords": 8,
+                "required": true
+              }
+            },
+            "required": true
+          },
+          "action": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "flicker"
+    ],
+    "default": "flicker",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "754-810",
+        "heading": "X21. Gated LP bodies (reuse G shell: `LPHero`, `LPSection`, FAQ, `GatedFormSection`)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "lp-jev"
+  ],
+  "tags": []
+}

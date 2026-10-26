@@ -1,0 +1,45 @@
+{
+  "id": "asset.placeholder",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Asset placeholder",
+  "purpose": "Image slot sized to the original box; kind selects photo, thumbnail, avatar, illustration, mascot, logo, cover, diagram or icon art.",
+  "source": {
+    "file": "src/components/ui/Placeholder.jsx",
+    "tag": "Placeholder",
+    "lines": "44-57",
+    "id": "Placeholder-jsx#Placeholder"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "kind": [
+      "photo",
+      "thumbnail",
+      "avatar",
+      "illustration",
+      "mascot",
+      "logo",
+      "cover",
+      "diagram",
+      "icon",
+      "none"
+    ],
+    "width": "number",
+    "height": "number",
+    "ratio": "string",
+    "label": "text(max 6 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "ASSET_MANIFEST.md",
+        "lines": "3-115",
+        "heading": "Asset manifest: MotherDuck homepage"
+      }
+    ]
+  },
+  "notes": "Every media field in a section contract names a closed assetRole; this primitive is the render-time slot for it. The clone resolves slots to original SVG art or free-licensed stand-in photos (public/assets/photos, CREDITS.md)."
+}

@@ -1,0 +1,450 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generated",
+  "template": "legal-toc",
+  "route": "/example/legal-toc",
+  "theme": "light",
+  "meta": {
+    "title": "Lumen Harbor sample page",
+    "brand": "Lumen Harbor",
+    "description": "A fictional example page built from the design system. Original copy, placeholder assets, reserved example domains."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "eyebrowText": "Prairie harbor across bramble oriole wicker in",
+        "eyebrowLink": {
+          "label": "Pilot horizon with",
+          "href": "https://studio.example/harbor"
+        },
+        "logo": {
+          "role": "placeholder-brand-mark",
+          "alt": "Lagoon dune with",
+          "ref": "placeholder:placeholder-brand-mark-71"
+        },
+        "navGroups": [
+          {
+            "label": "Compass fathom",
+            "items": [
+              {
+                "label": "Wicker vessel across pilot yarrow",
+                "href": {
+                  "label": "Willow zephyr for",
+                  "href": "https://studio.example/nimbus"
+                }
+              },
+              {
+                "label": "Pilot kelp in beacon bramble",
+                "href": {
+                  "label": "Harbor prairie for",
+                  "href": "https://studio.example/anchor"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Indigo compass",
+            "items": [
+              {
+                "label": "Ember anchor across orchard signal",
+                "href": {
+                  "label": "Mesa tundra from",
+                  "href": "https://studio.example/dune"
+                }
+              },
+              {
+                "label": "Pebble saffron on dune mesa",
+                "href": {
+                  "label": "Mosaic dune across",
+                  "href": "https://studio.example/dune"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Cedar cobalt",
+            "items": [
+              {
+                "label": "Willow beacon for gable cobalt",
+                "href": {
+                  "label": "Glacier quiver across",
+                  "href": "https://studio.example/mosaic"
+                }
+              },
+              {
+                "label": "Cobalt anchor for hollow alpine",
+                "href": {
+                  "label": "Tundra mesa from",
+                  "href": "https://studio.example/breeze"
+                }
+              }
+            ]
+          }
+        ],
+        "navLinks": [
+          {
+            "label": "Canvas signal",
+            "href": {
+              "label": "Jetty dune",
+              "href": "https://studio.example/marlin"
+            }
+          },
+          {
+            "label": "Trellis orchard",
+            "href": {
+              "label": "Zephyr ember",
+              "href": "https://studio.example/saffron"
+            }
+          }
+        ],
+        "primaryAction": {
+          "label": "Prairie orchard and",
+          "href": "https://studio.example/glacier"
+        }
+      },
+      "motion": {
+        "pattern": "dropdown-enter",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "legal.document-header",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h1": "Plan small batches with calm clarity"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "navigation.legal-toc",
+      "variant": "nested",
+      "surface": "cream",
+      "content": {
+        "items": [
+          {
+            "label": "Marlin ledger on oriole bramble canvas in",
+            "id": "Juniper"
+          },
+          {
+            "label": "Harvest signal across ferry beacon harbor and",
+            "id": "Breeze"
+          },
+          {
+            "label": "Marlin tundra and pebble compass breeze for",
+            "id": "Summit"
+          },
+          {
+            "label": "Thistle prairie on fathom breeze hollow for",
+            "id": "Prairie"
+          },
+          {
+            "label": "Wicker glacier on ember oriole atlas with",
+            "id": "Nimbus"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "accordion-single-open",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "legal.clause-section",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "heading": "Scope of the service",
+        "level": "h2",
+        "paragraphs": [
+          {
+            "text": "Short notes keep the whole crew aligned from start to finish."
+          },
+          {
+            "text": "Short notes keep the whole crew aligned from start to finish."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "surface": "ink",
+      "content": {
+        "logo": {
+          "role": "placeholder-brand-mark",
+          "alt": "Ledger signal on",
+          "ref": "placeholder:placeholder-brand-mark-17"
+        },
+        "social": [
+          {
+            "label": "Copper alpine on",
+            "href": {
+              "label": "Bramble",
+              "href": "https://studio.example/bramble"
+            }
+          },
+          {
+            "label": "Cobalt jetty in",
+            "href": {
+              "label": "Pebble",
+              "href": "https://studio.example/canvas"
+            }
+          },
+          {
+            "label": "Kelp vessel with",
+            "href": {
+              "label": "Horizon",
+              "href": "https://studio.example/umber"
+            }
+          },
+          {
+            "label": "Bramble oriole in",
+            "href": {
+              "label": "Beacon",
+              "href": "https://studio.example/quartz"
+            }
+          },
+          {
+            "label": "Breeze horizon from",
+            "href": {
+              "label": "Pilot",
+              "href": "https://studio.example/dune"
+            }
+          },
+          {
+            "label": "Lantern harvest and",
+            "href": {
+              "label": "Canvas",
+              "href": "https://studio.example/quartz"
+            }
+          }
+        ],
+        "columns": [
+          {
+            "groups": [
+              {
+                "heading": "Your responsibilities",
+                "links": [
+                  {
+                    "label": "Compass willow across oriole dune saffron in",
+                    "href": {
+                      "label": "Tundra willow for",
+                      "href": "https://studio.example/ember"
+                    }
+                  },
+                  {
+                    "label": "Trellis summit for saffron indigo alpine in",
+                    "href": {
+                      "label": "Signal prairie in",
+                      "href": "https://studio.example/orchard"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Changes to these terms",
+                "links": [
+                  {
+                    "label": "Canvas umber in glacier indigo cedar from",
+                    "href": {
+                      "label": "Meadow jetty on",
+                      "href": "https://studio.example/quartz"
+                    }
+                  },
+                  {
+                    "label": "Lantern dune for willow jetty yarrow from",
+                    "href": {
+                      "label": "Zephyr pilot from",
+                      "href": "https://studio.example/gable"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "How we handle data",
+                "links": [
+                  {
+                    "label": "Thistle dune on mesa signal mesa for",
+                    "href": {
+                      "label": "Trellis ferry on",
+                      "href": "https://studio.example/juniper"
+                    }
+                  },
+                  {
+                    "label": "Harvest lagoon across willow kestrel tundra and",
+                    "href": {
+                      "label": "Harvest hollow across",
+                      "href": "https://studio.example/meadow"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Contact and notices",
+                "links": [
+                  {
+                    "label": "Summit atlas from orchard wicker yarrow from",
+                    "href": {
+                      "label": "Hollow glacier with",
+                      "href": "https://studio.example/glacier"
+                    }
+                  },
+                  {
+                    "label": "Ribbon prairie and alpine gable hollow on",
+                    "href": {
+                      "label": "Alpine juniper with",
+                      "href": "https://studio.example/nimbus"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Scope of the service",
+                "links": [
+                  {
+                    "label": "Oriole wicker from gable trellis lantern on",
+                    "href": {
+                      "label": "Kelp ferry with",
+                      "href": "https://studio.example/breeze"
+                    }
+                  },
+                  {
+                    "label": "Copper saffron on quartz fathom orchard on",
+                    "href": {
+                      "label": "Anchor zephyr for",
+                      "href": "https://studio.example/current"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Your responsibilities",
+                "links": [
+                  {
+                    "label": "Indigo nimbus across kelp horizon quiver for",
+                    "href": {
+                      "label": "Mosaic russet and",
+                      "href": "https://studio.example/indigo"
+                    }
+                  },
+                  {
+                    "label": "Lattice harbor for canvas nimbus glacier with",
+                    "href": {
+                      "label": "Horizon canvas from",
+                      "href": "https://studio.example/prairie"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Changes to these terms",
+                "links": [
+                  {
+                    "label": "Ledger lantern from yarrow mesa saffron across",
+                    "href": {
+                      "label": "Copper ferry and",
+                      "href": "https://studio.example/gable"
+                    }
+                  },
+                  {
+                    "label": "Pebble compass in mosaic quiver anchor with",
+                    "href": {
+                      "label": "Lattice lattice with",
+                      "href": "https://studio.example/ribbon"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "How we handle data",
+                "links": [
+                  {
+                    "label": "Alpine canvas with dune lagoon nimbus and",
+                    "href": {
+                      "label": "Yarrow kelp with",
+                      "href": "https://studio.example/trellis"
+                    }
+                  },
+                  {
+                    "label": "Kelp breeze in marlin quiver lagoon across",
+                    "href": {
+                      "label": "Quartz wicker on",
+                      "href": "https://studio.example/jetty"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "poweredByLine": "Zephyr horizon across wicker",
+        "legalLinks": [
+          {
+            "label": "Summit umber across",
+            "href": {
+              "label": "Atlas breeze with",
+              "href": "https://studio.example/fathom"
+            }
+          },
+          {
+            "label": "Kelp anchor from",
+            "href": {
+              "label": "Signal nimbus for",
+              "href": "https://studio.example/ember"
+            }
+          },
+          {
+            "label": "Wicker indigo across",
+            "href": {
+              "label": "Bramble harvest from",
+              "href": "https://studio.example/vessel"
+            }
+          }
+        ],
+        "badges": [
+          {
+            "img": {
+              "role": "placeholder-badge",
+              "alt": "Cedar fathom with",
+              "ref": "placeholder:placeholder-badge-54"
+            }
+          },
+          {
+            "img": {
+              "role": "placeholder-badge",
+              "alt": "Glacier kelp and",
+              "ref": "placeholder:placeholder-badge-2"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    }
+  ]
+}

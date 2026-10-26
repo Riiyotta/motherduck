@@ -1,0 +1,108 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "social-proof.case-quote-band",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Case study quote band",
+  "purpose": "Band with a pull quote and a profile card of the quoted person.",
+  "source": {
+    "file": "src/components/content/cases.jsx",
+    "tag": "QuoteBand",
+    "lines": "167-178",
+    "id": "cases-jsx#QuoteBand"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/content/cases.jsx",
+      "tag": "ProfileCard",
+      "lines": "152-165",
+      "id": "cases-jsx#ProfileCard"
+    }
+  ],
+  "semantic": {
+    "id": "social-proof.case-quote-band",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "quote": {
+        "type": "text",
+        "maxWords": 45,
+        "required": true
+      },
+      "name": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "role": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "portrait": {
+        "type": "asset",
+        "roles": [
+          "person-portrait"
+        ],
+        "required": true
+      },
+      "logo": {
+        "type": "asset",
+        "roles": [
+          "customer-logo"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "fictional-person-avatar",
+    "placeholder-brand-mark",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "359-387",
+        "heading": "C5. `CaseDetailHero` + `QuoteBand` + `CaseArticle` (L4) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "case-detail"
+  ],
+  "tags": []
+}

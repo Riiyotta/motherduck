@@ -1,0 +1,108 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.how-we-work",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "How we work",
+  "purpose": "Two features beside a sticky photo that cross-fades.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "HowWeWork",
+    "lines": "43-93",
+    "id": "careers-jsx#HowWeWork"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.how-we-work",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "features": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "photos": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "photo": {
+            "type": "asset",
+            "roles": [
+              "team-photo"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "scroll-animate-in",
+      "fade-swap",
+      "parallax-scroll"
+    ],
+    "default": "scroll-animate-in",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_COMPANY B1"
+  },
+  "generatedAssetRoles": [
+    "generated-photo-placeholder"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "183-189",
+        "heading": "B1. `HowWeWork` [NEW] (Careers)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "careers"
+  ],
+  "tags": []
+}

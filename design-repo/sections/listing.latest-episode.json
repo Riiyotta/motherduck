@@ -1,0 +1,102 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "listing.latest-episode",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Latest episode (dark)",
+  "purpose": "Featured latest podcast episode with video frame and prompt-chip heading.",
+  "source": {
+    "file": "src/components/extra/podcast.jsx",
+    "tag": "LatestEpisode",
+    "lines": "157-181",
+    "id": "podcast-jsx#LatestEpisode"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/podcast.jsx",
+      "tag": "PromptChip",
+      "lines": "59-69",
+      "id": "podcast-jsx#PromptChip"
+    }
+  ],
+  "semantic": {
+    "id": "listing.latest-episode",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "summary": {
+        "type": "text",
+        "maxWords": 35,
+        "required": true
+      },
+      "poster": {
+        "type": "asset",
+        "roles": [
+          "video-thumbnail"
+        ],
+        "required": true
+      },
+      "href": {
+        "type": "link",
+        "labelMaxWords": 1,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-video-poster"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "380-428",
+        "heading": "X9. Podcast index `/explain-analyze` (dark)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "podcast-index"
+  ],
+  "tags": []
+}

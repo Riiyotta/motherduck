@@ -1,0 +1,97 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.podcast",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Podcast hero (dark)",
+  "purpose": "Page-opening dark hero for the podcast index: title, description and platform tiles.",
+  "source": {
+    "file": "src/components/extra/podcast.jsx",
+    "tag": "PodcastHero",
+    "lines": "112-138",
+    "id": "podcast-jsx#PodcastHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.podcast",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 5,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 30,
+        "required": true
+      },
+      "platforms": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 5,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 2,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "cursor-blink-steps"
+    ],
+    "default": "cursor-blink-steps",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "380-428",
+        "heading": "X9. Podcast index `/explain-analyze` (dark)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "podcast-index"
+  ],
+  "tags": []
+}

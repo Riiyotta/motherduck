@@ -1,0 +1,127 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.persona",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Persona hero with video or illustration",
+  "purpose": "Page-opening: heading, lede, optional chip and inline links with a video thumbnail or illustration.",
+  "source": {
+    "file": "src/components/marketing/persona.jsx",
+    "tag": "PersonaHero",
+    "lines": "16-58",
+    "id": "persona-jsx#PersonaHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.persona",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "chip": {
+        "type": "text",
+        "maxWords": 3,
+        "required": false
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 35,
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": false
+      },
+      "inlineLinks": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 3,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 4,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "media": {
+        "type": "asset",
+        "roles": [
+          "video-thumbnail",
+          "spot-illustration"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default",
+    "overview",
+    "illustration"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 1302,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B18"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generated-video-poster",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "338-381",
+        "heading": "B18. Persona blocks (T3, /product)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-overview",
+    "product-persona"
+  ],
+  "tags": []
+}

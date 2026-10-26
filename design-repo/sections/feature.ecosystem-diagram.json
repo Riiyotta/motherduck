@@ -1,0 +1,125 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.ecosystem-diagram",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Ecosystem map diagram",
+  "purpose": "Map of nine integration categories as colored tiles around a background video (not reproduced).",
+  "source": {
+    "file": "src/components/marketing/persona.jsx",
+    "tag": "EcosystemDiagram",
+    "lines": "285-311",
+    "id": "persona-jsx#EcosystemDiagram"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/marketing/persona.jsx",
+      "tag": "EcoTile",
+      "lines": "271-283",
+      "id": "persona-jsx#EcoTile"
+    }
+  ],
+  "semantic": {
+    "id": "feature.ecosystem-diagram",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "tiles": {
+        "type": "list",
+        "minItems": 9,
+        "maxItems": 9,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "tone": {
+            "type": "enum",
+            "values": [
+              "sources",
+              "agents",
+              "ingestion",
+              "bi",
+              "retl",
+              "transform",
+              "dsai",
+              "orch",
+              "dq"
+            ],
+            "required": true
+          },
+          "logos": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 6,
+            "item": {
+              "logo": {
+                "type": "asset",
+                "roles": [
+                  "partner-tool-logo"
+                ],
+                "required": true
+              }
+            },
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generic-ui-glyph",
+    "placeholder-logo-row"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "338-381",
+        "heading": "B18. Persona blocks (T3, /product)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-overview",
+    "product-persona"
+  ],
+  "tags": []
+}

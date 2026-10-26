@@ -1,0 +1,82 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "media.video-feature",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Culture video feature",
+  "purpose": "Framed video poster on a yellow band.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "VideoFeature",
+    "lines": "96-121",
+    "id": "careers-jsx#VideoFeature"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "media.video-feature",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "poster": {
+        "type": "asset",
+        "roles": [
+          "video-thumbnail",
+          "team-photo"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "yellow"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "scroll-animate-in"
+    ],
+    "default": "scroll-animate-in",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-photo-placeholder",
+    "generated-video-poster"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "190-193",
+        "heading": "B2. `VideoFeature` [NEW] (Careers \"Our culture\")"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "careers"
+  ],
+  "tags": []
+}

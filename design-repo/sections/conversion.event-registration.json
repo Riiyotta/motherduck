@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.event-registration",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Event registration sidebar",
+  "purpose": "Sticky sidebar with date, time, location details and a register action.",
+  "source": {
+    "file": "src/components/extra/events.jsx",
+    "tag": "EventSidebar",
+    "lines": "98-116",
+    "id": "events-jsx#EventSidebar"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/events.jsx",
+      "tag": "DetailRow",
+      "lines": "88-95",
+      "id": "events-jsx#DetailRow"
+    }
+  ],
+  "semantic": {
+    "id": "conversion.event-registration",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "details": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 5,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "value": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "register": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "231-263",
+        "heading": "X3. Event detail `/events/:slug` (251; samples `ai-council-2026` upcoming, `ai-by-the-bay-"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "event-detail"
+  ],
+  "tags": []
+}

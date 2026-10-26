@@ -1,0 +1,29 @@
+{
+  "id": "state.no-results",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "No results",
+  "purpose": "Empty state with art for filtered lists.",
+  "source": {
+    "file": "src/components/content/bits.jsx",
+    "tag": "NoResults",
+    "lines": "69-89",
+    "id": "bits-jsx#NoResults"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "message": "text(max 10 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "251-258",
+        "heading": "F9. Infinite scroll + paging (L1, L5)"
+      }
+    ]
+  }
+}

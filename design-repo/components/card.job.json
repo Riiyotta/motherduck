@@ -1,0 +1,33 @@
+{
+  "id": "card.job",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Job card",
+  "purpose": "Open role row with arrow that slides on hover.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "JobCard",
+    "lines": "239-256",
+    "id": "careers-jsx#JobCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 8 words)",
+    "location": "text(max 3 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "203-216",
+        "heading": "B4. `JobsBoard` [NEW] (Careers \"Open positions\", anchor `#open-positions`)"
+      }
+    ]
+  },
+  "uses": [
+    "link.underline"
+  ]
+}

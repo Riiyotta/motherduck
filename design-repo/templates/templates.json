@@ -1,0 +1,4792 @@
+{
+  "templatesVersion": "1.0.0",
+  "description": "One entry per distinct page shape. Nodes are structured objects; routes map each served route pattern to exactly one template (see routes.json).",
+  "templates": [
+    {
+      "id": "home",
+      "title": "Homepage",
+      "family": "home",
+      "routes": [
+        "/"
+      ],
+      "sampleRoute": "/",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.home",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.isolated-compute",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.quote-card",
+          "required": true,
+          "repeatable": false,
+          "variant": "architecture"
+        },
+        {
+          "section": "feature.platform-diagram",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.product-card-trio",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.quote-card",
+          "required": true,
+          "repeatable": false,
+          "variant": "platform"
+        },
+        {
+          "section": "feature.integrations-arc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.integrations-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.customer-case-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.agent-interfaces",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.blog-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "CLONE_SPEC.md",
+            "lines": "180-200",
+            "heading": "1. Page skeleton and section order"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/Home.jsx",
+        "tag": "Home",
+        "lines": "10-24",
+        "id": "Home-jsx#Home"
+      },
+      "notes": "Hero media A/B cookie: the control (tabbed product sim) variant is the build target; the video variant is documented in CLONE_SPEC section 3 but not built."
+    },
+    {
+      "id": "product-overview",
+      "title": "Product overview",
+      "family": "marketing",
+      "routes": [
+        "/product"
+      ],
+      "sampleRoute": "/product",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.persona",
+          "required": true,
+          "repeatable": false,
+          "variant": "overview"
+        },
+        {
+          "section": "divider.marquee-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.use-case-split",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.old-world-new-world",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.agent-card-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.architecture-panel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.feature-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ecosystem-diagram",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.case-study-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.contact-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link",
+        "runtime.story-art-scrub"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "518-520",
+            "heading": "T3b /product"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/ProductRouter.jsx",
+        "tag": "'/product': [",
+        "lines": "138-150",
+        "id": "ProductRouter-jsx#product"
+      }
+    },
+    {
+      "id": "product-persona",
+      "title": "Persona landing (app developers / data teams / engine users)",
+      "family": "marketing",
+      "routes": [
+        "/product/app-developers",
+        "/product/data-teams",
+        "/product/duckdb-users"
+      ],
+      "sampleRoute": "/product/app-developers",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.persona",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.persona-split-rows",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.feature-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.architecture-panel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.yellow-band",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ecosystem-diagram",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.case-study-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.contact-form",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/app-developers": "measured",
+          "/product/data-teams": "measured",
+          "/product/duckdb-users": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "513-517",
+            "heading": "T3 persona"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/ProductRouter.jsx",
+        "tag": "'/product/app-developers': [",
+        "lines": "108-116",
+        "id": "ProductRouter-jsx#product-app-developers"
+      },
+      "memberCompositions": {
+        "/product/app-developers": [
+          "hero.persona",
+          "feature.persona-split-rows",
+          "feature.feature-grid",
+          "feature.architecture-panel",
+          "cta.yellow-band",
+          "feature.ecosystem-diagram",
+          "social-proof.case-study-carousel"
+        ],
+        "/product/data-teams": [
+          "hero.persona",
+          "feature.persona-split-rows",
+          "feature.feature-grid",
+          "feature.architecture-panel",
+          "cta.yellow-band",
+          "feature.ecosystem-diagram",
+          "social-proof.case-study-carousel"
+        ],
+        "/product/duckdb-users": [
+          "hero.persona",
+          "feature.persona-split-rows",
+          "feature.feature-grid",
+          "feature.architecture-panel",
+          "feature.ecosystem-diagram",
+          "social-proof.case-study-carousel",
+          "faq.accordion",
+          "conversion.contact-form"
+        ]
+      },
+      "notes": "duckdb-users adds the FAQ and contact form and has no yellow CTA band (PAGES_SPEC_MARKETING section 4 T3)."
+    },
+    {
+      "id": "product-feature",
+      "title": "Product feature page spine",
+      "family": "marketing",
+      "routes": [
+        "/product/dives",
+        "/product/flights",
+        "/product/guides",
+        "/product/mcp-server",
+        "/product/postgres-integration"
+      ],
+      "sampleRoute": "/product/dives",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-centered",
+          "required": true,
+          "repeatable": false,
+          "group": "opener"
+        },
+        {
+          "section": "hero.split-product",
+          "required": true,
+          "repeatable": false,
+          "group": "opener"
+        },
+        {
+          "section": "media.video-frame",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "media.media-frame",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.browser-window-demo",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.problem-cards",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.sticky-stack",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.live-embed",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.gallery-teaser",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.quote-spotlight",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.cookbook-grid",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/dives": "measured",
+          "/product/flights": "measured",
+          "/product/guides": "measured",
+          "/product/mcp-server": "measured",
+          "/product/postgres-integration": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "504-512",
+            "heading": "T2 product feature"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/ProductRouter.jsx",
+        "tag": "'/product/dives': [",
+        "lines": "50-59",
+        "id": "ProductRouter-jsx#product-dives"
+      },
+      "memberCompositions": {
+        "/product/dives": [
+          "hero.product-centered",
+          "media.video-frame",
+          "media.media-frame",
+          "feature.sticky-stack",
+          "media.live-embed",
+          "listing.gallery-teaser",
+          "faq.accordion",
+          "cta.band"
+        ],
+        "/product/flights": [
+          "hero.product-centered",
+          "media.media-frame",
+          "feature.sticky-stack",
+          "social-proof.quote-spotlight",
+          "listing.cookbook-grid",
+          "faq.accordion",
+          "cta.band"
+        ],
+        "/product/guides": [
+          "hero.product-centered",
+          "feature.browser-window-demo",
+          "feature.sticky-stack",
+          "faq.accordion",
+          "cta.band"
+        ],
+        "/product/mcp-server": [
+          "hero.product-centered",
+          "feature.problem-cards",
+          "feature.sticky-stack",
+          "social-proof.quote-spotlight",
+          "cta.band"
+        ],
+        "/product/postgres-integration": [
+          "hero.split-product",
+          "feature.problem-cards",
+          "feature.sticky-stack",
+          "social-proof.quote-spotlight",
+          "cta.band"
+        ]
+      },
+      "groups": [
+        {
+          "group": "opener",
+          "rule": "exactly-one"
+        }
+      ],
+      "notes": "The original composes these pages from blocks (no single template component); the node order is the merged order that all five measured compositions satisfy."
+    },
+    {
+      "id": "product-ducklake",
+      "title": "Table-format product page",
+      "family": "marketing",
+      "routes": [
+        "/product/ducklake"
+      ],
+      "sampleRoute": "/product/ducklake",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.ducklake",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.code-panel-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.format-compare",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.newsletter-signup",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.sticky-stack",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.code-sample",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.resource-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/ducklake": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "300-321",
+            "heading": "B16. DuckLake-only blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/ProductRouter.jsx",
+        "tag": "'/product/ducklake': [",
+        "lines": "60-68",
+        "id": "ProductRouter-jsx#product-ducklake"
+      }
+    },
+    {
+      "id": "product-hypertenancy",
+      "title": "Isolated-compute product page (dark hero)",
+      "family": "marketing",
+      "routes": [
+        "/product/hypertenancy"
+      ],
+      "sampleRoute": "/product/hypertenancy",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hypertenancy-dark",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.code-tabs-panel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.quote-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.alternating-rows",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/hypertenancy": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "322-337",
+            "heading": "B17. Hypertenancy-only blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/ProductRouter.jsx",
+        "tag": "'/product/hypertenancy': [",
+        "lines": "99-105",
+        "id": "ProductRouter-jsx#product-hypertenancy"
+      }
+    },
+    {
+      "id": "startups",
+      "title": "Startup program page",
+      "family": "marketing",
+      "routes": [
+        "/startups"
+      ],
+      "sampleRoute": "/startups",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.left",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.quote-spotlight",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.investor-logos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.program-benefits",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.logo-marquee",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.persona-split-sticky",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.apply-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/startups": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "433-458",
+            "heading": "B21. Startups blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/bespokePages.jsx",
+        "tag": "StartupsPage",
+        "lines": "10-24",
+        "id": "bespokePages-jsx#StartupsPage"
+      }
+    },
+    {
+      "id": "research-index",
+      "title": "Research papers index",
+      "family": "marketing",
+      "routes": [
+        "/research"
+      ],
+      "sampleRoute": "/research",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.left",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.research-chips",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.paper-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/research": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "459-487",
+            "heading": "B22. Research / Trust / Community blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/bespokePages.jsx",
+        "tag": "ResearchPage",
+        "lines": "26-34",
+        "id": "bespokePages-jsx#ResearchPage"
+      }
+    },
+    {
+      "id": "trust-security",
+      "title": "Trust and security page",
+      "family": "marketing",
+      "routes": [
+        "/trust-and-security"
+      ],
+      "sampleRoute": "/trust-and-security",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.left",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.trust-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/trust-and-security": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "459-487",
+            "heading": "B22. Research / Trust / Community blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/bespokePages.jsx",
+        "tag": "TrustPage",
+        "lines": "36-43",
+        "id": "bespokePages-jsx#TrustPage"
+      }
+    },
+    {
+      "id": "community-oss",
+      "title": "Community and open source page",
+      "family": "marketing",
+      "routes": [
+        "/community-and-open-source"
+      ],
+      "sampleRoute": "/community-and-open-source",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.left",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.repo-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.social-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/community-and-open-source": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "459-487",
+            "heading": "B22. Research / Trust / Community blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/bespokePages.jsx",
+        "tag": "CommunityPage",
+        "lines": "45-53",
+        "id": "bespokePages-jsx#CommunityPage"
+      }
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing page",
+      "family": "marketing",
+      "routes": [
+        "/product/pricing"
+      ],
+      "sampleRoute": "/product/pricing",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.pricing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.tier-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.quote-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.plan-matrix",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.instances",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.persona-split-rows",
+          "required": true,
+          "repeatable": false,
+          "variant": "compact"
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.final",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/pricing": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "391-432",
+            "heading": "B20. Pricing blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/Pricing.jsx",
+        "tag": "'/product/pricing': [",
+        "lines": "18-27",
+        "id": "Pricing-jsx#product-pricing"
+      }
+    },
+    {
+      "id": "pricing-support",
+      "title": "Engine support pricing panel",
+      "family": "marketing",
+      "routes": [
+        "/product/pricing/duckdb-support"
+      ],
+      "sampleRoute": "/product/pricing/duckdb-support",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.duckdb-support-panel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/pricing/duckdb-support": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "391-432",
+            "heading": "B20. Pricing blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/Pricing.jsx",
+        "tag": "'/product/pricing/duckdb-support'",
+        "lines": "28-29",
+        "id": "Pricing-jsx#product-pricing-duckdb-support"
+      },
+      "notes": "One-section page (1839px tall at 1440 including the footer per PAGES_SPEC_MARKETING section 4 T4)."
+    },
+    {
+      "id": "vs-comparison",
+      "title": "Competitor comparison page",
+      "family": "marketing",
+      "routes": [
+        "/vs/bigquery-alternative",
+        "/vs/clickhouse-alternative",
+        "/vs/databricks-alternative",
+        "/vs/postgresql-alternative",
+        "/vs/redshift-alternative",
+        "/vs/snowflake-alternative"
+      ],
+      "sampleRoute": "/vs/snowflake-alternative",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.vs",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.marquee-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "comparison.vs-table",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.logo-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "comparison.benchmark-panel",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.quote-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.sticky-stack",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "comparison.compare-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/vs/bigquery-alternative": "measured",
+          "/vs/clickhouse-alternative": "measured",
+          "/vs/databricks-alternative": "measured",
+          "/vs/postgresql-alternative": "measured",
+          "/vs/redshift-alternative": "measured",
+          "/vs/snowflake-alternative": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_MARKETING.md",
+            "lines": "492-503",
+            "heading": "T1 vs (all six)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/marketing/VsPage.jsx",
+        "tag": "VsPage",
+        "lines": "91-118",
+        "id": "VsPage-jsx#VsPage"
+      },
+      "memberCompositions": {
+        "/vs/snowflake-alternative": [
+          "hero.vs",
+          "divider.marquee-band",
+          "comparison.vs-table",
+          "social-proof.logo-bar",
+          "comparison.benchmark-panel",
+          "social-proof.quote-carousel",
+          "feature.sticky-stack",
+          "comparison.compare-cards",
+          "faq.accordion",
+          "cta.band"
+        ],
+        "/vs/clickhouse-alternative": [
+          "hero.vs",
+          "divider.marquee-band",
+          "comparison.vs-table",
+          "social-proof.logo-bar",
+          "social-proof.quote-carousel",
+          "feature.sticky-stack",
+          "comparison.compare-cards",
+          "faq.accordion",
+          "cta.band"
+        ]
+      },
+      "notes": "All six share one DOM at 1440; bigquery, databricks, postgresql and redshift were measured at 1440 only (PAGES_SPEC_MARKETING header). clickhouse has no benchmark panel."
+    },
+    {
+      "id": "vs-index",
+      "title": "Comparisons index",
+      "family": "marketing",
+      "routes": [
+        "/vs"
+      ],
+      "sampleRoute": "/vs",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.vs-index",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.marquee-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.all-comparisons",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/vs": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "647-655",
+            "heading": "X15. Comparisons index `/vs`"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/VsIndex.jsx",
+        "tag": "VsIndex",
+        "lines": "4-14",
+        "id": "VsIndex-jsx#VsIndex"
+      }
+    },
+    {
+      "id": "persona-landing",
+      "title": "Persona landing 2 (founders / operators)",
+      "family": "marketing",
+      "routes": [
+        "/product/for-founders",
+        "/product/for-operators"
+      ],
+      "sampleRoute": "/product/for-founders",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.persona-landing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.logo-strip",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.dark-features",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split-media",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.gallery-row",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.security-split",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.industry-swiper",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.agent-links",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.closing-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/for-founders": "measured",
+          "/product/for-operators": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "480-563",
+            "heading": "X12. Persona landing `/product/for-founders`, `/product/for-operators` (one template, two "
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/PersonaLanding.jsx",
+        "tag": "PersonaLanding",
+        "lines": "13-23",
+        "id": "PersonaLanding-jsx#PersonaLanding"
+      },
+      "memberCompositions": {
+        "/product/for-founders": [
+          "hero.persona-landing",
+          "social-proof.logo-strip",
+          "feature.dark-features",
+          "feature.split-media",
+          "social-proof.industry-swiper",
+          "pricing.band",
+          "feature.agent-links",
+          "cta.closing-band"
+        ],
+        "/product/for-operators": [
+          "hero.persona-landing",
+          "social-proof.logo-strip",
+          "feature.dark-features",
+          "listing.gallery-row",
+          "feature.security-split",
+          "pricing.band",
+          "social-proof.industry-swiper",
+          "feature.agent-links",
+          "cta.closing-band"
+        ]
+      },
+      "unorderedGroups": [
+        [
+          "feature.split-media",
+          "listing.gallery-row",
+          "feature.security-split",
+          "pricing.band",
+          "social-proof.industry-swiper"
+        ]
+      ],
+      "notes": "Block order differs per route (order arrays in src/components/extra/data/marketing.js): founders = hero, logos, features, split, swiper, pricing, agent, closing; operators = hero, logos, features, gallery, security, pricing, swiper, agent, closing. The five middle blocks are therefore an unordered group. PAGES_SPEC_EXTRA section 2 lists the operators security rows beyond 2 as UNMEASURED."
+    },
+    {
+      "id": "eu-region",
+      "title": "EU region landing",
+      "family": "marketing",
+      "routes": [
+        "/product/eu-region"
+      ],
+      "sampleRoute": "/product/eu-region",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.eu-region",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.eu-partners",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.eu-webinars",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.eu-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/eu-region": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "564-594",
+            "heading": "X13. EU region `/product/eu-region`"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/EuRegion.jsx",
+        "tag": "EuRegion",
+        "lines": "4-13",
+        "id": "EuRegion-jsx#EuRegion"
+      },
+      "notes": "PAGES_SPEC_EXTRA section 2 lists the last two form-field labels as UNMEASURED."
+    },
+    {
+      "id": "azure-waitlist",
+      "title": "Cloud-provider waitlist page",
+      "family": "marketing",
+      "routes": [
+        "/product/azure"
+      ],
+      "sampleRoute": "/product/azure",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.azure-waitlist",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.azure-coming",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.azure-vote",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.azure-steps",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.azure-closing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/product/azure": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "595-646",
+            "heading": "X14. Azure waitlist `/product/azure`"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/Azure.jsx",
+        "tag": "Azure",
+        "lines": "4-15",
+        "id": "Azure-jsx#Azure"
+      },
+      "notes": "PAGES_SPEC_EXTRA section 2 lists the success copy and the plain-form styling as UNMEASURED."
+    },
+    {
+      "id": "about",
+      "title": "About us",
+      "family": "company",
+      "routes": [
+        "/about-us"
+      ],
+      "sampleRoute": "/about-us",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-illustrated",
+          "required": true,
+          "repeatable": false,
+          "variant": "about"
+        },
+        {
+          "section": "editorial.origin-story",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.team-photo",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.investors",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.contact-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.community-join",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/about-us": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "329-337"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/About.jsx",
+        "tag": "About",
+        "lines": "5-16",
+        "id": "About-jsx#About"
+      }
+    },
+    {
+      "id": "careers",
+      "title": "Careers",
+      "family": "company",
+      "routes": [
+        "/careers"
+      ],
+      "sampleRoute": "/careers",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-illustrated",
+          "required": true,
+          "repeatable": false,
+          "variant": "careers"
+        },
+        {
+          "section": "feature.how-we-work",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.video-feature",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.values-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.jobs-board",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.photo-marquee",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.benefits-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "divider.ticker-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.testimonials",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.closing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/careers": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "337-347"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/Careers.jsx",
+        "tag": "Careers",
+        "lines": "9-29",
+        "id": "Careers-jsx#Careers"
+      }
+    },
+    {
+      "id": "contact-chooser",
+      "title": "Contact chooser",
+      "family": "form-lp",
+      "routes": [
+        "/contact-us"
+      ],
+      "sampleRoute": "/contact-us",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.contact-chooser",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/contact-us": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "234-239",
+            "heading": "C1. `ContactChooser` [NEW] (Contact us)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/Contact.jsx",
+        "tag": "Contact",
+        "lines": "6-18",
+        "id": "Contact-jsx#Contact"
+      }
+    },
+    {
+      "id": "contact-form",
+      "title": "Contact split form",
+      "family": "form-lp",
+      "routes": [
+        "/contact-us/product-expert",
+        "/contact-us/support"
+      ],
+      "sampleRoute": "/contact-us/product-expert",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.contact-split-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/contact-us/product-expert": "measured",
+          "/contact-us/support": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "240-249",
+            "heading": "D1. `ContactSplitForm` [NEW] (Product expert)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/Contact.jsx",
+        "tag": "Contact",
+        "lines": "6-18",
+        "id": "Contact-jsx#Contact"
+      },
+      "notes": "/contact-us/support (PAGES_SPEC_EXTRA X16) is a variant of the same split form composed in src/pages/extra/ContactSupport.jsx."
+    },
+    {
+      "id": "support-hub",
+      "title": "Customer support hub",
+      "family": "form-lp",
+      "routes": [
+        "/customer-support"
+      ],
+      "sampleRoute": "/customer-support",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-illustrated",
+          "required": true,
+          "repeatable": false,
+          "variant": "support"
+        },
+        {
+          "section": "feature.support-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.yellow-callout",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/customer-support": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "250-254",
+            "heading": "E1. `SupportCards` [NEW] (Customer support)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/Contact.jsx",
+        "tag": "Contact",
+        "lines": "6-18",
+        "id": "Contact-jsx#Contact"
+      }
+    },
+    {
+      "id": "legal-toc",
+      "title": "Legal document with table of contents",
+      "family": "legal",
+      "routes": [
+        "/privacy-policy",
+        "/terms-of-use",
+        "/terms-of-service",
+        "/candidate-privacy"
+      ],
+      "sampleRoute": "/privacy-policy",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.document-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.legal-toc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.clause-section",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "mixed",
+        "routeEvidence": {
+          "/privacy-policy": "measured",
+          "/terms-of-use": "measured",
+          "/terms-of-service": "measured",
+          "/candidate-privacy": "inferred"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "259-277",
+            "heading": "F1. `LegalPage` [NEW] (Privacy, Terms; Support-policy variant)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/Legal.jsx",
+        "tag": "Legal",
+        "lines": "6-11",
+        "id": "Legal-jsx#Legal"
+      },
+      "notes": "/terms-of-service and /candidate-privacy reuse the F1 TOC variant (PAGES_SPEC_EXTRA X18); that spec lists the TOC nesting as UNMEASURED, so /candidate-privacy is recorded as inferred."
+    },
+    {
+      "id": "legal-plain",
+      "title": "Legal / policy / prose page without TOC",
+      "family": "legal",
+      "routes": [
+        "/support-policy",
+        "/motherduck-terms-of-service",
+        "/acceptable-use-policy",
+        "/fees-addendum",
+        "/divemaxxing/rules",
+        "/forms/finance-onboarding",
+        "/hack-night",
+        "/getting-started-with-motherduck",
+        "/local-dev-cloud-prod-dagster-motherduck",
+        "/react-components-testing"
+      ],
+      "sampleRoute": "/acceptable-use-policy",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.document-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.clause-section",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/support-policy": "measured",
+          "/motherduck-terms-of-service": "measured",
+          "/acceptable-use-policy": "measured",
+          "/fees-addendum": "measured",
+          "/divemaxxing/rules": "measured",
+          "/forms/finance-onboarding": "measured",
+          "/hack-night": "measured",
+          "/getting-started-with-motherduck": "measured",
+          "/local-dev-cloud-prod-dagster-motherduck": "measured",
+          "/react-components-testing": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "676-704",
+            "heading": "X17. Generic page (= the `/support-policy` variant of F1 `LegalPage`; same classes as `/co"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/GenericPage.jsx",
+        "tag": "GenericPage",
+        "lines": "6-16",
+        "id": "GenericPage-jsx#GenericPage"
+      },
+      "notes": "Same DOM and styles as the /support-policy variant of F1 (PAGES_SPEC_EXTRA X17); only /support-policy was measured in the company pass, the other nine are recorded with the evidence level of the X17 pass."
+    },
+    {
+      "id": "prose-sidebar-form",
+      "title": "Prose page with sidebar form",
+      "family": "legal",
+      "routes": [
+        "/live-demo",
+        "/duckdb-book-brief-orig"
+      ],
+      "sampleRoute": "/live-demo",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.document-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.clause-section",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "conversion.side-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.form-bar",
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/live-demo": "measured",
+          "/duckdb-book-brief-orig": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "676-704",
+            "heading": "X17. Generic page (= the `/support-policy` variant of F1 `LegalPage`; same classes as `/co"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/GenericPage.jsx",
+        "tag": "GenericPage",
+        "lines": "6-16",
+        "id": "GenericPage-jsx#GenericPage"
+      }
+    },
+    {
+      "id": "gated-lp",
+      "title": "Gated landing page (guide / report / cheatsheet)",
+      "family": "form-lp",
+      "routes": [
+        "/lp/:slug",
+        "/duckdb-cheatsheet-full"
+      ],
+      "sampleRoute": "/lp/ai-analytics-eval-field-guide-full",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.lp-cover",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.stat-benchmark-band",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.prose-two-col",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.card-band",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.numbered-list",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.checklist-split",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.authors",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.insight-bars",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.code-window",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.pg-sign-cards",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.pg-architecture-panel",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.pg-chapter-list",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "lp.pg-quote-cards",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.gated-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.form-success-overlay",
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/lp/:slug": "measured",
+          "/duckdb-cheatsheet-full": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "278-304",
+            "heading": "G. Gated LP template blocks"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/Gated.jsx",
+        "tag": "const PAGES = {",
+        "lines": "24-125",
+        "id": "Gated-jsx#const-PAGES"
+      },
+      "memberCompositions": {
+        "/lp/ai-analytics-eval-field-guide-full": [
+          "hero.lp-cover",
+          "lp.stat-benchmark-band",
+          "lp.prose-two-col",
+          "lp.card-band",
+          "lp.card-band",
+          "lp.card-band",
+          "conversion.gated-form"
+        ],
+        "/lp/data-ai-survey-full": [
+          "hero.lp-cover",
+          "lp.stat-benchmark-band",
+          "lp.numbered-list",
+          "conversion.gated-form"
+        ],
+        "/lp/ducklake-lakehouse-table-format-book-full": [
+          "hero.lp-cover",
+          "lp.card-band",
+          "lp.card-band",
+          "lp.checklist-split",
+          "lp.authors",
+          "faq.accordion",
+          "conversion.gated-form"
+        ],
+        "/lp/guide-to-bi-in-the-agentic-era-full": [
+          "hero.lp-cover",
+          "lp.card-band",
+          "lp.card-band",
+          "lp.card-band",
+          "lp.insight-bars",
+          "faq.accordion",
+          "conversion.gated-form"
+        ],
+        "/lp/postgres-analytics-guide-full": [
+          "hero.lp-cover",
+          "lp.pg-sign-cards",
+          "lp.pg-architecture-panel",
+          "lp.pg-chapter-list",
+          "lp.pg-quote-cards",
+          "conversion.gated-form"
+        ],
+        "/duckdb-cheatsheet-full": [
+          "hero.lp-cover",
+          "lp.card-band",
+          "lp.code-window",
+          "conversion.gated-form"
+        ]
+      },
+      "unorderedGroups": [
+        [
+          "lp.stat-benchmark-band",
+          "lp.prose-two-col",
+          "lp.card-band",
+          "lp.numbered-list",
+          "lp.checklist-split",
+          "lp.authors",
+          "lp.insight-bars",
+          "lp.code-window",
+          "lp.pg-sign-cards",
+          "lp.pg-architecture-panel",
+          "lp.pg-chapter-list",
+          "lp.pg-quote-cards"
+        ]
+      ],
+      "notes": "Six LP datasets exist in Gated.jsx. KNOWN CLONE GAP: /lp/agents-run-your-analytics-full is a sitemap URL that matches /lp/:slug but has no dataset entry, so it renders the not-found style stub (PageStub)."
+    },
+    {
+      "id": "book-brief",
+      "title": "Book brief",
+      "family": "form-lp",
+      "routes": [
+        "/duckdb-book-brief"
+      ],
+      "sampleRoute": "/duckdb-book-brief",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-illustrated",
+          "required": true,
+          "repeatable": false,
+          "variant": "book"
+        },
+        {
+          "section": "conversion.book-offer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.chapter-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/duckdb-book-brief": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_COMPANY.md",
+            "lines": "305-311",
+            "heading": "H1. `BookOffer` [NEW] (Book brief)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/company/Gated.jsx",
+        "tag": "Gated",
+        "lines": "128-143",
+        "id": "Gated-jsx#Gated"
+      }
+    },
+    {
+      "id": "split-form-lp",
+      "title": "Split-form landing page",
+      "family": "form-lp",
+      "routes": [
+        "/together-ai",
+        "/duckdb-book-form",
+        "/sql-duckdb-book-form"
+      ],
+      "sampleRoute": "/duckdb-book-form",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.split-form-lp",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.split-lead-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.sneak-peek",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/together-ai": "measured",
+          "/duckdb-book-form": "measured",
+          "/sql-duckdb-book-form": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "713-732",
+            "heading": "X19. Split-form LP `/together-ai`, `/duckdb-book-form`, `/sql-duckdb-book-form` (NEW, one "
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/SplitFormLP.jsx",
+        "tag": "SplitFormLP",
+        "lines": "12-16",
+        "id": "SplitFormLP-jsx#SplitFormLP"
+      },
+      "memberCompositions": {
+        "/together-ai": [
+          "hero.split-form-lp",
+          "conversion.split-lead-form"
+        ],
+        "/duckdb-book-form": [
+          "hero.split-form-lp",
+          "conversion.split-lead-form",
+          "feature.sneak-peek"
+        ]
+      },
+      "notes": "/together-ai has no Sneak Peek block; PAGES_SPEC_EXTRA section 2 lists the Sneak Peek mobile image block as UNMEASURED."
+    },
+    {
+      "id": "lp-ducklake-full",
+      "title": "Open table format guide LP",
+      "family": "form-lp",
+      "routes": [
+        "/ducklake-open-table-format-full"
+      ],
+      "sampleRoute": "/ducklake-open-table-format-full",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.lp-cover",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.card-band",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "lp.comparison-dark-table",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.checklist-split",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.gated-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.form-success-overlay",
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/ducklake-open-table-format-full": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "754-810",
+            "heading": "X21. Gated LP bodies (reuse G shell: `LPHero`, `LPSection`, FAQ, `GatedFormSection`)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/LpExtra.jsx",
+        "tag": "DucklakeFull",
+        "lines": "22-51",
+        "id": "LpExtra-jsx#DucklakeFull"
+      }
+    },
+    {
+      "id": "lp-divemaxxing",
+      "title": "Hackathon landing page",
+      "family": "form-lp",
+      "routes": [
+        "/divemaxxing-full"
+      ],
+      "sampleRoute": "/divemaxxing-full",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.divemaxxing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.embed-frame",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.whats-a-dive",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.competition-rules",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.judges",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.timeline",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.prizes",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/divemaxxing-full": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "754-810",
+            "heading": "X21. Gated LP bodies (reuse G shell: `LPHero`, `LPSection`, FAQ, `GatedFormSection`)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/components/extra/divemaxxing.jsx",
+        "tag": "DivemaxxingLP",
+        "lines": "181-193",
+        "id": "divemaxxing-jsx#DivemaxxingLP"
+      },
+      "notes": "PAGES_SPEC_EXTRA section 2 lists the divemaxxing closing strip as UNMEASURED."
+    },
+    {
+      "id": "lp-jev",
+      "title": "Cost calculator landing page",
+      "family": "form-lp",
+      "routes": [
+        "/jev-full"
+      ],
+      "sampleRoute": "/jev-full",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.jev",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.jev-calculator",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.jev-plans",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.jev-closing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/jev-full": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "754-810",
+            "heading": "X21. Gated LP bodies (reuse G shell: `LPHero`, `LPSection`, FAQ, `GatedFormSection`)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/components/extra/jev.jsx",
+        "tag": "JevLP",
+        "lines": "272-282",
+        "id": "jev-jsx#JevLP"
+      },
+      "notes": "PAGES_SPEC_EXTRA section 2 lists the jev closing and the calculator formula as UNMEASURED."
+    },
+    {
+      "id": "lp-book-own-nav",
+      "title": "Book LP with its own nav (no site header or footer)",
+      "family": "form-lp",
+      "routes": [
+        "/lp/ducklake-lakehouse-table-format-book"
+      ],
+      "sampleRoute": "/lp/ducklake-lakehouse-table-format-book",
+      "nodes": [
+        {
+          "section": "shell.lp-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.lp-cover",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.card-band",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "lp.checklist-split",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "lp.authors",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.gated-form",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.form-success-overlay",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "own navigation node",
+        "footer": "own footer node or none",
+        "mode": "own"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/lp/ducklake-lakehouse-table-format-book": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "21-34",
+            "heading": "1a. Redirects (HTTP 3xx on the original; build these as client redirects, not templates)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/LpExtra.jsx",
+        "tag": "DucklakeBook",
+        "lines": "73-111",
+        "id": "LpExtra-jsx#DucklakeBook"
+      },
+      "notes": "Static route /lp/ducklake-lakehouse-table-format-book is declared in the lpExtra key and shadows /lp/:slug. The page sets a body flag that hides the site header, footer and header offset (src/styles/extra-marketing.css:97-100). Its sitemap presence: the path is a redirect target of /ducklake-open-table-format-guide and is not itself a sitemap URL."
+    },
+    {
+      "id": "blog-index",
+      "title": "Blog index",
+      "family": "content-index",
+      "routes": [
+        "/blog"
+      ],
+      "sampleRoute": "/blog",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.feed",
+          "required": true,
+          "repeatable": false,
+          "variant": "blog"
+        },
+        {
+          "section": "navigation.search-filter",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.featured-post",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.post-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.mobile-subscribe-button",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/blog": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "170-180",
+            "heading": "F1. `FeedHero` (L1, L9) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/BlogIndex.jsx",
+        "tag": "BlogIndex",
+        "lines": "15-64",
+        "id": "BlogIndex-jsx#BlogIndex"
+      }
+    },
+    {
+      "id": "blog-post",
+      "title": "Blog post",
+      "family": "article",
+      "routes": [
+        "/blog/:slug"
+      ],
+      "sampleRoute": "/blog/hello-world",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.article-header",
+          "required": true,
+          "repeatable": false,
+          "variant": "blog-post"
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "navigation.article-toc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.read-next-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.subscribe-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.floating-cta",
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/blog/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "259-295",
+            "heading": "B1. `ArticleLayout` (L2) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/BlogPost.jsx",
+        "tag": "BlogPost",
+        "lines": "63-109",
+        "id": "BlogPost-jsx#BlogPost"
+      }
+    },
+    {
+      "id": "case-index",
+      "title": "Case studies index",
+      "family": "content-index",
+      "routes": [
+        "/case-studies"
+      ],
+      "sampleRoute": "/case-studies",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.title-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.testimonial-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.category-chips",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.case-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/case-studies": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "306-310",
+            "heading": "C1. `TitleHero` (case-study index) [NEW, trivial]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/CaseIndex.jsx",
+        "tag": "CaseIndex",
+        "lines": "9-36",
+        "id": "CaseIndex-jsx#CaseIndex"
+      }
+    },
+    {
+      "id": "case-detail",
+      "title": "Case study detail",
+      "family": "article",
+      "routes": [
+        "/case-studies/:slug"
+      ],
+      "sampleRoute": "/case-studies/dexibit",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.case-detail",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.case-quote-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.article-lede",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.back-to-top",
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/case-studies/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "359-387",
+            "heading": "C5. `CaseDetailHero` + `QuoteBand` + `CaseArticle` (L4) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/CaseDetail.jsx",
+        "tag": "CaseDetail",
+        "lines": "32-62",
+        "id": "CaseDetail-jsx#CaseDetail"
+      }
+    },
+    {
+      "id": "video-index",
+      "title": "Videos index",
+      "family": "content-index",
+      "routes": [
+        "/videos"
+      ],
+      "sampleRoute": "/videos",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.sand-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.featured-video",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.category-chips",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.search-filter",
+          "required": true,
+          "repeatable": false,
+          "variant": "search-only"
+        },
+        {
+          "section": "listing.video-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/videos": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "388-395",
+            "heading": "V1. `SandGridHero` (video index) and `SandBand` (video detail) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/VideoIndex.jsx",
+        "tag": "VideoIndex",
+        "lines": "15-65",
+        "id": "VideoIndex-jsx#VideoIndex"
+      }
+    },
+    {
+      "id": "video-detail",
+      "title": "Video detail",
+      "family": "article",
+      "routes": [
+        "/videos/:slug"
+      ],
+      "sampleRoute": "/videos/unleashing-duckdb-dbt-for-local-analytics-triumphs",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.video-player-frame",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.video-meta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "navigation.article-toc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.transcript",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.related-videos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link",
+        "runtime.toc-fab"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/videos/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "420-424",
+            "heading": "V4. `VideoPlayerFrame` (video detail) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/VideoDetail.jsx",
+        "tag": "VideoDetail",
+        "lines": "11-58",
+        "id": "VideoDetail-jsx#VideoDetail"
+      }
+    },
+    {
+      "id": "webinar-detail",
+      "title": "Webinar / video detail (standard, register-LP and side-form variants)",
+      "family": "article",
+      "routes": [
+        "/webinar/:slug",
+        "/video/:slug"
+      ],
+      "sampleRoute": "/webinar/take-flight-with-the-modern-duck-stack",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.video-player-frame",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.video-meta",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "conversion.webinar-register",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.gated-video-modal",
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/webinar/:slug": "measured",
+          "/video/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "354-379",
+            "heading": "X8. Webinar / video detail `/webinar/:slug` (13), `/video/:slug` (2) — variant of VideoDet"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/Webinar.jsx",
+        "tag": "Webinar",
+        "lines": "7-15",
+        "id": "Webinar-jsx#Webinar"
+      },
+      "memberCompositions": {
+        "/webinar/:slug": [
+          "media.video-player-frame",
+          "editorial.video-meta",
+          "editorial.prose-chapter"
+        ]
+      },
+      "notes": "Three measured layouts live in src/components/extra/webinar.jsx: standard (player + meta + prose), register LP (title + body + split form) and side form. The code header says the second and third are \"measured non-spec layouts\"."
+    },
+    {
+      "id": "ecosystem-index",
+      "title": "Ecosystem partners index",
+      "family": "content-index",
+      "routes": [
+        "/ecosystem"
+      ],
+      "sampleRoute": "/ecosystem",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.ecosystem",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.category-chips",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.search-filter",
+          "required": true,
+          "repeatable": false,
+          "variant": "search-only"
+        },
+        {
+          "section": "listing.partner-grid",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "cta.build-with",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.partner-modal",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/ecosystem": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "459-467",
+            "heading": "E1. `EcoHero` (ecosystem index) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/EcosystemIndex.jsx",
+        "tag": "EcosystemIndex",
+        "lines": "15-64",
+        "id": "EcosystemIndex-jsx#EcosystemIndex"
+      }
+    },
+    {
+      "id": "ecosystem-detail",
+      "title": "Ecosystem partner detail",
+      "family": "article",
+      "routes": [
+        "/ecosystem/:slug"
+      ],
+      "sampleRoute": "/ecosystem/hex",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.partner-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "editorial.partner-links",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/ecosystem/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "521-538",
+            "heading": "E6. `PartnerDetail` (L8) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/EcosystemDetail.jsx",
+        "tag": "EcosystemDetail",
+        "lines": "11-48",
+        "id": "EcosystemDetail-jsx#EcosystemDetail"
+      }
+    },
+    {
+      "id": "learn-index",
+      "title": "Learn index",
+      "family": "content-index",
+      "routes": [
+        "/learn"
+      ],
+      "sampleRoute": "/learn",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.feed",
+          "required": true,
+          "repeatable": false,
+          "variant": "learn"
+        },
+        {
+          "section": "listing.learn-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/learn": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "578-587",
+            "heading": "K1. `LearnCard` + grid (L9) [NEW, on `LiftCard lift={14}`]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/LearnHub.jsx",
+        "tag": "LearnHub",
+        "lines": "20-31",
+        "id": "LearnHub-jsx#LearnHub"
+      }
+    },
+    {
+      "id": "events-index",
+      "title": "Upcoming events index",
+      "family": "events",
+      "routes": [
+        "/events"
+      ],
+      "sampleRoute": "/events",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.events",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.speaker-banner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.search-filter",
+          "required": true,
+          "repeatable": false,
+          "variant": "events"
+        },
+        {
+          "section": "listing.event-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.subscribe-inline-banner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/events": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "539-546",
+            "heading": "H1. `EventsHero` [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/EventsHub.jsx",
+        "tag": "EventsHub",
+        "lines": "87-122",
+        "id": "EventsHub-jsx#EventsHub"
+      },
+      "notes": "The subscribe banner renders after the first event row inside the list; it is modelled as the node after the list."
+    },
+    {
+      "id": "events-past",
+      "title": "Past events index (paged)",
+      "family": "events",
+      "routes": [
+        "/events/past",
+        "/events/past/page/:n"
+      ],
+      "sampleRoute": "/events/past/page/2",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.events",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.speaker-banner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.search-filter",
+          "required": true,
+          "repeatable": false,
+          "variant": "events"
+        },
+        {
+          "section": "listing.past-event-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.pagination",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/events/past": "measured",
+          "/events/past/page/:n": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "264-280",
+            "heading": "X4. Past events `/events/past` and `/events/past/page/:n` (variant of EventsHub L10)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/EventsPast.jsx",
+        "tag": "EventsPast",
+        "lines": "17-73",
+        "id": "EventsPast-jsx#EventsPast"
+      },
+      "notes": "Filtering on past pages is UNMEASURED (EventsPast.jsx comment); matches are listed without paging."
+    },
+    {
+      "id": "event-detail",
+      "title": "Event detail",
+      "family": "events",
+      "routes": [
+        "/events/:slug"
+      ],
+      "sampleRoute": "/events/ai-by-the-bay-2025",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.event-detail",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.event-description",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.event-registration",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.subscribe-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.more-events",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.back-to-top",
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.mobile-register-bar",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/events/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "231-263",
+            "heading": "X3. Event detail `/events/:slug` (251; samples `ai-council-2026` upcoming, `ai-by-the-bay-"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/EventDetail.jsx",
+        "tag": "EventDetail",
+        "lines": "8-23",
+        "id": "EventDetail-jsx#EventDetail"
+      }
+    },
+    {
+      "id": "news-index",
+      "title": "Engine news index",
+      "family": "content-index",
+      "routes": [
+        "/duckdb-news"
+      ],
+      "sampleRoute": "/duckdb-news",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.feed",
+          "required": true,
+          "repeatable": false,
+          "variant": "news"
+        },
+        {
+          "section": "listing.news-digest",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.post-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.subscribe-inline-banner",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/duckdb-news": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "244-250",
+            "heading": "F8. `NewsDigestCard` (News only) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/NewsIndex.jsx",
+        "tag": "NewsIndex",
+        "lines": "16-47",
+        "id": "NewsIndex-jsx#NewsIndex"
+      },
+      "notes": "The subscribe banner renders after the third card inside the grid (NewsIndex.jsx); modelled as the node after the grid."
+    },
+    {
+      "id": "quack-index",
+      "title": "Around-the-web index",
+      "family": "content-index",
+      "routes": [
+        "/quacking-around-the-web"
+      ],
+      "sampleRoute": "/quacking-around-the-web",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.feed",
+          "required": true,
+          "repeatable": false,
+          "variant": "quack"
+        },
+        {
+          "section": "navigation.search-filter",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.post-grid",
+          "required": true,
+          "repeatable": false,
+          "variant": "badge"
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/quacking-around-the-web": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "170-180",
+            "heading": "F1. `FeedHero` (L1, L9) [NEW]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/QuackIndex.jsx",
+        "tag": "QuackIndex",
+        "lines": "15-56",
+        "id": "QuackIndex-jsx#QuackIndex"
+      }
+    },
+    {
+      "id": "community-code",
+      "title": "Community code (prose page)",
+      "family": "article",
+      "routes": [
+        "/community-code"
+      ],
+      "sampleRoute": "/community-code",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.article-header",
+          "required": true,
+          "repeatable": false,
+          "variant": "prose-page"
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/community-code": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "588-593",
+            "heading": "P1. `ProsePage` (community code, L11) [NEW, trivial]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/CommunityCode.jsx",
+        "tag": "CommunityCode",
+        "lines": "9-20",
+        "id": "CommunityCode-jsx#CommunityCode"
+      }
+    },
+    {
+      "id": "dive-gallery",
+      "title": "Dive gallery (own nav and footer)",
+      "family": "content-index",
+      "routes": [
+        "/dive-gallery"
+      ],
+      "sampleRoute": "/dive-gallery",
+      "nodes": [
+        {
+          "section": "shell.dive-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.dive-gallery",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.dive-filter",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.dive-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.dive-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "own navigation node",
+        "footer": "own footer node or none",
+        "mode": "own"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/dive-gallery": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_CONTENT.md",
+            "lines": "594-636",
+            "heading": "D1. Dive gallery (L12): separate app chrome [NEW, self-contained]"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/content/DiveGallery.jsx",
+        "tag": "DiveGallery",
+        "lines": "86-161",
+        "id": "DiveGallery-jsx#DiveGallery"
+      },
+      "notes": "App.jsx OWN_NAV_PREFIXES hides the site header and footer for /dive-gallery (455px footer vs the site footer 1021px at 1440)."
+    },
+    {
+      "id": "dive-detail",
+      "title": "Dive detail (own nav and footer)",
+      "family": "article",
+      "routes": [
+        "/dive-gallery/dives/:slug"
+      ],
+      "sampleRoute": "/dive-gallery/dives/nyc-taxi-operations-dashboard",
+      "nodes": [
+        {
+          "section": "shell.dive-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.dive-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.dive-prompts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.dive-comments",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.dive-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "own navigation node",
+        "footer": "own footer node or none",
+        "mode": "own"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/dive-gallery/dives/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "281-307",
+            "heading": "X5. Dive detail `/dive-gallery/dives/:slug` (135; samples `232000-theorems-and-counting`, "
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/DiveDetail.jsx",
+        "tag": "DiveDetail",
+        "lines": "9-26",
+        "id": "DiveDetail-jsx#DiveDetail"
+      }
+    },
+    {
+      "id": "glossary-index",
+      "title": "Glossary index",
+      "family": "content-index",
+      "routes": [
+        "/glossary"
+      ],
+      "sampleRoute": "/glossary",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.glossary",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.glossary-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.glossary-letter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/glossary": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "175-206",
+            "heading": "X1. Glossary index `/glossary`"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/GlossaryIndex.jsx",
+        "tag": "GlossaryIndex",
+        "lines": "8-35",
+        "id": "GlossaryIndex-jsx#GlossaryIndex"
+      },
+      "notes": "/glossary is not in the sitemap file (PAGES_SPEC_EXTRA header: exists on the original but is not in MISSING_ROUTES.txt)."
+    },
+    {
+      "id": "glossary-term",
+      "title": "Glossary term",
+      "family": "article",
+      "routes": [
+        "/glossary/:slug"
+      ],
+      "sampleRoute": "/glossary/acid",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.article-header",
+          "required": true,
+          "repeatable": false,
+          "variant": "glossary-term"
+        },
+        {
+          "section": "editorial.article-lede",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "cta.term-promo",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.related-terms",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.read-next-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/glossary/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "207-230",
+            "heading": "X2. Glossary term `/glossary/:slug` (347; samples `acid`, `ai`)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/GlossaryTerm.jsx",
+        "tag": "GlossaryTerm",
+        "lines": "11-38",
+        "id": "GlossaryTerm-jsx#GlossaryTerm"
+      }
+    },
+    {
+      "id": "author",
+      "title": "Author profile",
+      "family": "article",
+      "routes": [
+        "/authors/:slug"
+      ],
+      "sampleRoute": "/authors/antony-courtney",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.author",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.author-feed",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.subscribe-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/authors/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "308-328",
+            "heading": "X6. Author `/authors/:slug` (120; samples `alex-monahan` 31 items, `adi-polak` 1 item)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/Author.jsx",
+        "tag": "Author",
+        "lines": "8-18",
+        "id": "Author-jsx#Author"
+      }
+    },
+    {
+      "id": "learn-article",
+      "title": "Learn article",
+      "family": "article",
+      "routes": [
+        "/learn/:slug"
+      ],
+      "sampleRoute": "/learn/acid-transactions-sql",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.learn-article",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "navigation.article-toc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.start-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.read-next-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link",
+        "runtime.toc-fab"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/learn/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "329-353",
+            "heading": "X7. Learn article `/learn/:slug` (68; samples `acid-transactions-sql`, `best-analytics-db-"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/LearnArticle.jsx",
+        "tag": "LearnArticle",
+        "lines": "12-31",
+        "id": "LearnArticle-jsx#LearnArticle"
+      }
+    },
+    {
+      "id": "research-paper",
+      "title": "Research paper",
+      "family": "article",
+      "routes": [
+        "/research/:slug"
+      ],
+      "sampleRoute": "/research/declarative-caching-in-motherduck",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.research-paper",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "navigation.article-toc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.paper-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link",
+        "runtime.view-paper-fab"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/research/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "461-477",
+            "heading": "X11. Research paper `/research/:slug` (6; samples `declarative-caching-in-motherduck`, `mo"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/ResearchPaper.jsx",
+        "tag": "ResearchPaper",
+        "lines": "10-29",
+        "id": "ResearchPaper-jsx#ResearchPaper"
+      },
+      "notes": "PAGES_SPEC_EXTRA section 2 lists the floating \"View Paper\" geometry below XL as UNMEASURED."
+    },
+    {
+      "id": "book-chapter",
+      "title": "Book chapter summary",
+      "family": "article",
+      "routes": [
+        "/duckdb-book-summary-chapter1",
+        "/duckdb-book-summary-chapter2",
+        "/duckdb-book-summary-chapter3",
+        "/duckdb-book-summary-chapter4",
+        "/duckdb-book-summary-chapter5",
+        "/duckdb-book-summary-chapter6",
+        "/duckdb-book-summary-chapter7",
+        "/duckdb-book-summary-chapter8",
+        "/duckdb-book-summary-chapter9",
+        "/duckdb-book-summary-chapter10",
+        "/duckdb-book-summary-chapter11"
+      ],
+      "sampleRoute": "/duckdb-book-summary-chapter1",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.article-header",
+          "required": true,
+          "repeatable": false,
+          "variant": "book-chapter"
+        },
+        {
+          "section": "conversion.book-panel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.prose-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "navigation.chapter-sidebar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.read-ebook-bar",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/duckdb-book-summary-chapter1": "measured",
+          "/duckdb-book-summary-chapter2": "measured",
+          "/duckdb-book-summary-chapter3": "measured",
+          "/duckdb-book-summary-chapter4": "measured",
+          "/duckdb-book-summary-chapter5": "measured",
+          "/duckdb-book-summary-chapter6": "measured",
+          "/duckdb-book-summary-chapter7": "measured",
+          "/duckdb-book-summary-chapter8": "measured",
+          "/duckdb-book-summary-chapter9": "measured",
+          "/duckdb-book-summary-chapter10": "measured",
+          "/duckdb-book-summary-chapter11": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "733-753",
+            "heading": "X20. Book chapter summary `/duckdb-book-summary-chapter1` … `chapter11` (NEW)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/BookChapter.jsx",
+        "tag": "BookChapter",
+        "lines": "11-37",
+        "id": "BookChapter-jsx#BookChapter"
+      }
+    },
+    {
+      "id": "podcast-index",
+      "title": "Podcast index (dark)",
+      "family": "podcast",
+      "routes": [
+        "/explain-analyze"
+      ],
+      "sampleRoute": "/explain-analyze",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "variant": "dark"
+        },
+        {
+          "section": "hero.podcast",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.latest-episode",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.episode-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/explain-analyze": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "380-428",
+            "heading": "X9. Podcast index `/explain-analyze` (dark)"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/PodcastIndex.jsx",
+        "tag": "PodcastIndex",
+        "lines": "6-19",
+        "id": "PodcastIndex-jsx#PodcastIndex"
+      },
+      "notes": "Dark theme is set by the page (document.body.dataset.theme = dark) and scopes header overrides in src/styles/extra-media.css; the page-root noise texture is omitted (PAGES_SPEC_EXTRA section 2 allows it)."
+    },
+    {
+      "id": "podcast-episode",
+      "title": "Podcast episode (dark)",
+      "family": "podcast",
+      "routes": [
+        "/explain-analyze/:slug"
+      ],
+      "sampleRoute": "/explain-analyze/0001-ai-tooling-wars",
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "variant": "dark"
+        },
+        {
+          "section": "media.episode-player",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.episode-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.episode-unlock",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.episode-transcript",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.mega-menu",
+        "runtime.mobile-menu",
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "shell.header",
+        "footer": "shell.footer",
+        "mode": "site"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/explain-analyze/:slug": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "429-460",
+            "heading": "X10. Podcast episode `/explain-analyze/:slug` (11; samples `0001-ai-tooling-wars`, `0010-a"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/PodcastEpisode.jsx",
+        "tag": "PodcastEpisode",
+        "lines": "8-21",
+        "id": "PodcastEpisode-jsx#PodcastEpisode"
+      },
+      "notes": "PAGES_SPEC_EXTRA section 2 lists the behaviour after unlock and speed values after 1.25x as UNMEASURED."
+    },
+    {
+      "id": "try-app",
+      "title": "Static try-the-product app shell (no site chrome)",
+      "family": "app",
+      "routes": [
+        "/try"
+      ],
+      "sampleRoute": "/try",
+      "nodes": [
+        {
+          "section": "app.try-shell",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeUi": [
+        "runtime.skip-link"
+      ],
+      "chrome": {
+        "header": "none",
+        "footer": "none",
+        "mode": "none"
+      },
+      "evidence": {
+        "level": "measured",
+        "routeEvidence": {
+          "/try": "measured"
+        },
+        "specRefs": [
+          {
+            "doc": "PAGES_SPEC_EXTRA.md",
+            "lines": "60"
+          }
+        ]
+      },
+      "source": {
+        "file": "src/pages/extra/Try.jsx",
+        "tag": "Try",
+        "lines": "50-169",
+        "id": "Try-jsx#Try"
+      },
+      "notes": "Static, non-functional shell: no AI calls, no network requests (Try.jsx header comment). App.jsx BARE_PATHS renders /try without the site header or footer."
+    }
+  ]
+}

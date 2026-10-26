@@ -1,0 +1,34 @@
+{
+  "id": "tooltip",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Tooltip",
+  "purpose": "Dark tooltip with a small external-link icon and a CSS triangle nub; fades in on hover.",
+  "source": {
+    "file": "src/components/integrations/Tooltip.jsx",
+    "tag": "Tooltip",
+    "lines": "13-23",
+    "id": "Tooltip-jsx#Tooltip"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "label": "text(max 3 words)"
+  },
+  "tokens": [
+    "tooltip.background",
+    "tooltip.fadeMs"
+  ],
+  "states": [
+    "hidden",
+    "visible"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "452"
+      }
+    ]
+  }
+}

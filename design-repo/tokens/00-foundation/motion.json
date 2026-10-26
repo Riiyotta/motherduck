@@ -1,0 +1,197 @@
+{
+  "description": "Durations, easings and animation utilities; named patterns live in motion-patterns.json.",
+  "tokens": {
+    "duration.30": {
+      "value": "30ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "duration.60": {
+      "value": "60ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "duration.120": {
+      "value": "120ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "duration.125": {
+      "value": "125ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "duration.150": {
+      "value": "150ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "duration.200": {
+      "value": "200ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "duration.250": {
+      "value": "250ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "duration.300": {
+      "value": "300ms",
+      "type": "duration",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "173"
+      }
+    },
+    "easing.DEFAULT": {
+      "value": "ease-in-out",
+      "type": "easing",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "172"
+      }
+    },
+    "easing.in-out": {
+      "value": "ease-in-out",
+      "type": "easing",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "172"
+      }
+    },
+    "easing.in": {
+      "value": "ease-in",
+      "type": "easing",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "172"
+      }
+    },
+    "easing.out": {
+      "value": "ease-out",
+      "type": "easing",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "172"
+      }
+    },
+    "animation.spin-slow": {
+      "value": "spin-slow 54s linear infinite",
+      "type": "animation",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "179"
+      }
+    },
+    "animation.glow": {
+      "value": "glow 4s ease-in-out infinite alternate",
+      "type": "animation",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "180"
+      }
+    },
+    "animation.blink": {
+      "value": "blink 1s step-end infinite",
+      "type": "animation",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "181"
+      }
+    },
+    "animation.dropdown-in": {
+      "value": "dropdown-in 0.2s ease-out forwards",
+      "type": "animation",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "182"
+      }
+    },
+    "animation.wire-flow": {
+      "value": "wire-flow var(--wire-dur) linear infinite",
+      "type": "animation",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "184"
+      }
+    },
+    "animation.menu-drop": {
+      "value": "menu-drop 0.2s ease-out forwards",
+      "type": "animation",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "51"
+      }
+    },
+    "animation.feed-spin": {
+      "value": "feed-spin 1s linear infinite",
+      "type": "animation",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "52"
+      }
+    },
+    "animation.fab-pop": {
+      "value": "fab-pop 0.15s ease-out forwards",
+      "type": "animation",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "53"
+      }
+    },
+    "animation.sidebar-in": {
+      "value": "sidebar-in 250ms ease-out forwards",
+      "type": "animation",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "54"
+      }
+    },
+    "animation.modal-in": {
+      "value": "modal-in 200ms ease-out forwards",
+      "type": "animation",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "55"
+      }
+    },
+    "animation.sheet-in": {
+      "value": "sheet-in 200ms ease-out forwards",
+      "type": "animation",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "56"
+      }
+    },
+    "animation.caret-blink": {
+      "value": "caret-blink 1.1s ease-in-out infinite",
+      "type": "animation",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "57"
+      }
+    }
+  }
+}

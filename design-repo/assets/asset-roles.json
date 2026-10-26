@@ -1,0 +1,1100 @@
+{
+  "registryVersion": "1.0.0",
+  "availabilityEnum": [
+    "reference-only",
+    "generation-safe",
+    "blocked-for-generation"
+  ],
+  "generationPolicyEnum": [
+    "may-generate-new",
+    "must-not-reproduce",
+    "must-not-fabricate",
+    "must-not-reuse-live-endpoint",
+    "reference-copy-allowed"
+  ],
+  "description": "Closed assetRole enum derived from the real image slots in IMAGE_BRIEFS.md and ASSET_MANIFEST.md. reference-only roles may appear in reference-mode PageSpecs as evidence; blocked-for-generation roles must never be reproduced or fabricated; only generation-safe roles may appear in generated-mode PageSpecs.",
+  "sourceIsRealCompany": true,
+  "globalGuidance": {
+    "aiGeneration": "A generator must never reproduce, trace, imitate or fabricate the source company logos, customer or investor wordmarks, third-party tool marks, certification seals, mascot artwork, product screenshots, people photographs, book covers, embedded endpoints or any other proprietary asset. In generated mode only the generation-safe roles are allowed and every media field must carry one of them.",
+    "licensing": "The source is a live commercial site. IMAGE_BRIEFS.md and ASSET_MANIFEST.md instruct: do not download, use, trace or recreate the original files. The commercial typefaces (Aeonik Fono, Aeonik Mono) are likewise not to be downloaded; free substitutes are listed in tokens/00-foundation/typography.json.",
+    "cloneStandIns": "The clone itself ships two kinds of stand-in media: original SVG artwork (src/components/ui/art, including the original mascot Pip) and 91 free-licensed stranger photographs (public/assets/photos, attribution in CREDITS.md and CREDITS.json: CC BY, CC BY-SA, CC0, public domain, Unsplash). The photographs show real people; they are stand-ins for the portrait and team roles and must not be reused for generated pages. person-portrait and team-photo therefore stay blocked-for-generation."
+  },
+  "roles": [
+    {
+      "id": "customer-logo",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "origin": "source-slot",
+      "description": "Wordmarks of real customers shown in logo strips, quote cards, case cards and comparison bars.",
+      "generationSafeSubstitutes": [
+        "placeholder-logo-row",
+        "placeholder-brand-mark"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "17"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "19"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "24"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "26"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "80"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "82"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "84"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "143"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "161"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "167"
+        }
+      ],
+      "slotCount": 10,
+      "aiGenerationGuidance": "Never draw, trace, describe-and-render or otherwise reproduce a real company wordmark or logo. Use a placeholder wordmark box with invented text on an .example brand. Do not invent plausible customer names either.",
+      "licensingGuidance": "Real customer trademarks. The clone renders neutral placeholders; do not source the originals.",
+      "usedBySections": [
+        "comparison.vs-table",
+        "conversion.contact-split-form",
+        "conversion.webinar-register",
+        "hero.case-detail",
+        "hero.home",
+        "hero.split-form-lp",
+        "listing.case-grid",
+        "social-proof.case-quote-band",
+        "social-proof.case-study-carousel",
+        "social-proof.customer-case-grid",
+        "social-proof.logo-bar",
+        "social-proof.logo-marquee",
+        "social-proof.logo-strip",
+        "social-proof.quote-card",
+        "social-proof.quote-carousel",
+        "social-proof.quote-spotlight",
+        "social-proof.testimonial-carousel"
+      ]
+    },
+    {
+      "id": "investor-logo",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "origin": "source-slot",
+      "description": "Wordmarks of real investors shown on the about and startups pages.",
+      "generationSafeSubstitutes": [
+        "placeholder-logo-row"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "40"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "165"
+        }
+      ],
+      "slotCount": 2,
+      "aiGenerationGuidance": "Never draw, trace, describe-and-render or otherwise reproduce a real company wordmark or logo. Use a placeholder wordmark box with invented text on an .example brand.",
+      "licensingGuidance": "Real firm trademarks; never reproduce or imply endorsement.",
+      "usedBySections": [
+        "social-proof.investor-logos",
+        "social-proof.investors"
+      ]
+    },
+    {
+      "id": "partner-tool-logo",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "origin": "source-slot",
+      "description": "Third-party tool, language, agent, cloud and project marks (tool tiles, ecosystem partners, integration arc, repo cards, agent tabs).",
+      "generationSafeSubstitutes": [
+        "placeholder-logo-row",
+        "generic-ui-glyph"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "18"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "54"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "90"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "93"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "123"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "124"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "138"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "153"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "171"
+        }
+      ],
+      "slotCount": 9,
+      "aiGenerationGuidance": "Never draw, trace, describe-and-render or otherwise reproduce a real company wordmark or logo. Use a placeholder wordmark box with invented text on an .example brand. Agent-client and language marks are third-party trademarks.",
+      "licensingGuidance": "Third-party trademarks (ASSET_MANIFEST: use neutral glyphs). Do not redraw them.",
+      "usedBySections": [
+        "comparison.vs-table",
+        "conversion.webinar-register",
+        "editorial.partner-header",
+        "feature.agent-interfaces",
+        "feature.ecosystem-diagram",
+        "feature.integrations-arc",
+        "feature.integrations-bar",
+        "feature.isolated-compute",
+        "feature.platform-diagram",
+        "hero.split-form-lp",
+        "listing.eu-partners",
+        "listing.partner-grid",
+        "listing.repo-grid",
+        "pricing.instances"
+      ]
+    },
+    {
+      "id": "compliance-badge",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "origin": "source-slot",
+      "description": "Audit and certification seals in the footer.",
+      "generationSafeSubstitutes": [
+        "placeholder-badge"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "29"
+        }
+      ],
+      "slotCount": 1,
+      "aiGenerationGuidance": "Never fabricate a certification seal; a generated page may only show an obviously generic placeholder badge.",
+      "licensingGuidance": "Certification marks are issued by third parties; showing one without certification is misleading.",
+      "usedBySections": [
+        "editorial.trust-section",
+        "shell.footer"
+      ]
+    },
+    {
+      "id": "brand-wordmark",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reproduce",
+      "origin": "source-slot",
+      "description": "The source brand wordmark and duck mark (header, footer, comparison table, final CTA, logo marks).",
+      "generationSafeSubstitutes": [
+        "placeholder-brand-mark"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "64"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "154"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "160"
+        },
+        {
+          "file": "ASSET_MANIFEST.md",
+          "lines": "19"
+        }
+      ],
+      "slotCount": 4,
+      "aiGenerationGuidance": "Never reproduce the source logo or any look-alike. In generated mode use a text wordmark for the fictional brand.",
+      "licensingGuidance": "Source brand trademark. The clone itself uses a same-size placeholder SVG.",
+      "usedBySections": [
+        "shell.footer",
+        "shell.header",
+        "shell.lp-nav"
+      ]
+    },
+    {
+      "id": "company-mascot-art",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reproduce",
+      "origin": "source-slot",
+      "description": "The source company's duck mascot artwork and poses (hero art, section illustrations, FAQ and form decorations, animated character).",
+      "generationSafeSubstitutes": [
+        "fictional-mascot-placeholder"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "25"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "27"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "41"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "88"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "126"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "127"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "136"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "163"
+        }
+      ],
+      "slotCount": 8,
+      "aiGenerationGuidance": "Never reproduce, trace or imitate the source mascot or its poses. The clone replaces it with its own original character; generated pages use a new fictional mascot.",
+      "licensingGuidance": "Source copyrighted character art; not reusable under any mode other than the original owner.",
+      "usedBySections": [
+        "conversion.contact-form",
+        "cta.closing",
+        "cta.contact-band",
+        "editorial.blog-carousel",
+        "faq.accordion",
+        "feature.integrations-bar",
+        "feature.values-cards",
+        "hero.page-illustrated"
+      ]
+    },
+    {
+      "id": "clone-mascot-pip",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "Pip, the clone's own original mascot (a rounded data-block body with an antenna and stubby legs) that stands in for the source mascot in reference mode.",
+      "generationSafeSubstitutes": [
+        "fictional-mascot-placeholder"
+      ],
+      "evidence": [
+        {
+          "file": "src/components/ui/art/pip.jsx",
+          "lines": "1"
+        }
+      ],
+      "slotCount": 1,
+      "aiGenerationGuidance": "Pip is original to the clone. It may appear in reference-mode reconstructions; generated pages should use a new fictional mascot instead so they do not look like a copy of this site.",
+      "licensingGuidance": "Original art made for this clone; no third-party rights, but not intended as the generated-page default.",
+      "usedBySections": [
+        "conversion.contact-form",
+        "cta.closing",
+        "cta.contact-band",
+        "editorial.blog-carousel",
+        "faq.accordion",
+        "feature.integrations-bar",
+        "feature.values-cards"
+      ]
+    },
+    {
+      "id": "team-photo",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reproduce",
+      "origin": "source-slot",
+      "description": "Photographs of real colleagues and events (about page team photo, careers photos, event mixes).",
+      "generationSafeSubstitutes": [
+        "generated-photo-placeholder"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "39"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "43"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "44"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "45"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "46"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "50"
+        }
+      ],
+      "slotCount": 6,
+      "aiGenerationGuidance": "Never reproduce a real person photograph or generate a likeness of a real person. Use a fictional avatar or an abstract placeholder portrait.",
+      "licensingGuidance": "Photographs of identifiable real people; consent and copyright belong to the source.",
+      "usedBySections": [
+        "feature.how-we-work",
+        "hero.event-detail",
+        "hero.page-illustrated",
+        "media.photo-marquee",
+        "media.team-photo",
+        "media.video-feature"
+      ]
+    },
+    {
+      "id": "person-portrait",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reproduce",
+      "origin": "source-slot",
+      "description": "Portraits of real customers, employees, authors, judges, speakers and community members (headshots, name plates, avatars).",
+      "generationSafeSubstitutes": [
+        "fictional-person-avatar"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "51"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "60"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "81"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "83"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "125"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "142"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "172"
+        }
+      ],
+      "slotCount": 7,
+      "aiGenerationGuidance": "Never reproduce a real person photograph or generate a likeness of a real person. Use a fictional avatar or an abstract placeholder portrait.",
+      "licensingGuidance": "Likenesses of identifiable real people; never reproduce or imitate.",
+      "usedBySections": [
+        "editorial.event-description",
+        "hero.author",
+        "lp.authors",
+        "lp.judges",
+        "social-proof.case-quote-band",
+        "social-proof.case-study-carousel",
+        "social-proof.social-carousel",
+        "social-proof.testimonial-carousel",
+        "social-proof.testimonials"
+      ]
+    },
+    {
+      "id": "product-screenshot",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "Screenshots of the real product UI and of user-built apps.",
+      "generationSafeSubstitutes": [
+        "generated-product-visual"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "23"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "42"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "59"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "98"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "130"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "134"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "135"
+        }
+      ],
+      "slotCount": 7,
+      "aiGenerationGuidance": "Do not reproduce real product screenshots in generated mode; generate an invented interface.",
+      "licensingGuidance": "Real product UI is proprietary; the clone uses same-size placeholders.",
+      "usedBySections": [
+        "cta.community-join",
+        "editorial.dive-card",
+        "editorial.prose-chapter",
+        "feature.alternating-rows",
+        "feature.browser-window-demo",
+        "feature.persona-split-rows",
+        "feature.product-card-trio",
+        "feature.split-media",
+        "feature.sticky-stack",
+        "hero.dive-gallery",
+        "hero.home",
+        "hero.hypertenancy-dark",
+        "hero.lp-cover",
+        "hero.persona-landing",
+        "hero.split-product",
+        "listing.dive-grid",
+        "listing.gallery-row",
+        "listing.gallery-teaser",
+        "lp.whats-a-dive",
+        "media.media-frame",
+        "social-proof.industry-swiper"
+      ]
+    },
+    {
+      "id": "video-thumbnail",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "Video and webinar thumbnails and posters, often with real presenters.",
+      "generationSafeSubstitutes": [
+        "generated-video-poster"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "47"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "85"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "86"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "109"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "117"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "133"
+        }
+      ],
+      "slotCount": 6,
+      "aiGenerationGuidance": "Do not recreate real presenter thumbnails; generate an abstract poster with invented text.",
+      "licensingGuidance": "Thumbnails show real people and branded frames.",
+      "usedBySections": [
+        "editorial.blog-carousel",
+        "editorial.read-next-carousel",
+        "hero.persona",
+        "listing.author-feed",
+        "listing.eu-webinars",
+        "listing.featured-video",
+        "listing.latest-episode",
+        "listing.related-videos",
+        "listing.video-grid",
+        "media.episode-player",
+        "media.video-feature",
+        "media.video-frame",
+        "media.video-player-frame"
+      ]
+    },
+    {
+      "id": "editorial-thumbnail",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "House-style editorial graphics for blog, news and resource cards.",
+      "generationSafeSubstitutes": [
+        "generated-illustration"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "28"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "72"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "73"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "77"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "146"
+        }
+      ],
+      "slotCount": 5,
+      "aiGenerationGuidance": "Create new graphics; do not trace the source house style characters.",
+      "licensingGuidance": "Source editorial artwork.",
+      "usedBySections": [
+        "editorial.blog-carousel",
+        "editorial.read-next-carousel",
+        "listing.author-feed",
+        "listing.eu-posts",
+        "listing.featured-post",
+        "listing.post-grid",
+        "listing.read-next-grid",
+        "listing.resource-carousel"
+      ]
+    },
+    {
+      "id": "spot-illustration",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "House-style spot illustrations and icons (feature cards, split rows, hero art, learn cards).",
+      "generationSafeSubstitutes": [
+        "generated-illustration",
+        "generic-ui-glyph"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "20"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "22"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "37"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "38"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "48"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "49"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "52"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "53"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "55"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "56"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "57"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "74"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "94"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "110"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "116"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "118"
+        }
+      ],
+      "slotCount": 16,
+      "aiGenerationGuidance": "Draw original flat illustrations; do not copy the source characters.",
+      "licensingGuidance": "Source illustrations; reference mode only.",
+      "usedBySections": [
+        "conversion.subscribe-band",
+        "conversion.subscribe-inline-banner",
+        "cta.closing",
+        "cta.speaker-banner",
+        "cta.yellow-callout",
+        "editorial.origin-story",
+        "feature.agent-card-carousel",
+        "feature.benefits-card",
+        "feature.dark-features",
+        "feature.feature-grid",
+        "feature.old-world-new-world",
+        "feature.persona-split-rows",
+        "feature.persona-split-sticky",
+        "feature.product-card-trio",
+        "feature.program-benefits",
+        "feature.security-split",
+        "feature.sticky-stack",
+        "feature.support-cards",
+        "feature.use-case-split",
+        "feature.values-cards",
+        "hero.page-illustrated",
+        "hero.persona",
+        "listing.jobs-board",
+        "listing.learn-grid",
+        "lp.card-band"
+      ]
+    },
+    {
+      "id": "book-cover",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "Report, guide and book cover art (tilted LP cover, offer card, thumbnails).",
+      "generationSafeSubstitutes": [
+        "generated-book-cover"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "58"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "61"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "63"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "145"
+        }
+      ],
+      "slotCount": 4,
+      "aiGenerationGuidance": "Generate a new cover with an invented title; never reproduce a publisher cover.",
+      "licensingGuidance": "Publisher and source cover art.",
+      "usedBySections": [
+        "conversion.book-offer",
+        "conversion.book-panel",
+        "conversion.gated-form",
+        "conversion.newsletter-signup",
+        "feature.sneak-peek",
+        "hero.lp-cover"
+      ]
+    },
+    {
+      "id": "architecture-diagram",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "System and architecture diagrams, often containing the mascot and real product names.",
+      "generationSafeSubstitutes": [
+        "generated-diagram"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "119"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "120"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "132"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "147"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "149"
+        }
+      ],
+      "slotCount": 5,
+      "aiGenerationGuidance": "Draw a new generic diagram with invented labels.",
+      "licensingGuidance": "Diagrams carry source product naming and mascot art.",
+      "usedBySections": [
+        "feature.alternating-rows",
+        "feature.architecture-panel",
+        "feature.format-compare",
+        "feature.isolated-compute",
+        "feature.old-world-new-world",
+        "feature.split-media",
+        "hero.hypertenancy-dark",
+        "hero.persona-landing",
+        "media.media-frame"
+      ]
+    },
+    {
+      "id": "chart-figure",
+      "availability": "reference-only",
+      "generationPolicy": "reference-copy-allowed",
+      "origin": "source-slot",
+      "description": "In-prose charts and benchmark charts.",
+      "generationSafeSubstitutes": [
+        "generated-chart"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "78"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "137"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "162"
+        }
+      ],
+      "slotCount": 3,
+      "aiGenerationGuidance": "Generate charts from invented data only; never present source benchmark numbers.",
+      "licensingGuidance": "Charts contain source measurement claims.",
+      "usedBySections": [
+        "comparison.benchmark-panel",
+        "editorial.prose-chapter",
+        "feature.browser-window-demo",
+        "listing.paper-list"
+      ]
+    },
+    {
+      "id": "embedded-app",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "origin": "source-slot",
+      "description": "Live third-party iframes: interactive app sandboxes, video and audio players (not loaded in the clone).",
+      "generationSafeSubstitutes": [
+        "placeholder-embed"
+      ],
+      "evidence": [
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "79"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "122"
+        },
+        {
+          "file": "IMAGE_BRIEFS.md",
+          "lines": "134"
+        }
+      ],
+      "slotCount": 3,
+      "aiGenerationGuidance": "Never embed a live source endpoint (app sandbox, player or form). Use a static placeholder frame.",
+      "licensingGuidance": "Live endpoints belong to the source or to video platforms; embedding them from a generated page is out of scope.",
+      "usedBySections": [
+        "editorial.dive-card",
+        "media.embed-frame",
+        "media.episode-player",
+        "media.live-embed",
+        "media.video-player-frame"
+      ]
+    },
+    {
+      "id": "generic-ui-glyph",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "source-slot",
+      "description": "Generic arrows, chevrons, social glyphs and shapes that carry no trademark (clone share glyphs, cloud outlines, doodles).",
+      "generationSafeSubstitutes": [],
+      "evidence": [
+        {
+          "file": "ASSET_MANIFEST.md",
+          "lines": "20"
+        },
+        {
+          "file": "ASSET_MANIFEST.md",
+          "lines": "23"
+        }
+      ],
+      "slotCount": 2,
+      "aiGenerationGuidance": "May be redrawn freely; keep them generic.",
+      "licensingGuidance": "Generic shapes; the manifest says to redraw them.",
+      "usedBySections": [
+        "feature.agent-interfaces",
+        "feature.dark-features",
+        "feature.feature-grid",
+        "feature.isolated-compute",
+        "feature.persona-split-rows",
+        "lp.card-band"
+      ]
+    },
+    {
+      "id": "placeholder-brand-mark",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Placeholder or user-supplied wordmark/logo for the fictional brand (text wordmark on an .example brand).",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "placeholder-logo-row",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Row of obviously placeholder logo boxes (\"Logo 1\") used where the source shows customer, investor or tool logos.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "placeholder-badge",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Obviously generic placeholder badge (no certification claim).",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "fictional-person-avatar",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Fictional avatar or abstract portrait for an invented person.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "generated-photo-placeholder",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Neutral generated or stock-free photo placeholder (flat colour or abstract image) with no identifiable person.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "generated-product-visual",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Original generated product interface visual for an invented product.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "generated-video-poster",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Original abstract video poster with invented title text.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "generated-illustration",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Original flat illustration or editorial graphic.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "generated-book-cover",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Original cover with an invented title.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "generated-diagram",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Original generic architecture diagram with invented labels.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "generated-chart",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Chart drawn from invented data.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "fictional-mascot-placeholder",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "A new fictional mascot or a neutral shape in place of any mascot.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "placeholder-embed",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Static placeholder frame standing in for an embed.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "placeholder-rating",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Obviously placeholder rating (for example \"4.0 / 5 (sample)\"). No ratings were observed in the source; the role exists so rating leakage can be policed symmetrically (R2).",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "placeholder-url",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Link to a reserved .example or .invalid domain, or an in-page anchor.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    },
+    {
+      "id": "original-copy",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "origin": "generation-substitute",
+      "description": "Newly written copy that does not reproduce any source heading, tagline, claim, statistic or testimonial.",
+      "generationSafeSubstitutes": [],
+      "evidence": [],
+      "slotCount": 0,
+      "aiGenerationGuidance": "Safe for generated mode. Keep it obviously fictional or placeholder.",
+      "licensingGuidance": "Original or placeholder material created for the generated page; no third-party rights involved.",
+      "usedBySections": []
+    }
+  ]
+}

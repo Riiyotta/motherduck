@@ -1,0 +1,97 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "cta.closing",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Careers closing call-to-action",
+  "purpose": "Closing heading, action and illustration.",
+  "source": {
+    "file": "src/components/company/careers.jsx",
+    "tag": "ClosingCTA",
+    "lines": "536-550",
+    "id": "careers-jsx#ClosingCTA"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "cta.closing",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 25,
+        "required": false
+      },
+      "action": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "art": {
+        "type": "asset",
+        "roles": [
+          "company-mascot-art",
+          "clone-mascot-pip",
+          "spot-illustration"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-animate-in"
+    ],
+    "default": "scroll-animate-in",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "fictional-mascot-placeholder",
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_COMPANY.md",
+        "lines": "231-233",
+        "heading": "B8. `ClosingCTA` [NEW] (Careers \"Can't find the role\")"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "careers"
+  ],
+  "tags": []
+}

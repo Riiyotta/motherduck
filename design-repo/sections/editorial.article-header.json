@@ -1,0 +1,150 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.article-header",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Article header",
+  "purpose": "Back link, title, topic chips, date/read time and byline for an article-like page (blog post, glossary term, book chapter, prose page).",
+  "source": {
+    "file": "src/pages/content/BlogPost.jsx",
+    "tag": "Hero",
+    "lines": "36-61",
+    "id": "BlogPost-jsx#Hero"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/bookChapter.jsx",
+      "tag": "ChapterHeader",
+      "lines": "66-73",
+      "id": "bookChapter-jsx#ChapterHeader"
+    },
+    {
+      "file": "src/pages/content/CommunityCode.jsx",
+      "tag": "CommunityCode",
+      "lines": "9-20",
+      "id": "CommunityCode-jsx#CommunityCode"
+    },
+    {
+      "file": "src/pages/extra/GlossaryTerm.jsx",
+      "tag": "GlossaryTerm",
+      "lines": "11-38",
+      "id": "GlossaryTerm-jsx#GlossaryTerm"
+    }
+  ],
+  "semantic": {
+    "id": "editorial.article-header",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "backLink": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": false
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true
+      },
+      "tags": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "date": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false
+      },
+      "readMinutes": {
+        "type": "number",
+        "min": 1,
+        "max": 60,
+        "required": false
+      },
+      "authors": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 4,
+        "item": {
+          "name": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": false
+      },
+      "updated": {
+        "type": "text",
+        "maxWords": 5,
+        "required": false
+      },
+      "share": {
+        "type": "boolean",
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "blog-post",
+    "glossary-term",
+    "book-chapter",
+    "prose-page"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "259-295",
+        "heading": "B1. `ArticleLayout` (L2) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-post",
+    "book-chapter",
+    "community-code",
+    "glossary-term"
+  ],
+  "tags": [],
+  "notes": "Title budget 14w = the largest title shape (exactTitle 69ch video titles); article body is never part of this contract."
+}

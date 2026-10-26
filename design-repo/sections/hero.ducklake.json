@@ -1,0 +1,100 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.ducklake",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Table-format product hero",
+  "purpose": "Page-opening sun hero: status chip, two-line heading, lede and two actions.",
+  "source": {
+    "file": "src/components/marketing/ducklake.jsx",
+    "tag": "DuckLakeHero",
+    "lines": "91-109",
+    "id": "ducklake-jsx#DuckLakeHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.ducklake",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "chip": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "status": {
+        "type": "text",
+        "maxWords": 2,
+        "required": false
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 33,
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 3,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "sun"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B16"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "300-321",
+        "heading": "B16. DuckLake-only blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-ducklake"
+  ],
+  "tags": [],
+  "notes": "The original DuckLakeHero component returns two sections; the second one (heading + code panel on a gradient) is the separate media.code-panel-band contract."
+}

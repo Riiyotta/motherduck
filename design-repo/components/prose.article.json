@@ -1,0 +1,44 @@
+{
+  "id": "prose.article",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Article prose",
+  "purpose": "Typographic block renderer for long-form content: headings, paragraphs, lists, code, figures, callouts, quotes.",
+  "source": {
+    "file": "src/components/content/ArticleProse.jsx",
+    "tag": "ArticleProse",
+    "lines": "135-141",
+    "id": "ArticleProse-jsx#ArticleProse"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/proseExtras.jsx",
+      "tag": "Admonition",
+      "lines": "21-33",
+      "id": "proseExtras-jsx#Admonition"
+    },
+    {
+      "file": "src/components/extra/proseExtras.jsx",
+      "tag": "Footnotes",
+      "lines": "39-52",
+      "id": "proseExtras-jsx#Footnotes"
+    }
+  ],
+  "props": {
+    "blocks": "list"
+  },
+  "tokens": [
+    "code.bg"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "637-676",
+        "heading": "6. `ArticleProse`: full prose styles"
+      }
+    ]
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "shell.footer",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Site footer",
+  "purpose": "Dark footer: brand column with social icons, four link columns with recent-session links, legal links and compliance badges.",
+  "source": {
+    "file": "src/components/Footer.jsx",
+    "tag": "Footer",
+    "lines": "37-104",
+    "id": "Footer-jsx#Footer"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "shell.footer",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "logo": {
+        "type": "asset",
+        "roles": [
+          "brand-wordmark"
+        ],
+        "required": true
+      },
+      "social": {
+        "type": "list",
+        "minItems": 6,
+        "maxItems": 6,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 1,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "columns": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "groups": {
+            "type": "list",
+            "minItems": 1,
+            "maxItems": 2,
+            "item": {
+              "heading": {
+                "type": "text",
+                "maxWords": 4,
+                "required": true
+              },
+              "links": {
+                "type": "list",
+                "minItems": 2,
+                "maxItems": 15,
+                "item": {
+                  "label": {
+                    "type": "text",
+                    "maxWords": 14,
+                    "required": true
+                  },
+                  "href": {
+                    "type": "link",
+                    "labelMaxWords": 14,
+                    "required": true
+                  }
+                },
+                "required": true
+              }
+            },
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "poweredByLine": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "legalLinks": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "badges": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "img": {
+            "type": "asset",
+            "roles": [
+              "compliance-badge"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift",
+      "none"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 4,
+      "lg": 4,
+      "md": 4,
+      "sm": 2
+    },
+    "stackBelowPx": 960,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 10: 4 link columns at >=728, 2 columns below"
+  },
+  "generatedAssetRoles": [
+    "placeholder-badge",
+    "placeholder-brand-mark"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "546-563",
+        "heading": "10. Footer (bg **#383838**, text white)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "about",
+    "author",
+    "azure-waitlist",
+    "blog-index",
+    "blog-post",
+    "book-brief",
+    "book-chapter",
+    "careers",
+    "case-detail",
+    "case-index",
+    "community-code",
+    "community-oss",
+    "contact-chooser",
+    "contact-form",
+    "ecosystem-detail",
+    "ecosystem-index",
+    "eu-region",
+    "event-detail",
+    "events-index",
+    "events-past",
+    "gated-lp",
+    "glossary-index",
+    "glossary-term",
+    "home",
+    "learn-article",
+    "learn-index",
+    "legal-plain",
+    "legal-toc",
+    "lp-divemaxxing",
+    "lp-ducklake-full",
+    "lp-jev",
+    "news-index",
+    "persona-landing",
+    "podcast-episode",
+    "podcast-index",
+    "pricing",
+    "pricing-support",
+    "product-ducklake",
+    "product-feature",
+    "product-hypertenancy",
+    "product-overview",
+    "product-persona",
+    "prose-sidebar-form",
+    "quack-index",
+    "research-index",
+    "research-paper",
+    "split-form-lp",
+    "startups",
+    "support-hub",
+    "trust-security",
+    "video-detail",
+    "video-index",
+    "vs-comparison",
+    "vs-index",
+    "webinar-detail"
+  ],
+  "tags": [],
+  "notes": "Footer is hidden on /try (bare), /dive-gallery* (own footer) and the book LP with its own nav."
+}

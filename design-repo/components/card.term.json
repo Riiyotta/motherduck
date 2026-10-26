@@ -1,0 +1,33 @@
+{
+  "id": "card.term",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Glossary term card",
+  "purpose": "Term card with summary.",
+  "source": {
+    "file": "src/components/extra/glossary.jsx",
+    "tag": "TermCard",
+    "lines": "10-20",
+    "id": "glossary-jsx#TermCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "term": "text(max 4 words)",
+    "summary": "text(max 30 words)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "175-206",
+        "heading": "X1. Glossary index `/glossary`"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift"
+  ]
+}

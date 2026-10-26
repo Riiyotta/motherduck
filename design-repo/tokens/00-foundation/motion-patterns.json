@@ -1,0 +1,1034 @@
+{
+  "description": "Closed catalog of motion patterns, quoted from the measured specs and the implemented CSS. Contract motion.allowedPatterns and PageSpec node.motion.pattern draw from this list. originalReducedMotion records what the ORIGINAL does under prefers-reduced-motion (disabled, paused, kept, unmeasured); node.motion.reducedMotionFallback is what a generated page does.",
+  "reducedMotionFallbackEnum": [
+    "static",
+    "paused",
+    "instant",
+    "unchanged-measured"
+  ],
+  "patterns": [
+    {
+      "id": "none",
+      "title": "No motion",
+      "trigger": "none",
+      "durationMs": null,
+      "easing": "none",
+      "delayMs": 0,
+      "iterations": "none",
+      "originalReducedMotion": "not-applicable",
+      "params": {},
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "595",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "offset-lift",
+      "title": "Offset-shadow lift on hover, return on press",
+      "trigger": "hover",
+      "durationMs": 120,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "pressDurationMs": [
+          30,
+          60
+        ],
+        "liftPx": {
+          "button": 7,
+          "quoteCard": 15,
+          "productCard": 10,
+          "agentCard": 10,
+          "customerCard": 14,
+          "blogCard": 14,
+          "integrationTile": 3,
+          "toolTile": 2
+        },
+        "activeFrom": "960px for cards, always for buttons"
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "241-247",
+          "note": "button hover translate(7px,-7px) 120ms / 30ms"
+        },
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "564-599",
+          "note": "card lifts rows 5-12"
+        },
+        {
+          "file": "src/index.css",
+          "lines": "52-58",
+          "note": "implemented lift CSS"
+        }
+      ]
+    },
+    {
+      "id": "tooltip-fade",
+      "title": "Tooltip opacity fade",
+      "trigger": "hover",
+      "durationMs": 150,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "property": "opacity",
+        "from": 0,
+        "to": 1
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "580",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "dropdown-enter",
+      "title": "Mega menu dropdown enter",
+      "trigger": "click",
+      "durationMs": 200,
+      "easing": "ease-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "keyframes": "dropdown-in",
+        "topFrom": "100%",
+        "topTo": "calc(100% + 16px)",
+        "chevronRotateDeg": 180
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "569",
+          "note": ""
+        },
+        {
+          "file": "src/index.css",
+          "lines": "130-134",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "accordion-single-open",
+      "title": "Single-open accordion expand",
+      "trigger": "click",
+      "durationMs": 250,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "cardBackgroundShadowMs": 200,
+        "bodyMaxHeightMs": 250,
+        "singleOpen": true
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "582",
+          "note": ""
+        },
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "324-332",
+          "note": "Accordion (single-open, click toggles; no auto-advance)"
+        }
+      ]
+    },
+    {
+      "id": "faq-multi-open",
+      "title": "FAQ row expand (multiple open)",
+      "trigger": "click",
+      "durationMs": 250,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "chevronMs": 200,
+        "bodyMs": 250,
+        "rowBackgroundMs": 200,
+        "chevronRotateDeg": 180,
+        "multipleOpen": true
+      },
+      "evidence": [
+        {
+          "file": "PAGES_SPEC_MARKETING.md",
+          "lines": "116",
+          "note": ""
+        },
+        {
+          "file": "src/components/marketing/FAQ.jsx",
+          "lines": "80-81",
+          "note": "implemented body transition"
+        }
+      ]
+    },
+    {
+      "id": "wire-flow",
+      "title": "Animated wire dashes",
+      "trigger": "always",
+      "durationMs": 312.5,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "wires": {
+          "agents": 312.5,
+          "you": 625,
+          "teammate": 1250,
+          "dbtPipeline": 2500
+        },
+        "durationUnit": "ms",
+        "inViewGatingRootMarginPx": 200,
+        "property": "stroke-dashoffset"
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "344",
+          "note": "per-wire durations"
+        },
+        {
+          "file": "src/index.css",
+          "lines": "162-180",
+          "note": "reduced motion hides pulse layers"
+        }
+      ]
+    },
+    {
+      "id": "sun-rotate",
+      "title": "Sun rays rotation",
+      "trigger": "always",
+      "durationMs": 54000,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "property": "transform rotate",
+        "degrees": 360
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "586",
+          "note": ""
+        },
+        {
+          "file": "src/index.css",
+          "lines": "116-119",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "glow-pulse",
+      "title": "Orange glow pulse",
+      "trigger": "always",
+      "durationMs": 4000,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "infinite alternate",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "opacityFrom": 0,
+        "opacityTo": 0.6
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "587",
+          "note": ""
+        },
+        {
+          "file": "src/index.css",
+          "lines": "120-124",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "caret-blink",
+      "title": "Terminal caret blink",
+      "trigger": "always",
+      "durationMs": 1000,
+      "easing": "steps(1)",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "keyframes": "blink"
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "589",
+          "note": ""
+        },
+        {
+          "file": "src/index.css",
+          "lines": "125-129",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "typing-sim",
+      "title": "Scripted typing simulation",
+      "trigger": "scroll-into-view",
+      "durationMs": 5000,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "timelineMs": {
+          "step1Appears": 500,
+          "step2Streams": 1000,
+          "toolCardAppears": 2100,
+          "answerStreams": 3000,
+          "done": 5000
+        },
+        "charsPerSecond": {
+          "narration": 65,
+          "sql": 180,
+          "answer": 60
+        },
+        "replaysOnTabSwitch": true,
+        "heroStartsOnLoad": true,
+        "agentTerminalStartsInView": true
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "289",
+          "note": ""
+        },
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "588",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "dither-canvas",
+      "title": "Dither strip canvas",
+      "trigger": "always",
+      "durationMs": null,
+      "easing": "requestAnimationFrame",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "bufferPx": "181x60",
+        "pixelColor": "#F9EE3E",
+        "algorithm": "UNMEASURED"
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "590",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "carousel-swipe",
+      "title": "Swiper slide transition",
+      "trigger": "click",
+      "durationMs": 300,
+      "easing": "ease",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "breakpointsSlidesPerView": {
+          "0": 1,
+          "500": 1.5,
+          "728": 2,
+          "960": 2.5,
+          "1302": 3.35
+        },
+        "loop": false
+      },
+      "evidence": [
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "591",
+          "note": ""
+        },
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "524-545",
+          "note": "9. Blog / \"fresh\" section (bg **#F9EE3E**, `border-bottom:2px solid #383838`)"
+        }
+      ]
+    },
+    {
+      "id": "carousel-autoplay",
+      "title": "Carousel autoplay",
+      "trigger": "time",
+      "durationMs": 7500,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "paused",
+      "params": {
+        "instances": {
+          "quote": {
+            "intervalMs": 7500,
+            "transitionMs": 400,
+            "transition": "fade"
+          },
+          "agentCards": {
+            "intervalMs": 5500,
+            "transitionMs": 400
+          },
+          "socialPosts": {
+            "intervalMs": 6000,
+            "transitionMs": 500
+          },
+          "industrySwiper": {
+            "intervalMs": 6000,
+            "transitionMs": 400
+          }
+        }
+      },
+      "evidence": [
+        {
+          "file": "src/components/marketing/QuoteCarousel.jsx",
+          "lines": "9",
+          "note": ""
+        },
+        {
+          "file": "src/components/marketing/overview.jsx",
+          "lines": "101-102",
+          "note": ""
+        },
+        {
+          "file": "src/components/marketing/bespoke.jsx",
+          "lines": "474-475",
+          "note": ""
+        },
+        {
+          "file": "src/components/extra/persona2.jsx",
+          "lines": "216-217",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "sticky-stack-scrub",
+      "title": "Scroll-driven sticky stack",
+      "trigger": "scroll-linked",
+      "durationMs": null,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "scrub",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "timeline": "view-timeline",
+        "slide": "translate 0 1000px to 0",
+        "scaleEndDefault": 0.9,
+        "fill": "both"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/marketing.css",
+          "lines": "47-65",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "story-scale-scrub",
+      "title": "Story art scale scrub",
+      "trigger": "scroll-linked",
+      "durationMs": null,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "scrub",
+      "originalReducedMotion": "kept",
+      "params": {
+        "timeline": "view-timeline on the portal box",
+        "panel1": {
+          "scaleFrom": 0.9,
+          "scaleTo": 0,
+          "range": "cover -10% cover 40%"
+        },
+        "panel2": {
+          "scaleFrom": 0,
+          "scaleTo": 1.1,
+          "range": "cover 20% cover 80%"
+        },
+        "minWidthPx": 728,
+        "viewTimelineInsetPx": {
+          "lt1302": 70,
+          "gte1302": 80
+        }
+      },
+      "evidence": [
+        {
+          "file": "src/styles/marketing.css",
+          "lines": "71-93",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "float-bob",
+      "title": "Vertical bob",
+      "trigger": "always",
+      "durationMs": 3000,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "kept",
+      "params": {
+        "translateYPx": [
+          -8,
+          8
+        ]
+      },
+      "evidence": [
+        {
+          "file": "src/styles/marketing.css",
+          "lines": "7-13",
+          "note": "the original keeps it running under reduced motion (CSS comment)"
+        }
+      ]
+    },
+    {
+      "id": "float-drift",
+      "title": "Floating drift with rotation",
+      "trigger": "always",
+      "durationMs": null,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "paused",
+      "params": {
+        "translateYPx": [
+          0,
+          -20
+        ],
+        "rotate": "per element via --float-rotate",
+        "duration": "per element via --float-dur"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/marketing.css",
+          "lines": "15-20",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "fade-swap",
+      "title": "Fade out/in swap",
+      "trigger": "click",
+      "durationMs": 400,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "fadeOutHalf": true
+      },
+      "evidence": [
+        {
+          "file": "src/styles/marketing.css",
+          "lines": "33-35",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "reveal-up",
+      "title": "Reveal up on scroll",
+      "trigger": "scroll-into-view",
+      "durationMs": 500,
+      "easing": "ease",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "translateYPx": 100,
+        "opacityFrom": 0
+      },
+      "evidence": [
+        {
+          "file": "src/styles/marketing.css",
+          "lines": "36-46",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "scroll-animate-in",
+      "title": "Careers scroll-in",
+      "trigger": "scroll-into-view",
+      "durationMs": 400,
+      "easing": "ease",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "translatePx": 100,
+        "durationsMs": [
+          400,
+          800,
+          1200,
+          1600,
+          750,
+          1000
+        ],
+        "firesPxFromViewportTop": 750
+      },
+      "evidence": [
+        {
+          "file": "PAGES_SPEC_COMPANY.md",
+          "lines": "381-403",
+          "note": "6. Motion summary (everything else is static)"
+        }
+      ]
+    },
+    {
+      "id": "parallax-scroll",
+      "title": "Scroll parallax",
+      "trigger": "scroll-linked",
+      "durationMs": null,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "scrub",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "translateYRangePx": "from -Y to +Y while crossing the viewport",
+        "opacityTransitionMs": 300
+      },
+      "evidence": [
+        {
+          "file": "PAGES_SPEC_COMPANY.md",
+          "lines": "381-403",
+          "note": "6. Motion summary (everything else is static)"
+        },
+        {
+          "file": "src/components/company/motion.jsx",
+          "lines": "37-41",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "marquee-scroll",
+      "title": "Continuous horizontal scroll",
+      "trigger": "always",
+      "durationMs": null,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "speedPxPerSecond": 60
+      },
+      "evidence": [
+        {
+          "file": "PAGES_SPEC_COMPANY.md",
+          "lines": "381-403",
+          "note": "6. Motion summary (everything else is static)"
+        }
+      ]
+    },
+    {
+      "id": "feature-rise",
+      "title": "Feature list rise",
+      "trigger": "scroll-into-view",
+      "durationMs": 450,
+      "easing": "cubic-bezier(0.34, 1.4, 0.64, 1)",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "translateYPx": 12,
+        "staggerMs": 80,
+        "revealOffsetMs": {
+          "inViewAtLoad": 1480,
+          "scrolledTo": 0
+        }
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "41-42",
+          "note": ""
+        },
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "36-41",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "hero-window-in",
+      "title": "Hero window enter",
+      "trigger": "load",
+      "durationMs": 360,
+      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "delayMs": 420,
+      "iterations": "once",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "translateYPx": 10,
+        "opacityFrom": 0
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "40-41",
+          "note": ""
+        },
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "43-44",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "flicker",
+      "title": "Landing flicker",
+      "trigger": "always",
+      "durationMs": 6000,
+      "easing": "steps(1)",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "keyframes": "xm-jv-flick",
+        "opacityDips": [
+          0.82,
+          0.95
+        ]
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "77-78",
+          "note": ""
+        },
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "87-88",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "jev-type",
+      "title": "Typed text loop",
+      "trigger": "always",
+      "durationMs": 7000,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "keyframes": "xm-jv-type"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "78-83",
+          "note": ""
+        },
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "84-85",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "jev-cursor-blink",
+      "title": "Calculator cursor blink",
+      "trigger": "always",
+      "durationMs": 1050,
+      "easing": "steps(1)",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "keyframes": "xm-jv-cur"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "83-84",
+          "note": ""
+        },
+        {
+          "file": "src/styles/extra-marketing.css",
+          "lines": "85-86",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "cursor-blink-steps",
+      "title": "Podcast block cursor blink",
+      "trigger": "always",
+      "durationMs": 1050,
+      "easing": "steps(2, start)",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "keyframes": "ea-cursor-block"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-media.css",
+          "lines": "55-60",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "modal-rise",
+      "title": "Modal content rise",
+      "trigger": "click",
+      "durationMs": 200,
+      "easing": "ease-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "kept",
+      "params": {
+        "translateYPx": 32,
+        "opacityFrom": 0,
+        "overlay": "appears instantly"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-media.css",
+          "lines": "61-67",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "bar-slide",
+      "title": "Bar / drawer slide",
+      "trigger": "scroll-linked",
+      "durationMs": 200,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "kept",
+      "params": {
+        "mobileMenuPanel": "right 200ms ease-in-out, opacity 500ms ease-in-out",
+        "registerBar": "slides by its own height; opacity flips after the slide-out ends"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-media.css",
+          "lines": "69-72",
+          "note": ""
+        },
+        {
+          "file": "CLONE_SPEC.md",
+          "lines": "570",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "typewriter-h1",
+      "title": "Typewriter heading",
+      "trigger": "load",
+      "durationMs": 800,
+      "easing": "steps(var(--type-steps))",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "keyframes": [
+          "type-in",
+          "caret-cover"
+        ],
+        "caretCoverMs": 853.333,
+        "caretBlinkMs": 1100,
+        "caretBlinkEasing": "ease-in-out"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/content.css",
+          "lines": "6-11",
+          "note": ""
+        },
+        {
+          "file": "src/styles/content.css",
+          "lines": "85-86",
+          "note": ""
+        },
+        {
+          "file": "src/styles/content.css",
+          "lines": "387-392",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "fab-pop",
+      "title": "Floating button pop",
+      "trigger": "scroll-into-view",
+      "durationMs": 150,
+      "easing": "ease-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "disabled",
+      "params": {
+        "keyframes": "fab-pop"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/content.css",
+          "lines": "29-33",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "sheet-in",
+      "title": "Bottom sheet enter",
+      "trigger": "click",
+      "durationMs": 200,
+      "easing": "ease-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "keyframes": "sheet-in"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/content.css",
+          "lines": "43-47",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "reveal-popover",
+      "title": "Reveal popover in/out",
+      "trigger": "click",
+      "durationMs": 250,
+      "easing": "ease-in-out",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "outMs": 150,
+        "translateYPx": -16
+      },
+      "evidence": [
+        {
+          "file": "src/styles/extra-content.css",
+          "lines": "92-96",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "feed-spin",
+      "title": "Feed loading spinner",
+      "trigger": "always",
+      "durationMs": 1000,
+      "easing": "linear",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "keyframes": "feed-spin"
+      },
+      "evidence": [
+        {
+          "file": "src/styles/content.css",
+          "lines": "26-29",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "mascot-sway",
+      "title": "Mascot idle loop",
+      "trigger": "always",
+      "durationMs": 8008,
+      "easing": "per-segment bezier",
+      "delayMs": 0,
+      "iterations": "infinite",
+      "originalReducedMotion": "kept",
+      "params": {
+        "segments": "sway 0 to 10 to 11 to 10 to 0 to -1 to 0 degrees; eyes lift; blinks at f77-82, f87-92, f196-201",
+        "frames": "240 @ 29.97fps"
+      },
+      "evidence": [
+        {
+          "file": "src/index.css",
+          "lines": "135-145",
+          "note": "original plays an 8.008s Lottie loop, also under prefers-reduced-motion"
+        }
+      ]
+    },
+    {
+      "id": "tilt-hover",
+      "title": "LP cover hover tilt",
+      "trigger": "hover",
+      "durationMs": 400,
+      "easing": "ease",
+      "delayMs": 0,
+      "iterations": "once",
+      "originalReducedMotion": "unmeasured",
+      "params": {
+        "rotateYDeg": [
+          -5,
+          -2
+        ],
+        "rotateXDeg": [
+          2,
+          1
+        ],
+        "shadowOffsetPx": [
+          -10,
+          -14
+        ]
+      },
+      "evidence": [
+        {
+          "file": "PAGES_SPEC_COMPANY.md",
+          "lines": "393",
+          "note": ""
+        },
+        {
+          "file": "src/styles/company.css",
+          "lines": "63-71",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

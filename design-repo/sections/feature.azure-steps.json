@@ -1,0 +1,89 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.azure-steps",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Getting-started steps",
+  "purpose": "Numbered steps for joining the launch.",
+  "source": {
+    "file": "src/components/extra/azure.jsx",
+    "tag": "AzureSteps",
+    "lines": "295-320",
+    "id": "azure-jsx#AzureSteps"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.azure-steps",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "steps": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 5,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 22,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "595-646",
+        "heading": "X14. Azure waitlist `/product/azure`"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "azure-waitlist"
+  ],
+  "tags": []
+}

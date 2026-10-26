@@ -1,0 +1,34 @@
+{
+  "id": "card.case-study",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Case study card",
+  "purpose": "Index card with logo, title, bullets and category tags.",
+  "source": {
+    "file": "src/components/content/cases.jsx",
+    "tag": "CaseStudyCard",
+    "lines": "94-119",
+    "id": "cases-jsx#CaseStudyCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "title": "text(max 10 words)",
+    "bullets": "list(max 3)"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "348-358",
+        "heading": "C4. `CaseStudyCard` [NEW, on `LiftCard lift={14}`]"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "asset.placeholder"
+  ]
+}

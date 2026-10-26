@@ -1,0 +1,101 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "conversion.apply-form",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Program application form",
+  "purpose": "Application form with labelled fields, consent and submit.",
+  "source": {
+    "file": "src/components/marketing/bespoke.jsx",
+    "tag": "ApplyForm",
+    "lines": "215-287",
+    "id": "bespoke-jsx#ApplyForm"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "conversion.apply-form",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "fields": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 10,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true
+          },
+          "type": {
+            "type": "enum",
+            "values": [
+              "text",
+              "email",
+              "textarea",
+              "select"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "433-458",
+        "heading": "B21. Startups blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "startups"
+  ],
+  "tags": []
+}

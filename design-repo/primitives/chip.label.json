@@ -1,0 +1,35 @@
+{
+  "id": "chip.label",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Label chip",
+  "purpose": "Small uppercase mono chip, optionally with a status suffix (for example a public-preview marker).",
+  "source": {
+    "file": "src/components/marketing/bits.jsx",
+    "tag": "Chip",
+    "lines": "85-97",
+    "id": "bits-jsx#Chip"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "label": "text(max 4 words)",
+    "status": "text(max 2 words)",
+    "tall": "boolean"
+  },
+  "tokens": [
+    "chip.status.chipBackground",
+    "chip.status.chipBorder",
+    "type.label"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "135-155",
+        "heading": "Shared micro-components (build these first)"
+      }
+    ]
+  }
+}

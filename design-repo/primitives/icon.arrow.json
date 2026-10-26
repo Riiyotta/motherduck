@@ -1,0 +1,34 @@
+{
+  "id": "icon.arrow",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Arrow icon",
+  "purpose": "Generic 20x20 right arrow used in buttons and links.",
+  "source": {
+    "file": "src/components/ui/ArrowRight.jsx",
+    "tag": "ArrowRight",
+    "lines": "2-8",
+    "id": "ArrowRight-jsx#ArrowRight"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "size": [
+      "16",
+      "18",
+      "20"
+    ]
+  },
+  "tokens": [
+    "iconSize.20"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "244"
+      }
+    ]
+  }
+}

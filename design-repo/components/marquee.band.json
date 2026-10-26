@@ -1,0 +1,30 @@
+{
+  "id": "marquee.band",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Marquee band",
+  "purpose": "Strip repeating a short label.",
+  "source": {
+    "file": "src/components/marketing/MarqueeBand.jsx",
+    "tag": "MarqueeBand",
+    "lines": "13-63",
+    "id": "MarqueeBand-jsx#MarqueeBand"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "label": "text(max 4 words)",
+    "copies": "number"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "166-171",
+        "heading": "B2. `MarqueeBand` (vs ×2, persona, /product)"
+      }
+    ]
+  }
+}

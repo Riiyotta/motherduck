@@ -1,0 +1,97 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.eu-region",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Regional landing hero with form",
+  "purpose": "Page-opening: heading, lede and an inline interest form.",
+  "source": {
+    "file": "src/components/extra/euRegion.jsx",
+    "tag": "EuHero",
+    "lines": "46-69",
+    "id": "euRegion-jsx#EuHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.eu-region",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 35,
+        "required": true
+      },
+      "form": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true
+          }
+        },
+        "required": true
+      },
+      "submit": {
+        "type": "link",
+        "labelMaxWords": 2,
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "partially-measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "564-594",
+        "heading": "X13. EU region `/product/eu-region`"
+      }
+    ],
+    "note": "PAGES_SPEC_EXTRA section 2 UNMEASURED: last two form-field labels"
+  },
+  "usedInTemplates": [
+    "eu-region"
+  ],
+  "tags": []
+}

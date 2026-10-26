@@ -1,0 +1,37 @@
+{
+  "description": "The original only layout breakpoints (min-width).",
+  "tokens": {
+    "breakpoint.sm": {
+      "value": "500px",
+      "type": "minWidth",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "36-41"
+      }
+    },
+    "breakpoint.md": {
+      "value": "728px",
+      "type": "minWidth",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "36-41"
+      }
+    },
+    "breakpoint.lg": {
+      "value": "960px",
+      "type": "minWidth",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "36-41"
+      }
+    },
+    "breakpoint.xl": {
+      "value": "1302px",
+      "type": "minWidth",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "36-41"
+      }
+    }
+  }
+}

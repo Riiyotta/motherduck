@@ -1,0 +1,1013 @@
+{
+  "routesVersion": "1.0.0",
+  "description": "Every route pattern the clone serves (src/routes.js ROUTES plus the home route), mapped exactly once. Redirects are not templates.",
+  "sitemapSnapshot": {
+    "urls": 1583,
+    "resolvedToAPattern": 1583,
+    "unresolved": 0,
+    "note": "Snapshot of the live sitemap taken for this build (file not shipped). Each URL resolves to the most specific matching pattern; static patterns win over parameter patterns."
+  },
+  "excludedPrefixes": [
+    "/docs"
+  ],
+  "routes": [
+    {
+      "pattern": "/",
+      "kind": "page",
+      "template": "home",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "home",
+      "shadows": []
+    },
+    {
+      "pattern": "/product",
+      "kind": "page",
+      "template": "product-overview",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/app-developers",
+      "kind": "page",
+      "template": "product-persona",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/data-teams",
+      "kind": "page",
+      "template": "product-persona",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/duckdb-users",
+      "kind": "page",
+      "template": "product-persona",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/dives",
+      "kind": "page",
+      "template": "product-feature",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/flights",
+      "kind": "page",
+      "template": "product-feature",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/guides",
+      "kind": "page",
+      "template": "product-feature",
+      "sitemapHits": 0,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/mcp-server",
+      "kind": "page",
+      "template": "product-feature",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/postgres-integration",
+      "kind": "page",
+      "template": "product-feature",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/ducklake",
+      "kind": "page",
+      "template": "product-ducklake",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/hypertenancy",
+      "kind": "page",
+      "template": "product-hypertenancy",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/startups",
+      "kind": "page",
+      "template": "startups",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/research",
+      "kind": "page",
+      "template": "research-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/trust-and-security",
+      "kind": "page",
+      "template": "trust-security",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/community-and-open-source",
+      "kind": "page",
+      "template": "community-oss",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "product",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/pricing",
+      "kind": "page",
+      "template": "pricing",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "pricing",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/pricing/duckdb-support",
+      "kind": "page",
+      "template": "pricing-support",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "pricing",
+      "shadows": []
+    },
+    {
+      "pattern": "/vs/bigquery-alternative",
+      "kind": "page",
+      "template": "vs-comparison",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "vs",
+      "shadows": []
+    },
+    {
+      "pattern": "/vs/clickhouse-alternative",
+      "kind": "page",
+      "template": "vs-comparison",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "vs",
+      "shadows": []
+    },
+    {
+      "pattern": "/vs/databricks-alternative",
+      "kind": "page",
+      "template": "vs-comparison",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "vs",
+      "shadows": []
+    },
+    {
+      "pattern": "/vs/postgresql-alternative",
+      "kind": "page",
+      "template": "vs-comparison",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "vs",
+      "shadows": []
+    },
+    {
+      "pattern": "/vs/redshift-alternative",
+      "kind": "page",
+      "template": "vs-comparison",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "vs",
+      "shadows": []
+    },
+    {
+      "pattern": "/vs/snowflake-alternative",
+      "kind": "page",
+      "template": "vs-comparison",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "vs",
+      "shadows": []
+    },
+    {
+      "pattern": "/vs",
+      "kind": "page",
+      "template": "vs-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "vsIndex",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/for-founders",
+      "kind": "page",
+      "template": "persona-landing",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "persona2",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/for-operators",
+      "kind": "page",
+      "template": "persona-landing",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "persona2",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/eu-region",
+      "kind": "page",
+      "template": "eu-region",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "euRegion",
+      "shadows": []
+    },
+    {
+      "pattern": "/product/azure",
+      "kind": "page",
+      "template": "azure-waitlist",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "azure",
+      "shadows": []
+    },
+    {
+      "pattern": "/about-us",
+      "kind": "page",
+      "template": "about",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "about",
+      "shadows": []
+    },
+    {
+      "pattern": "/careers",
+      "kind": "page",
+      "template": "careers",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "careers",
+      "shadows": []
+    },
+    {
+      "pattern": "/contact-us",
+      "kind": "page",
+      "template": "contact-chooser",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "contact",
+      "shadows": []
+    },
+    {
+      "pattern": "/contact-us/product-expert",
+      "kind": "page",
+      "template": "contact-form",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "contact",
+      "shadows": []
+    },
+    {
+      "pattern": "/contact-us/support",
+      "kind": "page",
+      "template": "contact-form",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "contactSupport",
+      "shadows": []
+    },
+    {
+      "pattern": "/customer-support",
+      "kind": "page",
+      "template": "support-hub",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "contact",
+      "shadows": []
+    },
+    {
+      "pattern": "/privacy-policy",
+      "kind": "page",
+      "template": "legal-toc",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "legal",
+      "shadows": []
+    },
+    {
+      "pattern": "/terms-of-use",
+      "kind": "page",
+      "template": "legal-toc",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "legal",
+      "shadows": []
+    },
+    {
+      "pattern": "/terms-of-service",
+      "kind": "page",
+      "template": "legal-toc",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "legalToc",
+      "shadows": []
+    },
+    {
+      "pattern": "/candidate-privacy",
+      "kind": "page",
+      "template": "legal-toc",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "legalToc",
+      "shadows": []
+    },
+    {
+      "pattern": "/support-policy",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "legal",
+      "shadows": []
+    },
+    {
+      "pattern": "/motherduck-terms-of-service",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/acceptable-use-policy",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/fees-addendum",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/divemaxxing/rules",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/forms/finance-onboarding",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/hack-night",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/getting-started-with-motherduck",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/local-dev-cloud-prod-dagster-motherduck",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/react-components-testing",
+      "kind": "page",
+      "template": "legal-plain",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/live-demo",
+      "kind": "page",
+      "template": "prose-sidebar-form",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-brief-orig",
+      "kind": "page",
+      "template": "prose-sidebar-form",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "genericPage",
+      "shadows": []
+    },
+    {
+      "pattern": "/lp/:slug",
+      "kind": "page",
+      "template": "gated-lp",
+      "sitemapHits": 6,
+      "retrievalEligible": true,
+      "routeKey": "gated",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-cheatsheet-full",
+      "kind": "page",
+      "template": "gated-lp",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "gated",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-brief",
+      "kind": "page",
+      "template": "book-brief",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "gated",
+      "shadows": []
+    },
+    {
+      "pattern": "/together-ai",
+      "kind": "page",
+      "template": "split-form-lp",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "splitFormLP",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-form",
+      "kind": "page",
+      "template": "split-form-lp",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "splitFormLP",
+      "shadows": []
+    },
+    {
+      "pattern": "/sql-duckdb-book-form",
+      "kind": "page",
+      "template": "split-form-lp",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "splitFormLP",
+      "shadows": []
+    },
+    {
+      "pattern": "/ducklake-open-table-format-full",
+      "kind": "page",
+      "template": "lp-ducklake-full",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "lpExtra",
+      "shadows": []
+    },
+    {
+      "pattern": "/divemaxxing-full",
+      "kind": "page",
+      "template": "lp-divemaxxing",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "lpExtra",
+      "shadows": []
+    },
+    {
+      "pattern": "/jev-full",
+      "kind": "page",
+      "template": "lp-jev",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "lpExtra",
+      "shadows": []
+    },
+    {
+      "pattern": "/lp/ducklake-lakehouse-table-format-book",
+      "kind": "page",
+      "template": "lp-book-own-nav",
+      "sitemapHits": 0,
+      "retrievalEligible": true,
+      "routeKey": "lpExtra",
+      "shadows": [
+        "/lp/:slug"
+      ]
+    },
+    {
+      "pattern": "/blog",
+      "kind": "page",
+      "template": "blog-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "blogIndex",
+      "shadows": []
+    },
+    {
+      "pattern": "/blog/:slug",
+      "kind": "page",
+      "template": "blog-post",
+      "sitemapHits": 272,
+      "retrievalEligible": true,
+      "routeKey": "blogPost",
+      "shadows": []
+    },
+    {
+      "pattern": "/case-studies",
+      "kind": "page",
+      "template": "case-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "caseIndex",
+      "shadows": []
+    },
+    {
+      "pattern": "/case-studies/:slug",
+      "kind": "page",
+      "template": "case-detail",
+      "sitemapHits": 20,
+      "retrievalEligible": true,
+      "routeKey": "caseDetail",
+      "shadows": []
+    },
+    {
+      "pattern": "/videos",
+      "kind": "page",
+      "template": "video-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "videoIndex",
+      "shadows": []
+    },
+    {
+      "pattern": "/videos/:slug",
+      "kind": "page",
+      "template": "video-detail",
+      "sitemapHits": 149,
+      "retrievalEligible": true,
+      "routeKey": "videoDetail",
+      "shadows": []
+    },
+    {
+      "pattern": "/webinar/:slug",
+      "kind": "page",
+      "template": "webinar-detail",
+      "sitemapHits": 13,
+      "retrievalEligible": true,
+      "routeKey": "webinar",
+      "shadows": []
+    },
+    {
+      "pattern": "/video/:slug",
+      "kind": "page",
+      "template": "webinar-detail",
+      "sitemapHits": 2,
+      "retrievalEligible": true,
+      "routeKey": "webinar",
+      "shadows": []
+    },
+    {
+      "pattern": "/ecosystem",
+      "kind": "page",
+      "template": "ecosystem-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "ecosystemIndex",
+      "shadows": []
+    },
+    {
+      "pattern": "/ecosystem/:slug",
+      "kind": "page",
+      "template": "ecosystem-detail",
+      "sitemapHits": 84,
+      "retrievalEligible": true,
+      "routeKey": "ecosystemDetail",
+      "shadows": []
+    },
+    {
+      "pattern": "/learn",
+      "kind": "page",
+      "template": "learn-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "hub",
+      "shadows": []
+    },
+    {
+      "pattern": "/events",
+      "kind": "page",
+      "template": "events-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "hub",
+      "shadows": []
+    },
+    {
+      "pattern": "/events/past",
+      "kind": "page",
+      "template": "events-past",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "eventsPast",
+      "shadows": [
+        "/events/:slug"
+      ]
+    },
+    {
+      "pattern": "/events/past/page/:n",
+      "kind": "page",
+      "template": "events-past",
+      "sitemapHits": 12,
+      "retrievalEligible": true,
+      "routeKey": "eventsPast",
+      "shadows": []
+    },
+    {
+      "pattern": "/events/:slug",
+      "kind": "page",
+      "template": "event-detail",
+      "sitemapHits": 251,
+      "retrievalEligible": true,
+      "routeKey": "eventDetail",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-news",
+      "kind": "page",
+      "template": "news-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "hub",
+      "shadows": []
+    },
+    {
+      "pattern": "/quacking-around-the-web",
+      "kind": "page",
+      "template": "quack-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "hub",
+      "shadows": []
+    },
+    {
+      "pattern": "/community-code",
+      "kind": "page",
+      "template": "community-code",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "hub",
+      "shadows": []
+    },
+    {
+      "pattern": "/dive-gallery",
+      "kind": "page",
+      "template": "dive-gallery",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "hub",
+      "shadows": []
+    },
+    {
+      "pattern": "/dive-gallery/dives/:slug",
+      "kind": "page",
+      "template": "dive-detail",
+      "sitemapHits": 135,
+      "retrievalEligible": true,
+      "routeKey": "diveDetail",
+      "shadows": []
+    },
+    {
+      "pattern": "/glossary",
+      "kind": "page",
+      "template": "glossary-index",
+      "sitemapHits": 0,
+      "retrievalEligible": true,
+      "routeKey": "glossaryIndex",
+      "shadows": []
+    },
+    {
+      "pattern": "/glossary/:slug",
+      "kind": "page",
+      "template": "glossary-term",
+      "sitemapHits": 345,
+      "retrievalEligible": true,
+      "routeKey": "glossaryTerm",
+      "shadows": []
+    },
+    {
+      "pattern": "/authors/:slug",
+      "kind": "page",
+      "template": "author",
+      "sitemapHits": 120,
+      "retrievalEligible": true,
+      "routeKey": "author",
+      "shadows": []
+    },
+    {
+      "pattern": "/learn/:slug",
+      "kind": "page",
+      "template": "learn-article",
+      "sitemapHits": 68,
+      "retrievalEligible": true,
+      "routeKey": "learnArticle",
+      "shadows": []
+    },
+    {
+      "pattern": "/research/:slug",
+      "kind": "page",
+      "template": "research-paper",
+      "sitemapHits": 6,
+      "retrievalEligible": true,
+      "routeKey": "researchPaper",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter1",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter2",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter3",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter4",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter5",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter6",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter7",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter8",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter9",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter10",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/duckdb-book-summary-chapter11",
+      "kind": "page",
+      "template": "book-chapter",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "bookChapter",
+      "shadows": []
+    },
+    {
+      "pattern": "/explain-analyze",
+      "kind": "page",
+      "template": "podcast-index",
+      "sitemapHits": 1,
+      "retrievalEligible": true,
+      "routeKey": "podcastIndex",
+      "shadows": []
+    },
+    {
+      "pattern": "/explain-analyze/:slug",
+      "kind": "page",
+      "template": "podcast-episode",
+      "sitemapHits": 11,
+      "retrievalEligible": true,
+      "routeKey": "podcastEpisode",
+      "shadows": []
+    },
+    {
+      "pattern": "/try",
+      "kind": "page",
+      "template": "try-app",
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "try",
+      "shadows": []
+    },
+    {
+      "pattern": "/case-study-dexibit",
+      "kind": "redirect",
+      "redirectTo": "/case-studies/dexibit",
+      "template": null,
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": []
+    },
+    {
+      "pattern": "/case-study-dominik-moritz",
+      "kind": "redirect",
+      "redirectTo": "/case-studies/dominik-moritz",
+      "template": null,
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": []
+    },
+    {
+      "pattern": "/case-study-saasworks",
+      "kind": "redirect",
+      "redirectTo": "/case-studies/finqore",
+      "template": null,
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": []
+    },
+    {
+      "pattern": "/onboarding-sessions",
+      "kind": "redirect",
+      "redirectTo": "/contact-us/product-expert",
+      "template": null,
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": []
+    },
+    {
+      "pattern": "/ducklake-open-table-format-guide",
+      "kind": "redirect",
+      "redirectTo": "/lp/ducklake-lakehouse-table-format-book",
+      "template": null,
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": []
+    },
+    {
+      "pattern": "/glossary/dlt",
+      "kind": "redirect",
+      "redirectTo": "/glossary/data-load-tool-dlt",
+      "template": null,
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": [
+        "/glossary/:slug"
+      ]
+    },
+    {
+      "pattern": "/glossary/time-series-database",
+      "kind": "redirect",
+      "redirectTo": "/glossary/time-series",
+      "template": null,
+      "sitemapHits": 1,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": [
+        "/glossary/:slug"
+      ]
+    },
+    {
+      "pattern": "/learn-more",
+      "kind": "redirect",
+      "redirectTo": "/learn",
+      "template": null,
+      "sitemapHits": 0,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": []
+    },
+    {
+      "pattern": "/learn-more/:slug",
+      "kind": "redirect",
+      "redirectTo": "/learn/:slug",
+      "template": null,
+      "sitemapHits": 0,
+      "retrievalEligible": false,
+      "routeKey": "redirect",
+      "shadows": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "icon.chevron",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Chevron icon",
+  "purpose": "Nav and accordion chevron that rotates 180 degrees when open.",
+  "source": {
+    "file": "src/components/header/Chevron.jsx",
+    "tag": "Chevron",
+    "lines": "3-17",
+    "id": "Chevron-jsx#Chevron"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "open": "boolean"
+  },
+  "tokens": [
+    "iconSize.20"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "222"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "description": "Component-scoped tokens for menu.dropdown.",
+  "tokens": {
+    "menu.dropdown.borderWidth": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    },
+    "menu.dropdown.shadow": {
+      "value": "0 4px 8px 0 rgba(0,0,0,0.10)",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    },
+    "menu.dropdown.background": {
+      "value": "#FFFFFF",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    },
+    "menu.dropdown.enterMs": {
+      "value": "200ms ease-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    },
+    "menu.dropdown.productWidth": {
+      "value": "852px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    },
+    "menu.dropdown.communityWidth": {
+      "value": "736px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    },
+    "menu.dropdown.companyWidth": {
+      "value": "367px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "229-240",
+        "heading": "2c. Desktop mega-menu dropdowns (open on **click**, not hover)"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "runtime.mobile-subscribe-button",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Mobile subscribe button",
+  "purpose": "Floating subscribe button on feed index pages on small screens.",
+  "source": {
+    "file": "src/components/content/subscribe.jsx",
+    "tag": "MobileSubscribeButton",
+    "lines": "105-111",
+    "id": "subscribe-jsx#MobileSubscribeButton"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "runtime.mobile-subscribe-button",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "content": {
+    "fields": {
+      "label": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "fab-pop"
+    ],
+    "default": "fab-pop",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "215-231",
+        "heading": "F6. `SubscribeTile` (Blog grid, Video grid) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "blog-index"
+  ],
+  "tags": [],
+  "retrievalReason": "Floating mobile-only control that scrolls to or opens the subscribe tile; utility UI without independent content."
+}

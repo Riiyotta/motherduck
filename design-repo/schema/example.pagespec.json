@@ -1,0 +1,1276 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "reference",
+  "template": "home",
+  "route": "/",
+  "theme": "light",
+  "meta": {
+    "title": "Homepage (reference reconstruction)",
+    "brand": "Northwind Data",
+    "description": "Reference-mode reconstruction of the homepage structure. Copy is the clone placeholder copy, sized to the original lengths (CLONE_SPEC content policy)."
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "eyebrowText": "Kernel handle on notice bucket journal and",
+        "eyebrowLink": {
+          "label": "Archive router and",
+          "href": "#metric"
+        },
+        "logo": {
+          "role": "brand-wordmark",
+          "alt": "Index input with"
+        },
+        "navGroups": [
+          {
+            "label": "Archive module",
+            "items": [
+              {
+                "label": "Engine trace and router table",
+                "href": {
+                  "label": "Bridge module from",
+                  "href": "#handle"
+                }
+              },
+              {
+                "label": "Launch schema across output unit",
+                "href": {
+                  "label": "Widget engine and",
+                  "href": "#module"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Router grain",
+            "items": [
+              {
+                "label": "Output keyed for unit input",
+                "href": {
+                  "label": "Jump engine and",
+                  "href": "#export"
+                }
+              },
+              {
+                "label": "Bucket column in layer metric",
+                "href": {
+                  "label": "Layer layer for",
+                  "href": "#handle"
+                }
+              }
+            ]
+          },
+          {
+            "label": "Query stream",
+            "items": [
+              {
+                "label": "Column index and index table",
+                "href": {
+                  "label": "Network table for",
+                  "href": "#network"
+                }
+              },
+              {
+                "label": "Object grain across vector widget",
+                "href": {
+                  "label": "Network query for",
+                  "href": "#bridge"
+                }
+              }
+            ]
+          }
+        ],
+        "navLinks": [
+          {
+            "label": "Launch trace",
+            "href": {
+              "label": "Schema table",
+              "href": "#keyed"
+            }
+          },
+          {
+            "label": "Factory pipeline",
+            "href": {
+              "label": "Metric vector",
+              "href": "#engine"
+            }
+          }
+        ],
+        "primaryAction": {
+          "label": "Queue upload on",
+          "href": "#handle"
+        }
+      },
+      "motion": {
+        "pattern": "dropdown-enter",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "hero.home",
+      "variant": "control",
+      "surface": "cream",
+      "content": {
+        "h1": "Analytics that grows with teams",
+        "lede": "Northwind Data is a compact cloud warehouse for teams and all their tools. Load files, run quick queries, and share each result without managing a server or a cluster.",
+        "primaryAction": {
+          "label": "TRY 7 DAYS FREE"
+        },
+        "secondaryAction": {
+          "label": "BOOK A DEMO",
+          "href": "/contact-us/product-expert"
+        },
+        "agentLine": "Using agents? Start with this one",
+        "logoStripLabel": "TRUSTED BY BUILDERS",
+        "customerLogos": [
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo 1"
+            },
+            "href": {
+              "label": "Story",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo 2"
+            },
+            "href": {
+              "label": "Story",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo 3"
+            },
+            "href": {
+              "label": "Story",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo 4"
+            },
+            "href": {
+              "label": "Story",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo 5"
+            },
+            "href": {
+              "label": "Story",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo 6"
+            },
+            "href": {
+              "label": "Story",
+              "href": "/case-studies"
+            }
+          }
+        ],
+        "tabs": [
+          {
+            "label": "ASK (MCP)",
+            "panel": "ask"
+          },
+          {
+            "label": "SQL",
+            "panel": "sql"
+          },
+          {
+            "label": "PYTHON",
+            "panel": "python"
+          },
+          {
+            "label": "CLI",
+            "panel": "cli"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "typing-sim",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.isolated-compute",
+      "variant": "default",
+      "surface": "sky",
+      "content": {
+        "h2": "Isolated compute everywhere",
+        "lede": "Analysts, pipelines and assistants each receive dedicated compute matched to their workload, while everybody reads one shared, consistent dataset.",
+        "items": [
+          {
+            "title": "DEDICATED COMPUTE UNITS",
+            "body": "Every person, every report and every job gets its own engine, so one heavy query never slows down the rest of the team."
+          },
+          {
+            "title": "SCALES TO ZERO WHEN IDLE",
+            "body": "Engines start in a moment when a query arrives and stop again as soon as the work is done, so quiet hours and weekends cost you close to nothing."
+          },
+          {
+            "title": "ONE COPY OF YOUR DATA",
+            "body": "All engines read the same tables from shared storage, which keeps results consistent without copying files across separate systems."
+          },
+          {
+            "title": "OPEN STORAGE FORMATS",
+            "body": "Tables are stored in open file formats on object storage, so other tools can read them directly and your data is never locked into one vendor."
+          }
+        ],
+        "diagram": {
+          "role": "architecture-diagram",
+          "alt": "Wire diagram of four compute consumers sharing one storage stack"
+        },
+        "consumers": [
+          {
+            "label": "YOU",
+            "size": "PULSE"
+          },
+          {
+            "label": "TEAMMATE",
+            "size": "STANDARD"
+          },
+          {
+            "label": "DBT PIPELINE",
+            "size": "JUMBO"
+          },
+          {
+            "label": "AGENTS",
+            "size": "PULSE"
+          }
+        ],
+        "storageChip": "SHARED STORAGE",
+        "storageItems": [
+          {
+            "label": "DUCKLAKE",
+            "icon": {
+              "role": "partner-tool-logo",
+              "alt": "Storage format mark"
+            }
+          },
+          {
+            "label": "DIFFERENTIAL STORAGE",
+            "icon": {
+              "role": "partner-tool-logo",
+              "alt": "Storage format mark"
+            }
+          },
+          {
+            "label": "APACHE ICEBERG",
+            "icon": {
+              "role": "partner-tool-logo",
+              "alt": "Storage format mark"
+            }
+          },
+          {
+            "label": "OBJECT STORAGE",
+            "icon": {
+              "role": "partner-tool-logo",
+              "alt": "Storage format mark"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "accordion-single-open",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "social-proof.quote-card",
+      "variant": "architecture",
+      "surface": "cream",
+      "content": {
+        "quote": "Giving every analyst dedicated compute eliminated our backlog of sluggish dashboards. Nowadays our team delivers new reporting within hours, and cloud spending decreased.",
+        "name": "Jordan Avery",
+        "role": "Head of Data Platform",
+        "logo": {
+          "role": "customer-logo",
+          "alt": "Company logo"
+        },
+        "href": {
+          "label": "Story",
+          "href": "/case-studies"
+        }
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.platform-diagram",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "A single platform for compute, storage, agents",
+        "lede": "A shared foundation that links raw files, compute workers and the agent tools that turn questions into answers.",
+        "slabs": [
+          {
+            "label": "Shared Storage"
+          },
+          {
+            "label": "Compute Workers"
+          },
+          {
+            "label": "Agent context"
+          },
+          {
+            "label": "Tools & Languages"
+          },
+          {
+            "label": "Agent Interfaces"
+          }
+        ],
+        "cards": [
+          {
+            "title": "Tools & Languages",
+            "description": "Seven tool tiles"
+          },
+          {
+            "title": "Visuals",
+            "description": "Agent-built charts and embeddable reporting views"
+          },
+          {
+            "title": "Pipelines",
+            "description": "Managed runtime for loads, enrichment and more"
+          },
+          {
+            "title": "Context",
+            "description": "Shared knowledge for more accurate agent queries"
+          },
+          {
+            "title": "Storage",
+            "description": "Open table and file formats"
+          },
+          {
+            "title": "Interfaces",
+            "description": "MCP, CLI and REST"
+          },
+          {
+            "title": "Scale up or out",
+            "description": "Five instance sizes"
+          }
+        ],
+        "scaleTiers": [
+          {
+            "label": "GIGA"
+          },
+          {
+            "label": "MEGA"
+          },
+          {
+            "label": "JUMBO"
+          },
+          {
+            "label": "STANDARD"
+          },
+          {
+            "label": "PULSE"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.product-card-trio",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "cards": [
+          {
+            "title": "Pipelines",
+            "body": "A workflow runtime that runs on managed compute. Schedule data loads, run classifiers and more on a flexible setup.",
+            "icon": {
+              "role": "spot-illustration",
+              "alt": "Product icon placeholder"
+            },
+            "screenshot": {
+              "role": "product-screenshot",
+              "alt": "Product screenshot placeholder"
+            },
+            "link": {
+              "label": "LEARN MORE",
+              "href": "/product"
+            },
+            "tone": "peach"
+          },
+          {
+            "title": "Context",
+            "body": "A context layer for agents. Give agents the shared knowledge they need for faster, more reliable work.",
+            "icon": {
+              "role": "spot-illustration",
+              "alt": "Product icon placeholder"
+            },
+            "screenshot": {
+              "role": "product-screenshot",
+              "alt": "Product screenshot placeholder"
+            },
+            "link": {
+              "label": "LEARN MORE",
+              "href": "/product"
+            },
+            "tone": "sky-tint"
+          },
+          {
+            "title": "Visuals",
+            "body": "Interactive charts built by agents. Use them in house or embed them in your product, no BI tool needed.",
+            "icon": {
+              "role": "spot-illustration",
+              "alt": "Product icon placeholder"
+            },
+            "screenshot": {
+              "role": "product-screenshot",
+              "alt": "Product screenshot placeholder"
+            },
+            "link": {
+              "label": "LEARN MORE",
+              "href": "/product"
+            },
+            "tone": "mint"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "social-proof.quote-card",
+      "variant": "platform",
+      "surface": "cream",
+      "content": {
+        "quote": "Our previous cluster kept failing under heavy reporting workloads, even after we added more hardware to it. With large partners relying on our numbers every day, that was no longer acceptable. Moving to this platform made our slowest queries several times faster, and it is now the main source of truth for all of our core reporting work.",
+        "name": "Jordan Avery",
+        "role": "Co-Founder & CTO",
+        "logo": {
+          "role": "customer-logo",
+          "alt": "Company logo placeholder"
+        },
+        "href": {
+          "label": "Story",
+          "href": "/case-studies"
+        }
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.integrations-arc",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "h2": "Bring all the tools you know",
+        "sub": "Work with the languages, notebooks and pipelines you know, from any runtime to BI.",
+        "link": {
+          "label": "View all integrations",
+          "href": "#integrations"
+        },
+        "tiles": [
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Notebooks"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Scripting"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "JVM"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Transform"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Systems"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Loading"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Ingestion"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Dashboards"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Modeling"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "BI"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Tool logo"
+            },
+            "tooltip": "Orchestration"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sun-rotate",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.integrations-bar",
+      "variant": "default",
+      "surface": "cream",
+      "content": {
+        "title": "Integrations & Tools",
+        "chip": "Choose your stack",
+        "logos": [
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Server runtime"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Scripting"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "JVM"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Browser"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Typed web"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Systems"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Native"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Wire protocol"
+          },
+          {
+            "logo": {
+              "role": "partner-tool-logo",
+              "alt": "Language logo"
+            },
+            "tooltip": "Statistics"
+          }
+        ],
+        "trailing": "+ ODBC · HTTP · CLI",
+        "mascot": {
+          "role": "clone-mascot-pip",
+          "alt": "Pip, the clone mascot"
+        }
+      },
+      "motion": {
+        "pattern": "tooltip-fade",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "social-proof.customer-case-grid",
+      "variant": "default",
+      "surface": "sky",
+      "content": {
+        "h2": "Real customers building products",
+        "sub": "Production applications, customer-facing reporting, and internal tooling across industries.",
+        "cards": [
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo placeholder"
+            },
+            "text": "The pairing with our notebook tool is fantastic. The whole analytics team works faster now.",
+            "link": {
+              "label": "READ CASE STUDY",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo placeholder"
+            },
+            "text": "Pipeline runtime after moving all workloads to a single engine.",
+            "link": {
+              "label": "READ CASE STUDY",
+              "href": "/case-studies"
+            },
+            "stat": "4h → 6m"
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo placeholder"
+            },
+            "text": "An assistant that answers freight and routing questions in plain language.",
+            "link": {
+              "label": "READ CASE STUDY",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo placeholder"
+            },
+            "text": "Reporting for a large non-profit at a fraction of the earlier cost.",
+            "link": {
+              "label": "READ CASE STUDY",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "logo": {
+              "role": "customer-logo",
+              "alt": "Customer logo placeholder"
+            },
+            "text": "A data platform built around isolated compute for every user.",
+            "link": {
+              "label": "READ CASE STUDY",
+              "href": "/case-studies"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "feature.agent-interfaces",
+      "variant": "default",
+      "surface": "sky",
+      "content": {
+        "h2": "Agent-first Interfaces",
+        "sub": "Automated clients act unlike people do. Pick the tools, links, and surfaces that suit your work best.",
+        "clientTabs": [
+          {
+            "label": "Claude Code",
+            "icon": {
+              "role": "partner-tool-logo",
+              "alt": "Client mark"
+            }
+          },
+          {
+            "label": "Cursor",
+            "icon": {
+              "role": "partner-tool-logo",
+              "alt": "Client mark"
+            }
+          },
+          {
+            "label": "ChatGPT",
+            "icon": {
+              "role": "partner-tool-logo",
+              "alt": "Client mark"
+            }
+          }
+        ],
+        "footerLabel": "ANY MCP-CAPABLE AGENT",
+        "footerNote": "Works with the clients you already use",
+        "docsAction": {
+          "label": "DOCS"
+        },
+        "cards": [
+          {
+            "title": "SKILLS",
+            "body": "Reusable instructions your agent pulls in only when needed: query habits, table notes, playbooks.",
+            "link": {
+              "label": "SKILLS DOCS"
+            },
+            "icon": {
+              "role": "generic-ui-glyph",
+              "alt": "Card icon"
+            }
+          },
+          {
+            "title": "MCP SERVER",
+            "body": "Scoped read and write access over a standard tool protocol, with isolated compute and narrow keys.",
+            "link": {
+              "label": "MCP SERVER DOCS"
+            },
+            "icon": {
+              "role": "generic-ui-glyph",
+              "alt": "Card icon"
+            }
+          },
+          {
+            "title": "CLI",
+            "body": "A terminal-first command line: stream queries, inspect plans, and pass sessions on without context loss.",
+            "link": {
+              "label": "CLI DOCS"
+            },
+            "icon": {
+              "role": "generic-ui-glyph",
+              "alt": "Card icon"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "typing-sim",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "editorial.blog-carousel",
+      "variant": "default",
+      "surface": "yellow",
+      "content": {
+        "h2": "Latest from the desk",
+        "sub": "Articles, talks and stories from the team and community.",
+        "cards": [
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Video",
+            "title": "Columnar storage: a short talk",
+            "meta": "Oct 21, 2026 · 42 min"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "How a small team rebuilt its reporting in one quarter",
+            "meta": "Oct 19, 2026 · 8 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Case Study",
+            "title": "Moving nightly batch jobs to on-demand queries at a growing retail brand",
+            "meta": "Oct 16, 2026 · 6 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "Notes on columnar storage, part 3",
+            "meta": "Oct 14, 2026 · 4 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "Query planners and sorted data",
+            "meta": "Oct 12, 2026 · 11 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "Live session: a metrics layer from scratch",
+            "meta": "Oct 9, 2026 · 58 min"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Video",
+            "title": "Notes on columnar storage, part two of three",
+            "meta": "Oct 7, 2026 · 9 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "Serving per-customer dashboards without running a separate cache tier at all",
+            "meta": "Oct 2, 2026 · 7 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Video",
+            "title": "Ten minutes on table formats",
+            "meta": "Sep 30, 2026 · 5 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "A practical guide to evaluating generated SQL before you ship it",
+            "meta": "Sep 26, 2026 · 13 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "Designing warehouse schemas that agents can read without prompting",
+            "meta": "Sep 23, 2026 · 10 min"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Blog",
+            "title": "From spreadsheets to shared queries at a regional retail chain",
+            "meta": "Sep 19, 2026 · 8 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Video",
+            "title": "Release notes: the latest drivers",
+            "meta": "Sep 16, 2026 · 6 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Video",
+            "title": "Notes on columnar storage, the first part",
+            "meta": "Sep 12, 2026 · 3 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Video",
+            "title": "Office hours: your questions about change data capture, answered live",
+            "meta": "Sep 9, 2026 · 10 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Ecosystem",
+            "title": "Query plans explained",
+            "meta": "Sep 5, 2026 · 47 min"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Ecosystem",
+            "title": "Cost per tenant, simply",
+            "meta": "Sep 2, 2026 · 9 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Ecosystem",
+            "title": "Field notes: October",
+            "meta": "Aug 28, 2026 · 5 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Case Study",
+            "title": "Cutting dashboard load times for a logistics team with one change",
+            "meta": "Aug 25, 2026 · 7 min read"
+          },
+          {
+            "thumb": {
+              "role": "editorial-thumbnail",
+              "alt": "Post thumbnail"
+            },
+            "type": "Case Study",
+            "title": "What we learned running analytics queries in the browser",
+            "meta": "Aug 21, 2026 · 12 min read"
+          }
+        ],
+        "mascot": {
+          "role": "clone-mascot-pip",
+          "alt": "Pip, the clone mascot"
+        }
+      },
+      "motion": {
+        "pattern": "carousel-swipe",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "surface": "ink",
+      "content": {
+        "logo": {
+          "role": "brand-wordmark",
+          "alt": "Export module in"
+        },
+        "social": [
+          {
+            "label": "Kernel launch from",
+            "href": {
+              "label": "Column",
+              "href": "#stream"
+            }
+          },
+          {
+            "label": "Network input on",
+            "href": {
+              "label": "Circuit",
+              "href": "#engine"
+            }
+          },
+          {
+            "label": "Metric grain for",
+            "href": {
+              "label": "Dashboard",
+              "href": "#bridge"
+            }
+          },
+          {
+            "label": "Grain table across",
+            "href": {
+              "label": "Module",
+              "href": "#journal"
+            }
+          },
+          {
+            "label": "Schema gateway from",
+            "href": {
+              "label": "Widget",
+              "href": "#trace"
+            }
+          },
+          {
+            "label": "Launch pipeline and",
+            "href": {
+              "label": "Handle",
+              "href": "#dashboard"
+            }
+          }
+        ],
+        "columns": [
+          {
+            "groups": [
+              {
+                "heading": "Query record and dashboard",
+                "links": [
+                  {
+                    "label": "Metric query and module stream trace from",
+                    "href": {
+                      "label": "Bucket factory and",
+                      "href": "#export"
+                    }
+                  },
+                  {
+                    "label": "Jump module in query engine bucket in",
+                    "href": {
+                      "label": "Output notice and",
+                      "href": "#stream"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Module query with widget",
+                "links": [
+                  {
+                    "label": "Factory router for table widget upload from",
+                    "href": {
+                      "label": "Gateway handle with",
+                      "href": "#kernel"
+                    }
+                  },
+                  {
+                    "label": "Bridge keyed and archive bridge query for",
+                    "href": {
+                      "label": "Bucket bucket from",
+                      "href": "#trace"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Network keyed with metric",
+                "links": [
+                  {
+                    "label": "Bridge stream with object notice widget with",
+                    "href": {
+                      "label": "Factory trace in",
+                      "href": "#bridge"
+                    }
+                  },
+                  {
+                    "label": "Input record with launch module engine for",
+                    "href": {
+                      "label": "Index module from",
+                      "href": "#pipeline"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Vector packet in gateway",
+                "links": [
+                  {
+                    "label": "Keyed jump in filter keyed bucket across",
+                    "href": {
+                      "label": "Index archive for",
+                      "href": "#bridge"
+                    }
+                  },
+                  {
+                    "label": "Bridge output and query filter input on",
+                    "href": {
+                      "label": "Grain launch and",
+                      "href": "#router"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Bridge launch for unit",
+                "links": [
+                  {
+                    "label": "Archive bucket on export vector output on",
+                    "href": {
+                      "label": "Schema router across",
+                      "href": "#circuit"
+                    }
+                  },
+                  {
+                    "label": "Export filter with circuit engine filter for",
+                    "href": {
+                      "label": "Module input for",
+                      "href": "#column"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Kernel widget in object",
+                "links": [
+                  {
+                    "label": "Pipeline module from launch journal record across",
+                    "href": {
+                      "label": "Input input and",
+                      "href": "#object"
+                    }
+                  },
+                  {
+                    "label": "Filter column in bridge driver keyed across",
+                    "href": {
+                      "label": "Handle launch on",
+                      "href": "#router"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "groups": [
+              {
+                "heading": "Vector filter for upload",
+                "links": [
+                  {
+                    "label": "Index bridge on table launch archive with",
+                    "href": {
+                      "label": "Layer module and",
+                      "href": "#grain"
+                    }
+                  },
+                  {
+                    "label": "Schema object across factory metric metric across",
+                    "href": {
+                      "label": "Bucket launch across",
+                      "href": "#handle"
+                    }
+                  }
+                ]
+              },
+              {
+                "heading": "Bucket bucket for jump",
+                "links": [
+                  {
+                    "label": "Launch handle with upload trace upload with",
+                    "href": {
+                      "label": "Query queue from",
+                      "href": "#notice"
+                    }
+                  },
+                  {
+                    "label": "Grain pipeline for gateway stream schema with",
+                    "href": {
+                      "label": "Circuit gateway and",
+                      "href": "#journal"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "poweredByLine": "Object handle in input",
+        "legalLinks": [
+          {
+            "label": "Query circuit in",
+            "href": {
+              "label": "Schema vector on",
+              "href": "#widget"
+            }
+          },
+          {
+            "label": "Archive unit for",
+            "href": {
+              "label": "Bridge dashboard with",
+              "href": "#trace"
+            }
+          },
+          {
+            "label": "Network keyed and",
+            "href": {
+              "label": "Layer handle from",
+              "href": "#output"
+            }
+          }
+        ],
+        "badges": [
+          {
+            "img": {
+              "role": "compliance-badge",
+              "alt": "Gateway jump on"
+            }
+          },
+          {
+            "img": {
+              "role": "compliance-badge",
+              "alt": "Query bridge from"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "offset-lift",
+        "reducedMotionFallback": "static"
+      }
+    }
+  ]
+}

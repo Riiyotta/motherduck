@@ -1,0 +1,104 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.product-centered",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Centered product hero",
+  "purpose": "Page-opening: product chip, centered H1, supporting text and actions with decorative floating bubbles.",
+  "source": {
+    "file": "src/components/marketing/feature.jsx",
+    "tag": "ProductHeroCentered",
+    "lines": "75-106",
+    "id": "feature-jsx#ProductHeroCentered"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.product-centered",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "chip": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true
+      },
+      "status": {
+        "type": "text",
+        "maxWords": 2,
+        "required": false
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 17,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 35,
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "dives",
+    "flights",
+    "guides",
+    "mcp"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "float-drift",
+      "float-bob",
+      "none"
+    ],
+    "default": "float-drift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B11"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "254-262",
+        "heading": "B11. `ProductHeroCentered` (dives, flights, guides, mcp; hypertenancy uses a dark variant,"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-feature"
+  ],
+  "tags": []
+}

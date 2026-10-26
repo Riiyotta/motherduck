@@ -1,0 +1,93 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.transcript",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Video transcript",
+  "purpose": "Timestamped transcript lines below the video article.",
+  "source": {
+    "file": "src/components/content/videos.jsx",
+    "tag": "Transcript",
+    "lines": "183-210",
+    "id": "videos-jsx#Transcript"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/podcast.jsx",
+      "tag": "DarkTranscript",
+      "lines": "285-316",
+      "id": "podcast-jsx#DarkTranscript"
+    }
+  ],
+  "semantic": {
+    "id": "editorial.transcript",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "lines": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 60,
+        "item": {
+          "time": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "text": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_CONTENT.md",
+        "lines": "425-442",
+        "heading": "V5. `VideoMeta` + body/sidebar (video detail) [NEW]"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "video-detail"
+  ],
+  "tags": []
+}

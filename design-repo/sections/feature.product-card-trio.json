@@ -1,0 +1,118 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.product-card-trio",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Three product cards with screenshots",
+  "purpose": "Three colored lift cards (peach, sky tint, mint), each with an icon tab, one-word H3, short body, screenshot frame and learn-more link.",
+  "source": {
+    "file": "src/components/platform/ProductCard.jsx",
+    "tag": "ProductCard",
+    "lines": "6-35",
+    "id": "ProductCard-jsx#ProductCard"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.product-card-trio",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 1,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 19,
+            "required": true
+          },
+          "icon": {
+            "type": "asset",
+            "roles": [
+              "spot-illustration"
+            ],
+            "required": true
+          },
+          "screenshot": {
+            "type": "asset",
+            "roles": [
+              "product-screenshot"
+            ],
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 3,
+            "required": true
+          },
+          "tone": {
+            "type": "enum",
+            "values": [
+              "peach",
+              "sky-tint",
+              "mint"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "offset-lift"
+    ],
+    "default": "offset-lift",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 3,
+      "lg": 3,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 960,
+    "hiddenBelowPx": null,
+    "evidence": "CLONE_SPEC section 5: 3-up grid at >=960, column below"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generated-product-visual",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "404-413",
+        "heading": "Product cards (3-up), margin-top 56"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "home"
+  ],
+  "tags": []
+}

@@ -1,0 +1,69 @@
+{
+  "description": "Component-scoped tokens for button.offset.",
+  "tokens": {
+    "button.offset.height": {
+      "value": "43.8px",
+      "ref": null,
+      "evidence": {
+        "file": "src/components/ui/OffsetButton.jsx",
+        "lines": "3-6"
+      }
+    },
+    "button.offset.paddingX": {
+      "value": "18px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "242"
+      }
+    },
+    "button.offset.paddingY": {
+      "value": "11.5px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "242"
+      }
+    },
+    "button.offset.borderWidth": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "242"
+      }
+    },
+    "button.offset.radius": {
+      "value": "2px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "242"
+      }
+    },
+    "button.offset.lift": {
+      "value": "7px",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "242"
+      }
+    },
+    "button.offset.transition": {
+      "value": "120ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "242"
+      }
+    },
+    "button.offset.pressTransition": {
+      "value": "30ms ease-in-out",
+      "ref": null,
+      "evidence": {
+        "doc": "CLONE_SPEC.md",
+        "lines": "242"
+      }
+    }
+  }
+}

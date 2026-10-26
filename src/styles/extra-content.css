@@ -1,0 +1,132 @@
+/* PAGES_SPEC_EXTRA chunk A (X1 glossary index, X2 glossary term, X5 dive detail, X6 author, X7 learn article,
+   X11 research paper, X20 book chapter, ReadNextGrid). Type roles from §3b that no shared token file defines yet
+   live here as classes (base = SM <728, then MD >=728, LG >=960, XL >=1302). */
+
+/* ---------- §3b type roles ---------- */
+.xc-mono { font-family: "Fragment Mono", ui-monospace, monospace; font-weight: 400; text-transform: uppercase; }
+
+/* gloss-h1, author-h1: Mono 32/44.8 -> 40/56 (MD) -> 56/67.2 (LG, XL) */
+.xc-gloss-h1, .xc-author-h1 { font-size: 32px; line-height: 44.8px; }
+@media (min-width: 728px) { .xc-gloss-h1, .xc-author-h1 { font-size: 40px; line-height: 56px; } }
+@media (min-width: 960px) { .xc-gloss-h1, .xc-author-h1 { font-size: 56px; line-height: 67.2px; } }
+
+/* readnext-h2: 24/33.6 · 32/44.8 · 28/39.2 · 36/50.4 */
+.xc-readnext-h2 { font-size: 24px; line-height: 33.6px; }
+@media (min-width: 728px) { .xc-readnext-h2 { font-size: 32px; line-height: 44.8px; } }
+@media (min-width: 960px) { .xc-readnext-h2 { font-size: 28px; line-height: 39.2px; } }
+@media (min-width: 1302px) { .xc-readnext-h2 { font-size: 36px; line-height: 50.4px; } }
+
+/* rec-title-mono: 18/25.2 below 960, 20/28 at >=960 */
+.xc-rec-title { font-size: 18px; line-height: 25.2px; overflow-wrap: anywhere; }
+@media (min-width: 960px) { .xc-rec-title { font-size: 20px; line-height: 28px; } }
+
+/* learn-h1: 24/33.6 · 32/38.4 (MD, LG) · 48/57.6 */
+.xc-learn-h1 { font-size: 24px; line-height: 33.6px; }
+@media (min-width: 728px) { .xc-learn-h1 { font-size: 32px; line-height: 38.4px; } }
+@media (min-width: 1302px) { .xc-learn-h1 { font-size: 48px; line-height: 57.6px; } }
+
+/* research-h1: 32/38.4 · 48/57.6 (MD, LG) · 56/67.2 */
+.xc-research-h1 { font-size: 32px; line-height: 38.4px; }
+@media (min-width: 728px) { .xc-research-h1 { font-size: 48px; line-height: 57.6px; } }
+@media (min-width: 1302px) { .xc-research-h1 { font-size: 56px; line-height: 67.2px; } }
+
+/* chapter-h1: 32/44.8 · 48/57.6 · 56/67.2 (LG, XL) */
+.xc-chapter-h1 { font-size: 32px; line-height: 44.8px; }
+@media (min-width: 728px) { .xc-chapter-h1 { font-size: 48px; line-height: 57.6px; } }
+@media (min-width: 960px) { .xc-chapter-h1 { font-size: 56px; line-height: 67.2px; } }
+
+/* ---------- X1 glossary ---------- */
+.xc-gloss-wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.xc-gloss-lede { font: 300 18.4px/28.52px Inter, system-ui, sans-serif; letter-spacing: 0.368px; color: #818181; }
+.xc-gloss-lede b { font: 600 18.4px/28.52px "Fragment Mono", ui-monospace, monospace; color: #383838; }
+.xc-gloss-count { font: 400 12.5px/12.5px "Fragment Mono", ui-monospace, monospace; letter-spacing: 0.75px; text-transform: uppercase; color: #818181; white-space: nowrap; }
+.xc-gloss-count b { font-weight: 700; color: #383838; }
+/* Deliberate deviation (orchestrator decision): the original sticks at top:0, under the fixed header. */
+.xc-gloss-bar { position: sticky; top: var(--header-total); z-index: 20; }
+.xc-gloss-input {
+  display: block; width: 100%; height: 47.6px; padding: 10px 16px 10px 44px;
+  background: #FFFFFF; border: 1px solid #383838; border-radius: 0; outline: none;
+  font: 400 16px/25.6px Inter, system-ui, sans-serif; color: #383838; -webkit-appearance: none; appearance: none;
+}
+@media (min-width: 728px) { .xc-gloss-input { height: 53.6px; padding-top: 13px; padding-bottom: 13px; } }
+.xc-gloss-input:focus { border-color: #383838; box-shadow: 0 0 0 3px #FF9538; }
+.xc-gloss-input::-webkit-search-cancel-button { cursor: pointer; }
+.xc-gloss-letter {
+  display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid transparent;
+  font: 400 13px/13px "Fragment Mono", ui-monospace, monospace; color: #383838; text-decoration: none;
+}
+@media (min-width: 728px) { .xc-gloss-letter { width: 30px; } }
+.xc-gloss-letter:hover { border-color: #383838; }
+.xc-gloss-letter[data-dim] { opacity: 0.32; }
+/* Section anchor offset: the original's 140 assumes the bar is hidden; with the bar visible below the header the
+   landing offset is header + bar + 10 (see --xc-bar-h, set from the measured bar height). */
+.xc-gloss-section { padding-top: 40px; scroll-margin-top: calc(var(--header-total) + var(--xc-bar-h, 130px) - 30px); }
+
+.xc-term-card {
+  display: block; background: #FFFFFF; border: 1px solid #E1D6CB; padding: 16px 18px; text-decoration: none;
+  transition: border-color 0.12s ease, transform 0.12s ease;
+}
+.xc-term-card:hover { border-color: #383838; transform: translateY(-2px); }
+.xc-term-title { font: 600 16.8px/16.8px Inter, system-ui, sans-serif; letter-spacing: -0.084px; color: #2BA5FF; }
+.xc-term-arrow {
+  display: inline-block; width: 10px; font: 600 16.8px/16.8px "Fragment Mono", ui-monospace, monospace; color: #818181;
+  opacity: 0; transform: translateX(-3px); transition: all 0.12s ease;
+}
+.xc-term-card:hover .xc-term-arrow { opacity: 1; transform: none; }
+.xc-term-def {
+  margin: 7px 0 0; font: 300 14.8px/22.2px Inter, system-ui, sans-serif; letter-spacing: 0.296px; color: #818181;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* X2: FAQ constrained to the 1000 column (the shared FAQSection is full-bleed; neutralise its container). */
+.xc-faq-col .container { max-width: none; padding-left: 0; padding-right: 0; }
+@media (min-width: 1302px) {
+  .xc-faq-col .container > * { width: calc(100% - 202.4px) !important; }
+  .xc-faq-col section > [role='img'] { right: -60px !important; }
+}
+
+/* ---------- X20 chapter summary: sidebar form reveal ---------- */
+/* Measured: focus/fill -> block `OuPLP` 0.25s ease-in-out forwards (opacity 0 -> 1, translateY(-16px) -> 0,
+   pointer-events none -> auto) while the form's room for it grows over 0.1s ease-in-out; blur while empty ->
+   `jPCdGn` 0.15s ease-in-out forwards (reverse) while the room shrinks over 0.25s. Runs under reduced motion too. */
+@keyframes xc-reveal-in { from { opacity: 0; transform: translateY(-16px); pointer-events: none; } to { opacity: 1; transform: none; pointer-events: auto; } }
+@keyframes xc-reveal-out { from { opacity: 1; transform: none; pointer-events: auto; } to { opacity: 0; transform: translateY(-16px); pointer-events: none; } }
+.xc-reveal { opacity: 0; position: absolute; left: 24px; right: 24px; pointer-events: none; }
+.xc-reveal[data-state='open'] { animation: xc-reveal-in 0.25s ease-in-out forwards; }
+.xc-reveal[data-state='closed'] { animation: xc-reveal-out 0.15s ease-in-out forwards; }
+.xc-reveal-space { transition: height 0.25s ease-in-out; }
+.xc-reveal-space[data-open] { transition-duration: 0.1s; }
+
+/* ---------- X11 paper card grid pattern (CSS stand-in for grid-bg-pattern.png) ---------- */
+.xc-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(56, 56, 56, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 56, 56, 0.18) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* ---------- X6 author subscribe tag ---------- */
+.xc-sub-tag { transform: translateY(-8px) rotate(-10.8deg); }
+@media (min-width: 728px) { .xc-sub-tag { transform: translateY(-12px) rotate(-10.8deg); } }
+
+/* X2: the original drops the first heading's top margin in the term body (body box starts at the H2). */
+.ct-prose.xc-flush-top > :first-child { margin-top: 0; }
+.xc-cq { container-type: inline-size; }
+
+/* X20: the CTA admonition is the article's own block (the article gap spaces it, not the admonition margin). */
+.ct-prose.xc-cta .xp-admon { margin-bottom: 0; }
+
+/* X2 term-body promo card (measured aside, see TermPromo) */
+.xc-promo { display: flex; gap: 16px; margin: 32px 0; padding: 18px 20px; background: #FFFFFF; border: 1px solid #383838; color: #383838; }
+.xc-promo-icon { display: grid; place-items: center; flex: none; width: 44px; height: 44px; background: #FF9538; border: 1px solid #383838; box-sizing: border-box; }
+.xc-promo-body { min-width: 0; max-width: 485px; }
+.xc-promo-eye { margin: 0 0 24px; font: 300 16px/25.6px Inter, system-ui, sans-serif; letter-spacing: 0.32px; text-transform: uppercase; color: #FF9538; }
+.xc-promo-title { margin: 0 0 16px; font: 400 18px/23.4px 'Space Grotesk', sans-serif; text-transform: uppercase; color: #383838; }
+.xc-promo-text { margin: 0 0 24px; font: 300 16px/25.6px Inter, system-ui, sans-serif; letter-spacing: 0.32px; color: #818181; }
+.xc-promo-cta {
+  display: inline-flex; align-items: center; gap: 7px; padding: 8px 15px; background: #FF9538; border: 1px solid #383838;
+  font: 700 14.4px/14.4px Inter, system-ui, sans-serif; color: #FFFFFF; text-decoration: underline;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.xc-promo-cta span { font-family: 'Fragment Mono', ui-monospace, monospace; }
+.xc-promo-cta:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 0 #383838; }

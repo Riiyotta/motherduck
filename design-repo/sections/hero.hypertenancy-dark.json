@@ -1,0 +1,106 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "hero.hypertenancy-dark",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Dark hero with product media",
+  "purpose": "Page-opening dark hero: chip, two-line display heading (second line in the display face), lede, two actions and one wide product media frame.",
+  "source": {
+    "file": "src/components/marketing/hypertenancy.jsx",
+    "tag": "DarkHero",
+    "lines": "48-77",
+    "id": "hypertenancy-jsx#DarkHero"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "hero.hypertenancy-dark",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "chip": {
+        "type": "text",
+        "maxWords": 2,
+        "required": true
+      },
+      "h1": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "lede": {
+        "type": "text",
+        "maxWords": 23,
+        "required": true
+      },
+      "primaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "secondaryAction": {
+        "type": "link",
+        "labelMaxWords": 4,
+        "required": true
+      },
+      "media": {
+        "type": "asset",
+        "roles": [
+          "product-screenshot",
+          "architecture-diagram"
+        ],
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B17"
+  },
+  "generatedAssetRoles": [
+    "generated-diagram",
+    "generated-product-visual"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "322-337",
+        "heading": "B17. Hypertenancy-only blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-hypertenancy"
+  ],
+  "tags": [],
+  "notes": "The original DarkHero component also contains a second section (heading, lede, code tabs); that part is the separate feature.code-tabs-panel contract so the hero stays a page-opening composition only."
+}

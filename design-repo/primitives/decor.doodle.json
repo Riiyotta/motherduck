@@ -1,0 +1,41 @@
+{
+  "id": "decor.doodle",
+  "kind": "primitive",
+  "version": "1.0.0",
+  "title": "Doodle",
+  "purpose": "Decorative outline cloud, star, arc, loop, blob or burst; generic shapes that can be redrawn freely.",
+  "source": {
+    "file": "src/components/content/bits.jsx",
+    "tag": "Doodle",
+    "lines": "104-111",
+    "id": "bits-jsx#Doodle"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "kind": [
+      "cloud",
+      "star",
+      "arc",
+      "loop",
+      "blob",
+      "burst",
+      "dot",
+      "circle",
+      "diamond"
+    ],
+    "size": "number"
+  },
+  "tokens": [],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "311-367",
+        "heading": "4. Architecture section (bg **#97D4FF**, `border-top:2px solid #383838`, overflow clip)"
+      }
+    ]
+  },
+  "notes": "Decorative; aria-hidden."
+}

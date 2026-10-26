@@ -1,0 +1,125 @@
+{
+  "description": "Hard offset shadows and the two soft shadows.",
+  "tokens": {
+    "elevation.hard-4": {
+      "value": "-4px 4px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "164"
+      }
+    },
+    "elevation.hard-6": {
+      "value": "-6px 6px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "165"
+      }
+    },
+    "elevation.chat-input": {
+      "value": "0 4px 20px 0 rgba(0,0,0,0.08)",
+      "type": "shadow",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "166"
+      }
+    },
+    "elevation.dropdown": {
+      "value": "0 4px 8px 0 rgba(0,0,0,0.10)",
+      "type": "shadow",
+      "source": {
+        "file": "tailwind.config.js",
+        "lines": "167"
+      }
+    },
+    "elevation.hard-10": {
+      "value": "-10px 10px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "45"
+      }
+    },
+    "elevation.hard-14": {
+      "value": "-14px 14px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "46"
+      }
+    },
+    "elevation.hard-20": {
+      "value": "-20px 20px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "47"
+      }
+    },
+    "elevation.hard-r16": {
+      "value": "16px 16px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "48"
+      }
+    },
+    "elevation.hard-6-black": {
+      "value": "-6px 6px 0 0 #000000",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "49"
+      }
+    },
+    "elevation.hard-6-survey": {
+      "value": "-6px 6px 0 0 #16120C",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/company.js",
+        "lines": "50"
+      }
+    },
+    "elevation.hard-8": {
+      "value": "-8px 8px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "52"
+      }
+    },
+    "elevation.hard-12": {
+      "value": "-12px 12px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "53"
+      }
+    },
+    "elevation.hard-16": {
+      "value": "-16px 16px 0 0 #383838",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/marketing.js",
+        "lines": "54"
+      }
+    },
+    "elevation.dive-pill": {
+      "value": "0 2px 12px rgba(0,0,0,0.15)",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "46"
+      }
+    },
+    "elevation.dive-menu": {
+      "value": "0 4px 16px rgba(0,0,0,0.1)",
+      "type": "shadow",
+      "source": {
+        "file": "tokens/content.js",
+        "lines": "47"
+      }
+    }
+  }
+}

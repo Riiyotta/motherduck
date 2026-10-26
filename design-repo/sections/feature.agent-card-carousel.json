@@ -1,0 +1,99 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.agent-card-carousel",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Agent card carousel",
+  "purpose": "Auto-advancing carousel of four agent cards.",
+  "source": {
+    "file": "src/components/marketing/overview.jsx",
+    "tag": "AgentCardCarousel",
+    "lines": "104-132",
+    "id": "overview-jsx#AgentCardCarousel"
+  },
+  "sourceAlternates": [],
+  "semantic": {
+    "id": "feature.agent-card-carousel",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h2": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 30,
+            "required": true
+          },
+          "art": {
+            "type": "asset",
+            "roles": [
+              "spot-illustration"
+            ],
+            "required": true
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "cream"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "carousel-autoplay"
+    ],
+    "default": "carousel-autoplay",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "382-390",
+        "heading": "B19. /product-only bespoke blocks"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "product-overview"
+  ],
+  "tags": []
+}

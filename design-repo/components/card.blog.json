@@ -1,0 +1,38 @@
+{
+  "id": "card.blog",
+  "kind": "component",
+  "version": "1.0.0",
+  "title": "Carousel content card",
+  "purpose": "Carousel card: thumbnail, type chip, title, meta.",
+  "source": {
+    "file": "src/components/blog/BlogCard.jsx",
+    "tag": "BlogCard",
+    "lines": "6-38",
+    "id": "BlogCard-jsx#BlogCard"
+  },
+  "sourceAlternates": [],
+  "props": {
+    "type": "text(max 2 words)",
+    "title": "text(max 13 words)",
+    "meta": "text(max 6 words)"
+  },
+  "tokens": [
+    "card.lift.lift.blog"
+  ],
+  "states": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "CLONE_SPEC.md",
+        "lines": "524-545",
+        "heading": "9. Blog / \"fresh\" section (bg **#F9EE3E**, `border-bottom:2px solid #383838`)"
+      }
+    ]
+  },
+  "uses": [
+    "card.lift",
+    "chip.label",
+    "asset.placeholder"
+  ]
+}

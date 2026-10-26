@@ -1,0 +1,154 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "feature.persona-split-rows",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Persona split rows",
+  "purpose": "Three full-width rows alternating a colored side panel with art and text containing sub-items; used by persona pages and pricing values.",
+  "source": {
+    "file": "src/components/marketing/persona.jsx",
+    "tag": "PersonaSplitRows",
+    "lines": "137-149",
+    "id": "persona-jsx#PersonaSplitRows"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/marketing/persona.jsx",
+      "tag": "SplitRow",
+      "lines": "64-104",
+      "id": "persona-jsx#SplitRow"
+    },
+    {
+      "file": "src/components/marketing/persona.jsx",
+      "tag": "UiShowcase",
+      "lines": "109-135",
+      "id": "persona-jsx#UiShowcase"
+    }
+  ],
+  "semantic": {
+    "id": "feature.persona-split-rows",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "rows": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "h2": {
+            "type": "text",
+            "maxWords": 11,
+            "required": true
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 157,
+            "required": true
+          },
+          "side": {
+            "type": "enum",
+            "values": [
+              "left",
+              "right"
+            ],
+            "required": true
+          },
+          "art": {
+            "type": "asset",
+            "roles": [
+              "spot-illustration",
+              "product-screenshot"
+            ],
+            "required": true
+          },
+          "link": {
+            "type": "link",
+            "labelMaxWords": 4,
+            "required": false
+          },
+          "items": {
+            "type": "list",
+            "minItems": 0,
+            "maxItems": 3,
+            "item": {
+              "title": {
+                "type": "text",
+                "maxWords": 11,
+                "required": true
+              },
+              "body": {
+                "type": "text",
+                "maxWords": 93,
+                "required": true
+              },
+              "icon": {
+                "type": "asset",
+                "roles": [
+                  "spot-illustration",
+                  "generic-ui-glyph"
+                ],
+                "required": true
+              }
+            },
+            "required": false
+          }
+        },
+        "required": true
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default",
+    "compact"
+  ],
+  "allowedSurfaces": [
+    "garden",
+    "coral-red",
+    "sun",
+    "teal"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "float-bob"
+    ],
+    "default": "float-bob",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 2,
+      "lg": 2,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": 960,
+    "hiddenBelowPx": null,
+    "evidence": "PAGES_SPEC_MARKETING B18"
+  },
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "generated-product-visual",
+    "generic-ui-glyph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_MARKETING.md",
+        "lines": "338-381",
+        "heading": "B18. Persona blocks (T3, /product)"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "pricing",
+    "product-persona"
+  ],
+  "tags": [],
+  "notes": "Body budget 157w from ROW_LENS app p=864ch in ProductRouter.jsx; item body 93w from 507ch."
+}

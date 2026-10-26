@@ -1,0 +1,108 @@
+/* PAGES_SPEC_EXTRA chunk C (X12-X19, X21): styles that Tailwind utilities cannot express. */
+
+/* ---------- measured shape prose (X17 / X18) ---------- */
+.xm-shape { display: flow-root; color: #383838; }
+.xm-shape :is(p, div, h1, h2, h3, h4, h5, h6, ul, ol, li) { margin-bottom: 0; }
+.xm-shape strong { font-weight: 700; }
+.xm-shape em { font-style: italic; }
+.xm-shape .xm-a { color: inherit; text-decoration: underline; text-underline-offset: 3.52px; }
+.xm-shape .xm-list > li { padding-left: 4px; }
+.xm-shape .xm-list > li::marker { font-weight: 300; }
+.xm-shape .ct-prose > * { margin-bottom: 0; }
+
+/* ---------- X13 EU region ---------- */
+/* compact floating inputs (46.4 tall, padding 10 32 10 16, placeholder at left 16) */
+.xm-compact input:not([type='checkbox']) { height: 46.4px; padding: 10px 32px 10px 16px; line-height: 22.4px; }
+.xm-compact input:not([type='checkbox']) + p.top-1\/2 { left: 16px; padding-right: 24px; }
+.xm-compact .group label { line-height: 19.6px; }
+@media (max-width: 727px) { .xm-logo5 { --w: 55.5px !important; --h: 22px !important; } }
+
+/* ---------- X14 Azure ---------- */
+/* contained FAQ: the first item gets a top rule below 728 only (measured) */
+@media (max-width: 727px) { .xm-faq > div > :first-child { border-top: 2px solid #383838; } }
+
+/* ---------- X12 persona landings: hover states (measured) ---------- */
+.xm-lift2 { transition: transform 0.12s; }
+.xm-lift2:hover { transform: translateY(-2px); }
+.xm-arrow, .xm-tile, .xm-agent-card, .xm-agent-gated, .xm-copy { transition: transform 0.12s ease-in-out, box-shadow 0.12s ease-in-out, border-color 0.12s ease-in-out; }
+.xm-arrow:hover { transform: translate(4px, -4px); box-shadow: -4px 4px 0 0 #383838; }
+.xm-tile:hover { transform: translate(4px, -4px); border-color: #383838; box-shadow: inset 0 0 0 1px #383838, -4px 4px 0 0 #383838; }
+.xm-agent-card:hover, .xm-copy:hover { transform: translate(6px, -6px); box-shadow: -6px 6px 0 0 #383838; }
+.xm-agent-gated { box-shadow: -4px 4px 0 0 #383838; }
+@media (min-width: 960px) { .xm-agent-gated { box-shadow: -6px 6px 0 0 #383838; } }
+.xm-agent-gated:hover { transform: translate(6px, -6px); box-shadow: -12px 12px 0 0 #383838; }
+/* dark feature list: hovering one item dims its siblings (opacity .2s) */
+.xm-features:hover > li:not(:hover) { opacity: 0.6; }
+/* Measured motion (no-preference only; static under reduced motion). The hero window plays once on load; the feature list once it is in view:
+   hero diagram `window` part: from opacity 0 / translateY(10px), 360ms cubic-bezier(.22,1,.36,1), delay 420ms;
+   feature-rise: li > * from opacity 0 / translateY(12px), 450ms cubic-bezier(.34,1.4,.64,1), backwards, delay
+   offset + i x 80ms (first child) / + 80ms more (the rest); offset 1480ms when in view at load, 0 when scrolled to. */
+@keyframes xm-hero-window { from { opacity: 0; transform: translateY(10px); } }
+@keyframes xm-feature-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .xm-hero-window { animation: xm-hero-window 360ms cubic-bezier(0.22, 1, 0.36, 1) 420ms backwards; }
+  /* hidden until the list is in view (persona2.jsx useFeatureRise sets data-rise = load | scroll) */
+  .xm-features:not([data-rise]) > li > * { opacity: 0; }
+  .xm-features[data-rise='load'] { --reveal-offset: 1480ms; }
+  .xm-features[data-rise='scroll'] { --reveal-offset: 0ms; }
+  .xm-features[data-rise] > li > * { animation: xm-feature-rise 450ms cubic-bezier(0.34, 1.4, 0.64, 1) backwards; animation-delay: calc(var(--reveal-offset) + var(--step-delay, 0ms) + 80ms); }
+  .xm-features[data-rise] > li > :first-child { animation-delay: calc(var(--reveal-offset) + var(--step-delay, 0ms)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .xm-arrow, .xm-tile, .xm-agent-card, .xm-agent-gated, .xm-copy, .xm-lift2 { transition: none; }
+}
+
+/* ---------- X21 /jev-full ---------- */
+/* "CRT" text: transparent fill clipped to a scanline gradient (light on dark, dark on sun) */
+.xm-crt, .xm-crt-dark { color: transparent; -webkit-background-clip: text; background-clip: text; }
+.xm-crt { background-image: repeating-linear-gradient(to bottom, #F4EFEA 0 3px, rgba(244, 239, 234, 0.55) 3px 4px); }
+.xm-crt-dark { background-image: repeating-linear-gradient(to bottom, #141413 0 3px, rgba(20, 20, 19, 0.6) 3px 4px); }
+/* fitted headings: measured font sizes per breakpoint (the original fits them to the column with JS) */
+.xm-jv-h1 > span, .xm-jv-h2 > span, .xm-jv-h3 > span { white-space: nowrap; }
+.xm-jv-h1 > span:not(:last-child) { margin-bottom: 0.04em; }
+.xm-jv-h2 > span:first-child { margin-bottom: 0.022em; }
+.xm-jv-h3 > span:first-child { margin-bottom: 0.056em; }
+.xm-jv-h1 { font-size: 37.962px; line-height: 0.98; letter-spacing: -0.03em; }
+.xm-jv-h2 { font-size: 62.928px; line-height: 0.95; letter-spacing: -0.02em; }
+.xm-jv-h2b { font-size: 1.125em; }
+.xm-jv-h3 { font-size: 27.7px; line-height: 0.95; letter-spacing: -0.02em; }
+.xm-jv-h3b { font-size: 1.3333em; }
+@media (min-width: 728px) { .xm-jv-h1 { font-size: 76.368px; } .xm-jv-h2 { font-size: 126.592px; } .xm-jv-h3 { font-size: 55.7px; } }
+@media (min-width: 960px) { .xm-jv-h1 { font-size: 55.944px; } .xm-jv-h2 { font-size: 94.993px; } .xm-jv-h3 { font-size: 74.5px; } }
+@media (min-width: 1302px) { .xm-jv-h1 { font-size: 87.024px; } .xm-jv-h2 { font-size: 124.948px; } .xm-jv-h3 { font-size: 97.2px; } }
+/* measured motion (all three disabled under reduced motion, like the original):
+   jv-flick 6s steps(1) infinite on the "pays off" h2; jv-type 7s infinite typed last line (hold, delete in 12 steps
+   45-53%, hold empty to 58%, retype in 12 steps to 75%, hold; width calc(12ch - .24em) for the original's 12
+   characters -> 11 here); jv-cursor .55em x .8em sun scanline block, 1.05s steps(1) infinite blink. */
+@keyframes xm-jv-flick { 0%, 97%, 100% { opacity: 1; } 98% { opacity: 0.82; } 99% { opacity: 0.95; } }
+@keyframes xm-jv-type {
+  0%, 45% { width: calc(11ch - 0.22em); animation-timing-function: steps(11); }
+  53%, 58% { width: 0; animation-timing-function: steps(11); }
+  75%, 100% { width: calc(11ch - 0.22em); }
+}
+@keyframes xm-jv-cur { 50% { opacity: 0; } }
+.xm-jv-type { display: inline-block; overflow: hidden; vertical-align: bottom; white-space: nowrap; width: calc(11ch - 0.22em); }
+.xm-jv-cursor { display: inline-block; width: 0.55em; height: 0.8em; margin-left: 0.12em; vertical-align: -0.04em; background: repeating-linear-gradient(0deg, #FFE94D 0 2px, #E0C200 2px 3px); }
+@media (prefers-reduced-motion: no-preference) {
+  .xm-jv-flick { animation: xm-jv-flick 6s steps(1) infinite; }
+  .xm-jv-type { animation: xm-jv-type 7s infinite; }
+  .xm-jv-cursor { animation: xm-jv-cur 1.05s steps(1) infinite; }
+}
+.xm-jv-pill { transition: transform 0.12s ease-in-out; }
+.xm-jv-pill:hover { transform: translateY(-2px); }
+.xm-jv-range { accent-color: #141413; }
+
+/* ---------- LP-only page (/lp/ducklake-lakehouse-table-format-book): own fixed nav, no site header or footer ----------
+   App.jsx's OWN_NAV_PREFIXES is a prefix match and would also catch the -full LP (which keeps the site chrome), so the
+   page sets body[data-xm-lp-only] while mounted and the site header / footer / header offset are hidden here. */
+body[data-xm-lp-only] #root > div { padding-top: 0 !important; }
+body[data-xm-lp-only] #root > div > header,
+body[data-xm-lp-only] #main-content ~ * { display: none !important; }
+
+/* X21 /jev-full: Geist Mono (loaded by jev.jsx for this route only) and the fluid figure sizes measured on the
+   original at 390 / 768 / 1000 / 1280 / 1440 / 1920 (vw-based with a floor and a cap; line-height and -0.02em fixed). */
+.xm-gm { font-family: 'Geist Mono', ui-monospace, monospace; }
+.xm-jv-stat { font-size: clamp(34px, 4.2vw, 64px); line-height: 0.95; letter-spacing: -0.02em; }
+.xm-jv-rows { font-size: clamp(40px, 5vw, 72px); line-height: 0.9; letter-spacing: -0.02em; }
+.xm-jv-out { font-size: clamp(40px, 5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; }
+.xm-jv-meter { font-size: clamp(64px, 7vw, 104px); line-height: 0.85; letter-spacing: -0.02em; }

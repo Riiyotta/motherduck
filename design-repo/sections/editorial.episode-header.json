@@ -1,0 +1,122 @@
+{
+  "$schema": "../schema/section-contract.schema.json",
+  "id": "editorial.episode-header",
+  "kind": "section",
+  "version": "1.0.0",
+  "title": "Podcast episode header (dark)",
+  "purpose": "Episode title, meta, tagline, summary and platform tiles.",
+  "source": {
+    "file": "src/components/extra/podcast.jsx",
+    "tag": "EpisodeBody",
+    "lines": "318-340",
+    "id": "podcast-jsx#EpisodeBody"
+  },
+  "sourceAlternates": [
+    {
+      "file": "src/components/extra/podcast.jsx",
+      "tag": "Meta",
+      "lines": "141-147",
+      "id": "podcast-jsx#Meta"
+    },
+    {
+      "file": "src/components/extra/podcast.jsx",
+      "tag": "PlatformTiles",
+      "lines": "43-55",
+      "id": "podcast-jsx#PlatformTiles"
+    }
+  ],
+  "semantic": {
+    "id": "editorial.episode-header",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "content": {
+    "fields": {
+      "h1": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true
+      },
+      "date": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "duration": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true
+      },
+      "tagline": {
+        "type": "text",
+        "maxWords": 20,
+        "required": true
+      },
+      "summary": {
+        "type": "text",
+        "maxWords": 45,
+        "required": true
+      },
+      "platforms": {
+        "type": "list",
+        "minItems": 0,
+        "maxItems": 5,
+        "item": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true
+          },
+          "href": {
+            "type": "link",
+            "labelMaxWords": 2,
+            "required": true
+          }
+        },
+        "required": false
+      }
+    },
+    "copyBudgetBasis": "estimated: layout-fit budgets set from the placeholder lengths recorded in the page specs; see extraction/measured-values.json copyBudgets for the role-class maxima that were verified"
+  },
+  "variants": [
+    "default"
+  ],
+  "allowedSurfaces": [
+    "ink"
+  ],
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": "none",
+    "reducedMotionFallback": "static"
+  },
+  "responsive": {
+    "columns": {
+      "xl": 1,
+      "lg": 1,
+      "md": 1,
+      "sm": 1
+    },
+    "stackBelowPx": null,
+    "hiddenBelowPx": null,
+    "evidence": "no section-specific breakpoint behaviour is recorded in the page specs; the section follows the container grid"
+  },
+  "generatedAssetRoles": [],
+  "evidence": {
+    "level": "measured",
+    "specRefs": [
+      {
+        "doc": "PAGES_SPEC_EXTRA.md",
+        "lines": "429-460",
+        "heading": "X10. Podcast episode `/explain-analyze/:slug` (11; samples `0001-ai-tooling-wars`, `0010-a"
+      }
+    ],
+    "note": null
+  },
+  "usedInTemplates": [
+    "podcast-episode"
+  ],
+  "tags": []
+}
